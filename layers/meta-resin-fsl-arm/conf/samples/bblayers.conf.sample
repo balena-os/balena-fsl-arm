@@ -14,7 +14,7 @@ BBLAYERS ?= " \
     ${TOPDIR}/../layers/meta-fsl-arm \
     ${TOPDIR}/../layers/meta-fsl-arm-extra \
     ${TOPDIR}/../layers/meta-resin/meta-resin-common \
-    ${TOPDIR}/../layers/meta-resin/meta-resin-fido \
+    ${TOPDIR}/../layers/meta-resin/meta-resin-jethro \
     ${TOPDIR}/../layers/meta-resin-fsl-arm \
     "
 
@@ -22,5 +22,5 @@ BBLAYERS_NON_REMOVABLE ?= " \
     ${TOPDIR}/../layers/poky/meta \
     ${TOPDIR}/../layers/poky/meta-yocto \
     ${TOPDIR}/../layers/meta-resin/meta-resin-common \
-    ${TOPDIR}/../layers/meta-resin/meta-resin-fido \
+    ${TOPDIR}/../layers/meta-resin/meta-resin-jethro \
     "
