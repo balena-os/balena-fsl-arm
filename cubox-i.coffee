@@ -21,7 +21,7 @@ module.exports =
 		machine: 'cubox-i'
 		image: 'resin-image'
 		fstype: 'resin-sdcard'
-		version: 'yocto-fido'
+		version: 'yocto-jethro'
 		deployArtifact: 'resin-image-cubox-i.resin-sdcard'
 
 	configuration:

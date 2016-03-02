@@ -19,7 +19,7 @@ module.exports =
 		machine: 'nitrogen6x'
 		image: 'resin-image'
 		fstype: 'resin-sdcard'
-		version: 'yocto-fido'
+		version: 'yocto-jethro'
 		deployArtifact: 'resin-image-nitrogen6x.resin-sdcard'
 
 	options: [ networkOptions.group ]
