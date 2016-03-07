@@ -6,7 +6,7 @@ module.exports =
 	aliases: [ 'cubox-i' ]
 	name: 'Hummingboard'
 	arch: 'armv7hf'
-	state: 'experimental'
+	state: 'released'
 
 	instructions: commonImg.instructions
 	gettingStartedLink:
