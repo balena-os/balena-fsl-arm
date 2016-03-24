@@ -5,6 +5,13 @@ BOARD_SHUTDOWN_ARTIK = 'The device is performing a shutdown. Please wait until t
 SET_JUMPER_SD = 'Set SW2 dip switch to position 1:off, 2:on and then power on the board.'
 SET_JUMPER_EMMC = 'Set SW2 dip switch to position 1:off, 2:off.'
 
+postProvisioningInstructions = [
+	BOARD_SHUTDOWN_ARTIK
+	instructions.REMOVE_INSTALL_MEDIA
+	SET_JUMPER_EMMC
+	instructions.BOARD_REPOWER
+]
+
 module.exports =
 	slug: 'artik5'
 	aliases: [ 'artik5' ]
@@ -13,47 +20,14 @@ module.exports =
 	state: 'preview'
 
 	stateInstructions:
-		postProvisioning: [
-			BOARD_SHUTDOWN_ARTIK
-			instructions.REMOVE_INSTALL_MEDIA
-			SET_JUMPER_EMMC
-			instructions.BOARD_REPOWER
-		]
+		postProvisioning: postProvisioningInstructions
 
-	instructions:
-		windows: [
-			instructions.WINDOWS_DISK_IMAGER_SD
-			instructions.EJECT_SD
-			instructions.FLASHER_WARNING
-			SET_JUMPER_SD
-			BOARD_SHUTDOWN_ARTIK
-			instructions.REMOVE_INSTALL_MEDIA
-			SET_JUMPER_EMMC
-			instructions.BOARD_REPOWER
-		]
-		osx: [
-			instructions.OSX_PLUG_SD
-			instructions.OSX_UNMOUNT_SD
-			instructions.DD_BURN_IMAGE_SD
-			instructions.EJECT_SD
-			instructions.FLASHER_WARNING
-			SET_JUMPER_SD
-			BOARD_SHUTDOWN_ARTIK
-			instructions.REMOVE_INSTALL_MEDIA
-			SET_JUMPER_EMMC
-			instructions.BOARD_REPOWER
-		]
-		linux: [
-			instructions.LINUX_DF_SD
-			instructions.DD_BURN_IMAGE_SD
-			instructions.EJECT_SD
-			instructions.FLASHER_WARNING
-			SET_JUMPER_SD
-			BOARD_SHUTDOWN_ARTIK
-			instructions.REMOVE_INSTALL_MEDIA
-			SET_JUMPER_EMMC
-			instructions.BOARD_REPOWER
-		]
+	instructions: [
+		instructions.ETCHER_SD
+		instructions.EJECT_SD
+		instructions.FLASHER_WARNING
+		SET_JUMPER_SD
+	].concat(postProvisioningInstructions)
 
 	gettingStartedLink:
 		windows: 'http://docs.resin.io/#/pages/installing/gettingStarted-Samsung-Artik5.md#windows'
