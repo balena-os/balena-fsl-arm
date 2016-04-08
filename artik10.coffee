@@ -1,15 +1,17 @@
 deviceTypesCommon = require 'resin-device-types/common'
 { networkOptions, commonImg, instructions } = deviceTypesCommon
 
-BOARD_SHUTDOWN_ARTIK = 'The device is performing a shutdown. Please wait until the device is offline in the dashboard and disconnect the power cable.'
-SET_JUMPER_SD = 'Set SW2 dip switch to position 1:on, 2:on and then power on the board.'
+BOARD_SHUTDOWN_ARTIK = 'The device has performed a shutdown. Press the power switch PSW1 to the off position.'
+SET_JUMPER_SD = 'Set SW2 dip switch to position 1:on, 2:on.'
 SET_JUMPER_EMMC = 'Set SW2 dip switch to position 1:off, 2:off.'
+BOARD_POWERON_ARTIK = 'Press the power switch PSW1 to the on position. Press and hold for 1 second the SW3 POWER push button.'
+
 
 postProvisioningInstructions = [
 	BOARD_SHUTDOWN_ARTIK
 	instructions.REMOVE_INSTALL_MEDIA
 	SET_JUMPER_EMMC
-	instructions.BOARD_REPOWER
+	BOARD_POWERON_ARTIK
 ]
 
 module.exports =
@@ -27,6 +29,7 @@ module.exports =
 		instructions.EJECT_SD
 		instructions.FLASHER_WARNING
 		SET_JUMPER_SD
+		BOARD_POWERON_ARTIK
 	].concat(postProvisioningInstructions)
 
 	gettingStartedLink:
