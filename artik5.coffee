@@ -18,7 +18,7 @@ module.exports =
 	aliases: [ 'artik5' ]
 	name: 'Samsung Artik 5'
 	arch: 'armv7hf'
-	state: 'preview'
+	state: 'experimental'
 
 	stateInstructions:
 		postProvisioning: postProvisioningInstructions
