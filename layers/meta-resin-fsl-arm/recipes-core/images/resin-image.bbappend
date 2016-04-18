@@ -41,3 +41,25 @@ IMAGE_CMD_resin-sdcard_append_cubox-i () {
     dd if=${DEPLOY_DIR_IMAGE}/${SPL_BINARY} of=${RESIN_SDIMG} conv=notrunc seek=2 bs=512
     dd if=${DEPLOY_DIR_IMAGE}/u-boot-${MACHINE}.${UBOOT_SUFFIX} of=${RESIN_SDIMG} conv=notrunc seek=69 bs=1K
 }
+
+#
+# imx6qsabresd
+#
+
+IMAGE_FSTYPES_append_imx6qsabresd = " resin-sdcard"
+
+# Customize resin-sdcard
+RESIN_IMAGE_BOOTLOADER_imx6qsabresd = "u-boot"
+RESIN_BOOT_PARTITION_FILES_imx6qsabresd = " \
+    ${KERNEL_IMAGETYPE}-${MACHINE}.bin:/${KERNEL_IMAGETYPE} \
+    zImage-imx6q-sabresd-enetirq.dtb:/imx6q-sabresd-enetirq.dtb  \
+    zImage-imx6q-sabresd-hdcp.dtb:/imx6q-sabresd-hdcp.dtb \
+    zImage-imx6q-sabresd-ldo.dtb:/imx6q-sabresd-ldo.dtb \
+    zImage-imx6q-sabresd-uart.dtb:/imx6q-sabresd-uart.dtb \
+    zImage-imx6q-sabresd.dtb:/imx6q-sabresd.dtb \
+    "
+
+IMAGE_CMD_resin-sdcard_append_imx6qsabresd () {
+    # imx6qsabresd needs uboot written at a specific location along with SPL
+    dd if=${DEPLOY_DIR_IMAGE}/u-boot-${MACHINE}.imx of=${RESIN_SDIMG} conv=notrunc seek=2 bs=512
+}

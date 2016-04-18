@@ -1,6 +1,7 @@
 # Supported machines
 #MACHINE ?= "nitrogen6x"
 #MACHINE ?= "cubox-i"
+#MACHINE ?= "imx6qsabresd"
 
 # Set this to yes if staging build is desired
 #RESIN_STAGING_BUILD ?= "yes"
