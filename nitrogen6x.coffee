@@ -21,6 +21,7 @@ module.exports =
 		fstype: 'resin-sdcard'
 		version: 'yocto-jethro'
 		deployArtifact: 'resin-image-nitrogen6x.resin-sdcard'
+		compressed: true
 
 	options: [ networkOptions.group ]
 
