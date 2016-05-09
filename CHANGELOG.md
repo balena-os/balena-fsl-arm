@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Bump meta-resin to include switch from rce to docker [Andrei]
 * Include BCM4330/BCM4329 support for cubox-i [Andrei]
 
 # v1.1.1 - 2016-03-16
