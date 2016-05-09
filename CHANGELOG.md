@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Bump meta-resin to include switch from rce to docker [Andrei]
 * Update meta-artik submodule for having bluetooth support and adapt it for the Resin platform [Florin]
 
 # v1.1.4 - 2016-04-16
