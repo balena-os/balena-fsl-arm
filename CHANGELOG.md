@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Bump meta-artik to include latest u-boot and kernel (kernel version 3.10.93) from Samsung [Florin]
 * Bump meta-resin to include switch from rce to docker [Andrei]
 * Update meta-artik submodule for having bluetooth support and adapt it for the Resin platform [Florin]
 
