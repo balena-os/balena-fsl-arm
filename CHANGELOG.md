@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update resin-yocto-scripts to current HEAD to use in docker yocto builds for jenkins [Andrei]
 * Configure builds with RM_OLD_IMAGE [Theodor]
 * Bump meta-artik to include latest u-boot and kernel (kernel version 3.10.93) from Samsung [Florin]
 * Bump meta-resin to include switch from rce to docker [Andrei]
