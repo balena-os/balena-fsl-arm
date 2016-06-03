@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Bump yocto-resin-scripts to bring in improvements for in-docker builds [Andrei]
 * Configure builds with RM_OLD_IMAGE [Theodor]
 * Bump meta-resin to include switch from rce to docker [Andrei]
 * Include BCM4330/BCM4329 support for cubox-i [Andrei]
