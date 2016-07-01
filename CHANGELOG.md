@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Update meta-artik submodule for asix autoload fix [Florin]
+
 # v1.5.0rc4 - 2016-06-29
 
 * Update meta-resin to include supervisor update to v1.11.6 [Florin]
