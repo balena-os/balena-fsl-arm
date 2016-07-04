@@ -1,6 +1,10 @@
 Change log
 -----------
 
+# v1.5.0 - 2016-07-04
+
+* Update meta-resin to v1.5 [Florin]
+
 # v1.5.0rc5 - 2016-07-01
 
 * Update meta-artik submodule for asix autoload fix [Florin]
