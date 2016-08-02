@@ -1,6 +1,9 @@
 Change log
 -----------
 
+# v1.8.0 - 2016-08-02
+
+* Bump meta-resin to v1.8 [Andrei]
 * Update meta-artik to include defconfig changes and remove obsolete kernel-modules-headers patch [Florin]
 * Bump resin-device-types to include partial manifest support [Andrei]
 * No more debug images in staging
