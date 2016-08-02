@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update meta-artik to include defconfig changes and remove obsolete kernel-modules-headers patch [Florin]
 * Bump resin-device-types to include partial manifest support [Andrei]
 * No more debug images in staging
 
