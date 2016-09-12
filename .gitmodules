@@ -1,6 +1,3 @@
-[submodule "resin-device-types"]
-	path = resin-device-types
-	url = https://github.com/resin-io/resin-device-types.git
 [submodule "resin-yocto-scripts"]
 	path = resin-yocto-scripts
 	url = https://github.com/resin-os/resin-yocto-scripts.git
