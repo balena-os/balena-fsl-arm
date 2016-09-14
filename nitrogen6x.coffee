@@ -2,6 +2,7 @@ deviceTypesCommon = require '@resin.io/device-types/common'
 { networkOptions, commonImg, instructions } = deviceTypesCommon
 
 module.exports =
+	version: 1
 	slug: 'nitrogen6x'
 	aliases: [ 'nitrogen6x' ]
 	name: 'Nitrogen 6X'
@@ -28,8 +29,7 @@ module.exports =
 	configuration:
 		config:
 			partition:
-				primary: 4
-				logical: 1
+				primary: 1
 			path: '/config.json'
 
 	initialization: commonImg.initialization
