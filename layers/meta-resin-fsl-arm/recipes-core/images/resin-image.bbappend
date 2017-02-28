@@ -17,7 +17,7 @@ RESIN_BOOT_PARTITION_FILES_nitrogen6x = " \
 
 IMAGE_CMD_resinos-img_append_nitrogen6x () {
     # nitrogen6x needs uboot written at a specific location
-    dd if=${DEPLOY_DIR_IMAGE}/u-boot-${MACHINE}.imx of=${RESIN_SDIMG} conv=notrunc seek=2 bs=512
+    dd if=${DEPLOY_DIR_IMAGE}/u-boot-${MACHINE}.imx of=${RESIN_RAW_IMG} conv=notrunc seek=2 bs=512
 }
 
 #
@@ -38,6 +38,6 @@ RESIN_BOOT_PARTITION_FILES_cubox-i = " \
 
 IMAGE_CMD_resinos-img_append_cubox-i () {
     # cubox-i needs uboot written at a specific location along with SPL
-    dd if=${DEPLOY_DIR_IMAGE}/${SPL_BINARY} of=${RESIN_SDIMG} conv=notrunc seek=2 bs=512
-    dd if=${DEPLOY_DIR_IMAGE}/u-boot-${MACHINE}.${UBOOT_SUFFIX} of=${RESIN_SDIMG} conv=notrunc seek=69 bs=1K
+    dd if=${DEPLOY_DIR_IMAGE}/${SPL_BINARY} of=${RESIN_RAW_IMG} conv=notrunc seek=2 bs=512
+    dd if=${DEPLOY_DIR_IMAGE}/u-boot-${MACHINE}.${UBOOT_SUFFIX} of=${RESIN_RAW_IMG} conv=notrunc seek=69 bs=1K
 }
