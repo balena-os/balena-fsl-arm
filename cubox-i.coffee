@@ -21,9 +21,9 @@ module.exports =
 	yocto:
 		machine: 'cubox-i'
 		image: 'resin-image'
-		fstype: 'resin-sdcard'
+		fstype: 'resinos-img'
 		version: 'yocto-jethro'
-		deployArtifact: 'resin-image-cubox-i.resin-sdcard'
+		deployArtifact: 'resin-image-cubox-i.resinos-img'
 		compressed: true
 
 	configuration:
