@@ -19,3 +19,7 @@
 [submodule "layers/meta-freescale-3rdparty"]
 	path = layers/meta-freescale-3rdparty
 	url = https://github.com/Freescale/meta-freescale-3rdparty.git
+[submodule "layers/meta-solidrun-arm-imx6"]
+	path = layers/meta-solidrun-arm-imx6
+	url = https://github.com/SolidRun/meta-solidrun-arm-imx6.git
+	branch = resinos-morty

@@ -13,6 +13,7 @@ BBLAYERS ?= " \
     ${TOPDIR}/../layers/meta-openembedded/meta-networking \
     ${TOPDIR}/../layers/meta-openembedded/meta-python \
     ${TOPDIR}/../layers/meta-freescale \
+    ${TOPDIR}/../layers/meta-solidrun-arm-imx6 \
     ${TOPDIR}/../layers/meta-freescale-3rdparty \
     ${TOPDIR}/../layers/meta-resin/meta-resin-common \
     ${TOPDIR}/../layers/meta-resin/meta-resin-morty \

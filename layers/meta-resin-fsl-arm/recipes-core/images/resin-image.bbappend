@@ -21,23 +21,32 @@ IMAGE_CMD_resinos-img_append_nitrogen6x () {
 }
 
 #
-# cubox-i
+# SolidRun-imx6
 #
 
-IMAGE_FSTYPES_append_cubox-i = " resinos-img"
+IMAGE_FSTYPES_append_solidrun-imx6 = " resinos-img"
 
 # Customize resinos-img
-RESIN_IMAGE_BOOTLOADER_cubox-i = "u-boot"
-RESIN_BOOT_PARTITION_FILES_cubox-i = " \
-    ${KERNEL_IMAGETYPE}-${MACHINE}.bin:/${KERNEL_IMAGETYPE} \
-    zImage-imx6dl-cubox-i.dtb:/imx6dl-cubox-i.dtb  \
+RESIN_IMAGE_BOOTLOADER_solidrun-imx6 = "u-boot"
+RESIN_BOOT_PARTITION_FILES_solidrun-imx6 = " \
+    zImage-initramfs-${MACHINE}.bin:/zImage \
+    uEnv-${MACHINE}.txt:/uEnv.txt \
+    zImage-imx6dl-cubox-i.dtb:/imx6dl-cubox-i.dtb \
     zImage-imx6q-cubox-i.dtb:/imx6q-cubox-i.dtb \
     zImage-imx6dl-hummingboard.dtb:/imx6dl-hummingboard.dtb \
     zImage-imx6q-hummingboard.dtb:/imx6q-hummingboard.dtb \
+    zImage-imx6dl-hummingboard2.dtb:/imx6dl-hummingboard2.dtb \
+    zImage-imx6q-hummingboard2.dtb:/imx6q-hummingboard2.dtb \
+    zImage-imx6dl-cubox-i-som-v15.dtb:/imx6dl-cubox-i-som-v15.dtb \
+    zImage-imx6q-cubox-i-som-v15.dtb:/imx6q-cubox-i-som-v15.dtb \
+    zImage-imx6dl-hummingboard-som-v15.dtb:/imx6dl-hummingboard-som-v15.dtb \
+    zImage-imx6q-hummingboard-som-v15.dtb:/imx6q-hummingboard-som-v15.dtb \
+    zImage-imx6dl-hummingboard2-som-v15.dtb:/imx6dl-hummingboard2-som-v15.dtb \
+    zImage-imx6q-hummingboard2-som-v15.dtb:/imx6q-hummingboard2-som-v15.dtb \
     "
 
-IMAGE_CMD_resinos-img_append_cubox-i () {
-    # cubox-i needs uboot written at a specific location along with SPL
-    dd if=${DEPLOY_DIR_IMAGE}/${SPL_BINARY} of=${RESIN_RAW_IMG} conv=notrunc seek=2 bs=512
+IMAGE_CMD_resinos-img_append_solidrun-imx6 () {
+    # solidrun-imx6 needs uboot written at a specific location along with SPL
+    dd if=${DEPLOY_DIR_IMAGE}/${SPL_BINARY} of=${RESIN_RAW_IMG} conv=notrunc seek=1 bs=1K
     dd if=${DEPLOY_DIR_IMAGE}/u-boot-${MACHINE}.${UBOOT_SUFFIX} of=${RESIN_RAW_IMG} conv=notrunc seek=69 bs=1K
 }

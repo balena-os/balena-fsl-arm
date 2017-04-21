@@ -4,7 +4,7 @@ deviceTypesCommon = require '@resin.io/device-types/common'
 module.exports =
 	version: 1
 	slug: 'hummingboard'
-	aliases: [ 'cubox-i' ]
+	aliases: [ 'solidrun-imx6', 'cubox-i', 'hummingboard', 'hummingboard2' ]
 	name: 'Hummingboard'
 	arch: 'armv7hf'
 	state: 'released'
@@ -19,11 +19,11 @@ module.exports =
 	options: [ networkOptions.group ]
 
 	yocto:
-		machine: 'cubox-i'
+		machine: 'solidrun-imx6'
 		image: 'resin-image'
-		fstype: 'resinos-img'
-		version: 'yocto-jethro'
-		deployArtifact: 'resin-image-cubox-i.resinos-img'
+		fstype: 'resin-img'
+		version: 'yocto-morty'
+		deployArtifact: 'resin-image-solidrun-imx6.resinos-img'
 		compressed: true
 
 	configuration:
