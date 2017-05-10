@@ -4,12 +4,6 @@
 [submodule "layers/meta-openembedded"]
 	path = layers/meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
-[submodule "layers/meta-fsl-arm"]
-	path = layers/meta-fsl-arm
-	url = https://github.com/Freescale/meta-fsl-arm.git
-[submodule "layers/meta-fsl-arm-extra"]
-	path = layers/meta-fsl-arm-extra
-	url = https://github.com/Freescale/meta-fsl-arm-extra.git
 [submodule "layers/meta-resin"]
 	path = layers/meta-resin
 	url = https://github.com/resin-os/meta-resin.git
@@ -19,3 +13,9 @@
 [submodule "layers/oe-meta-go"]
 	path = layers/oe-meta-go
 	url = https://github.com/mem/oe-meta-go.git
+[submodule "layers/meta-freescale"]
+	path = layers/meta-freescale
+	url = https://github.com/Freescale/meta-freescale.git
+[submodule "layers/meta-freescale-3rdparty"]
+	path = layers/meta-freescale-3rdparty
+	url = https://github.com/Freescale/meta-freescale-3rdparty.git

@@ -12,8 +12,8 @@ BBLAYERS ?= " \
     ${TOPDIR}/../layers/meta-openembedded/meta-filesystems \
     ${TOPDIR}/../layers/meta-openembedded/meta-networking \
     ${TOPDIR}/../layers/meta-openembedded/meta-python \
-    ${TOPDIR}/../layers/meta-fsl-arm \
-    ${TOPDIR}/../layers/meta-fsl-arm-extra \
+    ${TOPDIR}/../layers/meta-freescale \
+    ${TOPDIR}/../layers/meta-freescale-3rdparty \
     ${TOPDIR}/../layers/meta-resin/meta-resin-common \
     ${TOPDIR}/../layers/meta-resin/meta-resin-jethro \
     ${TOPDIR}/../layers/meta-resin-fsl-arm \
