@@ -15,7 +15,7 @@ BBLAYERS ?= " \
     ${TOPDIR}/../layers/meta-freescale \
     ${TOPDIR}/../layers/meta-freescale-3rdparty \
     ${TOPDIR}/../layers/meta-resin/meta-resin-common \
-    ${TOPDIR}/../layers/meta-resin/meta-resin-jethro \
+    ${TOPDIR}/../layers/meta-resin/meta-resin-morty \
     ${TOPDIR}/../layers/meta-resin-fsl-arm \
     ${TOPDIR}/../layers/oe-meta-go \
     "
@@ -24,5 +24,5 @@ BBLAYERS_NON_REMOVABLE ?= " \
     ${TOPDIR}/../layers/poky/meta \
     ${TOPDIR}/../layers/poky/meta-yocto \
     ${TOPDIR}/../layers/meta-resin/meta-resin-common \
-    ${TOPDIR}/../layers/meta-resin/meta-resin-jethro \
+    ${TOPDIR}/../layers/meta-resin/meta-resin-morty \
     "
