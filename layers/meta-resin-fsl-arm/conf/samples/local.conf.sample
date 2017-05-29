@@ -1,6 +1,6 @@
 # Supported machines
 #MACHINE ?= "nitrogen6x"
-#MACHINE ?= "cubox-i"
+#MACHINE ?= "solidrun-imx6"
 
 # More info meta-resin/README.md
 #RESIN_CONNECTABLE ?= "1"
