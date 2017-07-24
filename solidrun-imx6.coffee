@@ -11,9 +11,9 @@ module.exports =
 
 	instructions: commonImg.instructions
 	gettingStartedLink:
-		windows: 'http://docs.resin.io/#/pages/installing/gettingStarted-Hummingboard.md#windows'
-		osx: 'http://docs.resin.io/#/pages/installing/gettingStarted-Hummingboard.md#on-mac-and-linux'
-		linux: 'http://docs.resin.io/#/pages/installing/gettingStarted-Hummingboard.md#on-mac-and-linux'
+		windows: 'http://docs.resin.io/hummingboard/nodejs/getting-started/#adding-your-first-device'
+		osx: 'http://docs.resin.io/hummingboard/nodejs/getting-started/#adding-your-first-device'
+		linux: 'http://docs.resin.io/hummingboard/nodejs/getting-started/#adding-your-first-device'
 	supportsBlink: false
 
 	options: [ networkOptions.group ]
