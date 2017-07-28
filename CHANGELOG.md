@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Correct Yocto release version in nitrogen6x.coffee [Florin]
+
 # v2.0.5+rev1 - 2017-06-05
 
 * Update meta-resin to v2.0.5 [Florin]
