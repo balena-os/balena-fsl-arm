@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update the resin-yocto-scripts submodule to HEAD of master [Florin]
 * Correct Yocto release version in nitrogen6x.coffee [Florin]
 
 # v2.0.5+rev1 - 2017-06-05
