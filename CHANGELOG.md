@@ -1,6 +1,9 @@
 Change log
 -----------
 
+# v2.2.0+rev1 - 2017-07-30
+
+* Update the meta-resin submodule to v2.2.0 [Florin]
 * Update the resin-yocto-scripts submodule to HEAD of master [Florin]
 * Correct Yocto release version in nitrogen6x.coffee [Florin]
 
