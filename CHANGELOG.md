@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Update getting started links for Nitrogen 6X [Zach]
+
 # v2.2.0+rev1 - 2017-07-30
 
 * Update the meta-resin submodule to v2.2.0 [Florin]
