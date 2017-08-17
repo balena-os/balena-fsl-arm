@@ -1,6 +1,9 @@
 Change log
 -----------
 
+# v2.3.0+rev1 - 2017-08-17
+
+* Update the meta-resin submodule to v2.3.0 [Florin]
 * Update getting started links for solidrun imx6 [Zach]
 * Update getting started links for Nitrogen 6X [Zach]
 
