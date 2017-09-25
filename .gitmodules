@@ -23,3 +23,6 @@
 	path = layers/meta-solidrun-arm-imx6
 	url = https://github.com/SolidRun/meta-solidrun-arm-imx6.git
 	branch = resinos-morty
+[submodule "layers/meta-rust"]
+	path = layers/meta-rust
+	url = https://github.com/meta-rust/meta-rust.git
