@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update poky to latest morty branch [Will]
 * Include meta-rust layer [Will]
 * Add meta-rust layer [Will]
 
