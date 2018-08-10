@@ -30,7 +30,6 @@ IMAGE_FSTYPES_append_solidrun-imx6 = " resinos-img"
 RESIN_IMAGE_BOOTLOADER_solidrun-imx6 = "u-boot"
 RESIN_BOOT_PARTITION_FILES_solidrun-imx6 = " \
     zImage-initramfs-${MACHINE}.bin:/zImage \
-    uEnv-${MACHINE}.txt:/uEnv.txt \
     zImage-imx6dl-cubox-i.dtb:/imx6dl-cubox-i.dtb \
     zImage-imx6q-cubox-i.dtb:/imx6q-cubox-i.dtb \
     zImage-imx6dl-hummingboard.dtb:/imx6dl-hummingboard.dtb \
@@ -43,6 +42,8 @@ RESIN_BOOT_PARTITION_FILES_solidrun-imx6 = " \
     zImage-imx6q-hummingboard-som-v15.dtb:/imx6q-hummingboard-som-v15.dtb \
     zImage-imx6dl-hummingboard2-som-v15.dtb:/imx6dl-hummingboard2-som-v15.dtb \
     zImage-imx6q-hummingboard2-som-v15.dtb:/imx6q-hummingboard2-som-v15.dtb \
+    zImage-imx6q-hummingboard2-emmc-som-v15.dtb:/imx6q-hummingboard2-emmc-som-v15.dtb \
+    zImage-imx6dl-hummingboard2-emmc-som-v15.dtb:/imx6dl-hummingboard2-emmc-som-v15.dtb
     "
 
 IMAGE_CMD_resinos-img_append_solidrun-imx6 () {
