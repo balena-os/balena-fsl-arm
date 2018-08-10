@@ -22,7 +22,7 @@ module.exports =
 		machine: 'solidrun-imx6'
 		image: 'resin-image'
 		fstype: 'resin-img'
-		version: 'yocto-morty'
+		version: 'yocto-rocko'
 		deployArtifact: 'resin-image-solidrun-imx6.resinos-img'
 		compressed: true
 
