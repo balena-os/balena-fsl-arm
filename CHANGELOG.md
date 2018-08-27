@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.3.0+rev2
+## (2018-08-27)
+
+* Add versionist support [Giovanni Garufi]
+
 * Update meta-openembedded to latest morty branch [Will]
 * Update poky to latest morty branch [Will]
 * Include meta-rust layer [Will]
