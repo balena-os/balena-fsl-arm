@@ -12,7 +12,6 @@ RESIN_BOOT_PARTITION_FILES_nitrogen6x = " \
     zImage-imx6q-nitrogen6_max.dtb:/imx6q-nitrogen6_max.dtb \
     zImage-imx6q-nitrogen6x.dtb:/imx6q-nitrogen6x.dtb \
     zImage-imx6q-sabrelite.dtb:/imx6q-sabrelite.dtb \
-    6x_bootscript-${MACHINE}:/6x_bootscript \
     "
 
 IMAGE_CMD_resinos-img_append_nitrogen6x () {
