@@ -1,6 +1,13 @@
 Change log
 -----------
 
+# v2.15.1+rev1
+## (2018-09-06)
+
+* Add versionist support [Giovanni Garufi]
+* Update to rocko all submodules and poky to rocko-18.0.3 [Sebastian Panceac]
+* Add versionist support [Giovanni Garufi]
+
 * Update meta-openembedded to latest morty branch [Will]
 * Update poky to latest morty branch [Will]
 * Include meta-rust layer [Will]
