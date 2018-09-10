@@ -20,7 +20,7 @@ module.exports =
 		machine: 'nitrogen6x'
 		image: 'resin-image'
 		fstype: 'resinos-img'
-		version: 'yocto-morty'
+		version: 'yocto-rocko'
 		deployArtifact: 'resin-image-nitrogen6x.resinos-img'
 		compressed: true
 
