@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.15.1+rev2
+## (2018-09-10)
+
+* Nitrogen6x.coffee: Update yocto version to rocko [Sebastian Panceac]
+
 # v2.15.1+rev1
 ## (2018-09-06)
 
