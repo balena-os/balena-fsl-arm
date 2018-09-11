@@ -43,6 +43,8 @@ RESIN_BOOT_PARTITION_FILES_solidrun-imx6 = " \
     zImage-imx6q-hummingboard2-som-v15.dtb:/imx6q-hummingboard2-som-v15.dtb \
     zImage-imx6q-hummingboard2-emmc-som-v15.dtb:/imx6q-hummingboard2-emmc-som-v15.dtb \
     zImage-imx6dl-hummingboard2-emmc-som-v15.dtb:/imx6dl-hummingboard2-emmc-som-v15.dtb \
+    ${SPL_BINARY}:/${SPL_BINARY} \
+    u-boot-${MACHINE}.${UBOOT_SUFFIX}:/u-boot-${MACHINE}.${UBOOT_SUFFIX} \
     "
 
 IMAGE_CMD_resinos-img_append_solidrun-imx6 () {
