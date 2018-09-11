@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.15.1+rev3
+## (2018-09-11)
+
+* Add hostOS update support for solidrun-imx6 machine [Sebastian Panceac]
+
 # v2.15.1+rev2
 ## (2018-09-10)
 
