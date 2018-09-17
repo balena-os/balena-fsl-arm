@@ -1,0 +1,201 @@
+- version: v2.15.1+rev3
+  date: 2018-09-10T22:00:00.000Z
+  commits:
+    - subject: 'Add hostOS update support for solidrun-imx6 machine [Sebastian Panceac]'
+- version: v2.15.1+rev2
+  date: 2018-09-09T22:00:00.000Z
+  commits:
+    - subject: 'Nitrogen6x.coffee: Update yocto version to rocko [Sebastian Panceac]'
+- version: v2.15.1+rev1
+  date: 2018-09-05T22:00:00.000Z
+  commits:
+    - subject: 'Update resin-yocto-scripts to HEAD [Sebastian]'
+    - subject: 'solidrun-imx6.coffee: Set image type to flasher [Sebastian]'
+    - subject: 'Update to Rocko [Sebastian]'
+    - subject: 'Update meta-openembedded to latest morty branch [Will]'
+    - subject: 'Update poky to latest morty branch [Will]'
+    - subject: 'Include meta-rust layer [Will]'
+    - subject: 'Add meta-rust layer [Will]'
+- version: v2.3.0+rev1
+  date: 2017-08-16T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to v2.3.0 [Florin]'
+    - subject: 'Update getting started links for solidrun imx6 [Zach]'
+    - subject: 'Update getting started links for Nitrogen 6X [Zach]'
+- version: v2.2.0+rev1
+  date: 2017-07-29T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to v2.2.0 [Florin]'
+    - subject: 'Update the resin-yocto-scripts submodule to HEAD of master [Florin]'
+    - subject: 'Correct Yocto release version in nitrogen6x.coffee [Florin]'
+- version: v2.0.5+rev1
+  date: 2017-06-04T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0.5 [Florin]'
+    - subject: 'Update the resin-yocto-scripts submodule to HEAD of master [Florin]'
+    - subject: 'Upgrade to Morty [Jon]'
+    - subject: 'Update the resin-yocto-scripts submodule [Florin]'
+    - subject: 'Update resin-yocto-scripts to allow external meta-resin builds [Will]'
+    - subject: 'Update resin-yocto-scripts [Will]'
+- version: v2.0.0-beta12.rev1
+  date: 2017-02-26T23:00:00.000Z
+  commits:
+    - subject: 'Bump resin-yocto-scripts to current HEAD [Andrei]'
+    - subject: 'meta-resin: Bump to 2.0.0-beta12 [Andrei]'
+- version: v2.0.0-beta11.rev1
+  date: 2017-02-14T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0.0-beta.11 [Andrei]'
+- version: v2.0.0-beta10.rev1
+  date: 2017-02-13T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0.0-beta.10 [Andrei]'
+- version: v2.0.0-beta.9
+  date: 2017-02-07T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.9 [Andrei]'
+- version: v2.0.0-beta.8
+  date: 2017-01-26T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.8 [Andrei]'
+    - subject: 'Update resin-yocto-scripts to HEAD of the master branch [Florin]'
+- version: v2.0.0-beta.7
+  date: 2016-12-04T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.7 [Florin]'
+- version: v2.0.0-beta.6
+  date: 2016-12-04T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.6 [Andrei]'
+- version: v2.0.0-beta.5
+  date: 2016-11-30T00:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.5 [Andrei]'
+- version: v2.0.0-beta.3
+  date: 2016-11-06T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.3 [Andrei]'
+    - subject: 'Cleanup docker-resin-supervisor-disk of unneeded variables [Andrei]'
+    - subject: Update resin-yocto-scripts to fix logging in container builds
+- version: v2.0.0-beta.1
+  date: 2016-10-11T00:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.1 [Andrei]'
+    - subject: 'Add meta-filesystem as we need aufs-utils [Andrei]'
+    - subject: 'Add build support for resinos [Andrei]'
+    - subject: >-
+        Update resin-yocto-script to include changes in our image types
+        [Theodor]
+    - subject: 'Replace the concept of a debug image with a development image [Theodor]'
+    - subject: 'Update meta-resin to include avahi [Florin]'
+    - subject: >-
+        Update resin-yocto-scripts to include kernel headers handling as gzip
+        [Florin]
+- version: v1.16.0
+  date: 2016-09-26T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.16 [Florin]'
+- version: v1.15.0
+  date: 2016-09-23T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.15 [Florin]'
+- version: v1.14.0
+  date: 2016-09-22T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.14 [Florin]'
+- version: v1.13.0
+  date: 2016-09-22T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.13 [Florin]'
+- version: v1.12.0
+  date: 2016-09-20T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.12 [Florin]'
+    - subject: >-
+        Update resin-yocto-scripts to include resinhup upload to dockerhub
+        [Florin]
+    - subject: 'Update meta-resin [Florin]'
+    - subject: >-
+        Change .coffee to announce partition 1 now holds config.json and also
+        introduce versioning (v1) [Florin]
+- version: v1.11.0
+  date: 2016-08-30T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.11 [Florin]'
+- version: v1.10.0
+  date: 2016-08-23T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.10 [Florin]'
+- version: v1.9.0
+  date: 2016-08-23T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.9 [Florin]'
+    - subject: >-
+        Update resin-yocto-scripts for including kernel modules headers deploy
+        [Florin]
+    - subject: >-
+        Update yocto-resin-scripts for host nodejs detection improvements
+        [Florin]
+- version: v1.8.0
+  date: 2016-08-01T22:00:00.000Z
+  commits:
+    - subject: 'Bump meta-resin to v1.8 [Andrei]'
+    - subject: 'Bump resin-device-types to include partial manifest support [Andrei]'
+    - subject: No more debug images in staging
+- version: v1.7.0
+  date: 2016-07-13T22:00:00.000Z
+  commits:
+    - subject: Update meta-resin to v1.7
+- version: v1.6.0
+  date: 2016-07-05T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.6 [Florin]'
+- version: v1.5.0
+  date: 2016-07-03T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.5 [Florin]'
+- version: v1.5.0rc4
+  date: 2016-06-28T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to include supervisor update to v1.11.6 [Florin]'
+- version: v1.5.0rc3
+  date: 2016-06-28T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to include openvpn-resin.service refactoring [Florin]'
+- version: v1.5.0rc2
+  date: 2016-06-27T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to include docker key.json fix [Florin]'
+    - subject: 'Update meta-resin to include flasher fixes [Florin]'
+- version: v1.4.0
+  date: 2016-06-26T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.4 [Florin]'
+    - subject: 'Update meta-resin to allow let error out [Florin]'
+    - subject: 'Update meta-resin to allow patching of kernel-modules-headers [Florin]'
+    - subject: 'Bump meta-resin to fix various issues [Andrei]'
+    - subject: 'Fix a small syntax error in meta-resin [Andrei]'
+    - subject: 'Fix automation fix for debug image [Andrei]'
+    - subject: 'Replace RESIN_STAGING_BUILD by DEBUG_IMAGE [Andrei]'
+- version: v1.3.0
+  date: 2016-06-23T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.3 [Florin]'
+    - subject: 'Update meta-resin to include kernel modules compress support [Andrei]'
+    - subject: 'Replace SUPERVISOR_TAG by TARGET_TAG [Andrei]'
+    - subject: 'Custom docker images in connectable builds [Andrei]'
+    - subject: 'Bump meta-resin to include connectable builds [Andrei]'
+    - subject: 'Add support for optional supervisor image [Andrei]'
+    - subject: 'Update meta-resin to v1.2 [Andrei]'
+    - subject: 'Bump meta-resin to HEAD [Andrei]'
+    - subject: >-
+        Bump yocto-resin-scripts to bring in improvements for in-docker builds
+        [Andrei]
+    - subject: 'Configure builds with RM_OLD_IMAGE [Theodor]'
+    - subject: 'Bump meta-resin to include switch from rce to docker [Andrei]'
+    - subject: 'Include BCM4330/BCM4329 support for cubox-i [Andrei]'
+- version: v1.1.1
+  date: 2016-03-15T23:00:00.000Z
+  commits:
+    - subject: 'Promote cubox-i.coffee and nitrogen6x.coffee to released [Florin]'
+    - subject: 'Transition from fido -> jethro [Theodor]'
