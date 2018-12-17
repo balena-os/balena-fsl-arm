@@ -1,3 +1,30 @@
+- commits:
+    - subject: Switch from resin-yocto-scripts to balena-yocto-scripts
+      hash: 13e835c8daac12d942d6f6bd3ec980c55b5c1a40
+      body: ''
+      footer:
+        Changelog-entry: Switch from resin-yocto-scripts to balena-yocto-scripts
+        changelog-entry: Switch from resin-yocto-scripts to balena-yocto-scripts
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Add a parsable representation of the changelog
+      hash: 253892283ca702a491a093baa86a633cdc156ff8
+      body: |
+        This file allows other components to uniquely parse the information that
+        is contained in the changelog. It will be automatically managed by
+        versionist by appending the new commits on top. This is needed to
+        provide nested-changelogs.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Giovanni Garufi <giovanni@resin.io>
+        signed-off-by: Giovanni Garufi <giovanni@resin.io>
+        Changelog-entry: Add a parsable representation of the changelog
+        changelog-entry: Add a parsable representation of the changelog
+      author: Giovanni Garufi
+  version: 2.15.1+rev4
+  date: 2018-12-14T14:51:42.513Z
 - version: v2.15.1+rev3
   date: 2018-09-10T22:00:00.000Z
   commits:

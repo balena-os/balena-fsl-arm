@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.15.1+rev4
+## (2018-12-14)
+
+* Switch from resin-yocto-scripts to balena-yocto-scripts [Florin Sarbu]
+* Add a parsable representation of the changelog [Giovanni Garufi]
+
 # v2.15.1+rev3
 ## (2018-09-11)
 
