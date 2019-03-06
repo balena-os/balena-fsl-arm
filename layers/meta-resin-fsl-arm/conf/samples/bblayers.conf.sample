@@ -16,7 +16,7 @@ BBLAYERS ?= " \
     ${TOPDIR}/../layers/meta-solidrun-arm-imx6 \
     ${TOPDIR}/../layers/meta-freescale-3rdparty \
     ${TOPDIR}/../layers/meta-resin/meta-resin-common \
-    ${TOPDIR}/../layers/meta-resin/meta-resin-rocko \
+    ${TOPDIR}/../layers/meta-resin/meta-resin-sumo \
     ${TOPDIR}/../layers/meta-resin-fsl-arm \
     ${TOPDIR}/../layers/meta-rust \
     ${TOPDIR}/../layers/oe-meta-go \

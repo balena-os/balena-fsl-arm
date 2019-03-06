@@ -1,10 +1,13 @@
 # Supported machines
 #MACHINE ?= "nitrogen6x"
 #MACHINE ?= "solidrun-imx6"
+#MACHINE ?= "nitrogen6xq2g"
 
 # More info meta-resin/README.md
 #TARGET_REPOSITORY ?= ""
 #TARGET_TAG ?= ""
+
+BALENA_STORAGE_nitrogen6xq2g = "overlay2"
 
 # Set this to 1 if development image is desired
 #DEVELOPMENT_IMAGE = "1"
