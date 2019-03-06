@@ -1,7 +1,21 @@
 #
+# Nitrogen6x Quad 2GB RAM
+#
+IMAGE_FSTYPES_append_nitrogen6xq2g = " resinos-img"
+
+# Customize resinos-img
+RESIN_IMAGE_BOOTLOADER_nitrogen6xq2g = "u-boot"
+RESIN_BOOT_PARTITION_FILES_nitrogen6xq2g = " \
+    ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/${KERNEL_IMAGETYPE} \
+    zImage-imx6dl-nitrogen6x.dtb:/imx6dl-nitrogen6x.dtb \
+    zImage-imx6q-nitrogen6_max.dtb:/imx6q-nitrogen6_max.dtb \
+    zImage-imx6q-nitrogen6x.dtb:/imx6q-nitrogen6x.dtb \
+    zImage-imx6q-sabrelite.dtb:/imx6q-sabrelite.dtb \
+"
+
+#
 # Nitrogen6x
 #
-
 IMAGE_FSTYPES_append_nitrogen6x = " resinos-img"
 
 # Customize resinos-img
