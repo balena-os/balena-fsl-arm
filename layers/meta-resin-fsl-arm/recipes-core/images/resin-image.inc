@@ -11,7 +11,16 @@ RESIN_BOOT_PARTITION_FILES_nitrogen6xq2g = " \
     zImage-imx6q-nitrogen6_max.dtb:/imx6q-nitrogen6_max.dtb \
     zImage-imx6q-nitrogen6x.dtb:/imx6q-nitrogen6x.dtb \
     zImage-imx6q-sabrelite.dtb:/imx6q-sabrelite.dtb \
+    u-boot-${MACHINE}.imx:/u-boot.imx \
+    u-boot-flasher.sh:/u-boot-flasher.sh \
 "
+
+IMAGE_INSTALL_append_nitrogen6xq2g = " \
+                                       mtd-utils \
+                                       u-boot-flasher \
+"
+
+DEPENDS_append_nitrogen6xq2g = " u-boot-flasher"
 
 #
 # Nitrogen6x
@@ -21,7 +30,7 @@ IMAGE_FSTYPES_append_nitrogen6x = " resinos-img"
 # Customize resinos-img
 RESIN_IMAGE_BOOTLOADER_nitrogen6x = "u-boot"
 RESIN_BOOT_PARTITION_FILES_nitrogen6x = " \
-    ${KERNEL_IMAGETYPE}-${MACHINE}.bin:/${KERNEL_IMAGETYPE} \
+    ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/${KERNEL_IMAGETYPE} \
     zImage-imx6dl-nitrogen6x.dtb:/imx6dl-nitrogen6x.dtb \
     zImage-imx6q-nitrogen6_max.dtb:/imx6q-nitrogen6_max.dtb \
     zImage-imx6q-nitrogen6x.dtb:/imx6q-nitrogen6x.dtb \
