@@ -1,0 +1,45 @@
+From 60d8b234bee30e62dcb057bfb8c1157b8b527b10 Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Thu, 7 Mar 2019 10:38:06 +0100
+Subject: [PATCH] u-boot: Integrate plain Nitrogen6x with Balena env
+
+Upstream-Status: Inappropriate [configuration]
+
+Signed-off-by: Alexandru Costache <alexandru@balena.io>
+---
+ configs/nitrogen6q_defconfig | 3 +++
+ include/configs/nitrogen6x.h | 7 +++++++
+ 2 files changed, 10 insertions(+)
+
+diff --git a/configs/nitrogen6q_defconfig b/configs/nitrogen6q_defconfig
+index a852440..00c4617 100644
+--- a/configs/nitrogen6q_defconfig
++++ b/configs/nitrogen6q_defconfig
+@@ -71,3 +71,6 @@ CONFIG_USB_ETH_CDC=y
+ CONFIG_VIDEO=y
+ # CONFIG_VIDEO_SW_CURSOR is not set
+ CONFIG_OF_LIBFDT=y
++CONFIG_CMD_SETEXPR=y
++CONFIG_PARTITION_UUIDS=y
++CONFIG_CMD_IMPORTENV=y
+diff --git a/include/configs/nitrogen6x.h b/include/configs/nitrogen6x.h
+index 62708b8..5081394 100644
+--- a/include/configs/nitrogen6x.h
++++ b/include/configs/nitrogen6x.h
+@@ -47,6 +47,13 @@
+ #else
+ #include "boundary.h"
+ #define CONFIG_EXTRA_ENV_SETTINGS BD_BOUNDARY_ENV_SETTINGS \
++	"fdtfile=imx6q-nitrogen6x.dtb\0" \
++	"image=zImage\0" \
++	"loadfdt=load mmc ${resin_dev_index} ${fdt_addr} ${fdtfile};\0" \
++	"loadimage=load mmc ${resin_dev_index} ${loadaddr} ${image};\0" \
++	"setbootargs=setenv bootargs console=${console},${baudrate} ${resin_kernel_root} ro rootwait;\0" \
++	"mmcboot=run loadfdt; run loadimage; bootz ${loadaddr} - ${fdt_addr};\0" \
++	"bootcmd=mmc dev; setenv resin_kernel_load_addr ${loadaddr}; run resin_set_kernel_root; run setbootargs; run mmcboot;\0 " \
+ 
+ #endif
+ 
+-- 
+2.7.4
+
