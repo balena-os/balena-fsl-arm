@@ -1,0 +1,9 @@
+[Unit]
+Description=Updates Balena u-boot when necessary
+
+[Service]
+Type=oneshot
+ExecStart=/mnt/boot/u-boot-flasher.sh
+
+[Install]
+WantedBy=multi-user.target
