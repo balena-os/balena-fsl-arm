@@ -1,4 +1,2664 @@
 - commits:
+    - subject: 'nitrogen6xq2g.coffee: Added coffee file for Nitrogen6X Quad 2GB RAM'
+      hash: 64679331ce6ac78dc6ae5529acf7711c4b625503
+      body: ''
+      footer:
+        Changelog-entry: 'nitrogen6xq2g.coffee: Added coffee file for Nitrogen6X Quad 2GB RAM'
+        changelog-entry: 'nitrogen6xq2g.coffee: Added coffee file for Nitrogen6X Quad 2GB RAM'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+    - subject: Update the meta-resin submodule from v2.15.1 to v2.31.0
+      hash: 5963ae6360899bc7f0ddd609458b421140a0f542
+      body: |
+        Update meta-resin from 2.15.1 to 2.31.0
+      footer:
+        Changelog-entry: Update the meta-resin submodule from v2.15.1 to v2.31.0
+        changelog-entry: Update the meta-resin submodule from v2.15.1 to v2.31.0
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested:
+        - commits:
+            - subject: 'README:md: Document dnsServers behaviour'
+              hash: ad441b8367d65fe780beef35b20f8d4898bdd339
+              body: >
+                Taken from fa3de6987e3bc82ab6d85038c637f1871e5269cb commit
+                message
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexis Svinartchouk <alexis@balena.io>
+                signed-off-by: Alexis Svinartchouk <alexis@balena.io>
+              author: Alexis Svinartchouk
+            - subject: Update resin-supervisor to v9.9.0
+              hash: 133dde58bde7c4d54ad157374bb3e7062a599e31
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update resin-supervisor to v9.9.0
+                changelog-entry: Update resin-supervisor to v9.9.0
+                Signed-off-by: Cameron Diver <cameron@balena.io>
+                signed-off-by: Cameron Diver <cameron@balena.io>
+              author: Cameron Diver
+            - subject: Cleanup old versions of iwlwifi firmware files in Yocto sumo
+              hash: 5db4441e50b2d47cd7658845c12508b50808d5ee
+              body: >
+                This is done so we can save considerable amount of space on the
+                root
+
+                partition.
+
+
+                See #810
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Cleanup old versions of iwlwifi firmware files in Yocto sumo
+                changelog-entry: Cleanup old versions of iwlwifi firmware files in Yocto sumo
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Remove polkit dependency in balenaOS
+              hash: 4fddf1a54ac13ed4acd3f65096afccf6a5f7a5ef
+              body: |
+                Fixes #1404
+                See #810
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Remove polkit dependency in balenaOS
+                changelog-entry: Remove polkit dependency in balenaOS
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Remove support for XFS file system
+              hash: bbf5675973da6adf8fa8f8b671606fbffaef834e
+              body: |
+                This is done so we can save space on the root file system.
+
+                See #810
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Remove support for XFS file system
+                changelog-entry: Remove support for XFS file system
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: 'resin-init: update resin.io reference to balenaOS'
+              hash: 593fcb558b1afe3892560fdd7e0c315c9459466f
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Matthew McGinn <matthew@balena.io>
+                signed-off-by: Matthew McGinn <matthew@balena.io>
+              author: Matthew McGinn
+          version: meta-resin-2.31.0
+          date: 2019-03-08T14:31:27.986Z
+        - commits:
+            - subject: 'resin-supervisor: Recreate on start if config has changed'
+              hash: 3ce04f93b1894f86be5d838bcc24335aaa161233
+              body: >
+                When starting the supervisor container, check that the values
+                being
+
+                passed into the environment match the ones held in the config.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Rich Bayliss <rich@balena.io>
+                signed-off-by: Rich Bayliss <rich@balena.io>
+              author: Rich Bayliss
+            - subject: >-
+                Generate the temporary kernel-devsrc compressed archive in
+                WORKDIR instead of B
+              hash: ed5fe09c9dfb4f5dd07bae691b277b9d2f38f718
+              body: >
+                It is best to not create anything in ${B} even if just temporary
+                because
+
+                it alters the directory in ways which can break other parts of
+                the build
+
+                system. For example, if there is a leftover kernel_source.tar.gz
+                in B,
+
+                then the current kernel-devsrc will create a hardlink of this
+                file in
+
+                the kernel source tree and then the command:
+
+                tar -czf ${B}/kernel_source.tar.gz -C "$kerneldir/../" .
+
+
+                will fail like:
+
+                tar: ./kernel/kernel_source.tar.gz: file changed as we read it
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: >-
+                  Generate the temporary kernel-devsrc compressed archive in
+                  WORKDIR instead of B
+                changelog-entry: >-
+                  Generate the temporary kernel-devsrc compressed archive in
+                  WORKDIR instead of B
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+            - subject: 'balena-engine: Update to include fix for signal SIGRTMIN+3'
+              hash: 0e19efb71526097cad4037336f7a410782189fa0
+              body: |
+                See https://github.com/opencontainers/runc/issues/1766.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Reduce sleeps while trying to mount partition to speed up boot
+              hash: 73b69ae792330741603e0a4fc7878b2ec9ed0462
+              body: >
+                There is no need to wait 1 second if a label hasn't appeared.
+                Other
+
+                services depend on these partitions to be mounted. Reduce sleep
+                to 0.1
+
+                second.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Reduce sleeps while trying to mount partition to speed up boot
+                changelog-entry: Reduce sleeps while trying to mount partition to speed up boot
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: 'resin-expand: Reduce sleep duration to speed up boot'
+              hash: 6c69d676d36ed6a94ca094037515dd5ee4a5697a
+              body: >
+                There is no need to sleep for 1 second if a label isn't visible.
+
+                Other services depend on the partitons mounted. Reduce sleep to
+                0.1
+
+                second.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: 'initrdscripts: Reduce sleep to speed up boot'
+              hash: 4a6cb8ae75e275de389dc3ef9dfbd52c3bdd72f1
+              body: >
+                There is no need to sleep for 1 second if the label hasn't been
+                found.
+
+                There is nothing else running on the device in the initramfs.
+
+                Check every 0.05 seconds.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: >-
+                Make balena-host daemon socket activated to reduce baseline
+                cpu/memory usage
+              hash: 0d0cb22118e08d710640697561853a1227b64b92
+              body: >
+                Fixes #1405
+
+
+                We'd like the balena-host daemon to be socket activated so that
+                it does
+
+                not consume any cpu/memory resource until used.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: >-
+                  Make balena-host daemon socket activated to reduce baseline
+                  cpu/memory usage
+                changelog-entry: >-
+                  Make balena-host daemon socket activated to reduce baseline
+                  cpu/memory usage
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Update resin-supervisor to v9.8.6
+              hash: 3124067996edded74e52cf9b87ec5dc9ee95c730
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update resin-supervisor to v9.8.6
+                changelog-entry: Update resin-supervisor to v9.8.6
+                Signed-off-by: Cameron Diver <cameron@balena.io>
+                signed-off-by: Cameron Diver <cameron@balena.io>
+              author: Cameron Diver
+            - subject: >-
+                Add support for aufs 4.18.11+, 4.19, 4.20 variants and update
+                4.14, 4.14.56+, 4.15, 4.16, 4.17, 4.18
+              hash: 9c8b60cf92aa7a25f424532956439b518ec96201
+              body: |
+                We add support for 4.18.11+, 4.19, 4.19.17+, 4.20, 4.20.4+.
+                Also, update 4.14, 4.14.56+, 4.15, 4.16, 4.17, 4.18.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: >-
+                  Add support for aufs 4.18.11+, 4.19, 4.20 variants and update
+                  4.14, 4.14.56+, 4.15, 4.16, 4.17, 4.18
+                changelog-entry: >-
+                  Add support for aufs 4.18.11+, 4.19, 4.20 variants and update
+                  4.14, 4.14.56+, 4.15, 4.16, 4.17, 4.18
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+            - subject: 'balena-engine: Bump to include runc patch'
+              hash: f56f08136e9c855637ff28880fb593dba53d452b
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Improve kernel-module-headers for v4.18+ kernels
+              hash: 0931b97b76ef2d04697468f027b53247803b51d4
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Improve kernel-module-headers for v4.18+ kernels
+                changelog-entry: Improve kernel-module-headers for v4.18+ kernels
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Update balena-supervisor to v9.8.3
+              hash: 76a72c58095d0d1b45a552f62b75bb5ec18813c6
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update balena-supervisor to v9.8.3
+                changelog-entry: Update balena-supervisor to v9.8.3
+                Signed-off-by: Cameron Diver <cameron@balena.io>
+                signed-off-by: Cameron Diver <cameron@balena.io>
+              author: Cameron Diver
+            - subject: >-
+                Ask chrony to quickly take measurements from custom NTP servers
+                when they are added
+              hash: 8cb1664a2650b1a60849efaf009b205e8e796816
+              body: >
+                By default, chrony will slowly and gracefully take measurements
+                from
+
+                the new ntp server. The burst 4/10 command will make chrony take
+                4 good
+
+                measurements within 2 seconds each. It will try up to 10 times.
+
+                Fixes #1385
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: >-
+                  Ask chrony to quickly take measurements from custom NTP
+                  servers when they are added
+                changelog-entry: >-
+                  Ask chrony to quickly take measurements from custom NTP
+                  servers when they are added
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Disable in-tree rtl8192cu driver
+              hash: 95a5c13ee40cc958b142b00e19a4349d66a8b808
+              body: |
+                We will only have the out of tree module which allegedly
+                is more stable:
+                https://github.com/raspberrypi/linux/issues/1866
+
+                The configs for disabling it were added but apparently
+                they were never applied.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Disable in-tree rtl8192cu driver
+                changelog-entry: Disable in-tree rtl8192cu driver
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+            - subject: >-
+                Prevent rollbacks from running if the previous OS is before
+                v2.30.0
+              hash: fee00ba8b841d3e8634960c37c3e96c994c18567
+              body: >
+                v2.30.0 is a more mature version for rollbacks. Prevent
+                rollbacks
+
+                from running on OS
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: >-
+                  Prevent rollbacks from running if the previous OS is before
+                  v2.30.0
+                changelog-entry: >-
+                  Prevent rollbacks from running if the previous OS is before
+                  v2.30.0
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Change rollbacks to accept hex partition numbers for jetsons
+              hash: 11b540777b76163493564407c9bdd7be98215f02
+              body: >
+                The partition numbers are hex and not integers. This is obvious
+                when
+
+                using the jetson family of devices as their partition numbering
+                starts
+
+                at 0xc.
+
+
+                - Change integer comparisons to string comparisons.
+
+                - Convert current_part_idx to hex for a valid string comparison
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Change rollbacks to accept hex partition numbers for jetsons
+                changelog-entry: Change rollbacks to accept hex partition numbers for jetsons
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: >-
+                Convert partition numbers to hex in u-boot hook. Shouldn't
+                affect any device.
+              hash: 6c646e5c275f881c255e49d206a15d6fbbba3276
+              body: >
+                From u-boot docs:
+
+                "Almost all U-Boot commands expect numbers to be entered in
+                hexadecimal
+
+                input format"
+
+
+                We only hit this in the jetson family as the boot partition
+                there is
+
+                0xc. Add a simple conversion to hex. This should not affect any
+                devices
+
+                that use <9 partition numbers. And allow us to use the same hook
+
+                from meta-balena accross all devices. Currently the jetson
+                family has
+
+                its own custom hook with this one-liner.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: >-
+                  Convert partition numbers to hex in u-boot hook. Shouldn't
+                  affect any device.
+                changelog-entry: >-
+                  Convert partition numbers to hex in u-boot hook. Shouldn't
+                  affect any device.
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: >-
+                Reduce default reboot/poweroff timeouts from 30 minutes to 10
+                minutes
+              hash: 59c923777e6145288df5b6e77ca33a21323b68e3
+              body: >
+                The default timeout for poweroff/reboot targets is 30 minutes.
+                That is
+
+                too long. Reduce it to 10 minutes.
+
+
+                We might start hitting this when the supervisor starts rebooting
+                devices
+
+                more gracefully after
+                https://github.com/balena-io/balena-supervisor/issues/861
+
+                is resolved.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: >-
+                  Reduce default reboot/poweroff timeouts from 30 minutes to 10
+                  minutes
+                changelog-entry: >-
+                  Reduce default reboot/poweroff timeouts from 30 minutes to 10
+                  minutes
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Configure systemd tmpfiles to ignore supervisor tmp directories
+              hash: ebb0a930c7c8f8ec348858009a0ff3fd0c58b70b
+              body: >
+                There are tmp directories supervisor assumes nobody touches in
+                which
+
+                things like update lock files are stored. This patch configures
+                systemd
+
+                tmpfiles to ignore these tmp paths.
+
+
+                Fixes #1377
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: >-
+                  Configure systemd tmpfiles to ignore supervisor tmp
+                  directories
+                changelog-entry: >-
+                  Configure systemd tmpfiles to ignore supervisor tmp
+                  directories
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Fixed "Can't have overlapping partitions." error in flasher
+              hash: 299e2c7974c408a0a2ff762bc263f266c69d5a98
+              body: |
+                Fixed typo that caused flashing process to block
+                on some corrupted eMMCs due to parted command failure.
+
+                Flashing process hanged during boot with this log:
+                - Error: Can't have overlapping partitions.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Fixed "Can't have overlapping partitions." error in flasher
+                changelog-entry: Fixed "Can't have overlapping partitions." error in flasher
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+            - subject: Define default DNS servers behaviour with and without google DNS
+              hash: fa3de6987e3bc82ab6d85038c637f1871e5269cb
+              body: >
+                This implements a default logic for `dnsServers` attribute in
+
+                `config.json` as it follows:
+
+
+                * when dnsServers is not defined, or empty, the default value of
+                it will
+
+                be considered google DNS (8.8.8.8)
+
+                * when dnsServers is "null", the system will not alter
+                dnsServers to the
+
+                default server as stated above
+
+                * when dnsServers is defined and not "null" it will be
+                considered as
+
+                such without any additional servers servers
+
+
+                Fixes ##1348
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: >-
+                  Define default DNS servers behaviour with and without google
+                  DNS
+                changelog-entry: >-
+                  Define default DNS servers behaviour with and without google
+                  DNS
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Update balena-supervisor to v9.4.2
+              hash: 4d66971c840b6142c7e22c5538b5c34356b9f880
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update balena-supervisor to v9.4.2
+                changelog-entry: Update balena-supervisor to v9.4.2
+                Signed-off-by: Cameron Diver <cameron@balena.io>
+                signed-off-by: Cameron Diver <cameron@balena.io>
+              author: Cameron Diver
+            - subject: Fix for some warnings
+              hash: 1d92f8c3bcc21a7c0b21b12f65f1051616f04b78
+              body: >
+                From
+                http://cgit.openembedded.org/openembedded-core/commit/meta/recipes-kernel/linux/kernel-devsrc.bb?h=thud&id=fd74848c3c06901a77057ca03f7c01aff08ee34a
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Fix for some warnings
+                changelog-entry: Fix for some warnings
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Fix tini filename after balena-engine rename
+              hash: 47980f05d3fa7c8a46b297431e0398b2da03e22e
+              body: >
+                Since balena-engine rename, the daemon is looking for
+
+                `balena-engine-init` when running containers with `--init`. Fix
+                the tini
+
+                filename to comply with this.
+
+
+                Fixes #1368
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Fix tini filename after balena-engine rename
+                changelog-entry: Fix tini filename after balena-engine rename
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: >-
+                Fix nm dispatcher hook when there are no custom ntp servers in
+                config.json
+              hash: 0b75ee48cee005d78e08d8c68722cc2374567123
+              body: >
+                If there are no custom ntp servers, the added_server_file
+                doesn't exist
+
+                Add a check and avoid running the script if the file does not
+                exist
+
+
+                Fixes #1362
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: >-
+                  Fix nm dispatcher hook when there are no custom ntp servers in
+                  config.json
+                changelog-entry: >-
+                  Fix nm dispatcher hook when there are no custom ntp servers in
+                  config.json
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Improve persistent logging systemd service dependencies
+              hash: 0ce1d8576b7e33083784cb3123d2ad2c53091513
+              body: >
+                We need the state partition and boot partition ready before we
+                try
+
+                to run the persistent logging service.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Improve persistent logging systemd service dependencies
+                changelog-entry: Improve persistent logging systemd service dependencies
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Update balena-supervisor to v9.3.0
+              hash: dc5ed342a39c32d2efa00197e4ce7578e8de20f9
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update balena-supervisor to v9.3.0
+                changelog-entry: Update balena-supervisor to v9.3.0
+                Signed-off-by: Cameron Diver <cameron@balena.io>
+                signed-off-by: Cameron Diver <cameron@balena.io>
+              author: Cameron Diver
+            - subject: Use the new revision for balena source code
+              hash: a52207c03253fcc0cc219a4e1a100b46ea44e226
+              body: |
+                The 17.12-resin branch was modified and the old revision is not
+                there anymore.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Use the new revision for balena source code
+                changelog-entry: Use the new revision for balena source code
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+            - subject: >-
+                Add a workaround for a bug where the chronyc online command in
+                network manager hook would get stuck and eat cpu cycles
+              hash: 6fe830882bf8ee62dc6db09b5a8a6f099d64fe41
+              body: >
+                We have noticed devices in support that show high cpu usage
+                because
+
+                the process chronyc online seems to be eating up 50% cpu.
+
+
+                This is probably fixed upstream
+                https://github.com/mlichvar/chrony/commit/6863e43269fe27ce2744eb643295f31c00ec176d#diff-50898f0cb35139d87132f4732a029213
+
+
+                Add a timeout in any case as its a lower risk option
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: >-
+                  Add a workaround for a bug where the chronyc online command in
+                  network manager hook would get stuck and eat cpu cycles
+                changelog-entry: >-
+                  Add a workaround for a bug where the chronyc online command in
+                  network manager hook would get stuck and eat cpu cycles
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Fix img to rootfs dependency when img is invalidated
+              hash: 3050840935541c14ded2f9a6a1517d73dfc5ec18
+              body: >
+                There can be cases where a image type gets invalidated (due to a
+
+                variable change or so) and the dependency of it not. For example
+                the img
+
+                type can get invalidated while the hostapp ext3 type doesn't.
+                The img
+
+                generatiton script consumes/uses the rootfs generated by the
+                hostapp
+
+                type but, it references the artifact based on IMAGE_NAME
+                variable which
+
+                includes a time stamp. See bitbake.conf:
+
+
+                IMAGE_NAME = "${IMAGE_BASENAME}-${MACHINE}-${DATETIME}"
+
+
+                When that happens, the new timestamp will change and img will
+                fail to
+
+                find the old artifact of hostapp. Change this behaviour by using
+                the
+
+                symlink reference IMAGE_LINK_NAME which doesn't include a
+                timestamp.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Fix img to rootfs dependency when img is invalidated
+                changelog-entry: Fix img to rootfs dependency when img is invalidated
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Have boot partition type configurable as FAT32
+              hash: a582d10ca72ff0d865783252b87160f03b2045bb
+              body: >
+                When BALENA_BOOT_FAT32 is 1, it will instruct the raw image
+                generator to
+
+                create the filesystem using 32 as file allocation tables type
+                and, as
+
+                well, create the boot partition as fat32 type.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Have boot partition type configurable as FAT32
+                changelog-entry: Have boot partition type configurable as FAT32
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Deprecate morty and krogoth
+              hash: 9d311fd13ad2af4b17a7a9a512e2f667e4ff9f58
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Deprecate morty and krogoth
+                changelog-entry: Deprecate morty and krogoth
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: >-
+                Deploy kernel source as a build artifact as well for external
+                module compilation
+              hash: bfc7a67cb6b6f38617bb810f2b5c1e051ebf6a4a
+              body: >
+                We want to build the kernel-devsrc recipe so that we can package
+                the
+
+                kernel source tarball. This tarball will allow users to use the
+                source
+
+                package and compile or cross compile kernel modules
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: >-
+                  Deploy kernel source as a build artifact as well for external
+                  module compilation
+                changelog-entry: >-
+                  Deploy kernel source as a build artifact as well for external
+                  module compilation
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: 'kernel-devsrc: Tarball up the kernel source and deploy it.'
+              hash: 4da9fdc90001f64f2bd8852cd4cf8a8de3b02cbb
+              body: >
+                The kernel-devsrc recipe only builds a package by default. We'd
+                like
+
+                to tarball the source and share it.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: 'kernel-modules-headers: Use the build directory for artifacts'
+              hash: 3e09d127d86729a94cd9a600a6f4f7568b4d6315
+              body: |
+                Otherwise the module header tarball appears in the kernel source
+                directory and is tarballed again by the kernel-devsrc recipe
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: 'docs: Add documentation on nested changelogs'
+              hash: d02c8f877914b8173af4f4fd051d4e5626a2aeae
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Giovanni Garufi <giovanni@balena.io>
+                signed-off-by: Giovanni Garufi <giovanni@balena.io>
+              author: Giovanni Garufi
+            - subject: 'VersionBot: update upstream name and url'
+              hash: 203ddc055b3ea63bfa953a8917fdcd2a4961c012
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Giovanni Garufi <giovanni@balena.io>
+                signed-off-by: Giovanni Garufi <giovanni@balena.io>
+              author: Giovanni Garufi
+          version: meta-resin-2.30.0
+          date: 2019-02-28T16:10:14.839Z
+        - commits:
+            - subject: OS will default apps.json to an empty json file
+              hash: c935fcfd72dfefa5188d90edc48cd1b01dbadec2
+              body: >
+                Currently, because we bind mount apps.json unconditionally, when
+                this
+
+                file doesn't exist, balena engine will create a directory on the
+                data
+
+                filesystem. This breaks when we add an apps.json file after the
+
+                supervisor container was already created.
+
+
+                Fixes #1325
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: OS will default apps.json to an empty json file
+                changelog-entry: OS will default apps.json to an empty json file
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Update balena-engine to include low entropy fixes
+              hash: 32726b55b9e4b0a33e6357bfbe4b0169bcf253a7
+              body: |
+                This includes changes which target fixing hanging on low entropy
+                situation.
+
+                Fixes #1208
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Update balena-engine to include low entropy fixes
+                changelog-entry: Update balena-engine to include low entropy fixes
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Move an NM patch to the right place to reduce a warning
+              hash: f823ee173d52519113bb9513972aa9eaf3816355
+              body: >
+                We get a warning that the file was not found when other versions
+                of NM
+
+                are parsed.
+
+
+                Warning networkmanager_1.10.6.bb: Unable to get checksum for
+
+                networkmanager SRC_URI entry balena-client-id.patch: file could
+                not
+
+                be found
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Move an NM patch to the right place to reduce a warning
+                changelog-entry: Move an NM patch to the right place to reduce a warning
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Update balena-supervisor to v9.0.1
+              hash: 73a8bf6d0b45b052f05403ad6bf84504be2d918d
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update balena-supervisor to v9.0.1
+                changelog-entry: Update balena-supervisor to v9.0.1
+                Signed-off-by: Pablo Carranza Velez <pablo@balena.io>
+                signed-off-by: Pablo Carranza Velez <pablo@balena.io>
+              author: Pablo Carranza Velez
+            - subject: >-
+                Fix cases where RESIN_BOOT_PARTITION_FILES includes invalid
+                entries
+              hash: c10653eb0b17e3997fb77182cf62b9cdc143f25c
+              body: |
+                Fixes #1330
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: >-
+                  Fix cases where RESIN_BOOT_PARTITION_FILES includes invalid
+                  entries
+                changelog-entry: >-
+                  Fix cases where RESIN_BOOT_PARTITION_FILES includes invalid
+                  entries
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Enable some common linux kernel serial device drivers
+              hash: 1fa8c951327d1356410152f944003f98a9b68112
+              body: |
+                Fixes #1327
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Enable some common linux kernel serial device drivers
+                changelog-entry: Enable some common linux kernel serial device drivers
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: >-
+                Configure NetworkManager to only ignore our vpn interface but
+                manage other tun devices
+              hash: 2a5415c4a9a1b9c1e3da8a340be4ba307174c42d
+              body: >
+                Under the current configuration we instruct NetworkManager
+                through its
+
+                configuration to completely ignore all the tun devices. This was
+
+                enforced as an extra precation as we run an openvpn client which
+
+                connects to the balena-cloud backend. This client creates, on
+                the host,
+
+                the interface `resin-tun` currently (rename pending). We want to
+                loosen
+
+                up this restriction to only unmanage this specific device -
+                `resin-tun`
+
+                - so that users can take advantage of NetworkManager managing
+                other tun
+
+                devices.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: >-
+                  Configure NetworkManager to only ignore our vpn interface but
+                  manage other tun devices
+                changelog-entry: >-
+                  Configure NetworkManager to only ignore our vpn interface but
+                  manage other tun devices
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: 'networkmanager: Add pppd to FILES'
+              hash: b05bc683b6517318a3ebef56010d671ae07804c1
+              body: >
+                Without this, we get a QA error
+
+
+                ERROR networkmanager-1.14.4-r0 do_package QA Issue
+                networkmanager
+
+                Files/directories were installed but not shipped in any package
+                  ... nm-pppd-plugin.so
+                Please set FILES such that these items are packaged.
+                Alternatively
+
+                if they are unneeded, avoid installing them or delete them
+                within do_install.
+
+                networkmanager 1 installed and not shipped files.
+                [installed-vs-shipped]
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: 'networkmanager: Add balena-client-id.patch in bbappend'
+              hash: 35c4822bbff164a4a4f3a769f0d1fabbda61f33b
+              body: |
+                Move this in bbappend. The 1.12 recipe was bumped to 1.14.
+                We'd like to keep our edits in bbappend
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Bump network manager from v1.12.2 to v1.14.4
+              hash: 0b8be376090d9bff4f41a362e4bcc250e0c664e9
+              body: >
+                Update recipe from upstream meta-openembedded
+
+                http://cgit.openembedded.org/meta-openembedded/commit/meta-networking/recipes-connectivity/networkmanager?id=331b717b862e3599b99942acb64c1d6b03806042
+
+
+                Difference in size ~ +400K
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Bump network manager from v1.12.2 to v1.14.4
+                changelog-entry: Bump network manager from v1.12.2 to v1.14.4
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Update balena-supervisor to v8.7.0
+              hash: ff552b96370e06a357db69d57cbbad5db08433db
+              body: ''
+              footer:
+                Changelog-entry: Update balena-supervisor to v8.7.0
+                changelog-entry: Update balena-supervisor to v8.7.0
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Pablo Carranza Velez <pablo@balena.io>
+                signed-off-by: Pablo Carranza Velez <pablo@balena.io>
+              author: Pablo Carranza Velez
+            - subject: Fix test cases for kernel module header compilation
+              hash: 53793e1e591f2e0d4534c38fcb0585ace2d0d181
+              body: >
+                For some reason, using xargs -I a produced spurious difficult to
+                trace
+
+                errors. Rework test case using a loop. Do the arch check using
+                Yoctos
+
+                QA framework that runs on all packages. Otherwise, we'd have to
+                manually
+
+                map various compatible arches e.g. aarch64 - arm8, 80386 - x86
+
+
+                bberror does not exit the do_compile task. Add exit 1 to make
+                sure that
+
+                if an error is found, the task is marked as failed. Otherwise
+                the
+
+                error becomes a heisenbug as bitbake proceeds after do_compile.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Fix test cases for kernel module header compilation
+                changelog-entry: Fix test cases for kernel module header compilation
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: >-
+                Add chrony v3.2 recipe in various layers to keep minimum chrony
+                version on devices above v3.2
+              hash: 898ce1a6c0a18c91478f704f4014ec2fcd1fedce
+              body: >
+                We added an option in chrony.conf (hwtimestamp) via
+                meta-resin-common.
+
+                That option is supported in newer versions of chrony.
+
+
+                Add chrony 3.2 recipe from meta-openembedded sumo
+
+                http://cgit.openembedded.org/meta-openembedded/tree/meta-networking/recipes-support/chrony?h=sumo
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: >-
+                  Add chrony v3.2 recipe in various layers to keep minimum
+                  chrony version on devices above v3.2
+                changelog-entry: >-
+                  Add chrony v3.2 recipe in various layers to keep minimum
+                  chrony version on devices above v3.2
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: 'chrony/pyro: Add v3.2 recipe'
+              hash: c3fbd6fe368ae1ca2472f15414d319f802e2989c
+              body: >
+                We added an option in chrony.conf (hwtimestamp) via
+                meta-resin-common.
+
+                That option is supported in newer versions of chrony.
+
+
+                Add chrony 3.2 recipe from meta-openembedded sumo
+
+                http://cgit.openembedded.org/meta-openembedded/tree/meta-networking/recipes-support/chrony?h=sumo
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: 'chrony/morty: Add v3.2 recipe'
+              hash: 75f44470da8e5bf99bdf4cd4ea45cbb798909604
+              body: >
+                We added an option in chrony.conf (hwtimestamp) via
+                meta-resin-common.
+
+                That option is supported in newer versions of chrony.
+
+
+                Add chrony 3.2 recipe from meta-openembedded sumo
+
+                http://cgit.openembedded.org/meta-openembedded/tree/meta-networking/recipes-support/chrony?h=sumo
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: 'chrony/krogoth: Bump recipe version to v3.2'
+              hash: 59ac08ea58e59e2d61cc53cadea1b835eb5b4e31
+              body: >
+                We added an option in chrony.conf (hwtimestamp) via
+                meta-resin-common.
+
+                That option is supported in newer versions of chrony.
+
+
+                Add chrony 3.2 recipe from meta-openembedded sumo
+
+                http://cgit.openembedded.org/meta-openembedded/tree/meta-networking/recipes-support/chrony?h=sumo
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Update resin-supervisor to v8.6.8
+              hash: a9cf9b06e9775612f2397c7abaca507428558722
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update resin-supervisor to v8.6.8
+                changelog-entry: Update resin-supervisor to v8.6.8
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+          version: meta-resin-2.29.0
+          date: 2018-12-19T06:20:13.246Z
+        - commits:
+            - subject: Update os-config to 1.0.0
+              hash: e9a428ae474c9a9e4573ae1071978b19e332f0b8
+              body: >
+                The main feature this brings is support for custom certificates
+                base64
+
+                encoded in config.json.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update os-config to 1.0.0
+                changelog-entry: Update os-config to 1.0.0
+                Signed-off-by: Zahari Petkov <zahari@balena.io>
+                signed-off-by: Zahari Petkov <zahari@balena.io>
+              author: Zahari Petkov
+            - subject: Update libqmi to version 1.20.2
+              hash: 19bb5410ac28a89db7193490001ea358bbb37912
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update libqmi to version 1.20.2
+                changelog-entry: Update libqmi to version 1.20.2
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+            - subject: Update libmbim to version 1.16.2
+              hash: 7e8d7520288c916f694fe6cdf1d43fa0d0a275e3
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update libmbim to version 1.16.2
+                changelog-entry: Update libmbim to version 1.16.2
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+            - subject: 'kernel-modules-headers: Add basic sanity test'
+              hash: 51ff1d707273a27369e91b6cf99257633f0b9e21
+              body: >
+                Test if the ELFs inside the kernel module header tarball are the
+
+                correct architecture and don't have the sysroot as the
+                interpreter
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Fix kernel module header generation
+              hash: 706829bc46c593048909686a67faef064adf6232
+              body: >
+                63baa421 introduced a bug where the tools in the header tarballs
+                were
+
+                compiled with the incorrect HOSTCC parameter. As a result the
+                tools
+
+                inside the tarball were compiled for x86-64 instead of the
+                native
+
+                device architecture. And they had the incorrect ld interpreter
+                path
+
+                as well.
+
+
+                Update to v0.0.12 to fix that.
+
+                This release also adds objtool support needed by the intel nuc
+                image.
+
+
+                Fixes #1302
+
+                Fixes #1303
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Fix kernel module header generation
+                changelog-entry: Fix kernel module header generation
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: 'image-resin.bbclass: Fix config.json pretty format'
+              hash: 889d989a3d9059825d7d346fbf0e728be9869994
+              body: |
+                Fixes #1300
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Allow supervisor update on unmanaged devices
+              hash: b8705936f0a081a2f33f3fb590a90e4805547e9d
+              body: >
+                When the device hasn't joined a backend, there is no API key
+                available
+
+                and the update supervisor tool currently just bails out. This
+                blocks
+
+                switching the supervisor version on an unmanaged device.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Allow supervisor update on unmanaged devices
+                changelog-entry: Allow supervisor update on unmanaged devices
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Update resin-supervisor to v8.6.3
+              hash: 1f0a1b16102847412e0165ff01125a4d50ab4c81
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update resin-supervisor to v8.6.3
+                changelog-entry: Update resin-supervisor to v8.6.3
+                Signed-off-by: Cameron Diver <cameron@balena.io>
+                signed-off-by: Cameron Diver <cameron@balena.io>
+              author: Cameron Diver
+          version: meta-resin-2.28.0
+          date: 2018-12-05T15:21:33.157Z
+        - commits:
+            - subject: Expose randomMacAddressScan config.json knob
+              hash: 69d2340ccf5691085bebeb92478475cd3278bbb9
+              body: >
+                For now only allow `wifi.scan-rand-mac-address` configurable
+                from
+
+                config.json using `randomMacAddressScan` as the json key.
+
+
+                config.json snippet example:
+
+
+                "os": {
+                  "network" : {
+                    "wifi": {
+                      "randomMacAddressScan": false
+                    }
+                  }
+                }
+
+
+                We include a set of tests for this tool which are ran at build
+                time.
+
+
+                Fixes #1294
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Expose randomMacAddressScan config.json knob
+                changelog-entry: Expose randomMacAddressScan config.json knob
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Move modemmanager udev rules in /lib/udev/rules.d
+              hash: 1d7f81ee8b8ca5fd73417598ac8b15d8f99b28ed
+              body: >
+                The path where the udev rules are currently installed (etc) will
+                be
+
+                shadowned at runtime because the etc udev rules path is
+                bindmounted for
+
+                use with custom configuration from `config.json`.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Move modemmanager udev rules in /lib/udev/rules.d
+                changelog-entry: Move modemmanager udev rules in /lib/udev/rules.d
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Fix modemmanager bbappend files
+              hash: 304b7079ec0261a4467cd384b83b456348af6a0c
+              body: >
+                The bbappend uses a local `resin-files` directory for additional
+                file
+
+                entries but some of these files ended up in `files`. This works
+                well if
+
+                the recipe used is the one in the same directory as the `files`
+
+                subdirectory will be used by default. The problem shows when the
+                recipe
+
+                is not in the same directoy as bitbake will not be able to find
+                needed
+
+                bbappended files.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Fix modemmanager bbappend files
+                changelog-entry: Fix modemmanager bbappend files
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: 'dnsmasq: Define 8.8.8.8 as a fallback nameserver'
+              hash: 8ae0b2aef3ac2816c2a336b2dcc5d6f6a9c726c0
+              body: |
+                Fixes #1293
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changel-log-entry: Restore 8.8.8.8 as fallback DNS server
+                changel-log-entry: Restore 8.8.8.8 as fallback DNS server
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Increase timeout for filesystem label
+              hash: 9184e01e4f42b95df53f440b4638a8acd9877a9c
+              body: >
+                The label is actually a udev symlink, but we're keeping
+
+                this naming to be consistent across the file.
+
+
+                The error seen is that the balena-host service wasn't
+
+                able to start because of a mnt-sysroot-active.service
+                dependency:
+
+                resin-partition-mounter[440]: ERROR: Timeout while waiting
+
+                for filesystem label to appear
+
+
+                By increasing this timeout, the filesystem symlink should
+
+                already exist, at the time the mnt-sysroot-active service is
+
+                looking for this dependency.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Increase timeout for filesystem label
+                changelog-entry: Increase timeout for filesystem label
+                Signed-off-by: Vicentiu Galanopulo <vicentiu@resin.io>
+                signed-off-by: Vicentiu Galanopulo <vicentiu@resin.io>
+              author: Vicentiu Galanopulo
+            - subject: Add support for Huawei ME936 modem in MBIM mode
+              hash: 5e214c0faa2d8a06e23553d6523523b3ad15d8bd
+              body: >
+                Add udev rule and helper script to switch this modem to MBIM
+                mode
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Add support for Huawei ME936 modem in MBIM mode
+                changelog-entry: Add support for Huawei ME936 modem in MBIM mode
+                Signed-off-by: Florin Sarbu <florin@resin.io>
+                signed-off-by: Florin Sarbu <florin@resin.io>
+              author: Florin Sarbu
+            - subject: Backport systemd sd-shutdown improvements for sumo versions
+              hash: 2643ef9959734c794880fecb36284db35e0565df
+              body: |
+                OS 2.26.0+rev1 reports the following at reboot:
+                systemd-shutdown[1]: Failed to wait for process: Protocol error
+                systemd-shutdown[1]: Failed to wait for process: Protocol error
+
+                As per systemd/systemd#8155 (comment), systemd/systemd#8429
+                needs to be backported.
+
+                We currently backport these patches for sumo only
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Backport systemd sd-shutdown improvements for sumo versions
+                changelog-entry: Backport systemd sd-shutdown improvements for sumo versions
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+            - subject: Include avahi d-bus introspection files in rootfs
+              hash: d98f0d47369135f1c88429aac58b73aced3d4f6c
+              body: >
+                Poky removes the dbus introspection description documents for
+                avahi.
+
+                See:
+
+                http://git.yoctoproject.org/cgit.cgi/poky/commit/?id=59a08907eafffde664079b9a2068f47131dd3f5d
+
+
+                dbus-native node module requires this data to be available to
+                allow
+
+                access to interfaces.
+
+
+                Fixes #1140
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Include avahi d-bus introspection files in rootfs
+                changelog-entry: Include avahi d-bus introspection files in rootfs
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Fix custom udev rules when rule is removed from config.json
+              hash: dbf42dd1ddcbb45be0320d8d4b4bd93c9522ec34
+              body: >
+                Fixes #1271
+
+                When os.udevRules is completely removed from config.json, any
+                previous
+
+                rules are left there. Remove them.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Fix custom udev rules when rule is removed from config.json
+                changelog-entry: Fix custom udev rules when rule is removed from config.json
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: 'resin-mounts: Add NetworkManager conf.d bind mounts'
+              hash: a94a3b3490319a3e6a5de373a773348eada532ba
+              body: |
+                This bind mount is used for passing custom config options to
+                NetworkManager via config.json
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Add support to pass custom configuration to NetworkManager
+              hash: 8370f01078b6971f2b6c2707f679a3cc581702d2
+              body: >
+                This allows extra config fragments to be passed to
+                NetworkManager
+
+                via config.json
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Add support to pass custom configuration to NetworkManager
+                changelog-entry: Add support to pass custom configuration to NetworkManager
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: 'README.md: Add info about SSH and Avahi services'
+              hash: 778785283d372689af654c42b3c42cfc02ecdcfb
+              body: |
+                Fixes #1274
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Avoid xtables lock in resin-proxy-config
+              hash: f2bed69f1825e270be695ada997bc10120a2bae8
+              body: >
+                There are other components setting up iptables rules - for
+                example
+
+                balena. In order to avoid a lock race, run iptables commands
+                with a 10
+
+                seconds wait flag.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Avoid xtables lock in resin-proxy-config
+                changelog-entry: Avoid xtables lock in resin-proxy-config
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Migrate the supervisor to balena repositories
+              hash: 0905256113d58ce4644e975144d71b20f532a35d
+              body: |
+                This has changed from "resin" to "balena" due to the rename
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Migrate the supervisor to balena repositories
+                changelog-entry: Migrate the supervisor to balena repositories
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+            - subject: Update balena-supervisor to v8.3.5
+              hash: d0ec760020b7778ac9116dde803393a1f444228f
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update balena-supervisor to v8.3.5
+                changelog-entry: Update balena-supervisor to v8.3.5
+                Signed-off-by: Cameron Diver <cameron@balena.io>
+                signed-off-by: Cameron Diver <cameron@balena.io>
+              author: Cameron Diver
+            - subject: Update supported modems list
+              hash: 9c966ff98f7bd1e9478a6f49164118c6b0b8a0d8
+              body: |
+                We remove SIM7100E in favour of SIM7600E and
+                also add Huawei ME909s-120.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update supported modems list
+                changelog-entry: Update supported modems list
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+          version: meta-resin-2.27.0
+          date: 2018-11-23T14:49:56.671Z
+        - commits:
+            - subject: Rename resin-unique-key to balena-unique-key
+              hash: da871aeb64dffcb84c2fad75b299f661cab40c3d
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Rename resin-unique-key to balena-unique-key
+                changelog-entry: Rename resin-unique-key to balena-unique-key
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Don't let resin-unique-key rewrite config.json
+              hash: 58685dd3accb19b159adc933d3b203c615675343
+              body: |
+                Fixes #1262
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Don't let resin-unique-key rewrite config.json
+                changelog-entry: Don't let resin-unique-key rewrite config.json
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+          version: meta-resin-2.26.0
+          date: 2018-11-05T15:22:47.685Z
+        - commits:
+            - subject: Generate ssh host key at first boot (not at first connection)
+              hash: aea0382c5e6c26933767a931f3a0df45e3cde233
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Generate ssh host key at first boot (not at first connection)
+                changelog-entry: Generate ssh host key at first boot (not at first connection)
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Fix extraneous space in kernel-resin.bbclass config
+              hash: bf3124d468dfce8e9b4909965dfea05752835b33
+              body: |
+                This extra space leads to kernel config check error
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Fix extraneous space in kernel-resin.bbclass config
+                changelog-entry: Fix extraneous space in kernel-resin.bbclass config
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+            - subject: >-
+                Drop obsolete eval from kernel-resin's
+                do_kernel_resin_reconfigure
+              hash: 1b882e69d125c4cd84a8ebd8298eb294d52d5574
+              body: >
+                This is not needed as bitbake already expands
+                KERNEL_CONFIG_COMMAND
+
+                See Poky commit 95909bc788bef1baabead94231dffb3b7f59fb00 for
+                details
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: >-
+                  Drop obsolete eval from kernel-resin's
+                  do_kernel_resin_reconfigure
+                changelog-entry: >-
+                  Drop obsolete eval from kernel-resin's
+                  do_kernel_resin_reconfigure
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+            - subject: >-
+                Add SyslogIdentifier for balena and resin-supervisor healthdog
+                services
+              hash: 23fadcc59cc2b353b68264220e35fa1c06b97444
+              body: ''
+              footer:
+                Changelog-entry: >-
+                  Add SyslogIdentifier for balena and resin-supervisor healthdog
+                  services
+                changelog-entry: >-
+                  Add SyslogIdentifier for balena and resin-supervisor healthdog
+                  services
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Matthew McGinn <mamcgi@gmail.com>
+                signed-off-by: Matthew McGinn <mamcgi@gmail.com>
+              author: Matthew McGinn
+          version: meta-resin-2.25.0
+          date: 2018-11-02T15:58:49.876Z
+        - commits:
+            - subject: Update resin-supervisor to v8.0.0
+              hash: 01511f5902e83f80e93a37b5e5cffd59654e5c04
+              body: ''
+              footer:
+                Changelog-entry: Update resin-supervisor to v8.0.0
+                changelog-entry: Update resin-supervisor to v8.0.0
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Pablo Carranza Velez <pablo@balena.io>
+                signed-off-by: Pablo Carranza Velez <pablo@balena.io>
+              author: Pablo Carranza Velez
+          version: meta-resin-2.24.1
+          date: 2018-11-01T16:25:19.386Z
+        - commits:
+            - subject: 'resin-info: Small tweak for balenaCloud product'
+              hash: 74f795dc2251266622f44f0a32162adfbbc432e3
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Andrei Gherzan <andrei@resin.io>
+                signed-off-by: Andrei Gherzan <andrei@resin.io>
+              author: Andrei Gherzan
+            - subject: Update resin-supervisor to v7.25.8
+              hash: 4806e3340d75cb76437311bd44a93e40360f90ed
+              body: ''
+              footer:
+                Changelog-entry: Update resin-supervisor to v7.25.8
+                changelog-entry: Update resin-supervisor to v7.25.8
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Pablo Carranza Velez <pablo@balena.io>
+                signed-off-by: Pablo Carranza Velez <pablo@balena.io>
+              author: Pablo Carranza Velez
+            - subject: Rename resinOS to balenaOS
+              hash: d2a7e648b2ccefe46f67fb02c0f382c958aad5e5
+              body: >
+                As part of resin rename to balena, we rename the distro file
+                including
+
+                the OS name which is part of the distro name. This ends up in
+                the
+
+                dashboard as part of the OS version.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Rename resinOS to balenaOS
+                changelog-entry: Rename resinOS to balenaOS
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+          version: meta-resin-2.24.0
+          date: 2018-10-24T01:06:11.405Z
+        - commits:
+            - subject: Update resin-supervisor to v7.25.5
+              hash: 21d97fc5d73e2a97760b9328d099ea8b7daaee39
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update resin-supervisor to v7.25.5
+                changelog-entry: Update resin-supervisor to v7.25.5
+                Signed-off-by: Cameron Diver <cameron@resin.io>
+                signed-off-by: Cameron Diver <cameron@resin.io>
+              author: Cameron Diver
+            - subject: 'recipes-containers: Increase healthcheck timeout to 180s'
+              hash: fb966719844dfd045a03440242a412d641c7b791
+              body: |
+                The original 60s might be slow for some devices where balena
+                is busy with a task and the hardware is slow for various
+                reasons (ie. Pi1/Zero). In those cases even if the device
+                is functioning correctly, the healthcheck will assess the
+                device as unhealthy and restart balena and/or the supervisor.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Gergely Imreh <gergely@balena.io>
+                signed-off-by: Gergely Imreh <gergely@balena.io>
+              author: Gergely Imreh
+            - subject: '.gitignore: add node_modules and package-lock files'
+              hash: becc602a39ec9c788e4f1765ec696f2f71ceb321
+              body: >
+                These files are generated by the CI when running the automatic
+
+                versioning. Since this is not a node project both can be simply
+                ignored.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Giovanni Garufi <giovanni@resin.io>
+                signed-off-by: Giovanni Garufi <giovanni@resin.io>
+              author: Giovanni Garufi
+          version: meta-resin-2.23.0
+          date: 2018-10-22T22:10:11.913Z
+        - commits:
+            - subject: Update resin-supervisor to v7.25.3
+              hash: dd4966235420be328f6280fa170d17f5570dbfa2
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Update resin-supervisor to v7.25.3
+                changelog-entry: Update resin-supervisor to v7.25.3
+                Signed-off-by: Pablo Carranza Velez <pablo@balena.io>
+                signed-off-by: Pablo Carranza Velez <pablo@balena.io>
+              author: Pablo Carranza Velez
+          version: meta-resin-2.22.1
+          date: 2018-10-20T04:01:35.497Z
+        - commits:
+            - subject: Update resin-supervisor to v7.25.2
+              hash: 999d0e07e426d175168da46557855f4dee724ee2
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update resin-supervisor to v7.25.2
+                changelog-entry: Update resin-supervisor to v7.25.2
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Include a CONTRIBUTING.md file
+              hash: a38f167752e68db524f55bb5bec97d8a03692283
+              body: |
+                Fixes #422
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Include a CONTRIBUTING.md file
+                changelog-entry: Include a CONTRIBUTING.md file
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Update to ModemManager v1.8.2
+              hash: cd6386ffedbe4e4c4959b0f2941826c324029cb1
+              body: |
+                Fixes #1209
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update to ModemManager v1.8.2
+                changelog-entry: Update to ModemManager v1.8.2
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Updates on contributing-device-support.md
+              hash: 75ee54d48a40476e6de5076ffc238cb6fad25041
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Updates on contributing-device-support.md
+                changelog-entry: Updates on contributing-device-support.md
+                Signed-off-by: Vicentiu Galanopulo <vicentiu@resin.io>
+                signed-off-by: Vicentiu Galanopulo <vicentiu@resin.io>
+              author: Vicentiu Galanopulo
+          version: meta-resin-2.22.0
+          date: 2018-10-19T18:42:10.962Z
+        - commits:
+            - subject: Improve systemd service ordering in rollbacks
+              hash: 1d729dec436d0cb2eeb8a6799a8b978aceba8f8d
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Improve systemd service ordering in rollbacks
+                changelog-entry: Improve systemd service ordering in rollbacks
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Update resin-supervisor to v7.24.1
+              hash: e5a882a75ca49828cabcba227c4972d9e4d753d9
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update resin-supervisor to v7.24.1
+                changelog-entry: Update resin-supervisor to v7.24.1
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+          version: meta-resin-2.21.0
+          date: 2018-10-18T17:23:01.640Z
+        - commits:
+            - subject: Avoid expander on flasher based on root kernel argument
+              hash: c155f8edfa543d29c7efafe2fb6c80d633b82dc1
+              body: >
+                The current implementation checks for the existance of the
+                `flash-boot`
+
+                label. This breaks when after flashing the flashing device is
+                left
+
+                plugged. Change this with a check based on the root kernel
+                argument.
+
+
+                Fixes #1210
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Avoid expander on flasher based on root kernel argument
+                changelog-entry: Avoid expander on flasher based on root kernel argument
+                Signed-off-by: Andrei Gherzan <andrei@resin.io>
+                signed-off-by: Andrei Gherzan <andrei@resin.io>
+              author: Andrei Gherzan
+            - subject: 'resin-vars: Implement custom ssh keys service'
+              hash: 6d2e43d4693208c8df9436ea1f96c844b4faeb75
+              body: >
+                This patch adds support for translating SSH public keys from
+                config.json
+
+                to an authorize_keys file. We use `authorize_keys_local` file as
+                the
+
+                destination file of this translation so we can differentiate in
+                between keys
+
+                brought locally from config.json and keys brought from the
+                balena backend
+
+                through os-config an avoid racing issues with this tool
+                (os-config). The final
+
+                `authorize_keys` file will be merged at every ssh connection in
+                the dropbear
+
+                service.
+
+
+                These SSH custom public keys in config.json are assumed to be
+                provided
+
+                as an array in `.os.sshKeys`. Example:
+
+                {
+                  [...]
+                  "os": {
+                    "sshKeys": [
+                      "ssh-rsa ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                      "ssh-rsa 0123456789"
+                    ]
+                  },
+                  [...]
+                }
+
+
+                Fixes #608
+              footer:
+                Change-type: minor
+                change-type: minor
+                Change-log-entry: Add support for custom SSH public keys in config.json
+                change-log-entry: Add support for custom SSH public keys in config.json
+                Signed-off-by: Andrei Gherzan <andrei@resin.io>
+                signed-off-by: Andrei Gherzan <andrei@resin.io>
+              author: Andrei Gherzan
+            - subject: Fix redsocks interface creation when no proxy configured
+              hash: 4d278e425a5624863ff62771c8db9b4c9bcf6821
+              body: |
+                When we have no redsocks configuration don't create the redsocks
+                interface.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Fix redsocks interface creation when no proxy configured
+                changelog-entry: Fix redsocks interface creation when no proxy configured
+                Signed-off-by: Andrei Gherzan <andrei@resin.io>
+                signed-off-by: Andrei Gherzan <andrei@resin.io>
+              author: Andrei Gherzan
+            - subject: >-
+                Replace NM's DHCP request option "Client indentifier" with
+                udhcpc style option
+              hash: 99b4e423003442a67f1fb45b1f4ae8d201c73b99
+              body: |
+                This patch replaces the "Client identifier" option from
+                DHCP packets sent by NM to resemble the way udhcpc does it.
+
+                The reason is that the Cisco RV325 router with fw older than
+                v1.2.1.14 doesn't reply to DHCP requests or discovery packages
+                if the "Client identifier" option is formatted in NM's style.
+
+                Even though this is a bug in the router's fw, we are going to
+                fix it here because we encountered clients that couldn't get
+                an IP address on these routers and we want to avoid that
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: >-
+                  Replace NM's DHCP request option "Client indentifier" with
+                  udhcpc style option
+                changelog-entry: >-
+                  Replace NM's DHCP request option "Client indentifier" with
+                  udhcpc style option
+                Signed-off-by: Sebastian Panceac <sebastian@balena.io>
+                signed-off-by: Sebastian Panceac <sebastian@balena.io>
+              author: Sebastian Panceac
+            - subject: Fix for rollbacks in case of old balenaOS version
+              hash: 814c39fb750104f1aef748a083a3384e5a594d9c
+              body: >
+                In some cases, the previous rootfs hooks are not functional
+                (which can
+
+                be the case when the hooks don't exist in older versions of
+                balenaOS).
+
+
+                With this patch, rollbacks will be stopped and a reboot will
+                happen
+
+                preventing further attempts by rollback-health to keep retrying
+                and
+
+                rolling back
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Fix for rollbacks in case of old balenaOS version
+                changelog-entry: Fix for rollbacks in case of old balenaOS version
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Update resin-supervisor to v7.21.4
+              hash: 4c1f5c7cdaf889b67098832b36ccd0cc39c58b0e
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update resin-supervisor to v7.21.4
+                changelog-entry: Update resin-supervisor to v7.21.4
+                Signed-off-by: Cameron Diver <cameron@resin.io>
+                signed-off-by: Cameron Diver <cameron@resin.io>
+              author: Cameron Diver
+            - subject: Warn if rules are found in /etc/udev/rules.d
+              hash: f228de23f388859d7cf3847fc608863bab2c6857
+              body: >
+                The /etc/udev/rules.d folder is now used by os-udevrules. We
+                warn if
+
+                there are rules in /etc/udev/rules.d installed by recipes in
+                other
+
+                layers
+
+
+                This warning will become an error in a few releases.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Warn if rules are found in /etc/udev/rules.d
+                changelog-entry: Warn if rules are found in /etc/udev/rules.d
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Add support to load custom udev rules from config.json
+              hash: f127232b8c7009c954f8467c32776c5fceee8c12
+              body: >
+                os-udevrules will parse config.json for any udev rules and copy
+                the
+
+                rules in /etc/udev/rules.d/key.rules
+
+
+                udev rules can be passed via config.json in the following format
+
+                  "settings": {
+                    "udevrules": {
+                      "60": "single line. Remember to escape the double quotes",
+                      "99": "multi line \n2nd line"
+                   }
+                 }
+
+                The above snippet will appear as /etc/udev/rules.d/60.rules
+
+                and /etc/udev/rules.d/99.rules
+
+
+                The first time rules are added/modified, these rules will be
+                added and
+
+                udevd will be asked to reload rules and re-trigger.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Add support to load custom udev rules from config.json
+                changelog-entry: Add support to load custom udev rules from config.json
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: 'aufs-util: Package auplink separately'
+              hash: f8d0ae01bae540dcf52ebbbdc6315c86f7efa684
+              body: >
+                From the aufs-util package only the auplink binary is needed and
+                that
+
+                dependency is from balena. So we package auplink in a separate
+                package
+
+                and just install that package into the rootfs.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Chanelog-entry: >-
+                  Only add auplink binary into the rootfs to decrease rootfs
+                  size
+                chanelog-entry: >-
+                  Only add auplink binary into the rootfs to decrease rootfs
+                  size
+                Signed-off-by: Florin Sarbu <florin@resin.io>
+                signed-off-by: Florin Sarbu <florin@resin.io>
+              author: Florin Sarbu
+            - subject: Enable kernel config dependencies for MBIM and QMI
+              hash: fd7c661209532296b8e6f7ce74328ffbc5ab8053
+              body: >
+                MBIM and QMI support needs USB_NET_DRIVERS and USB_USBNET
+                enabled.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Enable kernel config dependencies for MBIM and QMI
+                changelog-entry: Enable kernel config dependencies for MBIM and QMI
+                Signed-off-by: Florin Sarbu <florin@resin.io>
+                signed-off-by: Florin Sarbu <florin@resin.io>
+              author: Florin Sarbu
+            - subject: Set UPX to use LZMA compression by default
+              hash: 69bc7e1c6c8382d69b57b662518909c4f7824644
+              body: >
+                In my testing lzma offers at least 30-40% better compression and
+                it is
+
+                introduced from v3.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Set UPX to use LZMA compression by default
+                changelog-entry: Set UPX to use LZMA compression by default
+                Signed-off-by: Andrei Gherzan <andrei@resin.io>
+                signed-off-by: Andrei Gherzan <andrei@resin.io>
+              author: Andrei Gherzan
+            - subject: Downgrade UPX to 3.94 for ARM
+              hash: 23423b875f2d892ce136c9a3e2f56692592c873d
+              body: >
+                3.95 introduced a data/instruction cache inconsistency bug:
+
+                https://github.com/upx/upx/issues/225. As this only afects this
+                version,
+
+                we downgrade it for the affected architecture.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Downgrade UPX to 3.94 for ARM
+                changelog-entry: Downgrade UPX to 3.94 for ARM
+                Signed-off-by: Andrei Gherzan <andrei@resin.io>
+                signed-off-by: Andrei Gherzan <andrei@resin.io>
+              author: Andrei Gherzan
+            - subject: >-
+                Balena update for rollbacks. mobynit can now mount rootfs from
+                sysroot.
+              hash: 008608db1b67dd9de0445ef6e1920bb0302f618e
+              body: >
+                This patch bumps the balena version in meta-resin.
+
+
+                The update in balena adds support to pass an argument to mobynit
+                which
+
+                allows mobynit to mount a rootfs from a custom path.
+
+
+                The command ./mobynit -sysroot /mnt/sysroot/inactive will mount
+                the
+
+                rootfs partition from /mnt/sysroot/inactive and return the
+                destination
+
+                path in stdout.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: >-
+                  Balena update for rollbacks. mobynit can now mount rootfs from
+                  sysroot.
+                changelog-entry: >-
+                  Balena update for rollbacks. mobynit can now mount rootfs from
+                  sysroot.
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Fix proxy when using containers over bridge network
+              hash: 3df6e1906e1138a8cd10d15ac3008685b90f75f8
+              body: >
+                Before multicontainer support in resin, the user container was
+                running
+
+                over the host's network stack which means that all the packets
+                were
+
+                treated as locally emitted ones. In this case, the communication
+                was
+
+                redirected as per the OUTPUT iptable rule only.
+
+                In the "multicontainer world" the user containers run on top of
+                bridge
+
+                network which makes the host act as a socksifying router. In
+                this case,
+
+                the packets won't go through the OUTPUT chain and the
+                redirection to
+
+                redsocks needs to happen at PREROUTING chain.
+
+                This change adds a redirect rule at PREROUTING for TCP packets
+                to
+
+                redsocks to redirect packets from the containers to redsocks
+                too.
+
+
+                As well, this adds support for redirecting DNS UDP packets to
+                redsocks.
+
+                This is implemented as iptables rules which are only added if
+                the
+
+                redsocks configuration has a `dnsu2t` section.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Fix proxy when using containers over bridge network
+                changelog-entry: Fix proxy when using containers over bridge network
+                Signed-off-by: Andrei Gherzan <andrei@resin.io>
+                signed-off-by: Andrei Gherzan <andrei@resin.io>
+              author: Andrei Gherzan
+            - subject: 'Add support for aufs 4.9.9+, 4.9.94+, 4.18'
+              hash: bc91ca07f0a44aaffb68720fc10f3e524491d92d
+              body: >
+                Also, update 4.9, 4.10, 4.11.7+, 4.12, 4.13, 4.14, 4.14.56+,
+                4.15,
+
+                4.16, 4.17.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: 'Add support for aufs 4.9.9+, 4.9.94+, 4.18'
+                changelog-entry: 'Add support for aufs 4.9.9+, 4.9.94+, 4.18'
+                Signed-off-by: Florin Sarbu <florin@resin.io>
+                signed-off-by: Florin Sarbu <florin@resin.io>
+              author: Florin Sarbu
+            - subject: Add rollback-altboot service before balena service
+              hash: 9c35e9c8b418b9253d53df48b783babc9d116006
+              body: >
+                We would like resin-altboot service to run before balena starts
+
+                resin-altboot checks if the boot configuration is set to run
+
+                resinOS from rootA(B) but we are actually running rootB(A) due
+                to
+
+                something.
+
+
+                If rollback-altboot triggers, it will run hooks to refresh boot
+                files
+
+                and reboot. There is no point starting balena in such a device
+                state
+
+                as that will only slow down the hooks from running.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Add rollback-altboot service before balena service
+                changelog-entry: Add rollback-altboot service before balena service
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Add Automated Rollback recipe
+              hash: fdfc451d1a8a95b1c9b9ee2d0fc8f736c094251b
+              body: >
+                This recipe adds a few systemd services and scripts that handle
+
+                automated OS rollback functionality.
+
+
+                The rollback-altboot.service checks if we are running in altboot
+                mode
+
+                i.e. resinOS_uEnv.txt says we should boot resin_root_part=3. But
+                we are
+
+                actually running resinOS from resin_root_part=2. This can happen
+                if
+
+                a reboot happened without clearing upgrade_available in
+                resinOS_uEnv
+
+                txt file. A kernel panic happened etc.
+
+
+                The rollback-altboot script runs hostapp-update hooks to change
+                the
+
+                bootfiles.
+
+
+                The rollback-health.service runs rollback-health which checks if
+                vpn is
+
+                online and balena is healthy after a hostapp-update.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Add Automated Rollback recipe
+                changelog-entry: Add Automated Rollback recipe
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Add Automated Rollback support in u-boot env_resin.h
+              hash: c6145d1f535098ef46f44d44d061b04fd7174f77
+              body: >
+                This patch adds a simple check in env_resin.h.
+
+
+                If bootcount is found to be greater than bootlimit, switch the
+
+                partitions. Both bootcount and bootlimit are standard u-boot env
+
+                variables.
+
+
+                To enable rollback in devices, devices have to do the following
+                in
+
+                their u-boot
+
+
+                Enable CONFIG_CMD_SETEXPR, CONFIG_BOOTCOUNT_LIMIT and depending
+                on the
+
+                device, save the bootcount in some persistant location whether
+                that
+
+                is an area in the SoC or an ext partition etc.
+
+
+                If you are using the CONFIG_BOOTCOUNT_EXT driver, use only the
+                boot
+
+                partition and use the filename "bootcount.env"
+
+
+                E.g. for rpi3
+
+                CONFIG_CMD_SETEXPR=y
+
+                CONFIG_BOOTCOUNT_LIMIT=y
+
+                CONFIG_SYS_BOOTCOUNT_ADDR=0x02300000
+
+                CONFIG_BOOTCOUNT_EXT=y
+
+                CONFIG_SYS_BOOTCOUNT_EXT_DEVPART=0:1
+
+                CONFIG_SYS_BOOTCOUNT_EXT_NAME="bootcount.env"
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Add Automated Rollback support in u-boot env_resin.h
+                changelog-entry: Add Automated Rollback support in u-boot env_resin.h
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Add a hook to support Automated Rollbacks
+              hash: b93b655e9cad7ad439a603ddedc9a965a909c037
+              body: |
+                This hook leaves breadcrumbs for the rollback-altboot and
+                rollback-health service after a HUP.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Add a hook to support Automated Rollbacks
+                changelog-entry: Add a hook to support Automated Rollbacks
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Update HUP grub hook to support Automated Rollbacks
+              hash: 620d7a4466dd2aea0c3c5e4ffc95ac22e7f7651c
+              body: >
+                Devices that support automated os rollbacks will have two extra
+
+                variables upgrade_available and resin_root_part in their
+                grub.cfg
+
+                files.
+
+
+                Check for the presense of those variables and update them if
+                they
+
+                exist.
+
+
+                Otherwise stick to the previous way of updating grub.cfg
+
+
+                For devices using grub 2.0, devices will have to mirror the
+                pattern
+
+                that exists in u-boot.
+
+                i.e.
+                 Add a variable upgrade_available to grub.cfg (HUP hooks update this)
+                 Add a variable bootcount to grubenv that increments if
+                 upgrade_available is set
+                 Add logic in grub.cfg to boot the alternate rootB/A if bootcount
+                 reaches 2.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update HUP grub hook to support Automated Rollbacks
+                changelog-entry: Update HUP grub hook to support Automated Rollbacks
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Update HUP u-boot hook to support Automated Rollbacks
+              hash: 76e103304264d88178b4948c020acf1f27246f85
+              body: >
+                u-boot uses an upgrade_avaiable flag to update bootcount to
+                reduce
+
+                writes to sd card.
+
+
+                If upgrade_available=0, u-boot won't bother updating the
+                bootcount
+
+                variable. During HUP, we'll set upgrade_available=1 so that
+                u-boot
+
+                starts counting.
+
+
+                It'll be the job of the new OS and the rollback services to set
+
+                upgrade_available=0
+
+
+                For some devices, u-boot will save the bootcount in the boot
+                partition
+
+                in /mnt/boot/bootcount.env. Remove that counter when running
+                hooks
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update HUP u-boot hook to support Automated Rollbacks
+                changelog-entry: Update HUP u-boot hook to support Automated Rollbacks
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: >-
+                Move kernel-image-initramfs from resin-image recipe to
+                packagegroup-resin.inc
+              hash: bfa0cc20d3bb1b6a26d87507b196b54ab6d672aa
+              body: >
+                We add the package here as this file is included in the flasher
+                image
+
+                recipe as well
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: >-
+                  Move kernel-image-initramfs from resin-image recipe to
+                  packagegroup-resin.inc
+                changelog-entry: >-
+                  Move kernel-image-initramfs from resin-image recipe to
+                  packagegroup-resin.inc
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Have 99-resin-grub hostapp-update-hook decide which grub to use
+              hash: ec0c373a8fa9dfd7ae989615646c76a4ab87f531
+              body: >
+                We move the decision of using either grub legacy or grub EFI
+                from the
+
+                board specific layer to here so that all boards can benefit from
+                these
+
+                changes.
+
+
+                Additionally, we make it so that this hostapp-update-hook also
+                deletes
+
+                the unnecessary grub.cfg file.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: >-
+                  Have 99-resin-grub hostapp-update-hook decide which grub to
+                  use
+                changelog-entry: >-
+                  Have 99-resin-grub hostapp-update-hook decide which grub to
+                  use
+                Signed-off-by: Florin Sarbu <florin@resin.io>
+                signed-off-by: Florin Sarbu <florin@resin.io>
+              author: Florin Sarbu
+          version: meta-resin-2.20.0
+          date: 2018-10-18T08:16:00.360Z
+        - commits:
+            - subject: Update Balena to fix tty console hanging in some cases
+              hash: 06ae0837d2823587858437d5eb41b8fc5be8e7c6
+              body: |
+                https://github.com/resin-os/balena/pull/101
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Update Balena to fix tty console hanging in some cases
+                changelog-entry: Update Balena to fix tty console hanging in some cases
+                Signed-off-by: Petros Angelatos <petrosagg@gmail.com>
+                signed-off-by: Petros Angelatos <petrosagg@gmail.com>
+              author: Petros Angelatos
+            - subject: >-
+                Pin down cargo deps (using Cargo.lock) to versions known working
+                with rust 1.24.1 (for sumo)
+              hash: ef3e76f2d343e8cd367214b4b5ce52b3b97be262
+              body: >
+                With Sumo 19.0.1, when building cargo 0.25.0 we get:
+
+                | error[E0425]: cannot find function `read_to_string` in module
+                `fs`
+
+                |   -->
+                /yocto/resin-board/build/tmp/work/x86_64-linux/cargo-native/
+
+                0.25.0-r0/cargo_home/registry/src/github.com-1ecc6299db9ec823/
+
+                libssh2-sys-0.2.11/build.rs:99:26
+
+                let config =
+                fs::read_to_string("libssh2/src/libssh2_config_cmake.h.in")
+
+                ^^^^^^^^^^^^^^ did you mean `read_string`?
+
+
+                This is just one example of a package that fails like this.
+                There are
+
+                multiple packages in the cargo source tree that fail with this
+                error.
+
+
+                The cargo bbclass does a:
+
+                cargo build -v --target x86_64-linux --release
+
+
+                This has the following effect:
+
+                NOTE:- cargo build -v --target x86_64-linux --release.
+
+                Updating registry `https://github.com/rust-lang/crates.io-index`
+
+
+                Updating the registry will result in using the versions pinned
+                upstream.
+
+                In our case, it will be using newer versions of packages that
+                require a
+
+                newer rust version (read_to_string was added in rust 1.26.0).
+                But at the
+
+                same time, the meta-rust layer which we use has an older rust
+                version.
+
+                (currently meta-rust on sumo branch has rust at version 1.24.1)
+
+
+                The fix for such a case would be to use a Cargo.lock file which
+                pins
+
+                the packages to versions which are known to work with rust
+                1.24.1,
+
+                the version we use in sumo.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: >-
+                  Pin down cargo deps (using Cargo.lock) to versions known
+                  working with rust 1.24.1 (for sumo)
+                changelog-entry: >-
+                  Pin down cargo deps (using Cargo.lock) to versions known
+                  working with rust 1.24.1 (for sumo)
+                Signed-off-by: Florin Sarbu <florin@resin.io>
+                signed-off-by: Florin Sarbu <florin@resin.io>
+              author: Florin Sarbu
+            - subject: Remove duplicate packaging of bcm43143
+              hash: cef8864000507af337a52e47722274921ccb5982
+              body: >
+                Yocto Sumo 19.0.1 already packages this firmware separately so
+                let's
+
+                remove the duplication we do here.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Remove duplicate packaging of bcm43143
+                changelog-entry: Remove duplicate packaging of bcm43143
+                Signed-off-by: Florin Sarbu <florin@resin.io>
+                signed-off-by: Florin Sarbu <florin@resin.io>
+              author: Florin Sarbu
+            - subject: Set ModemManager to ignore Inca Roads Serial Device
+              hash: 107ab6747db748201742bf495a1c0f41fb28f1fe
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Set ModemManager to ignore Inca Roads Serial Device
+                changelog-entry: Set ModemManager to ignore Inca Roads Serial Device
+                Signed-off-by: Petros Angelatos <petrosagg@gmail.com>
+                signed-off-by: Petros Angelatos <petrosagg@gmail.com>
+              author: Petros Angelatos
+            - subject: Add support for aufs 4.14.56+
+              hash: 28746ab0d4d14c0def56382b1c1747c009362107
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Add support for aufs 4.14.56+
+                changelog-entry: Add support for aufs 4.14.56+
+                Signed-off-by: Florin Sarbu <florin@resin.io>
+                signed-off-by: Florin Sarbu <florin@resin.io>
+              author: Florin Sarbu
+            - subject: Update resin-supervisor to v7.19.7
+              hash: 9e595a0cab47b044d445d8aeab23e27a6cff58cc
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update resin-supervisor to v7.19.7
+                changelog-entry: Update resin-supervisor to v7.19.7
+                Signed-off-by: Cameron Diver <cameron@resin.io>
+                signed-off-by: Cameron Diver <cameron@resin.io>
+              author: Cameron Diver
+          version: meta-resin-2.19.0
+          date: 2018-09-23T15:05:11.877Z
+        - commits:
+            - subject: Add a parsable representation of the changelog
+              hash: f6c58c1e4da805e5e53da0af08128b7fb4adb87e
+              body: >
+                This file allows other components to uniquely parse the
+                information that
+
+                is contained in the changelog. It will be automatically managed
+                by
+
+                versionist by appending the new commits on top. This is needed
+                to
+
+                provide nested-changelogs.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Giovanni Garufi <giovanni@resin.io>
+                signed-off-by: Giovanni Garufi <giovanni@resin.io>
+                Changelog-entry: Add a parsable representation of the changelog
+                changelog-entry: Add a parsable representation of the changelog
+              author: Giovanni Garufi
+          version: meta-resin-2.18.1
+          date: 2018-09-14T12:50:23.575Z
+        - version: meta-resin-v2.18.0
+          date: 2018-09-12T00:00:00.000Z
+          commits:
+            - subject: >-
+                Update grub hooks to prepare to load kernel from root [Zubair
+                Lutfullah Kakakhel]
+            - subject: 'Update resin-supervisor to v7.19.4 [Cameron Diver]'
+            - subject: >-
+                Kernel-resin.bbclass: Enable CONFIG_IP_NF_TARGET_LOG as a module
+                [John (Jack) Brown]
+            - subject: 'Balena: Update to current HEAD of 17.12-resin [Andrei Gherzan]'
+            - subject: 'Compress os-config with UPX on arm64 too [Andrei Gherzan]'
+            - subject: 'Update upx to 3.95 [Andrei Gherzan]'
+            - subject: >-
+                Add support to skip flasher detection in env_resin.h [Zubair
+                Lutfullah Kakakhel]
+            - subject: 'Add the kernel to the rootfs [Zubair Lutfullah Kakakhel]'
+            - subject: >-
+                Rework resin-supervisor systemd dependency on balena [Florin
+                Sarbu]
+            - subject: 'Enhanced security options for dropbear - sumo [Andrei Gherzan]'
+            - subject: 'Enhanced security options for dropbear - rocko [Andrei Gherzan]'
+            - subject: 'Enhanced security options for dropbear - pyro [Andrei Gherzan]'
+            - subject: 'Enhanced security options for dropbear - morty [Andrei Gherzan]'
+            - subject: >-
+                Enhanced security options for dropbear - krogoth [Andrei
+                Gherzan]
+        - commits:
+            - subject: >-
+                Resin-proxy-config: The no_proxy file fails to parse when
+                missing EOL [Rich Bayliss]
+          date: 2018-09-03T00:00:00.000Z
+          version: meta-resin-2.17.0
+        - commits:
+            - subject: 'Os-config: UPX is broken on aarch64 [Theodor Gherzan]'
+            - subject: 'Allow flasher types to pin preloaded devices [Theodor Gherzan]'
+            - subject: 'Disable PIE for go [Zubair Lutfullah Kakakhel]'
+            - subject: 'Disable PIE for balena [Zubair Lutfullah Kakakhel]'
+          date: 2018-08-31T00:00:00.000Z
+          version: meta-resin-2.16.0
+    - subject: 'balena-yocto-scripts: Updated layer to v1.0.3'
+      hash: d75977dff01309a2d79d83743f0b7e0ec501bc68
+      body: ''
+      footer:
+        Changelog-entry: 'balena-yocto-scripts: Updated layer to v1.0.3'
+        changelog-entry: 'balena-yocto-scripts: Updated layer to v1.0.3'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.31.0+rev1
+  date: 2019-03-12T07:54:56.642Z
+- commits:
     - subject: Switch from resin-yocto-scripts to balena-yocto-scripts
       hash: 13e835c8daac12d942d6f6bd3ec980c55b5c1a40
       body: ''
