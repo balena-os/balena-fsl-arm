@@ -1,4 +1,27 @@
 - commits:
+    - subject: Discontinue the nitrogen6xq2g board
+      hash: 9fa270a23b9cce1525d0ba7a57e2bb6cabe943da
+      body: |
+        We will no longer be offering OS updates for this board
+      footer:
+        Changelog-entry: Discontinue the nitrogen6xq2g board
+        changelog-entry: Discontinue the nitrogen6xq2g board
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Discontinue the nitrogen6x board
+      hash: 0de3d7273a5904f5b4267bb5e629c953283c7339
+      body: |
+        We will no longer be offering OS updates for this board
+      footer:
+        Changelog-entry: Discontinue the nitrogen6x board
+        changelog-entry: Discontinue the nitrogen6x board
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.31.0+rev2
+  date: 2019-04-29T19:02:05.161Z
+- commits:
     - subject: 'nitrogen6xq2g.coffee: Added coffee file for Nitrogen6X Quad 2GB RAM'
       hash: 64679331ce6ac78dc6ae5529acf7711c4b625503
       body: ''

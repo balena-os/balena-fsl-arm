@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.31.0+rev2
+## (2019-04-29)
+
+* Discontinue the nitrogen6xq2g board [Florin Sarbu]
+* Discontinue the nitrogen6x board [Florin Sarbu]
+
 # v2.31.0+rev1
 ## (2019-03-12)
 
