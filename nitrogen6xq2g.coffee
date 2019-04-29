@@ -18,7 +18,7 @@ module.exports =
 	aliases: [ 'nitrogen6xq2g' ]
 	name: 'Nitrogen 6X Quad 2GB'
 	arch: 'armv7hf'
-	state: 'experimental'
+	state: 'discontinued'
 
 	stateInstructions:
 		postProvisioning: postProvisioningInstructions
