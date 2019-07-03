@@ -1,1 +1,1 @@
-PACKAGECONFIG_remove_mx6 = " egl glesv2"
+PACKAGECONFIG_remove = " egl glesv2"
