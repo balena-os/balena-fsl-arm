@@ -26,3 +26,6 @@
 [submodule "layers/meta-rust"]
 	path = layers/meta-rust
 	url = https://github.com/meta-rust/meta-rust.git
+[submodule "layers/meta-boundary"]
+	path = layers/meta-boundary
+	url = https://github.com/boundarydevices/meta-boundary
