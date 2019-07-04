@@ -1,12 +1,12 @@
 [submodule "layers/poky"]
 	path = layers/poky
-	url = https://git.yoctoproject.org/git/poky
+	url = https://github.com/balena-os/poky
 [submodule "layers/meta-openembedded"]
 	path = layers/meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
-[submodule "layers/meta-resin"]
-	path = layers/meta-resin
-	url = https://github.com/resin-os/meta-resin.git
+[submodule "layers/meta-balena"]
+	path = layers/meta-balena
+	url = https://github.com/balena-os/meta-balena.git
 [submodule "balena-yocto-scripts"]
 	path = balena-yocto-scripts
 	url = https://github.com/balena-os/balena-yocto-scripts.git
@@ -18,7 +18,7 @@
 	url = https://github.com/Freescale/meta-freescale.git
 [submodule "layers/meta-freescale-3rdparty"]
 	path = layers/meta-freescale-3rdparty
-	url = https://github.com/Freescale/meta-freescale-3rdparty.git
+	url = https://github.com/boundarydevices/meta-freescale-3rdparty
 [submodule "layers/meta-solidrun-arm-imx6"]
 	path = layers/meta-solidrun-arm-imx6
 	url = https://github.com/SolidRun/meta-solidrun-arm-imx6.git
@@ -26,3 +26,6 @@
 [submodule "layers/meta-rust"]
 	path = layers/meta-rust
 	url = https://github.com/meta-rust/meta-rust.git
+[submodule "layers/meta-boundary"]
+	path = layers/meta-boundary
+	url = https://github.com/boundarydevices/meta-boundary

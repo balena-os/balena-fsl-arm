@@ -75,3 +75,21 @@ IMAGE_CMD_resinos-img_append_solidrun-imx6 () {
     dd if=${DEPLOY_DIR_IMAGE}/${SPL_BINARY} of=${RESIN_RAW_IMG} conv=notrunc seek=1 bs=1K
     dd if=${DEPLOY_DIR_IMAGE}/u-boot-${MACHINE}.${UBOOT_SUFFIX} of=${RESIN_RAW_IMG} conv=notrunc seek=69 bs=1K
 }
+
+
+IMAGE_FSTYPES_append_nitrogen8mm = " resinos-img"
+RESIN_IMAGE_BOOTLOADER_nitrogen8mm = "u-boot"
+RESIN_BOOT_PARTITION_FILES_nitrogen8mm = " \
+    imx8mm-${MACHINE}.dtb:/imx8mm-${MACHINE}.dtb \
+    boot.scr-${MACHINE}:/boot.scr \
+    imx-boot:/imx-boot \
+"
+
+IMAGE_INSTALL_append_nitrogen8mm = " \
+	imx-boot \
+	firmware-imx \
+	kernel-module-imx-gpu-viv \
+	kernel-module-qcacld \
+	linux-firmware-bdsdmac \
+	u-boot-script-boundary \
+"

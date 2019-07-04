@@ -1,0 +1,17 @@
+#!/bin/sh
+
+#
+# Initial flashing of u-boot
+#
+
+set -o errexit
+
+# machine specific data
+uboot_file="imx-boot"
+uboot_block_size=1024
+uboot_seek_blocks=33
+uboot_device="/dev/mmcblk0boot0"
+
+echo 0 > /sys/block/mmcblk0boot0/force_ro
+dd if=/mnt/boot/$uboot_file of=$uboot_device conv=fdatasync seek=$uboot_seek_blocks bs=$uboot_block_size
+echo 1 > /sys/block/mmcblk0boot0/force_ro
