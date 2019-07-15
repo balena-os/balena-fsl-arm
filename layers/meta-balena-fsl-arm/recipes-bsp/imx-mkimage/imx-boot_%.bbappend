@@ -20,3 +20,9 @@ do_compile() {
 do_compile[depends] += " \
     virtual/bootloader:do_install \
 "
+
+# Together with the IMAGE DEPENDS in resin-image
+# this triggers signed boot binary generation each time
+# there's a change in u-boot, without installing
+# imx-boot in the rootfs
+do_compile[nostamp] = "1"
