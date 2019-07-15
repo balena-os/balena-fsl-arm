@@ -86,10 +86,11 @@ RESIN_BOOT_PARTITION_FILES_nitrogen8mm = " \
 "
 
 IMAGE_INSTALL_append_nitrogen8mm = " \
-	imx-boot \
 	firmware-imx \
 	kernel-module-imx-gpu-viv \
 	kernel-module-qcacld \
 	linux-firmware-bdsdmac \
 	u-boot-script-boundary \
 "
+
+DEPENDS_append_nitrogen8mm += "imx-boot"
