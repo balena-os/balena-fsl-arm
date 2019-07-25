@@ -52,20 +52,20 @@ IMAGE_FSTYPES_append_solidrun-imx6 = " resinos-img"
 RESIN_IMAGE_BOOTLOADER_solidrun-imx6 = "u-boot"
 RESIN_BOOT_PARTITION_FILES_solidrun-imx6 = " \
     zImage-initramfs-${MACHINE}.bin:/zImage \
-    zImage-imx6dl-cubox-i.dtb:/imx6dl-cubox-i.dtb \
-    zImage-imx6q-cubox-i.dtb:/imx6q-cubox-i.dtb \
-    zImage-imx6dl-hummingboard.dtb:/imx6dl-hummingboard.dtb \
-    zImage-imx6q-hummingboard.dtb:/imx6q-hummingboard.dtb \
-    zImage-imx6dl-hummingboard2.dtb:/imx6dl-hummingboard2.dtb \
-    zImage-imx6q-hummingboard2.dtb:/imx6q-hummingboard2.dtb \
-    zImage-imx6dl-cubox-i-som-v15.dtb:/imx6dl-cubox-i-som-v15.dtb \
-    zImage-imx6q-cubox-i-som-v15.dtb:/imx6q-cubox-i-som-v15.dtb \
-    zImage-imx6dl-hummingboard-som-v15.dtb:/imx6dl-hummingboard-som-v15.dtb \
-    zImage-imx6q-hummingboard-som-v15.dtb:/imx6q-hummingboard-som-v15.dtb \
-    zImage-imx6dl-hummingboard2-som-v15.dtb:/imx6dl-hummingboard2-som-v15.dtb \
-    zImage-imx6q-hummingboard2-som-v15.dtb:/imx6q-hummingboard2-som-v15.dtb \
-    zImage-imx6q-hummingboard2-emmc-som-v15.dtb:/imx6q-hummingboard2-emmc-som-v15.dtb \
-    zImage-imx6dl-hummingboard2-emmc-som-v15.dtb:/imx6dl-hummingboard2-emmc-som-v15.dtb \
+    imx6dl-cubox-i.dtb:/imx6dl-cubox-i.dtb \
+    imx6q-cubox-i.dtb:/imx6q-cubox-i.dtb \
+    imx6dl-hummingboard.dtb:/imx6dl-hummingboard.dtb \
+    imx6q-hummingboard.dtb:/imx6q-hummingboard.dtb \
+    imx6dl-hummingboard2.dtb:/imx6dl-hummingboard2.dtb \
+    imx6q-hummingboard2.dtb:/imx6q-hummingboard2.dtb \
+    imx6dl-cubox-i-som-v15.dtb:/imx6dl-cubox-i-som-v15.dtb \
+    imx6q-cubox-i-som-v15.dtb:/imx6q-cubox-i-som-v15.dtb \
+    imx6dl-hummingboard-som-v15.dtb:/imx6dl-hummingboard-som-v15.dtb \
+    imx6q-hummingboard-som-v15.dtb:/imx6q-hummingboard-som-v15.dtb \
+    imx6dl-hummingboard2-som-v15.dtb:/imx6dl-hummingboard2-som-v15.dtb \
+    imx6q-hummingboard2-som-v15.dtb:/imx6q-hummingboard2-som-v15.dtb \
+    imx6q-hummingboard2-emmc-som-v15.dtb:/imx6q-hummingboard2-emmc-som-v15.dtb \
+    imx6dl-hummingboard2-emmc-som-v15.dtb:/imx6dl-hummingboard2-emmc-som-v15.dtb \
     ${SPL_BINARY}:/${SPL_BINARY} \
     u-boot-${MACHINE}.${UBOOT_SUFFIX}:/u-boot-${MACHINE}.${UBOOT_SUFFIX} \
     "
@@ -86,10 +86,11 @@ RESIN_BOOT_PARTITION_FILES_nitrogen8mm = " \
 "
 
 IMAGE_INSTALL_append_nitrogen8mm = " \
-	imx-boot \
 	firmware-imx \
 	kernel-module-imx-gpu-viv \
 	kernel-module-qcacld \
 	linux-firmware-bdsdmac \
 	u-boot-script-boundary \
 "
+
+DEPENDS_append_nitrogen8mm += "imx-boot"

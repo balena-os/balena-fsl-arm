@@ -1,0 +1,11 @@
+[Unit]
+Description=Nitrogen8M Mini bluetooth startup script
+Wants=dev-ttymxc0.device
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+
+ExecStart=/bin/sh /lib/systemd/nitrogen8mm-bluetooth.sh
