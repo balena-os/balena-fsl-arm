@@ -1,6 +1,20 @@
 Change log
 -----------
 
+# v2.38.3+rev1
+## (2019-07-19)
+
+* Update the balena-yocto-scripts submodule to v1.3.5 [Alexandru Costache]
+
+<details>
+<summary> Update meta-balena from v2.38.2 to v2.38.3 [Alexandru Costache] </summary>
+
+> ## meta-balena-2.38.3
+> ### (2019-07-10)
+> 
+> * resin-proxy-config: fix up incorrect bash subshell command [Matthew McGinn]
+</details>
+
 # v2.38.2+rev1
 ## (2019-07-04)
 
