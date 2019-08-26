@@ -7,7 +7,7 @@ module.exports =
 	aliases: [ 'solidrun-imx6', 'cubox-i', 'hummingboard', 'hummingboard2' ]
 	name: 'Hummingboard'
 	arch: 'armv7hf'
-	state: 'released'
+	state: 'discontinued'
 
 	instructions: commonImg.instructions
 	gettingStartedLink:
