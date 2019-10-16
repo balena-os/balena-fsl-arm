@@ -1,6 +1,53 @@
 Change log
 -----------
 
+# v2.44.0+rev1
+## (2019-10-16)
+
+* Update balena-yocto-scripts to v1.4.0 [Florin Sarbu]
+
+<details>
+<summary> Update meta-balena from v2.41.0 to v2.44.0 [Alexandru Costache] </summary>
+
+> ## meta-balena-2.44.0
+> ### (2019-10-03)
+> 
+> * Make uboot dev images autoboot delay build time configurable. Default is no delay [Zubair Lutfullah Kakakhel]
+> * Reduce systemd logging level from info to notice [Zubair Lutfullah Kakakhel]
+> * resin-supervisor: Expose container ID via env variable [Roman Mazur]
+> * kernel-devsrc: Copy vdso.lds.S file in source archive if available [Sebastian Panceac]
+> * Disable PasswordAuthentication in sshd in production images as an extra precautionary measure. [Zubair Lutfullah Kakakhel]
+> * Update balena-engine to 18.9.10 [Robert Günzler]
+> * hostapp-update-hooks: Filter out automount for inactive sysroot [Alexandru Costache]
+> * Add support for hooks 2.0 enabling finer granularity during HostOS updates. [Zubair Lutfullah Kakakhel]
+> * Update balena-supervisor to v10.3.7 [Cameron Diver]
+> * Add support for balena cloud SSH public keys [Andrei Gherzan]
+> * Map any user to root using libnss-ato [Andrei Gherzan]
+> * Add option to disable kernel headers from being built. [Zubair Lutfullah Kakakhel]
+
+> ## meta-balena-2.43.0
+> ### (2019-09-13)
+> 
+> * Update NetworkManager to 1.20.2 [Andrei Gherzan]
+> * Update ModemManager to 1.10.6 [Andrei Gherzan]
+
+> ## meta-balena-2.42.0
+> ### (2019-09-13)
+> 
+> * A small fix in initramfs when /dev/console is invalid due to whatever reason [Zubair Lutfullah Kakakhel]
+> * Add automated testing for external kernel module header tarballs [Zubair Lutfullah Kakakhel]
+> * Make sure correct utsrelease.h is packaged [Zubair Lutfullah Kakakhel]
+> * Fix a bug where application containers with new systemd versions were failing to start in cases. Switch to systemd cgroup driver in balenaEngine [Zubair Lutfullah Kakakhel]
+
+> ## meta-balena-2.41.1
+> ### (2019-09-03)
+> 
+> * Update ModemManager to version 1.10.4 [Florin Sarbu]
+> * Fix for some innocous systemd tmpfile warnings /var/run -> /run ones [Zubair Lutfullah Kakakhel]
+> * Fix for rollbacks where the inactive partition mount was unavailable when altboot triggered [Zubair Lutfullah Kakakhel]
+> * kernel-resin: Enable FTDI USB-serial convertors driver [Sebastian Panceac]
+</details>
+
 # v2.41.0+rev2
 ## (2019-09-30)
 
