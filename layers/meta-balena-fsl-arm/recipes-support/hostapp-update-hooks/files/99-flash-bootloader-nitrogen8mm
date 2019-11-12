@@ -28,6 +28,7 @@ for i in $update_files; do
 	# calculate md5sum of the data already written to $device, using $update_size bytes and skipping $skip_bytes from $device
 	existing_md5sum=$(dd if=$device bs=1 skip=$skip_bytes count=$update_size status=none | md5sum | awk '{print $1}')
 
+	# This hw partition should NOT be erased on Nitrogen8MM, as it might contain an u-boot eMMC environment
 	if [ ! "$existing_md5sum" = "$update_md5sum" ]; then
 		echo "Will update u-boot on /dev/mmcblk0boot0"
 		echo 0 > /sys/block/mmcblk0boot0/force_ro

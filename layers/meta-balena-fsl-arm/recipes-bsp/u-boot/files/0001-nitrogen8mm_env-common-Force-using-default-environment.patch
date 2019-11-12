@@ -1,0 +1,45 @@
+From bb722930a1247073a2a457b5b167e1c379857040 Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Tue, 15 Oct 2019 15:43:54 +0200
+Subject: [PATCH] env/common: Force using default environment
+
+We need to force using default env, the one built into
+the binary, and leave the eMMC based env untouched.
+That one can be queried from container using uboot fw_printenv.
+
+If the eMMC stored env size is for instance 0x3000, on a
+0x400000 hw partition size like mmcblk0boot0, container
+fw_env.config will look like this:
+/dev/mmcblk0boot0  0x3fd000          0x3000         0x1000
+
+Upstream-status: Inappropriate [configuration]
+Signed-off-by: Alexandru Costache <alexandru@balena.io>
+---
+ env/common.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+diff --git a/env/common.c b/env/common.c
+index daaa4ff0ec..c488f52373 100644
+--- a/env/common.c
++++ b/env/common.c
+@@ -113,6 +113,17 @@ int set_default_vars(int nvars, char * const vars[])
+  */
+ int env_import(const char *buf, int check)
+ {
++	/* Although CONFIG_ENV_IS_NOWHERE is set,
++	 * eMMC enviroment is still loaded and used.
++	 *
++	 * Force using BalenaOS environment, the one embedded
++	 * in the boot binary, and leave the eMMC one intact
++	 * so it can be queried from container.
++	 */
++	set_default_env("Switch to BalenaOS environment... ");
++
++	return 0;
++
+ 	env_t *ep = (env_t *)buf;
+ 
+ 	if (check) {
+-- 
+2.17.1
+
