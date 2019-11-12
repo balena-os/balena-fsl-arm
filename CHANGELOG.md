@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.44.0+rev2
+## (2019-10-16)
+
+* u-boot: Always use default built-in environment [Alexandru Costache]
+
 # v2.44.0+rev1
 ## (2019-10-16)
 
