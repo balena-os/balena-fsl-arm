@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-yocto-scripts to v1.5.2
+      hash: 0c78358fc8209e5f7a3f6cdd013d6d865b20405d
+      body: ''
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to v1.5.2
+        changelog-entry: Update balena-yocto-scripts to v1.5.2
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.44.0+rev3
+  date: 2019-11-19T09:21:04.580Z
+- commits:
     - subject: 'u-boot: Always use default built-in environment'
       hash: 6249ad0c26b9d48e4d04c0ad9a87e1ea6c0b3c42
       body: |
