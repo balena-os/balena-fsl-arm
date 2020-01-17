@@ -2,6 +2,8 @@
 #MACHINE ?= "nitrogen6x"
 #MACHINE ?= "solidrun-imx6"
 #MACHINE ?= "nitrogen6xq2g"
+#MACHINE ?= "nitrogen8mm"
+#MACHINE ?= "nitrogen8mm-dwe"
 
 # More info meta-resin/README.md
 #TARGET_REPOSITORY ?= ""
@@ -9,6 +11,7 @@
 
 BALENA_STORAGE_nitrogen6xq2g = "overlay2"
 BALENA_STORAGE_nitrogen8mm = "overlay2"
+BALENA_STORAGE_nitrogen8mm-dwe = "overlay2"
 # Set this to 1 if development image is desired
 #DEVELOPMENT_IMAGE = "1"
 
