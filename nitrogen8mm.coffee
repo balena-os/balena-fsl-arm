@@ -14,8 +14,7 @@ module.exports =
 	slug: 'nitrogen8mm'
 	name: 'Nitrogen8M Mini SBC'
 	arch: 'aarch64'
-	state: 'experimental'
-	community: true
+	state: 'new'
 
 	stateInstructions:
 		postProvisioning: postProvisioningInstructions
