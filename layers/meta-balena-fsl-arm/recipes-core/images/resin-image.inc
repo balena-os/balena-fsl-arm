@@ -80,7 +80,13 @@ IMAGE_CMD_resinos-img_append_solidrun-imx6 () {
 IMAGE_FSTYPES_append_nitrogen8mm = " resinos-img"
 RESIN_IMAGE_BOOTLOADER_nitrogen8mm = "u-boot"
 RESIN_BOOT_PARTITION_FILES_nitrogen8mm = " \
-    imx8mm-${MACHINE}.dtb:/imx8mm-${MACHINE}.dtb \
+    imx8mm-nitrogen8mm.dtb:/imx8mm-nitrogen8mm.dtb \
+    boot.scr-${MACHINE}:/boot.scr \
+    imx-boot:/imx-boot \
+"
+
+RESIN_BOOT_PARTITION_FILES_nitrogen8mm-dwe = " \
+    imx8mm-dwe.dtb:/imx8mm-dwe.dtb \
     boot.scr-${MACHINE}:/boot.scr \
     imx-boot:/imx-boot \
 "

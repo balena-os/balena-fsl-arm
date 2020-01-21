@@ -1,6 +1,10 @@
 # Use latest and known to work revision. Otherwise if
 # booting fails at some point we won't know what caused it
-SRCREV="2bb49a37e1d964eacebb09aa0073048a2bfd26e8"
+SRCREV="dc22e26d07f249325604f7dfd42324a9a75e7cc0"
+
+# In this case, MACHINE gets unset and imxboot_targets defaults to MX8QM.
+# Force iMX8MM SOC to fix failed booting.
+IMXBOOT_TARGETS_nitrogen8mm-dwe = "u-boot-lpddr4-iMX8MM-2g.nohdmibin"
 
 do_compile() {
     compile_${SOC_FAMILY}
@@ -10,7 +14,7 @@ do_compile() {
         # Use iMX8MM soc, not iMX8M. If dtbs not specified in lower case too
         # mkimage_fit_atf.sh will not use 8mm dtb when generating iMX8MM-2g.its
         # thus booting will fail - imx-mkimage/iMX8M/sok.mak:74
-        make SOC=iMX8MM  DTBS=${UBOOT_DTB_NAME} dtbs=${UBOOT_DTB_NAME} ${target}
+        make SOC=iMX8MM DTBS=${UBOOT_DTB_NAME} dtbs=${UBOOT_DTB_NAME} ${target}
         if [ -e "${BOOT_STAGING}/${target}" ]; then
             cp ${BOOT_STAGING}/${target} ${S}/${BOOT_CONFIG_MACHINE}-${target}
         fi

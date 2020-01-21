@@ -54,7 +54,7 @@ index 8f1d6b89ca..3cf63f7993 100644
 +    if env exists resin_set_kernel_root; then
 +        setenv bootargs "${bootargs} ${resin_kernel_root} ro rootwait ";
 +    else
-+        setenv bootargs "${bootargs} root=/dev/mmcblk${devnum}p2 ro rootwait ";
++        setenv bootargs "${bootargs} root=/dev/mmcblk${devnum}p2 ro rootwait flasher";
 +    fi;
  fi
  

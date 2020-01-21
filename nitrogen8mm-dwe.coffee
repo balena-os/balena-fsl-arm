@@ -1,7 +1,7 @@
 deviceTypesCommon = require '@resin.io/device-types/common'
 { networkOptions, commonImg, instructions } = deviceTypesCommon
 
-BOARD_POWEROFF = 'Remove and re-connect power to the board.'
+BOARD_POWEROFF = 'Remove power from the board, drain the super capacitor completely and then re-power the board.'
 
 postProvisioningInstructions = [
 	instructions.BOARD_SHUTDOWN
@@ -11,8 +11,8 @@ postProvisioningInstructions = [
 
 module.exports =
 	version: 1
-	slug: 'nitrogen8mm'
-	name: 'Nitrogen8M Mini SBC'
+	slug: 'nitrogen8mm-dwe'
+	name: 'Nitrogen8MM DWE'
 	arch: 'aarch64'
 	state: 'new'
 
@@ -27,18 +27,18 @@ module.exports =
 	].concat(postProvisioningInstructions)
 
 	gettingStartedLink:
-		windows: 'https://docs.resin.io/nitrogen8mm-sbc/nodejs/getting-started/#adding-your-first-device'
-		osx: 'https://docs.resin.io/nitrogen8mm-sbc/nodejs/getting-started/#adding-your-first-device'
-		linux: 'https://docs.resin.io/nitrogen8mm-sbc/nodejs/getting-started/#adding-your-first-device'
+		windows: 'https://docs.resin.io/nitrogen8mm-dwe/nodejs/getting-started/#adding-your-first-device'
+		osx: 'https://docs.resin.io/nitrogen8mm-dwe/nodejs/getting-started/#adding-your-first-device'
+		linux: 'https://docs.resin.io/nitrogen8mm-dwe/nodejs/getting-started/#adding-your-first-device'
 
 	supportsBlink: false
 
 	yocto:
-		machine: 'nitrogen8mm'
+		machine: 'nitrogen8mm-dwe'
 		image: 'resin-image-flasher'
 		fstype: 'resinos-img'
 		version: 'yocto-thud'
-		deployArtifact: 'resin-image-flasher-nitrogen8mm.resinos-img'
+		deployArtifact: 'resin-image-flasher-nitrogen8mm-dwe.resinos-img'
 		compressed: true
 
 	options: [ networkOptions.group ]
