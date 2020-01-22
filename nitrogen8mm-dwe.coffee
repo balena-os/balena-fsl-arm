@@ -1,12 +1,14 @@
 deviceTypesCommon = require '@resin.io/device-types/common'
 { networkOptions, commonImg, instructions } = deviceTypesCommon
 
-BOARD_POWEROFF = 'Remove power from the board, drain the super capacitor completely and then re-power the board.'
+BOARD_FLASHING = 'The device internal storage is now being flashed with BalenaOS, please wait until completed.'
+CAPACITOR_DRAIN = 'Remove power from the board and drain the super capacitor completely.'
+BOARD_POWERON = 'Connect power to the board.'
 
 postProvisioningInstructions = [
-	instructions.BOARD_SHUTDOWN
+	CAPACITOR_DRAIN
 	instructions.REMOVE_INSTALL_MEDIA
-	instructions.BOARD_REPOWER
+	BOARD_POWERON
 ]
 
 module.exports =
@@ -23,7 +25,8 @@ module.exports =
 		instructions.ETCHER_SD
 		instructions.EJECT_SD
 		instructions.FLASHER_WARNING
-		BOARD_POWEROFF
+		instructions.BOARD_REPOWER
+		BOARD_FLASHING
 	].concat(postProvisioningInstructions)
 
 	gettingStartedLink:
