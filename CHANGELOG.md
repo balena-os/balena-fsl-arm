@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.46.1+rev3
+## (2020-01-22)
+
+* u-boot: Fix hostOS update failure for N8MM DWE [Alexandru Costache]
+
 # v2.46.1+rev2
 ## (2020-01-21)
 
