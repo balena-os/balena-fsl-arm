@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.46.1+rev2
+## (2020-01-21)
+
+* resin-init-board: Add EC21 modem power up sequence [Alexandru Costache]
+
 # v2.46.1+rev1
 ## (2020-01-21)
 

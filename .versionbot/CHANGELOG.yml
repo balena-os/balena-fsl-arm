@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'resin-init-board: Add EC21 modem power up sequence'
+      hash: c5fdf93e379881f5598b71f1ea5ba8d26544cb6b
+      body: |
+        Add this script to board startup to power up the EC21
+      footer:
+        Changelog-entry: 'resin-init-board: Add EC21 modem power up sequence'
+        changelog-entry: 'resin-init-board: Add EC21 modem power up sequence'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.46.1+rev2
+  date: 2020-01-21T16:55:38.414Z
+- commits:
     - subject: Update meta-balena from v2.44.0 to v2.46.1
       hash: f573233f726f30098ecd884561396b42ad654bbd
       body: |
