@@ -14,3 +14,7 @@ SRC_URI_append_nitrogen8mm = " \
     file://0001-nitrogen8mm-Use-balenaOS-configs.patch \
     file://0001-nitrogen8mm_env-common-Force-using-default-environment.patch \
 "
+
+SRC_URI_append_nitrogen8mm-dwe = " \
+    file://nitrogen8mm-dwe-Use-balenaOS-configs.patch \
+"

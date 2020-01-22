@@ -1,0 +1,56 @@
+From 774548c8f92a161ad0a643f39aaf5a825209ef5e Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Wed, 22 Jan 2020 08:07:02 +0100
+Subject: [PATCH] nitrogen8mm-dwe: Enable necessary configs for BalenaOS
+
+Enable necessary configs for loading and updating
+resinOS_uEnv.txt
+
+Also, increase default env size to accomodate
+for inclusion of balenaOS u-boot scripts.
+
+Upstream-Status: Inappropriate [configuration]
+Signed-off-by: Alexandru Costache <alexandru@balena.io>
+---
+ configs/dwe_2g_defconfig | 5 +++++
+ include/configs/dwe.h    | 4 +---
+ 2 files changed, 6 insertions(+), 3 deletions(-)
+
+diff --git a/configs/dwe_2g_defconfig b/configs/dwe_2g_defconfig
+index 3e1bb94504..09c50fa23d 100644
+--- a/configs/dwe_2g_defconfig
++++ b/configs/dwe_2g_defconfig
+@@ -100,3 +100,8 @@ CONFIG_USB_ETH_CDC=y
+ CONFIG_USBNET_DEVADDR="00:19:b8:00:00:02"
+ CONFIG_USBNET_HOST_ADDR="00:19:b8:00:00:01"
+ CONFIG_USB_HOST_ETHER=y
++CONFIG_ENV_IS_NOWHERE=y
++CONFIG_CMD_SAVEENV=n
++CONFIG_FAT_WRITE=y
++CONFIG_CMD_EXPORTENV=y
++CONFIG_CMD_IMPORTENV=y
+diff --git a/include/configs/dwe.h b/include/configs/dwe.h
+index f5bed34abf..a81654fd75 100644
+--- a/include/configs/dwe.h
++++ b/include/configs/dwe.h
+@@ -59,8 +59,6 @@
+ /* Flat Device Tree Definitions */
+ #define CONFIG_OF_BOARD_SETUP
+ 
+-#undef CONFIG_CMD_EXPORTENV
+-#undef CONFIG_CMD_IMPORTENV
+ #undef CONFIG_CMD_IMLS
+ 
+ #undef CONFIG_CMD_CRC32
+@@ -96,7 +94,7 @@
+         (CONFIG_SYS_INIT_RAM_ADDR + CONFIG_SYS_INIT_SP_OFFSET)
+ 
+ #define CONFIG_ENV_OVERWRITE
+-#define CONFIG_ENV_SIZE			0x2000
++#define CONFIG_ENV_SIZE			0x3000
+ #if defined(CONFIG_ENV_IS_IN_MMC)
+ #define CONFIG_ENV_OFFSET               (-CONFIG_ENV_SIZE)
+ #define CONFIG_SYS_MMC_ENV_DEV		0	/* USDHC1 */
+-- 
+2.17.1
+
