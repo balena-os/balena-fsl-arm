@@ -1,0 +1,18 @@
+#!/bin/sh
+
+echo 111 > /sys/class/gpio/export
+echo 14 > /sys/class/gpio/export
+echo 128 > /sys/class/gpio/export
+
+# Set ET_USB_BOOT (SAI1_TXD3) to 0 to disable QDL mode
+echo out > /sys/class/gpio/gpio111/direction 
+echo 0 > /sys/class/gpio/gpio111/value
+
+echo out > /sys/class/gpio/gpio14/direction
+echo out > /sys/class/gpio/gpio128/direction
+
+# USB_OTG2_PWR (GPIO1_IO14)
+echo 1 > /sys/class/gpio/gpio14/value
+
+# 3P7V_EN (SAI3_TXC)
+echo 1 > /sys/class/gpio/gpio128/value
