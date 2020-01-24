@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.46.1+rev4
+## (2020-01-24)
+
+* nitrogen8mm-dwe: Switch to non-flasher image [Alexandru Costache]
+
 # v2.46.1+rev3
 ## (2020-01-22)
 

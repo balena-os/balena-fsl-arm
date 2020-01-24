@@ -1,4 +1,20 @@
 - commits:
+    - subject: 'nitrogen8mm-dwe: Switch to non-flasher image'
+      hash: d2d8b6bf08918309f36fa2414d3ae843b0026445
+      body: |
+        Switch from flasher image to a standard, non-flasher
+        one in the coffee file.
+
+        Update dashboard instructions for this usecase too.
+      footer:
+        Changelog-entry: 'nitrogen8mm-dwe: Switch to non-flasher image'
+        changelog-entry: 'nitrogen8mm-dwe: Switch to non-flasher image'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.46.1+rev4
+  date: 2020-01-24T09:51:53.813Z
+- commits:
     - subject: 'u-boot: Fix hostOS update failure for N8MM DWE'
       hash: ad4483341b59ee4ac8261c035c4deff708405aec
       body: |
