@@ -1,14 +1,17 @@
 deviceTypesCommon = require '@resin.io/device-types/common'
 { networkOptions, commonImg, instructions } = deviceTypesCommon
 
-BOARD_FLASHING = 'The device internal storage is now being flashed with BalenaOS, please wait until completed.'
+UNPACK_IMAGE = 'Unzip the image downloaded from the dashboard.'
+CONNECT_USB = 'Power on the board, stop booting in u-boot cmdline and connect the USB OTG port to the PC. Issue the following command in u-boot: ums 0 mmc 0'
+FLASH_IMAGE = 'Use Balena Etcher to write the unzipped image to the internal storage of device, which is exposed as Mass Storage on the PC.'
 CAPACITOR_DRAIN = 'Remove power from the board and drain the super capacitor completely.'
 BOARD_POWERON = 'Connect power to the board.'
+WRITE_BALENA_UBOOT = 'If board is using a standard uboot, overwrite it with BalenaOS imx-boot in the mmcblk0boot0 partition.'
 
 postProvisioningInstructions = [
 	CAPACITOR_DRAIN
-	instructions.REMOVE_INSTALL_MEDIA
 	BOARD_POWERON
+	WRITE_BALENA_UBOOT
 ]
 
 module.exports =
@@ -22,11 +25,9 @@ module.exports =
 		postProvisioning: postProvisioningInstructions
 
 	instructions: [
-		instructions.ETCHER_SD
-		instructions.EJECT_SD
-		instructions.FLASHER_WARNING
-		instructions.BOARD_REPOWER
-		BOARD_FLASHING
+		UNPACK_IMAGE
+		CONNECT_USB
+		FLASH_IMAGE
 	].concat(postProvisioningInstructions)
 
 	gettingStartedLink:
@@ -38,10 +39,10 @@ module.exports =
 
 	yocto:
 		machine: 'nitrogen8mm-dwe'
-		image: 'resin-image-flasher'
+		image: 'resin-image'
 		fstype: 'resinos-img'
 		version: 'yocto-thud'
-		deployArtifact: 'resin-image-flasher-nitrogen8mm-dwe.resinos-img'
+		deployArtifact: 'resin-image-nitrogen8mm-dwe.resinos-img'
 		compressed: true
 
 	options: [ networkOptions.group ]
