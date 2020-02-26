@@ -1,0 +1,32 @@
+From 8f9717799bf92c39143f385853598d36d59c4764 Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Fri, 21 Feb 2020 11:32:17 +0100
+Subject: [PATCH] bootscript-yocto: Disable flasher for N8MM DWE
+
+This board no longer provides a flasher image.
+
+Let's remove flasher for it, so if booted with
+a vanilla u-boot to allow resizing of data partition.
+
+Upstream-Status: Inappropriate [configuration]
+Signed-off-by: Alexandru Costache <alexandru@balena.io>
+---
+ board/boundary/bootscripts/bootscript-yocto.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/board/boundary/bootscripts/bootscript-yocto.txt b/board/boundary/bootscripts/bootscript-yocto.txt
+index a26eed87a0..5b098dacaa 100644
+--- a/board/boundary/bootscripts/bootscript-yocto.txt
++++ b/board/boundary/bootscripts/bootscript-yocto.txt
+@@ -137,7 +137,7 @@ else
+     if env exists resin_set_kernel_root; then
+         setenv bootargs "${bootargs} ${resin_kernel_root} ro rootwait ";
+     else
+-        setenv bootargs "${bootargs} root=/dev/mmcblk${devnum}p2 ro rootwait flasher";
++        setenv bootargs "${bootargs} root=/dev/mmcblk${devnum}p2 ro rootwait ";
+     fi;
+ fi
+ 
+-- 
+2.17.1
+
