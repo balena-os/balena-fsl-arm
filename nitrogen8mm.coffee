@@ -2,9 +2,10 @@ deviceTypesCommon = require '@resin.io/device-types/common'
 { networkOptions, commonImg, instructions } = deviceTypesCommon
 
 BOARD_POWEROFF = 'Remove and re-connect power to the board.'
+BOARD_SHUTDOWN =  'Monitor the device in Balena dashboard to see when it entered the post-provisioning state. Leave the state settle for around 10 seconds.'
 
 postProvisioningInstructions = [
-	instructions.BOARD_SHUTDOWN
+	BOARD_SHUTDOWN
 	instructions.REMOVE_INSTALL_MEDIA
 	instructions.BOARD_REPOWER
 ]
