@@ -1,4 +1,20 @@
 - commits:
+    - subject: 'nitrogen8mm: Update flashing instructions'
+      hash: c9845ea2edf761b3bb7db04ff47d3138b3defe04
+      body: |
+        The power LED, which is the only one on the board,
+        does not go off after flashing is completed. Therefore
+        we need to check the dashboard to see when provisioning
+        is finished.
+      footer:
+        Changelog-entry: 'nitrogen8mm: Update flashing instructions'
+        changelog-entry: 'nitrogen8mm: Update flashing instructions'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.47.1+rev3
+  date: 2020-03-10T11:19:35.101Z
+- commits:
     - subject: 'linux-boundary: Include changes for disabling CQE'
       hash: 794e63f14eae54c2f441261a516814cd1e8aee21
       body: ''

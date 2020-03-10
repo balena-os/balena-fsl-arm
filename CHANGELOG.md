@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.47.1+rev3
+## (2020-03-10)
+
+* nitrogen8mm: Update flashing instructions [Alexandru Costache]
+
 # v2.47.1+rev2
 ## (2020-03-10)
 
