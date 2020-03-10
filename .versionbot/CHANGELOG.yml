@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'linux-boundary: Include changes for disabling CQE'
+      hash: 794e63f14eae54c2f441261a516814cd1e8aee21
+      body: ''
+      footer:
+        Changelog-entry: 'linux-boundary: Include changes for disabling CQE'
+        changelog-entry: 'linux-boundary: Include changes for disabling CQE'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.47.1+rev2
+  date: 2020-03-10T08:31:15.480Z
+- commits:
     - subject: Update balena-yocto-scripts to v1.5.4
       hash: 42ef82a7ec88f60384809cb323a3d3ccc5f027dd
       body: ''
