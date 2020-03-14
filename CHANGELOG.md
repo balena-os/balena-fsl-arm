@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.47.1+rev4
+## (2020-03-13)
+
+* Do not use wireless-regdb-static until we move to kernel >= 4.15 [Florin Sarbu]
+
 # v2.47.1+rev3
 ## (2020-03-10)
 

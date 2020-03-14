@@ -1,4 +1,19 @@
 - commits:
+    - subject: Do not use wireless-regdb-static until we move to kernel >= 4.15
+      hash: 3b65de4a552b361ff46094b781efb1abe962d2ab
+      body: |
+        The machines in this repo are still on kernel < 4.15 so let's not use
+        wireless-regdb-static just yet. When they will use a kernel >= 4.15
+        let's switch then from crda to wireless-regdb-static.
+      footer:
+        Changelog-entry: Do not use wireless-regdb-static until we move to kernel >= 4.15
+        changelog-entry: Do not use wireless-regdb-static until we move to kernel >= 4.15
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.47.1+rev4
+  date: 2020-03-13T21:56:35.396Z
+- commits:
     - subject: 'nitrogen8mm: Update flashing instructions'
       hash: c9845ea2edf761b3bb7db04ff47d3138b3defe04
       body: |
