@@ -6,7 +6,7 @@ CONNECT_USB = 'Power on the board, stop booting in u-boot cmdline and connect th
 FLASH_IMAGE = 'Use Balena Etcher to write the unzipped image to the internal storage of device, which is exposed as Mass Storage on the PC.'
 CAPACITOR_DRAIN = 'Remove power from the board and drain the super capacitor completely.'
 BOARD_POWERON = 'Connect power to the board.'
-WRITE_BALENA_UBOOT = 'If board is using a standard uboot, overwrite it with BalenaOS imx-boot in the mmcblk0boot0 partition.'
+WRITE_BALENA_UBOOT = 'Update BalenaOS imx-boot in the mmcblk0boot0 partition. imx-boot is present in /mnt/boot/ in the HostOS, as well as in the resin-boot partition of the downloaded BalenaOS image, e.g. dd if=/mnt/boot/imx-boot of=/dev/mmcblk0boot0 seek=33 bs=1K'
 
 postProvisioningInstructions = [
 	CAPACITOR_DRAIN
