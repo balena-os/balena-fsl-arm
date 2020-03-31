@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.48.0+rev2
+## (2020-03-31)
+
+* linux-boundary: Update to include fix for kworker high CPU [Alexandru Costache]
+
 # v2.48.0+rev1
 ## (2020-03-23)
 
