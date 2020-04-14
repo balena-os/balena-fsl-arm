@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'u-boot-boundary: Update to latest, enable usb boot'
+      hash: d2598957c9e3087ebdbeb0620d810308ab1ef1e6
+      body: |
+        Update to latest available u-boot version
+        and enable usb-boot from environment too.
+      footer:
+        Changelog-entry: 'u-boot-boundary: Update to latest, enable usb boot'
+        changelog-entry: 'u-boot-boundary: Update to latest, enable usb boot'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.48.0+rev3
+  date: 2020-04-14T13:12:07.340Z
+- commits:
     - subject: 'linux-boundary: Update to include fix for kworker high CPU'
       hash: 43b2749d2ecc69933c64715475eab745714a9735
       body: |

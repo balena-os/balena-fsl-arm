@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.48.0+rev3
+## (2020-04-14)
+
+* u-boot-boundary: Update to latest, enable usb boot [Alexandru Costache]
+
 # v2.48.0+rev2
 ## (2020-03-31)
 
