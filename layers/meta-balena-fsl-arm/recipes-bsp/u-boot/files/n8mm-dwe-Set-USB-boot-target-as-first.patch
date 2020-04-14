@@ -1,0 +1,35 @@
+From 43582d1fc0eec8b808747e9289b63f856da9e978 Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Tue, 14 Apr 2020 11:43:37 +0200
+Subject: [PATCH] n8mm-dwe: Set USB boot target as first
+
+Switch order of boot targets so that usb
+is used first to look for boot.scr.
+
+u-boot env variable "boot_targets"
+will now have usb0 on first position
+
+Upstream-status: Inappropriate [configuration]
+Signed-off-by: Alexandru Costache <alexandru@balena.io>
+---
+ include/configs/dwe.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/include/configs/dwe.h b/include/configs/dwe.h
+index 84abde27af..4d2f49a121 100644
+--- a/include/configs/dwe.h
++++ b/include/configs/dwe.h
+@@ -208,8 +208,8 @@
+ 
+ #ifndef BOOT_TARGET_DEVICES
+ #define BOOT_TARGET_DEVICES(func) \
+-	DISTRO_BOOT_DEV_MMC(func) \
+-	DISTRO_BOOT_DEV_USB(func)
++	DISTRO_BOOT_DEV_USB(func) \
++	DISTRO_BOOT_DEV_MMC(func)
+ #endif
+ 
+ #include <config_distro_bootcmd.h>
+-- 
+2.17.1
+
