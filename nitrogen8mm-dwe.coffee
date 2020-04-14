@@ -14,6 +14,13 @@ postProvisioningInstructions = [
 	WRITE_BALENA_UBOOT
 ]
 
+imageDownloadAlerts: [
+	{
+		type: 'warning'
+		message: 'To run the hostOS from a USB stick, please first ensure latest imx-boot has been written to /dev/mmcblk0boot0, and the emmc - /dev/mmcblk0 - does not contain any balena image or balena partitions.'
+	}
+]
+
 module.exports =
 	version: 1
 	slug: 'nitrogen8mm-dwe'
