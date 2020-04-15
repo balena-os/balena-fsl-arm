@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.48.0+rev4
+## (2020-04-15)
+
+* nitrogen8mm-dwe: Fix USB warning in dashboard [Alexandru Costache]
+
 # v2.48.0+rev3
 ## (2020-04-14)
 
