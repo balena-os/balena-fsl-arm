@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.48.0+rev5
+## (2020-04-27)
+
+* u-boot: Updates for latest 1G hw variant [Alexandru Costache]
+
 # v2.48.0+rev4
 ## (2020-04-15)
 

@@ -1,4 +1,26 @@
 - commits:
+    - subject: 'u-boot: Updates for latest 1G hw variant'
+      hash: 065ebb9b958826537fe40107817af11260375d72
+      body: |
+        We preserve the old 2G integration patch
+        for easing comparison, but don't use it
+        anymore.
+
+        We integrate BalenaOS with the 1G variant
+        and drop mem=1G from kernel cmdline as it
+        is no longer necessary.
+
+        1G and 2G uboot builds are not compatible
+        from one board to another.
+      footer:
+        Changelog-entry: 'u-boot: Updates for latest 1G hw variant'
+        changelog-entry: 'u-boot: Updates for latest 1G hw variant'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.48.0+rev5
+  date: 2020-04-27T13:48:17.943Z
+- commits:
     - subject: 'nitrogen8mm-dwe: Fix USB warning in dashboard'
       hash: d0719e0e4edd4b3fadd664c60086fdd5d9ef95a0
       body: |
