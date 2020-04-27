@@ -6,5 +6,5 @@ SRC_URI_append = " \
 
 SRC_URI_append_nitrogen8mm-dwe = " \
     file://n8mm-dwe-disable-bootscript-flasher.patch \
-    file://n8mm-dwe-bootscript-Disable-sd-boot-ensure-usb-target-is-firs.patch \
+    file://n8mm-dwe-bootscript-Disable-sd-boot.patch \
 "

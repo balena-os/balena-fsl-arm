@@ -1,12 +1,13 @@
 From 93d28fccac989d9947737dd76a026b16ea1c71b1 Mon Sep 17 00:00:00 2001
 From: Alexandru Costache <alexandru@balena.io>
 Date: Tue, 14 Apr 2020 10:53:38 +0200
-Subject: [PATCH] bootscript: Disable sd boot, ensure usb target is first
+Subject: [PATCH] bootscript: Disable sd boot
 
 Drop SD-card boot as it will not be used anymore.
-Ensure kernel cmdline root is not altered
-when booting from USB.
-Ensure usb rootfs boot target is always first.
+
+Still allowing to boot BalenaOS with non-balena
+u-boot, to allow for writing the u-boot from the
+hostOS
 
 Upstream-status: Inappropriate [configuration]
 Signed-off-by: Alexandru Costache <alexandru@balena.io>
@@ -52,7 +53,7 @@ index 5b098dacaa..4ea93fa849 100644
 -        setenv bootargs "${bootargs} root=/dev/mmcblk${devnum}p2 ro rootwait ";
 -    fi;
 -fi
-+    setenv bootargs "${bootargs} root=/dev/sda2 ro rootwait ";
++    setenv bootargs "${bootargs} root=/dev/mmcblk${devnum}p2 ro rootwait ";
 +fi;
  
  if itest.s "x" != "x${disable_msi}" ; then
