@@ -5,7 +5,7 @@ inherit resin-u-boot
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
 # Override bsp layer autorev and use latest revision
-SRCREV="cb6e27ffe24b2460c4b68e500b3f83048d0c9f8f"
+SRCREV="46b9362711932471e445a6aeec143e82ba693cdb"
 
 # resin-u-boot class patch is rebased
 SRC_URI_remove = " file://resin-specific-env-integration-kconfig.patch"
@@ -17,6 +17,6 @@ SRC_URI_append_nitrogen8mm = " \
 "
 
 SRC_URI_append_nitrogen8mm-dwe = " \
-    file://nitrogen8mm-dwe-Use-balenaOS-configs.patch \
+    file://nitrogen8mm-dwe-1g-Use-BalenaOS-configs.patch \
     file://n8mm-dwe-Set-USB-boot-target-as-first.patch \
 "
