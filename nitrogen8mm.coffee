@@ -16,6 +16,7 @@ module.exports =
 	name: 'Nitrogen8M Mini SBC'
 	arch: 'aarch64'
 	state: 'new'
+	private: false
 
 	stateInstructions:
 		postProvisioning: postProvisioningInstructions

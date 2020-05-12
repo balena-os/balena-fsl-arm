@@ -20,6 +20,7 @@ module.exports =
 	name: 'Nitrogen8MM DWE'
 	arch: 'aarch64'
 	state: 'new'
+	private: false
 
 	imageDownloadAlerts: [
 		{
