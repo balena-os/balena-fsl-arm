@@ -1,4 +1,16 @@
 - commits:
+    - subject: Set private to false in .coffee files for the public device types
+      hash: df4d461981fb2c56708d6f1bf212e32c8e899437
+      body: ''
+      footer:
+        Changelog-entry: Set private to false in .coffee files for the public device types
+        changelog-entry: Set private to false in .coffee files for the public device types
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.48.0+rev6
+  date: 2020-05-12T08:34:26.759Z
+- commits:
     - subject: 'u-boot: Updates for latest 1G hw variant'
       hash: 065ebb9b958826537fe40107817af11260375d72
       body: |
