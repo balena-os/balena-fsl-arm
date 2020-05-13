@@ -1,10 +1,10 @@
-From 4e97f342a4dd8bcafdb887e192c7b27e84445e8e Mon Sep 17 00:00:00 2001
+From 7bd0d34430401d3d97cef889d4fd759e0b2250c2 Mon Sep 17 00:00:00 2001
 From: Alexandru Costache <alexandru@balena.io>
-Date: Wed, 3 Jul 2019 14:12:10 +0200
+Date: Wed, 13 May 2020 11:07:37 +0200
 Subject: [PATCH] bootscript-yocto.txt: Allow flashing, integrate balenaOS
 
-Integrte boot script with resinOS and allow flashing balenaOS
-to a factory flashed board
+Integrate boot script with BalenaOS and allow flashing
+the eMMC.
 
 Upstream-Status: Inappropriate [configuration]
 Signed-off-by: Alexandru Costache <alexandru@balena.io>
@@ -13,16 +13,16 @@ Signed-off-by: Alexandru Costache <alexandru@balena.io>
  1 file changed, 34 insertions(+), 2 deletions(-)
 
 diff --git a/board/boundary/bootscripts/bootscript-yocto.txt b/board/boundary/bootscripts/bootscript-yocto.txt
-index 8f1d6b89ca..3cf63f7993 100644
+index 45e0f83498..d80ab9ba79 100644
 --- a/board/boundary/bootscripts/bootscript-yocto.txt
 +++ b/board/boundary/bootscripts/bootscript-yocto.txt
-@@ -64,9 +64,23 @@ if itest.s x${distro_bootpart} == x ; then
+@@ -68,6 +68,19 @@ if itest.s x${distro_bootpart} == x ; then
  	distro_bootpart=1
  fi
  
 +if mmc dev 1; then
 +    setenv devnum 1;
-+    echo Using SD Card to load resinOS;
++    echo Using SD Card to load BalenaOS;
 +fi;
 +
 +setenv resin_dev_index ${devnum};
@@ -36,11 +36,7 @@ index 8f1d6b89ca..3cf63f7993 100644
  if load ${devtype} ${devnum}:${distro_bootpart} ${a_script} uEnv.txt ; then
      env import -t ${a_script} ${filesize}
  fi
-+
- setenv bootargs ${bootargs} console=${console},115200 vmalloc=400M consoleblank=0 rootwait fixrtc cpu=${imx_cpu} board=${board}
- 
- if load ${devtype} ${devnum}:${distro_bootpart} ${a_fdt} ${prefix}${fdt_file} ; then
-@@ -107,12 +121,17 @@ fi
+@@ -124,12 +137,17 @@ fi
  if itest.s "x" == "x${bpart}" ; then
  	bpart=2
  fi
@@ -51,15 +47,15 @@ index 8f1d6b89ca..3cf63f7993 100644
  	setenv bootargs "${bootargs} root=/dev/sda${bpart}" ;
  else
 -	setenv bootargs "${bootargs} root=/dev/mmcblk${devnum}p${bpart}"
-+    if env exists resin_set_kernel_root; then
-+        setenv bootargs "${bootargs} ${resin_kernel_root} ro rootwait ";
-+    else
-+        setenv bootargs "${bootargs} root=/dev/mmcblk${devnum}p2 ro rootwait flasher";
-+    fi;
++	if env exists resin_set_kernel_root; then
++		setenv bootargs "${bootargs} ${resin_kernel_root} ro rootwait ";
++	else
++		setenv bootargs "${bootargs} root=/dev/mmcblk${devnum}p2 ro rootwait flasher";
++	fi;
  fi
  
  if itest.s "x" != "x${disable_msi}" ; then
-@@ -157,7 +176,20 @@ if itest.s "x" != "x${show_env}" ; then
+@@ -174,7 +192,21 @@ if itest.s "x" != "x${show_env}" ; then
  	printenv
  fi
  
@@ -74,6 +70,7 @@ index 8f1d6b89ca..3cf63f7993 100644
 +    if load ${devtype} ${resin_dev_index}:${resin_root_part} ${a_zImage} boot/${kernelimage} ; then
 +        ${bootcommand} ${a_zImage} - ${a_fdt}
 +    fi;
++
 +    echo "Error loading Balena kernel image"
 +fi;
 +
