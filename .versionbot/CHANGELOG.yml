@@ -1,4 +1,21 @@
 - commits:
+    - subject: 'u-boot-script-boundary: Rework BalenaOS DWE integration patches'
+      hash: 6d503008cb70cf50be6fa5bf118f2c0fc1087e20
+      body: |
+        u-boot-script yocto has been updated in upstream and caused
+        build failure.
+
+        Since multiple patches gathered up anyway, let's do a cleanup
+        and squash while rebasing against the latest upstream changes.
+      footer:
+        Changelog-entry: 'u-boot-script-boundary: Rework BalenaOS DWE integration patches'
+        changelog-entry: 'u-boot-script-boundary: Rework BalenaOS DWE integration patches'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.48.0+rev7
+  date: 2020-05-13T11:48:56.800Z
+- commits:
     - subject: Set private to false in .coffee files for the public device types
       hash: df4d461981fb2c56708d6f1bf212e32c8e899437
       body: ''

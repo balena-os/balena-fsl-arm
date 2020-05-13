@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.48.0+rev7
+## (2020-05-13)
+
+* u-boot-script-boundary: Rework BalenaOS DWE integration patches [Alexandru Costache]
+
 # v2.48.0+rev6
 ## (2020-05-12)
 
