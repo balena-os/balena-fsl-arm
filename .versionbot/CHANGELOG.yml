@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'resin-image: Include dtbs for newer N8MM SBC revisions'
+      hash: 697af880fa468389ce7393816436d1c561b00166
+      body: |
+        We add these to the boot partition.
+      footer:
+        Changelog-entry: 'resin-image: Include dtbs for newer N8MM SBC revisions'
+        changelog-entry: 'resin-image: Include dtbs for newer N8MM SBC revisions'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.50.1+rev2
+  date: 2020-06-04T20:13:20.438Z
+- commits:
     - subject: Update balena-yocto-scripts to v1.7.2
       hash: 911824e8f09767888960b818832a86267823c47f
       body: ''

@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.50.1+rev2
+## (2020-06-04)
+
+* resin-image: Include dtbs for newer N8MM SBC revisions [Alexandru Costache]
+
 # v2.50.1+rev1
 ## (2020-06-04)
 
