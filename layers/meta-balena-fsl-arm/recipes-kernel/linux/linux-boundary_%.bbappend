@@ -7,3 +7,4 @@ SRCREV = "519c68394326d9d3d00776dc71eb62f70bed74bc"
 
 # Disable commit SHA in kernel version string
 SCMVERSION="n"
+
