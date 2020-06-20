@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.51.1+rev2
+## (2020-06-20)
+
+* poky: Switch to warrior [Alexandru Costache]
+
 # v2.51.1+rev1
 ## (2020-06-10)
 

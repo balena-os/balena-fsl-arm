@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'poky: Switch to warrior'
+      hash: 54e05f740c1aa50aa947d541db808e6e3a4a2af0
+      body: ''
+      footer:
+        Changelog-entry: 'poky: Switch to warrior'
+        changelog-entry: 'poky: Switch to warrior'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.51.1+rev2
+  date: 2020-06-20T19:16:33.164Z
+- commits:
     - subject: 'README: Rename resin occurrences to balena'
       hash: ee4d5ac9ddc244b23412f64ab1033de534529db9
       body: ''
