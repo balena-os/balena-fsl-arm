@@ -17,7 +17,7 @@ BBLAYERS ?= " \
     ${TOPDIR}/../layers/meta-freescale-3rdparty \
     ${TOPDIR}/../layers/meta-boundary \
     ${TOPDIR}/../layers/meta-balena/meta-balena-common \
-    ${TOPDIR}/../layers/meta-balena/meta-balena-thud \
+    ${TOPDIR}/../layers/meta-balena/meta-balena-warrior \
     ${TOPDIR}/../layers/meta-balena-fsl-arm \
     ${TOPDIR}/../layers/meta-rust \
     ${TOPDIR}/../layers/oe-meta-go \
