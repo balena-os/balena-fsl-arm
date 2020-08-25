@@ -18,5 +18,4 @@ SRC_URI_append_nitrogen8mm = " \
 
 SRC_URI_append_nitrogen8mm-dwe = " \
     file://nitrogen8mm-dwe-1g-Use-BalenaOS-configs.patch \
-    file://n8mm-dwe-Set-USB-boot-target-as-first.patch \
 "

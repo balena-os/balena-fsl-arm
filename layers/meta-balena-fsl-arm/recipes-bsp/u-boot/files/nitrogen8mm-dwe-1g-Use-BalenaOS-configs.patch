@@ -1,6 +1,6 @@
-From 7ce653bc5b9d80a2ae4b642e57d0e564cc7304b8 Mon Sep 17 00:00:00 2001
+From 128fb052abfc10aa2369d737fa44f32dc7008c25 Mon Sep 17 00:00:00 2001
 From: Alexandru Costache <alexandru@balena.io>
-Date: Mon, 27 Apr 2020 10:53:00 +0200
+Date: Tue, 25 Aug 2020 11:17:05 +0200
 Subject: [PATCH] nitrogen8mm-dwe-1g: Use BalenaOS configs
 
 Integrate the 1G RAM version with BalenaOS.
@@ -14,8 +14,8 @@ Upstream-status: Inappropriate [configuration]
 Signed-off-by: Alexandru Costache <alexandru@balena.io>
 ---
  configs/dwe_1gch1_defconfig | 6 ++++++
- include/configs/dwe.h       | 4 +---
- 2 files changed, 7 insertions(+), 3 deletions(-)
+ include/configs/dwe.h       | 2 +-
+ 2 files changed, 7 insertions(+), 1 deletion(-)
 
 diff --git a/configs/dwe_1gch1_defconfig b/configs/dwe_1gch1_defconfig
 index 7f9cd42959..531fbe4273 100644
@@ -32,19 +32,10 @@ index 7f9cd42959..531fbe4273 100644
 +CONFIG_CMD_EXPORTENV=y
 +CONFIG_CMD_IMPORTENV=y
 diff --git a/include/configs/dwe.h b/include/configs/dwe.h
-index f5bed34abf..a81654fd75 100644
+index 331e06d23b..5c169267ee 100644
 --- a/include/configs/dwe.h
 +++ b/include/configs/dwe.h
-@@ -59,8 +59,6 @@
- /* Flat Device Tree Definitions */
- #define CONFIG_OF_BOARD_SETUP
- 
--#undef CONFIG_CMD_EXPORTENV
--#undef CONFIG_CMD_IMPORTENV
- #undef CONFIG_CMD_IMLS
- 
- #undef CONFIG_CMD_CRC32
-@@ -96,7 +94,7 @@
+@@ -94,7 +94,7 @@
          (CONFIG_SYS_INIT_RAM_ADDR + CONFIG_SYS_INIT_SP_OFFSET)
  
  #define CONFIG_ENV_OVERWRITE
