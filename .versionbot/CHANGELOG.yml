@@ -1,4 +1,20 @@
 - commits:
+    - subject: 'u-boot: Bring in fix for udelay hang'
+      hash: fb69a92aff9b66541dcea719d20adb30eae4f5e8
+      body: |
+        This revision includes the recommended patch for
+        boot reliability enhancement. This issue did not
+        occurr on our side.
+      footer:
+        Changelog-entry: 'u-boot: Bring in fix for udelay hang'
+        changelog-entry: 'u-boot: Bring in fix for udelay hang'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2.54.2+rev2
+  date: 2020-08-25T09:29:55.289Z
+- commits:
     - subject: Update meta-balena from v2.53.12 to v2.54.2
       hash: 5d2d001db8095d140950daafd40408cc23c31945
       body: |
