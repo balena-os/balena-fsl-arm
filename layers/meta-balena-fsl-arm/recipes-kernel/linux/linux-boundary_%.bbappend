@@ -1,3 +1,5 @@
+FILESEXTRAPATHS_append := ":${THISDIR}/${PN}"
+
 inherit kernel-resin
 
 # Use latest and known to boot version,
@@ -7,3 +9,7 @@ SRCREV = "519c68394326d9d3d00776dc71eb62f70bed74bc"
 
 # Disable commit SHA in kernel version string
 SCMVERSION="n"
+
+SRC_URI_append = " \
+	file://imx8mm-sbc-add-no-cqe-for-eMMC.patch \
+"
