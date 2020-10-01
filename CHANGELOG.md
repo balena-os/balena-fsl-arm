@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.56.0+rev2
+## (2020-10-01)
+
+* linux-boundary: Disable CQE for SBC eMMC [Alexandru Costache]
+
 # v2.56.0+rev1
 ## (2020-09-04)
 

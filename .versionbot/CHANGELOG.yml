@@ -1,4 +1,20 @@
 - commits:
+    - subject: 'linux-boundary: Disable CQE for SBC eMMC'
+      hash: df57ac10e5d37423a0c868230a09059041c16eab
+      body: |
+        BD recommends disabling CQE for the SBC, just
+        like HUB3 does, to avoid possible freezes in
+        case of cqe errors.
+      footer:
+        Changelog-entry: 'linux-boundary: Disable CQE for SBC eMMC'
+        changelog-entry: 'linux-boundary: Disable CQE for SBC eMMC'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2.56.0+rev2
+  date: 2020-10-01T10:49:04.224Z
+- commits:
     - subject: Update balena-yocto-scripts to v1.8.1
       hash: fec15f07e5f04576f7ad97455fd29c3731a03146
       body: ''
