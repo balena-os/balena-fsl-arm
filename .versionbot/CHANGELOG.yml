@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'u-boot: Bring in fix for eth PHY reset issue'
+      hash: 84fcdd49905a14549c71c0485685aa40ad0bf9d3
+      body: |
+        This revision includes a recommended fix from Boundary for eth PHY reset
+        issues on the nitrogen8mm-dwe board.
+      footer:
+        Changelog-entry: 'u-boot: Bring in fix for eth PHY reset issue'
+        changelog-entry: 'u-boot: Bring in fix for eth PHY reset issue'
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.56.0+rev3
+  date: 2020-10-09T19:26:55.830Z
+- commits:
     - subject: 'linux-boundary: Disable CQE for SBC eMMC'
       hash: df57ac10e5d37423a0c868230a09059041c16eab
       body: |

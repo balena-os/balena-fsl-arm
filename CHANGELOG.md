@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.56.0+rev3
+## (2020-10-09)
+
+* u-boot: Bring in fix for eth PHY reset issue [Florin Sarbu]
+
 # v2.56.0+rev2
 ## (2020-10-01)
 
