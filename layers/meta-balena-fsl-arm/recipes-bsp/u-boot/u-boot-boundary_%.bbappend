@@ -5,7 +5,7 @@ inherit resin-u-boot
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
 # Override bsp layer autorev and use latest revision
-SRCREV="cc96aa68fb9ee1dc1381c71704681a34828f18ad"
+SRCREV="616d48151df1499f43bb5a5d90676df1a316b5da"
 
 # resin-u-boot class patch is rebased
 SRC_URI_remove = " file://resin-specific-env-integration-kconfig.patch"
