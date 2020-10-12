@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.56.0+rev4
+## (2020-10-12)
+
+* Switch nitrogen8mm-dwe back to public [Florin Sarbu]
+
 # v2.56.0+rev3
 ## (2020-10-09)
 

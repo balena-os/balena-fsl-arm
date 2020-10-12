@@ -1,4 +1,20 @@
 - commits:
+    - subject: Switch nitrogen8mm-dwe back to public
+      hash: 1ae0cf67c4dcae63279d06432979366907f462ff
+      body: |
+        We do not have yet all the bits and pieces in our infrastructure to
+        handle this transition at this time so let's make the board public
+        again.
+      footer:
+        Changelog-entry: Switch nitrogen8mm-dwe back to public
+        changelog-entry: Switch nitrogen8mm-dwe back to public
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.56.0+rev4
+  date: 2020-10-12T16:06:06.896Z
+- commits:
     - subject: 'u-boot: Bring in fix for eth PHY reset issue'
       hash: 84fcdd49905a14549c71c0485685aa40ad0bf9d3
       body: |
