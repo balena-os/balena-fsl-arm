@@ -1,0 +1,6 @@
+System firmware updates not supported:
+
+* The hostapp-update-hooks package contains a 99-resin-uboot that assumes block devices. This needs to be changed
+  with a script that uses fw_setenv to update the U-Boot NAND environment.
+* The balena-rollback package contains a rollback-parse-bootloader script that assumes the environment is stored
+  in a block device. This also needs to change for a NAND stored environment.
