@@ -1,0 +1,16 @@
+#!/bin/sh
+# Copyright (C) 2019, Digi International
+
+part_name="data"
+ubidev_path="/dev/ubi4"
+
+source /init.d/init-common.sh
+
+initdata_enabled() {
+	resin_check_ubivol $part_name && return 1
+	return 0
+}
+
+initdata_run() {
+	resin_mkubivol $part_name $ubidev_path
+}
