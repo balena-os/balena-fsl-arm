@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -ex
+
+SYSROOT="/mnt/sysroot/inactive"
+
+balenad -s=@BALENA_STORAGE@ --data-root="$SYSROOT/balena" -H unix:///var/run/balena-host.sock &
+pid=$!
+sleep 5
+
+hostapp-update -f /input -n
+
+kill $pid
+wait $pid
+
+mkfs.ubifs -r "${SYSROOT}" -o /output @MKUBIFS_ARGS@
+
+exit 0
