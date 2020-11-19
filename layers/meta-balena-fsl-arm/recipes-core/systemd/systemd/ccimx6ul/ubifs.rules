@@ -1,0 +1,7 @@
+KERNEL=="ubi0_0", TAG+="systemd", SYMLINK+="disk/by-label/resin-state"
+KERNEL=="ubi1_0", TAG+="systemd", SYMLINK+="disk/by-label/resin-boot"
+KERNEL=="ubi2_0", TAG+="systemd", SYMLINK+="disk/by-label/resin-rootB"
+KERNEL=="ubi2_0", TAG+="systemd", SYMLINK+="disk/by-state/inactive"
+KERNEL=="ubi3_0", TAG+="systemd", SYMLINK+="disk/by-label/resin-rootA"
+KERNEL=="ubi3_0", TAG+="systemd", SYMLINK+="disk/by-state/active"
+KERNEL=="ubi4_0", TAG+="systemd", SYMLINK+="disk/by-label/resin-data"
