@@ -105,8 +105,8 @@ DEPENDS_append_nitrogen8mm += "imx-boot"
 
 inherit image_types_resin_ubifs
 
-RESIN_ROOT_FSTYPE_ccimx6ul = "hostapp-ubifs"
-IMAGE_FSTYPES_ccimx6ul = "hostapp-ubifs boot.ubifs"
+RESIN_ROOT_FSTYPE_ccimx6ul = "hostapp-${BALENA_FSTYPE}"
+IMAGE_FSTYPES_ccimx6ul = "resinos-img"
 RESIN_BOOT_PARTITION_FILES_ccimx6ul = " \
     ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/${KERNEL_IMAGETYPE} \
     ${KERNEL_DEVICETREE}:/${KERNEL_DEVICETREE} \
