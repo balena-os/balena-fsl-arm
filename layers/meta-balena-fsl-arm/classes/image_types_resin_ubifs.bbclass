@@ -42,10 +42,6 @@ inherit image_types_resin
 #   +-------------------+
 #
 
-IMAGE_CMD_resinos-img () {
-# Create a multi volume ubi image using ubinize
-}
-
 IMAGE_TYPEDEP_hostapp-ubifs = "docker"
 
 do_image_hostapp_ubifs[depends] += " \
@@ -65,8 +61,53 @@ do_image_boot_ubifs[depends] += " \
 
 IMAGE_CMD_boot.ubifs() {
 	# Build UBIFS boot image out of resin-boot folder
-	mkfs.ubifs -r "${IMAGE_ROOTFS}/${RESIN_BOOT_FS_LABEL}" -o "${IMGDEPLOYDIR}/${IMAGE_NAME}.boot.ubifs" ${MKUBIFS_BOOT_ARGS}
+	mkfs.ubifs -r "${IMAGE_ROOTFS}/${RESIN_BOOT_FS_LABEL}" -o "${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.boot.ubifs" ${MKUBIFS_BOOT_ARGS}
 }
 
 # Remove the default ".rootfs." suffix for 'boot.ubifs' images
 do_image_boot_ubifs[imgsuffix] = "."
+
+IMAGE_TYPEDEP_resinos-img += "boot.ubifs"
+IMAGE_CMD_resinos-img () {
+    # Create a multi volume ubi image using ubinize
+    cat << EOF > "${WORKDIR}/ubi.cfg"
+[resin-boot]
+mode=ubi
+image=${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.boot.ubifs
+vol_id=1
+vol_size=${RESIN_BOOT_SIZE}KiB
+vol_type=dynamic
+vol_name=resin-boot
+
+[resin-rootA]
+mode=ubi
+image=${RESIN_HOSTAPP_IMG}
+vol_id=2
+vol_size=${RESIN_ROOT_SIZE}KiB
+vol_type=dynamic
+vol_name=resin-rootA
+
+[resin-rootB]
+mode=ubi
+vol_id=3
+vol_size=${RESIN_ROOT_SIZE}KiB
+vol_type=dynamic
+vol_name=resin-rootB
+
+[resin-state]
+mode=ubi
+vol_id=4
+vol_size=${RESIN_STATE_SIZE}KiB
+vol_type=dynamic
+vol_name=resin-state
+
+[resin-data]
+mode=ubi
+image=${DEPLOY_DIR_IMAGE}/resin-data.ubifs
+vol_id=5
+vol_type=dynamic
+vol_name=resin-data
+EOF
+    ubinize ${UBINIZE_ARGS} -o "${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.resinos-img" "${WORKDIR}/ubi.cfg"
+}
+
