@@ -16,6 +16,19 @@ BALENA_STORAGE_nitrogen8mm = "overlay2"
 BALENA_STORAGE_nitrogen8mm-dwe = "overlay2"
 BALENA_STORAGE_ccimx6ulsbcexpress = "overlay2"
 BALENA_STORAGE_ccimx6ulsbcpro = "overlay2"
+
+BALENA_FSTYPE_ccimx6ulsbcexpress = "ubifs"
+BALENA_FSTYPE_ccimx6ulsbcpro = "ubifs"
+
+# Sizes in KiB
+RESIN_BOOT_SIZE ?= "24576"
+RESIN_ROOT_SIZE ?= "319488"
+RESIN_STATE_SIZE ?= "20480"
+# Uncomment for 256MB variant
+#RESIN_BOOT_SIZE = "20480"
+#RESIN_ROOT_SIZE = "102400"
+#RESIN_STATE_SIZE = "10240"
+
 # Set this to 1 if development image is desired
 #DEVELOPMENT_IMAGE = "1"
 
