@@ -67,15 +67,27 @@ IMAGE_CMD_boot.ubifs() {
 # Remove the default ".rootfs." suffix for 'boot.ubifs' images
 do_image_boot_ubifs[imgsuffix] = "."
 
+
+RESIN_IMAGE_ALIGNMENT = "128"
 IMAGE_TYPEDEP_resinos-img += "boot.ubifs"
 IMAGE_CMD_resinos-img () {
+    RESIN_BOOT_SIZE_ALIGNED=$(expr ${RESIN_BOOT_SIZE} \+ ${RESIN_IMAGE_ALIGNMENT} - 1)
+    RESIN_BOOT_SIZE_ALIGNED=$(expr ${RESIN_BOOT_SIZE_ALIGNED} \- ${RESIN_BOOT_SIZE_ALIGNED} \% ${RESIN_IMAGE_ALIGNMENT})
+    RESIN_ROOT_SIZE_ALIGNED=$(expr ${RESIN_ROOT_SIZE} \+ ${RESIN_IMAGE_ALIGNMENT} \- 1)
+    RESIN_ROOT_SIZE_ALIGNED=$(expr ${RESIN_ROOT_SIZE_ALIGNED} \- ${RESIN_ROOT_SIZE_ALIGNED} \% ${RESIN_IMAGE_ALIGNMENT})
+    RESIN_STATE_SIZE_ALIGNED=$(expr ${RESIN_STATE_SIZE} \+ ${RESIN_IMAGE_ALIGNMENT} \- 1)
+    RESIN_STATE_SIZE_ALIGNED=$(expr ${RESIN_STATE_SIZE_ALIGNED} \- ${RESIN_STATE_SIZE_ALIGNED} \% ${RESIN_IMAGE_ALIGNMENT})
+    RESIN_DATA_SIZE=$(du -bks "${DEPLOY_DIR_IMAGE}/resin-data.ubifs" | awk '{print $1}')
+    RESIN_DATA_SIZE_ALIGNED=$(expr ${RESIN_DATA_SIZE} \+ ${RESIN_IMAGE_ALIGNMENT} \- 1)
+    RESIN_DATA_SIZE_ALIGNED=$(expr ${RESIN_DATA_SIZE_ALIGNED} \- ${RESIN_DATA_SIZE_ALIGNED} \% ${RESIN_IMAGE_ALIGNMENT})
+
     # Create a multi volume ubi image using ubinize
     cat << EOF > "${WORKDIR}/ubi.cfg"
 [resin-boot]
 mode=ubi
 image=${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.boot.ubifs
 vol_id=1
-vol_size=${RESIN_BOOT_SIZE}KiB
+vol_size=${RESIN_BOOT_SIZE_ALIGNED}KiB
 vol_type=dynamic
 vol_name=resin-boot
 
@@ -83,31 +95,33 @@ vol_name=resin-boot
 mode=ubi
 image=${RESIN_HOSTAPP_IMG}
 vol_id=2
-vol_size=${RESIN_ROOT_SIZE}KiB
+vol_size=${RESIN_ROOT_SIZE_ALIGNED}KiB
 vol_type=dynamic
 vol_name=resin-rootA
 
 [resin-rootB]
 mode=ubi
 vol_id=3
-vol_size=${RESIN_ROOT_SIZE}KiB
+vol_size=${RESIN_ROOT_SIZE_ALIGNED}KiB
 vol_type=dynamic
 vol_name=resin-rootB
 
 [resin-state]
 mode=ubi
 vol_id=4
-vol_size=${RESIN_STATE_SIZE}KiB
+vol_size=${RESIN_STATE_SIZE_ALIGNED}KiB
 vol_type=dynamic
 vol_name=resin-state
 
 [resin-data]
 mode=ubi
 image=${DEPLOY_DIR_IMAGE}/resin-data.ubifs
+vol_size=${RESIN_DATA_SIZE_ALIGNED}KiB
 vol_id=5
 vol_type=dynamic
 vol_name=resin-data
+vol_flags=autoresize
 EOF
-    ubinize ${UBINIZE_ARGS} -o "${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.resinos-img" "${WORKDIR}/ubi.cfg"
+    ubinize ${UBINIZE_ARGS} -o "${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.resinos-img" "${WORKDIR}/ubi.cfg"
 }
 
