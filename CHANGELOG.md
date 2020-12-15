@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.56.0+rev5
+## (2020-12-15)
+
+* Remove obsolete oe-meta-go submodule [Florin Sarbu]
+
 # v2.56.0+rev4
 ## (2020-10-12)
 

@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove obsolete oe-meta-go submodule
+      hash: 0d44e34dc088883e2a484403a94ad1c5f3dd8345
+      body: ''
+      footer:
+        Changelog-entry: Remove obsolete oe-meta-go submodule
+        changelog-entry: Remove obsolete oe-meta-go submodule
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.56.0+rev5
+  date: 2020-12-15T09:46:16.817Z
+- commits:
     - subject: Switch nitrogen8mm-dwe back to public
       hash: 1ae0cf67c4dcae63279d06432979366907f462ff
       body: |
