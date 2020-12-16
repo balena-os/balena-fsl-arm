@@ -20,7 +20,6 @@ module.exports =
 	name: 'Nitrogen8MM HUB3'
 	arch: 'aarch64'
 	state: 'new'
-	private: false
 
 	imageDownloadAlerts: [
 		{
