@@ -13,15 +13,15 @@ of course not be necessary anymore.
 Upstream-status: Inappropriate [configuration]
 Signed-off-by: Alexandru Costache <alexandru@balena.io>
 ---
- configs/dwe_1gch1_defconfig | 6 ++++++
+ configs/dwe_1gch1_defconfig | 7 +++++++
  include/configs/dwe.h       | 2 +-
- 2 files changed, 7 insertions(+), 1 deletion(-)
+ 2 files changed, 8 insertions(+), 1 deletion(-)
 
 diff --git a/configs/dwe_1gch1_defconfig b/configs/dwe_1gch1_defconfig
 index 7f9cd42959..531fbe4273 100644
 --- a/configs/dwe_1gch1_defconfig
 +++ b/configs/dwe_1gch1_defconfig
-@@ -103,3 +103,9 @@ CONFIG_USB_ETH_CDC=y
+@@ -103,3 +103,10 @@ CONFIG_USB_ETH_CDC=y
  CONFIG_USBNET_DEVADDR="00:19:b8:00:00:02"
  CONFIG_USBNET_HOST_ADDR="00:19:b8:00:00:01"
  CONFIG_USB_HOST_ETHER=y
@@ -31,6 +31,7 @@ index 7f9cd42959..531fbe4273 100644
 +CONFIG_FAT_WRITE=y
 +CONFIG_CMD_EXPORTENV=y
 +CONFIG_CMD_IMPORTENV=y
++CONFIG_CMD_FS_UUID=y
 diff --git a/include/configs/dwe.h b/include/configs/dwe.h
 index 331e06d23b..5c169267ee 100644
 --- a/include/configs/dwe.h
