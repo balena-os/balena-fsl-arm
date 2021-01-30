@@ -12,21 +12,22 @@ for balenaOS scripts.
 Upstream-Status: Inappropriate [configuration]
 Signed-off-by: Alexandru Costache <alexandru@balena.io>
 ---
- configs/nitrogen8mm_2g_defconfig | 3 +++
+ configs/nitrogen8mm_2g_defconfig | 4 ++++
  include/configs/nitrogen8mm.h    | 2 +-
- 2 files changed, 4 insertions(+), 1 deletion(-)
+ 2 files changed, 5 insertions(+), 1 deletion(-)
 
 diff --git a/configs/nitrogen8mm_2g_defconfig b/configs/nitrogen8mm_2g_defconfig
 index 61ce65155e..4b8cf1e4e6 100644
 --- a/configs/nitrogen8mm_2g_defconfig
 +++ b/configs/nitrogen8mm_2g_defconfig
-@@ -108,3 +108,6 @@ CONFIG_USBNET_DEVADDR="00:19:b8:00:00:02"
+@@ -108,3 +108,7 @@ CONFIG_USBNET_DEVADDR="00:19:b8:00:00:02"
  CONFIG_USBNET_HOST_ADDR="00:19:b8:00:00:01"
  CONFIG_USB_HOST_ETHER=y
  CONFIG_LIBAVB=y
 +CONFIG_ENV_IS_NOWHERE=y
 +CONFIG_CMD_SAVEENV=n
 +CONFIG_FAT_WRITE=y
++CONFIG_CMD_FS_UUID=y
 diff --git a/include/configs/nitrogen8mm.h b/include/configs/nitrogen8mm.h
 index 02eff617cd..a5e501be99 100644
 --- a/include/configs/nitrogen8mm.h
