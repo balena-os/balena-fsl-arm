@@ -20,10 +20,10 @@ module.exports =
 
 	yocto:
 		machine: 'solidrun-imx6'
-		image: 'resin-image-flasher'
-		fstype: 'resinos-img'
+		image: 'balena-image-flasher'
+		fstype: 'balenaos-img'
 		version: 'yocto-rocko'
-		deployArtifact: 'resin-image-flasher-solidrun-imx6.resinos-img'
+		deployArtifact: 'balena-image-flasher-solidrun-imx6.balenaos-img'
 		compressed: true
 
 	configuration:

@@ -1,11 +1,11 @@
 #
 # Nitrogen6x Quad 2GB RAM
 #
-IMAGE_FSTYPES_append_nitrogen6xq2g = " resinos-img"
+IMAGE_FSTYPES_append_nitrogen6xq2g = " balenaos-img"
 
-# Customize resinos-img
-RESIN_IMAGE_BOOTLOADER_nitrogen6xq2g = "u-boot"
-RESIN_BOOT_PARTITION_FILES_nitrogen6xq2g = " \
+# Customize balenaos-img
+BALENA_IMAGE_BOOTLOADER_nitrogen6xq2g = "u-boot"
+BALENA_BOOT_PARTITION_FILES_nitrogen6xq2g = " \
     ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/${KERNEL_IMAGETYPE} \
     zImage-imx6dl-nitrogen6x.dtb:/imx6dl-nitrogen6x.dtb \
     zImage-imx6q-nitrogen6_max.dtb:/imx6q-nitrogen6_max.dtb \
@@ -25,11 +25,11 @@ DEPENDS_append_nitrogen6xq2g = " u-boot-flasher"
 #
 # Nitrogen6x
 #
-IMAGE_FSTYPES_append_nitrogen6x = " resinos-img"
+IMAGE_FSTYPES_append_nitrogen6x = " balenaos-img"
 
-# Customize resinos-img
-RESIN_IMAGE_BOOTLOADER_nitrogen6x = "u-boot"
-RESIN_BOOT_PARTITION_FILES_nitrogen6x = " \
+# Customize balenaos-img
+BALENA_IMAGE_BOOTLOADER_nitrogen6x = "u-boot"
+BALENA_BOOT_PARTITION_FILES_nitrogen6x = " \
     ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/${KERNEL_IMAGETYPE} \
     zImage-imx6dl-nitrogen6x.dtb:/imx6dl-nitrogen6x.dtb \
     zImage-imx6q-nitrogen6_max.dtb:/imx6q-nitrogen6_max.dtb \
@@ -37,20 +37,20 @@ RESIN_BOOT_PARTITION_FILES_nitrogen6x = " \
     zImage-imx6q-sabrelite.dtb:/imx6q-sabrelite.dtb \
     "
 
-IMAGE_CMD_resinos-img_append_nitrogen6x () {
+IMAGE_CMD_balenaos-img_append_nitrogen6x () {
     # nitrogen6x needs uboot written at a specific location
-    dd if=${DEPLOY_DIR_IMAGE}/u-boot-${MACHINE}.imx of=${RESIN_RAW_IMG} conv=notrunc seek=2 bs=512
+    dd if=${DEPLOY_DIR_IMAGE}/u-boot-${MACHINE}.imx of=${BALENA_RAW_IMG} conv=notrunc seek=2 bs=512
 }
 
 #
 # SolidRun-imx6
 #
 
-IMAGE_FSTYPES_append_solidrun-imx6 = " resinos-img"
+IMAGE_FSTYPES_append_solidrun-imx6 = " balenaos-img"
 
-# Customize resinos-img
-RESIN_IMAGE_BOOTLOADER_solidrun-imx6 = "u-boot"
-RESIN_BOOT_PARTITION_FILES_solidrun-imx6 = " \
+# Customize balenaos-img
+BALENA_IMAGE_BOOTLOADER_solidrun-imx6 = "u-boot"
+BALENA_BOOT_PARTITION_FILES_solidrun-imx6 = " \
     zImage-initramfs-${MACHINE}.bin:/zImage \
     imx6dl-cubox-i.dtb:/imx6dl-cubox-i.dtb \
     imx6q-cubox-i.dtb:/imx6q-cubox-i.dtb \
@@ -70,16 +70,16 @@ RESIN_BOOT_PARTITION_FILES_solidrun-imx6 = " \
     u-boot-${MACHINE}.${UBOOT_SUFFIX}:/u-boot-${MACHINE}.${UBOOT_SUFFIX} \
     "
 
-IMAGE_CMD_resinos-img_append_solidrun-imx6 () {
+IMAGE_CMD_balenaos-img_append_solidrun-imx6 () {
     # solidrun-imx6 needs uboot written at a specific location along with SPL
-    dd if=${DEPLOY_DIR_IMAGE}/${SPL_BINARY} of=${RESIN_RAW_IMG} conv=notrunc seek=1 bs=1K
-    dd if=${DEPLOY_DIR_IMAGE}/u-boot-${MACHINE}.${UBOOT_SUFFIX} of=${RESIN_RAW_IMG} conv=notrunc seek=69 bs=1K
+    dd if=${DEPLOY_DIR_IMAGE}/${SPL_BINARY} of=${BALENA_RAW_IMG} conv=notrunc seek=1 bs=1K
+    dd if=${DEPLOY_DIR_IMAGE}/u-boot-${MACHINE}.${UBOOT_SUFFIX} of=${BALENA_RAW_IMG} conv=notrunc seek=69 bs=1K
 }
 
 
-IMAGE_FSTYPES_append_nitrogen8mm = " resinos-img"
-RESIN_IMAGE_BOOTLOADER_nitrogen8mm = "u-boot"
-RESIN_BOOT_PARTITION_FILES_nitrogen8mm = " \
+IMAGE_FSTYPES_append_nitrogen8mm = " balenaos-img"
+BALENA_IMAGE_BOOTLOADER_nitrogen8mm = "u-boot"
+BALENA_BOOT_PARTITION_FILES_nitrogen8mm = " \
     imx8mm-nitrogen8mm.dtb:/imx8mm-nitrogen8mm.dtb \
     imx8mm-nitrogen8mm_rev2.dtb:/imx8mm-nitrogen8mm_rev2.dtb \
     imx8mm-nitrogen8mm_rev2-m4.dtb:/imx8mm-nitrogen8mm_rev2-m4.dtb \
@@ -87,7 +87,7 @@ RESIN_BOOT_PARTITION_FILES_nitrogen8mm = " \
     imx-boot:/imx-boot \
 "
 
-RESIN_BOOT_PARTITION_FILES_nitrogen8mm-dwe = " \
+BALENA_BOOT_PARTITION_FILES_nitrogen8mm-dwe = " \
     imx8mm-dwe.dtb:/imx8mm-dwe.dtb \
     boot.scr-${MACHINE}:/boot.scr \
     imx-boot:/imx-boot \
