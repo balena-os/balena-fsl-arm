@@ -1,6 +1,130 @@
 Change log
 -----------
 
+# v2.72.0+rev1
+## (2021-03-11)
+
+* Rename resin image types to balena [Kyle Harding]
+
+<details>
+<summary> Update meta-balena from v2.67.3 to v2.72.0 [Kyle Harding] </summary>
+
+> ## meta-balena-2.72.0
+> ### (2021-03-10)
+> 
+> 
+> <details>
+> <summary> os-config: Update os-config from v1.1.4 to v1.2.0 [Kyle Harding] </summary>
+> 
+>> ### os-config-1.2.0
+>> #### (2021-02-23)
+>> 
+>> * os-config: rename flasher flag path [Kyle Harding]
+>> 
+> </details>
+> 
+> * Rename resin image types to balena [Kyle Harding]
+> 
+> ## meta-balena-2.71.7
+> ### (2021-03-08)
+> 
+> * Apply aufs patches if aufs is present in kernel config [Kyle Harding]
+> 
+> ## meta-balena-2.71.6
+> ### (2021-03-05)
+> 
+> * grub-efi: build required modules into grub image [Joseph Kogut]
+> 
+> ## meta-balena-2.71.5
+> ### (2021-03-03)
+> 
+> * initrdscripts: always use by-uuid symlink looking for flasher rootfs [Michal Toman]
+> 
+> ## meta-balena-2.71.4
+> ### (2021-03-01)
+> 
+> * Update OS test suite [Vipul Gupta (@vipulgupta2048)]
+> 
+> ## meta-balena-2.71.3
+> ### (2021-02-26)
+> 
+> * balena: Make the healthcheck loading service part of balena.service [Robert Günzler]
+> 
+> ## meta-balena-2.71.2
+> ### (2021-02-23)
+> 
+> * dnsmasq: enable dbus support [Kyle Harding]
+> * dnsmasq: update to 2.84 with dnspooq fix [Kyle Harding]
+> 
+> ## meta-balena-2.71.1
+> ### (2021-02-23)
+> 
+> * recipes-bsp: grub: install only release modules [Joseph Kogut]
+> 
+> ## meta-balena-2.71.0
+> ### (2021-02-15)
+> 
+> * meta-balena-common: add grub-efi support [Joseph Kogut]
+> 
+> ## meta-balena-2.70.2
+> ### (2021-02-12)
+> 
+> * Update PR template to specify test coverage in more detail [Alex Gonzalez]
+> * Update codeowners [Alex Gonzalez]
+> 
+> ## meta-balena-2.70.1
+> ### (2021-02-11)
+> 
+> * Add leviathan automated OS test suite [Vipul Gupta (@vipulgupta2048)]
+> 
+> ## meta-balena-2.70.0
+> ### (2021-02-11)
+> 
+> * systemd/timeinit: use systemd mount unit for /etc/fake-hwclock [Mark Corbin]
+> 
+> ## meta-balena-2.69.1
+> ### (2021-02-03)
+> 
+> * Update balena-supervisor from v12.3.0 to v12.3.5 [Miguel Casqueira]
+> 
+> ## meta-balena-2.69.0
+> ### (2021-02-01)
+> 
+> * openvpn: remove resin-ntp-config call from upscript.sh [Mark Corbin]
+> * resin-vars: trigger NTP config script on config.json changes [Mark Corbin]
+> * resin-ntp-config: update script and add systemd service [Mark Corbin]
+> * networkmanager: add improved dispatcher scripts for NTP handling [Mark Corbin]
+> * chrony: add sourcedir support and helper script [Mark Corbin]
+> 
+> ## meta-balena-2.68.1
+> ### (2021-01-29)
+> 
+> * Fix task ordering for the iwlwifi_firmware_clean task [Florin Sarbu]
+> 
+> ## meta-balena-2.68.0
+> ### (2021-01-29)
+> 
+> * Update NetworkManager to 1.28.0 [Zahari Petkov]
+> 
+> ## meta-balena-2.67.6
+> ### (2021-01-28)
+> 
+> * docs: mention balenaRootCA as a config.json parameter [Matthew McGinn]
+> 
+> ## meta-balena-2.67.5
+> ### (2021-01-27)
+> 
+> * replace busybox ps with procps [klutchell] [Kyle Harding]
+> 
+> ## meta-balena-2.67.4
+> ### (2021-01-27)
+> 
+> * Update aufs4 and aufs5 kernel patches [Florin Sarbu]
+> 
+</details>
+
+* Update balena-yocto-scripts from v1.9.0 to v1.11.0 [Kyle Harding]
+
 # v2.67.3+rev1
 ## (2021-01-30)
 
