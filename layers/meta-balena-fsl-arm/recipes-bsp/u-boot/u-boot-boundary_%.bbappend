@@ -1,5 +1,5 @@
 UBOOT_KCONFIG_SUPPORT="1"
-RESIN_UBOOT_DEVICE_TYPES="usb mmc"
+BALENA_UBOOT_DEVICE_TYPES="usb mmc"
 inherit resin-u-boot
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
