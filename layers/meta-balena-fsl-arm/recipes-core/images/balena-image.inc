@@ -94,7 +94,7 @@ BALENA_BOOT_PARTITION_FILES_nitrogen8mm-dwe = " \
 "
 
 IMAGE_INSTALL_append_nitrogen8mm = " \
-	firmware-imx \
+	firmware-imx-8m \
 	kernel-module-imx-gpu-viv \
 	kernel-module-qcacld \
 	linux-firmware-bdsdmac \
