@@ -1,6 +1,6 @@
-From bb722930a1247073a2a457b5b167e1c379857040 Mon Sep 17 00:00:00 2001
+From 5b99a624f8da6425a3b9a5264434552d7df38f52 Mon Sep 17 00:00:00 2001
 From: Alexandru Costache <alexandru@balena.io>
-Date: Tue, 15 Oct 2019 15:43:54 +0200
+Date: Wed, 14 Apr 2021 14:50:00 +0200
 Subject: [PATCH] env/common: Force using default environment
 
 We need to force using default env, the one built into
@@ -19,23 +19,23 @@ Signed-off-by: Alexandru Costache <alexandru@balena.io>
  1 file changed, 11 insertions(+)
 
 diff --git a/env/common.c b/env/common.c
-index daaa4ff0ec..c488f52373 100644
+index 1f0c67f07a..c8cd41c472 100644
 --- a/env/common.c
 +++ b/env/common.c
-@@ -113,6 +113,17 @@ int set_default_vars(int nvars, char * const vars[])
+@@ -117,6 +117,17 @@ int env_set_default_vars(int nvars, char * const vars[], int flags)
   */
- int env_import(const char *buf, int check)
+ int env_import(const char *buf, int check, int flags)
  {
-+	/* Although CONFIG_ENV_IS_NOWHERE is set,
-+	 * eMMC enviroment is still loaded and used.
-+	 *
-+	 * Force using BalenaOS environment, the one embedded
-+	 * in the boot binary, and leave the eMMC one intact
-+	 * so it can be queried from container.
-+	 */
-+	set_default_env("Switch to BalenaOS environment... ");
++       /* Although CONFIG_ENV_IS_NOWHERE is set,
++        * eMMC enviroment is still loaded and used.
++        *
++        * Force using BalenaOS environment, the one embedded
++        * in the boot binary, and leave the eMMC one intact
++        * so it can be queried from container.
++        */
++        env_set_default("Switch to BalenaOS environment... ", 0);
 +
-+	return 0;
++        return 0;
 +
  	env_t *ep = (env_t *)buf;
  
