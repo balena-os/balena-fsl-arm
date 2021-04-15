@@ -99,6 +99,7 @@ IMAGE_INSTALL_append_nitrogen8mm = " \
 	kernel-module-qcacld \
 	linux-firmware-bdsdmac \
 	u-boot-script-boundary \
+	kernel-devicetree \
 "
 
 DEPENDS_append_nitrogen8mm += "imx-boot"
