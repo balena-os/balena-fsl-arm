@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.73.1+rev2
+## (2021-04-15)
+
+* u-boot-script: Continue to boot flasher images with stock uboot [Alexandru Costache]
+
 # v2.73.1+rev1
 ## (2021-04-15)
 

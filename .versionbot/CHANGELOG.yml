@@ -1,4 +1,22 @@
 - commits:
+    - subject: 'u-boot-script: Continue to boot flasher images with stock uboot'
+      hash: 2ec2273110fed88e2d990be81a31373e51699f04
+      body: |
+        Even if we now load the dtb from the rootfs and default to
+        the boot partition if not found, but we should continue to load
+        it from the boot partition if the board is booted with
+        a stock u-boot, like in the case of a flasher image on a
+        board that never ran Balena.
+      footer:
+        Changelog-entry: 'u-boot-script: Continue to boot flasher images with stock uboot'
+        changelog-entry: 'u-boot-script: Continue to boot flasher images with stock uboot'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2.73.1+rev2
+  date: 2021-04-15T12:54:21.603Z
+- commits:
     - subject: Update meta-balena from v2.72.0 to v2.73.1
       hash: bae82a81253394dbe47868efd1b75dc1c04324eb
       body: |
