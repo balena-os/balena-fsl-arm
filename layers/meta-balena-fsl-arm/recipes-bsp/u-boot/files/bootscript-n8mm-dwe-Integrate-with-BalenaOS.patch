@@ -1,4 +1,4 @@
-From b2984225004e46e73d6d31b1580cacd6bd2180dc Mon Sep 17 00:00:00 2001
+From 55c46636932184016e7514f4b1d1a60a04b9f562 Mon Sep 17 00:00:00 2001
 From: Alexandru Costache <alexandru@balena.io>
 Date: Thu, 15 Apr 2021 11:14:56 +0200
 Subject: [PATCH] bootscript-n8mm-dwe: Integrate with BalenaOS
@@ -6,14 +6,14 @@ Subject: [PATCH] bootscript-n8mm-dwe: Integrate with BalenaOS
 Upstream-status: Inappropriate [configuration]
 Signed-off-by: Alexandru Costache <alexandru@balena.io>
 ---
- .../boundary/bootscripts/bootscript-yocto.txt | 40 +++++++++++++++----
- 1 file changed, 32 insertions(+), 8 deletions(-)
+ .../boundary/bootscripts/bootscript-yocto.txt | 60 +++++++++++++++----
+ 1 file changed, 47 insertions(+), 13 deletions(-)
 
 diff --git a/board/boundary/bootscripts/bootscript-yocto.txt b/board/boundary/bootscripts/bootscript-yocto.txt
-index 8ce490745f..54667f06fa 100644
+index 8ce490745f..d623f890fb 100644
 --- a/board/boundary/bootscripts/bootscript-yocto.txt
 +++ b/board/boundary/bootscripts/bootscript-yocto.txt
-@@ -68,14 +68,26 @@ if itest.s x${distro_bootpart} == x ; then
+@@ -68,18 +68,40 @@ if itest.s x${distro_bootpart} == x ; then
  	distro_bootpart=1
  fi
  
@@ -31,17 +31,36 @@ index 8ce490745f..54667f06fa 100644
  setenv bootargs ${bootargs} console=${console},115200 vmalloc=400M consoleblank=0 rootwait fixrtc cpu=${imx_cpu} board=${board}
  
 -if load ${devtype} ${devnum}:${distro_bootpart} ${a_fdt} ${prefix}${fdt_file} ; then
-+if load ${devtype} ${devnum}:${resin_root_part} ${a_fdt} boot/${fdt_file} ; then
- 	fdt addr ${a_fdt}
- 	setenv fdt_high 0xffffffff
-+elif load ${devtype} ${devnum}:${resin_boot_part} ${a_fdt} ${fdt_file} ; then
-+        echo "Did not find dtb in root filesystem, loaded it from boot partition"
-+        fdt addr ${a_fdt}
-+        setenv fdt_high 0xffffffff
+-	fdt addr ${a_fdt}
+-	setenv fdt_high 0xffffffff
++if env exists resin_set_kernel_root; then
++	if load ${devtype} ${devnum}:${resin_root_part} ${a_fdt} boot/${fdt_file} ; then
++		fdt addr ${a_fdt}
++		setenv fdt_high 0xffffffff
++	elif load ${devtype} ${devnum}:${resin_boot_part} ${a_fdt} ${fdt_file} ; then
++		echo "Did not find dtb in root filesystem, loaded it from boot partition"
++	        fdt addr ${a_fdt}
++	        setenv fdt_high 0xffffffff
++	else
++		echo "!!!! Error loading Balena ${prefix}${fdt_file}";
++		exit;
++	fi
  else
- 	echo "!!!! Error loading ${prefix}${fdt_file}";
- 	exit;
-@@ -114,13 +126,12 @@ fi
+-	echo "!!!! Error loading ${prefix}${fdt_file}";
+-	exit;
+-fi
++	if load ${devtype} ${devnum}:${distro_bootpart} ${a_fdt} ${prefix}${fdt_file} ; then
++		fdt addr ${a_fdt}
++		setenv fdt_high 0xffffffff
++	else
++		echo "!!!! Error loading ${prefix}${fdt_file}";
++		exit;
++	fi;
++fi;
+ 
+ fdt resize 4096
+ if itest.s "x" != "x${cmd_board}" ; then
+@@ -114,13 +136,12 @@ fi
  if itest.s "x" == "x${bpart}" ; then
  	bpart=2
  fi
@@ -60,7 +79,7 @@ index 8ce490745f..54667f06fa 100644
  
  if itest.s "x" != "x${disable_msi}" ; then
  	setenv bootargs ${bootargs} pci=nomsi
-@@ -164,7 +175,20 @@ if itest.s "x" != "x${show_env}" ; then
+@@ -164,7 +185,20 @@ if itest.s "x" != "x${show_env}" ; then
  	printenv
  fi
  
