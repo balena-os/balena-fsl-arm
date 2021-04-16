@@ -5,7 +5,7 @@ SRC_URI_append = " \
 "
 
 # Override bsp layer autorev and use latest revision
-SRCREV="46b9362711932471e445a6aeec143e82ba693cdb"
+SRCREV="475d7e6b91375fe207ca37927b6e096aa1a4a360"
 
 # DWE inherits N8MM
 SRC_URI_remove_nitrogen8mm-dwe = "file://bootscript-n8mm-allow-flashing-balenaOS.patch"

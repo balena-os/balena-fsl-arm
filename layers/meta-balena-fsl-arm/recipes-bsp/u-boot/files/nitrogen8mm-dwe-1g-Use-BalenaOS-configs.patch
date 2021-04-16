@@ -1,6 +1,6 @@
-From 128fb052abfc10aa2369d737fa44f32dc7008c25 Mon Sep 17 00:00:00 2001
+From f0ea5bdd83f1cc7de3db793f33755b9196b42f26 Mon Sep 17 00:00:00 2001
 From: Alexandru Costache <alexandru@balena.io>
-Date: Tue, 25 Aug 2020 11:17:05 +0200
+Date: Wed, 14 Apr 2021 14:53:15 +0200
 Subject: [PATCH] nitrogen8mm-dwe-1g: Use BalenaOS configs
 
 Integrate the 1G RAM version with BalenaOS.
@@ -13,18 +13,26 @@ of course not be necessary anymore.
 Upstream-status: Inappropriate [configuration]
 Signed-off-by: Alexandru Costache <alexandru@balena.io>
 ---
- configs/dwe_1gch1_defconfig | 7 +++++++
- include/configs/dwe.h       | 2 +-
- 2 files changed, 8 insertions(+), 1 deletion(-)
+ configs/dwe_1gch1_defconfig | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
 
 diff --git a/configs/dwe_1gch1_defconfig b/configs/dwe_1gch1_defconfig
-index 7f9cd42959..531fbe4273 100644
+index c3b91c016f..3775ab2301 100644
 --- a/configs/dwe_1gch1_defconfig
 +++ b/configs/dwe_1gch1_defconfig
-@@ -103,3 +103,10 @@ CONFIG_USB_ETH_CDC=y
- CONFIG_USBNET_DEVADDR="00:19:b8:00:00:02"
+@@ -8,7 +8,7 @@ CONFIG_SPL_LIBCOMMON_SUPPORT=y
+ CONFIG_SPL_LIBGENERIC_SUPPORT=y
+ CONFIG_SYS_MALLOC_F_LEN=0x10000
+ CONFIG_NR_DRAM_BANKS=1
+-CONFIG_ENV_SIZE=0x2000
++CONFIG_ENV_SIZE=0x3000
+ CONFIG_ENV_OFFSET=0xffffe000
+ CONFIG_DDR_RANK_BITS=0
+ CONFIG_DDR_CHANNEL_CNT=1
+@@ -134,3 +134,10 @@ CONFIG_USBNET_DEVADDR="00:19:b8:00:00:02"
  CONFIG_USBNET_HOST_ADDR="00:19:b8:00:00:01"
  CONFIG_USB_HOST_ETHER=y
+ CONFIG_IMX_WATCHDOG=y
 +CONFIG_FAT_WRITE=y
 +CONFIG_ENV_IS_NOWHERE=y
 +CONFIG_CMD_SAVEENV=n
@@ -32,19 +40,6 @@ index 7f9cd42959..531fbe4273 100644
 +CONFIG_CMD_EXPORTENV=y
 +CONFIG_CMD_IMPORTENV=y
 +CONFIG_CMD_FS_UUID=y
-diff --git a/include/configs/dwe.h b/include/configs/dwe.h
-index 331e06d23b..5c169267ee 100644
---- a/include/configs/dwe.h
-+++ b/include/configs/dwe.h
-@@ -94,7 +94,7 @@
-         (CONFIG_SYS_INIT_RAM_ADDR + CONFIG_SYS_INIT_SP_OFFSET)
- 
- #define CONFIG_ENV_OVERWRITE
--#define CONFIG_ENV_SIZE			0x2000
-+#define CONFIG_ENV_SIZE			0x3000
- #if defined(CONFIG_ENV_IS_IN_MMC)
- #define CONFIG_ENV_OFFSET               (-CONFIG_ENV_SIZE)
- #define CONFIG_SYS_MMC_ENV_DEV		0	/* USDHC1 */
 -- 
 2.17.1
 

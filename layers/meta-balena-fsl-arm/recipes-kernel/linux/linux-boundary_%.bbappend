@@ -2,10 +2,8 @@ FILESEXTRAPATHS_append := ":${THISDIR}/${PN}"
 
 inherit kernel-resin
 
-# Use latest and known to boot version,
-# and the one that includes patch for
-# setting zwave reset as active high
-SRCREV = "519c68394326d9d3d00776dc71eb62f70bed74bc"
+# Latest known revision as of now is 49cd2d27fefdbaa79f32df96c4672433d9d45590
+# and is set in meta-freescale-third-party linux-boundary recipe.
 
 # Disable commit SHA in kernel version string
 SCMVERSION="n"

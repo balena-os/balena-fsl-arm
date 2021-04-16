@@ -1,6 +1,6 @@
-From d07c0c549a8e825f985e7844644732dea91f9bf2 Mon Sep 17 00:00:00 2001
+From f06f761e490e870d4d20a6aa2fb188214a57ce30 Mon Sep 17 00:00:00 2001
 From: Alexandru Costache <alexandru@balena.io>
-Date: Tue, 25 Aug 2020 11:10:31 +0200
+Date: Wed, 14 Apr 2021 14:46:02 +0200
 Subject: [PATCH] nitrogen8mm: Add BalenaOS configs
 
 Enable necessary configs for loading and updating
@@ -12,35 +12,33 @@ for balenaOS scripts.
 Upstream-Status: Inappropriate [configuration]
 Signed-off-by: Alexandru Costache <alexandru@balena.io>
 ---
- configs/nitrogen8mm_2g_defconfig | 4 ++++
- include/configs/nitrogen8mm.h    | 2 +-
- 2 files changed, 5 insertions(+), 1 deletion(-)
+ configs/nitrogen8mm_2g_defconfig | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
 
 diff --git a/configs/nitrogen8mm_2g_defconfig b/configs/nitrogen8mm_2g_defconfig
-index 61ce65155e..4b8cf1e4e6 100644
+index 089cccd23f..aac874450d 100644
 --- a/configs/nitrogen8mm_2g_defconfig
 +++ b/configs/nitrogen8mm_2g_defconfig
-@@ -108,3 +108,7 @@ CONFIG_USBNET_DEVADDR="00:19:b8:00:00:02"
- CONFIG_USBNET_HOST_ADDR="00:19:b8:00:00:01"
+@@ -8,7 +8,7 @@ CONFIG_SPL_LIBCOMMON_SUPPORT=y
+ CONFIG_SPL_LIBGENERIC_SUPPORT=y
+ CONFIG_SYS_MALLOC_F_LEN=0x10000
+ CONFIG_NR_DRAM_BANKS=1
+-CONFIG_ENV_SIZE=0x2000
++CONFIG_ENV_SIZE=0x3000
+ CONFIG_ENV_OFFSET=0xffffe000
+ CONFIG_SYS_I2C_MXC_I2C1=y
+ CONFIG_SYS_I2C_MXC_I2C2=y
+@@ -139,3 +139,10 @@ CONFIG_USBNET_HOST_ADDR="00:19:b8:00:00:01"
  CONFIG_USB_HOST_ETHER=y
+ CONFIG_IMX_WATCHDOG=y
  CONFIG_LIBAVB=y
 +CONFIG_ENV_IS_NOWHERE=y
 +CONFIG_CMD_SAVEENV=n
 +CONFIG_FAT_WRITE=y
 +CONFIG_CMD_FS_UUID=y
-diff --git a/include/configs/nitrogen8mm.h b/include/configs/nitrogen8mm.h
-index 02eff617cd..a5e501be99 100644
---- a/include/configs/nitrogen8mm.h
-+++ b/include/configs/nitrogen8mm.h
-@@ -100,7 +100,7 @@
-         (CONFIG_SYS_INIT_RAM_ADDR + CONFIG_SYS_INIT_SP_OFFSET)
- 
- #define CONFIG_ENV_OVERWRITE
--#define CONFIG_ENV_SIZE			0x2000
-+#define CONFIG_ENV_SIZE			0x3000
- #if defined(CONFIG_ENV_IS_IN_MMC)
- #define CONFIG_ENV_OFFSET               (-CONFIG_ENV_SIZE)
- #define CONFIG_SYS_MMC_ENV_DEV		0	/* USDHC1 */
++CONFIG_CMD_SETEXPR=y
++CONFIG_CMD_IMPORTENV=y
++CONFIG_CMD_EXPORTENV=y
 -- 
 2.17.1
 

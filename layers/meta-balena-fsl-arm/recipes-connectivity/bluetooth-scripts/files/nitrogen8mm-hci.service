@@ -10,4 +10,4 @@ Type=oneshot
 
 # Use this service file approach to bring up hci0 for now
 # since an udev rule for this does not work at startup, only at runtime
-ExecStart=/bin/bash -c 'while [ ! -d /sys/devices/platform/30860000.serial/tty/ttymxc0/hci0/device ]; do sleep 1; done; rfkill unblock bluetooth; /usr/bin/hciconfig hci0 up'
+ExecStart=/bin/bash -c 'while [ ! -d /sys/devices/platform/soc@0/soc@0:bus@30800000/30860000.serial/tty/ttymxc0/device ]; do sleep 1; done; rfkill unblock bluetooth; /usr/bin/hciconfig hci0 up'
