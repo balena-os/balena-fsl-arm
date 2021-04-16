@@ -1,6 +1,63 @@
 Change log
 -----------
 
+# v2.73.10+rev1
+## (2021-04-15)
+
+
+<details>
+<summary> Update meta-balena from v2.73.1 to v2.73.10 [Alexandru Costache] </summary>
+
+> ## meta-balena-2.73.10
+> ### (2021-04-14)
+> 
+> * repo.yml: Move balena-supervisor reference to balena-os [Alex Gonzalez]
+> 
+> ## meta-balena-2.73.9
+> ### (2021-04-14)
+> 
+> * Update balena-supervisor from v12.5.6 to v12.5.10 [Christina Wang]
+> 
+> ## meta-balena-2.73.8
+> ### (2021-04-13)
+> 
+> * resin-mounts/etc-fake-hwclock: add dependency on resin-state services [Mark Corbin]
+> 
+> ## meta-balena-2.73.7
+> ### (2021-04-13)
+> 
+> * fix udev test indentation [rcooke-warwick]
+> * Added comments for easier debugging [rcooke-warwick]
+> * Fix old tests + add new tests based on testlodge [rcooke-warwick]
+> 
+> ## meta-balena-2.73.6
+> ### (2021-04-12)
+> 
+> * Add automated test checking for udev/resin_update_state_probe warnings [Michal Toman]
+> * udev: Silence warnings from resin_update_state_probe [Michal Toman]
+> 
+> ## meta-balena-2.73.5
+> ### (2021-04-06)
+> 
+> * Update balena-supervisor from v12.4.6 to v12.5.6 [Christina Wang]
+> 
+> ## meta-balena-2.73.4
+> ### (2021-03-20)
+> 
+> * Add to persistent logging defn [Andrew Nhem]
+> 
+> ## meta-balena-2.73.3
+> ### (2021-03-19)
+> 
+> * wifi: remove listed example as it's discontinued [Tomás Migone]
+> 
+> ## meta-balena-2.73.2
+> ### (2021-03-17)
+> 
+> * hostapp-update: convert absolute symlinks to relative [Joseph Kogut]
+> 
+</details>
+
 # v2.73.1+rev2
 ## (2021-04-15)
 
