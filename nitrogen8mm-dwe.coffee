@@ -19,7 +19,7 @@ module.exports =
 	slug: 'nitrogen8mm-dwe'
 	name: 'Nitrogen8MM HUB3'
 	arch: 'aarch64'
-	state: 'new'
+	state: 'released'
 
 	imageDownloadAlerts: [
 		{
