@@ -1,4 +1,168 @@
 - commits:
+    - subject: Update meta-balena from v2.73.10 to v2.75.0
+      hash: 902ebc65a28ad98d14b3c06b30dfd9f8e136383b
+      body: |
+        Update meta-balena from 2.73.10 to 2.75.0
+      footer:
+        Changelog-entry: Update meta-balena from v2.73.10 to v2.75.0
+        changelog-entry: Update meta-balena from v2.73.10 to v2.75.0
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested:
+        - commits:
+            - subject: Update mobynit to the new multi-container hostOS specification
+              hash: 93335381320815dbe7b2d21233106910a200e2f5
+              body: >
+                Update mobynit to use the new multi-container hostOS
+                specification
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update mobynit to the new multi-container hostOS specification
+                changelog-entry: Update mobynit to the new multi-container hostOS specification
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.75.0
+          date: 2021-04-22T12:36:31.239Z
+        - commits:
+            - subject: 'balena-engine: Update to 19.03.18'
+              hash: 32705abbf93971bdddb980fe0c7a01b40d229560
+              body: >
+                This brings in the aufs-to-overlay migrator. Which won't run
+                until we
+
+                configure the engine service to include an
+                `BALENA_MIGRATE_OVERLAY=1`
+
+                env var.
+
+
+                The other notable change is the fix for
+
+                https://github.com/balena-os/balena-engine/issues/236 which
+                allows
+
+                `balena top` to work as expected on balenaOS
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Robert Günzler <robertg@balena.io>
+                signed-off-by: Robert Günzler <robertg@balena.io>
+              author: Robert Günzler
+              nested: []
+          version: meta-balena-2.74.0
+          date: 2021-04-20T20:48:58.556Z
+        - commits:
+            - subject: >-
+                modemmanager:u-blox-switch: Rework the u-blox modem switch to
+                ECM mode
+              hash: 9de54188ea47e121a7f408ae1c65f70f53d3a634
+              body: >
+                We need to make sure the modem is completely initialized before
+                sending
+
+                the AT commands that do the switch to ECM mode. To achieve this
+                we
+
+                change the systemd service dependency to depend on
+                ModemManager.service
+
+                and then we determine the modem state by using mmcli and
+                querying the
+
+                modem power-state property.
+
+
+                This procedure will only be done once. After the modem is placed
+                in ECM
+
+                mode, it will stay in this mode for future reboots so there will
+                be no
+
+                other delays in bringing up the modem connection.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-2.73.15
+          date: 2021-04-20T09:21:07.975Z
+        - commits:
+            - subject: 'device-progress: do not force an exit code'
+              hash: f080936299781d121866de112e6930fa2f261fac
+              body: >
+                this script is only used during provisioning and HUP. in
+                provisioning we `|| true` anyway, and
+
+                in HUP we would like to use the exit code for retrying
+              footer:
+                Signed-off-by: Matthew McGinn <matthew@balena.io>
+                signed-off-by: Matthew McGinn <matthew@balena.io>
+                Change-type: patch
+                change-type: patch
+              author: Matthew McGinn
+              nested: []
+          version: meta-balena-2.73.14
+          date: 2021-04-19T14:59:22.521Z
+        - commits:
+            - subject: add retries to status check
+              hash: 73e7cae10974974eeb180fd18551f6da67432101
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: meta-balena-2.73.13
+          date: 2021-04-19T10:30:12.192Z
+        - commits:
+            - subject: 'meta-balena: rename resin-vars to balena-config-vars'
+              hash: 7d019abde039a469212c59bcf6e1b7a94ed365d6
+              body: >
+                Rename the 'resin-vars' script to 'balena-config-vars' and
+                update all
+
+                references.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: 'meta-balena: rename resin-vars to balena-config-vars'
+                changelog-entry: 'meta-balena: rename resin-vars to balena-config-vars'
+                Signed-off-by: Mark Corbin <mark@balena.io>
+                signed-off-by: Mark Corbin <mark@balena.io>
+              author: Mark Corbin
+              nested: []
+          version: meta-balena-2.73.12
+          date: 2021-04-16T12:31:11.982Z
+        - commits:
+            - subject: 'patch: Add strict bootcount count condition'
+              hash: a340d4ddd09515eedb125cbc57d39531ade2566a
+              body: ''
+              footer:
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+              author: Vipul Gupta (@vipulgupta2048)
+              nested: []
+            - subject: 'patch: Reactivate Persistent Logging test'
+              hash: 572e287bb93deae01786b025ad116d4d78a6b918
+              body: ''
+              footer:
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+              author: Vipul Gupta (@vipulgupta2048)
+              nested: []
+          version: meta-balena-2.73.11
+          date: 2021-04-16T07:39:41.833Z
+  version: 2.75.0+rev1
+  date: 2021-05-23T12:19:49.913Z
+- commits:
     - subject: Update meta-balena from v2.73.1 to v2.73.10
       hash: 0d6cb99f383b920af0a1e5ac04ef235a8f565b57
       body: |
