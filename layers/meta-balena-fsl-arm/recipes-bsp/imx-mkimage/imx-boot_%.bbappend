@@ -6,6 +6,21 @@ SRCREV="dc22e26d07f249325604f7dfd42324a9a75e7cc0"
 # Force iMX8MM SOC to fix failed booting.
 IMXBOOT_TARGETS_nitrogen8mm-dwe = "u-boot-lpddr4-iMX8MM-2g.nohdmibin"
 
+compile_mx8m() {
+    bbnote 8MQ/8MM boot binary build
+    for ddr_firmware in ${DDR_FIRMWARE_NAME}; do
+        bbnote "Copy ddr_firmware: ${ddr_firmware} from ${DEPLOY_DIR_IMAGE} -> ${BOOT_STAGING} "
+        cp ${DEPLOY_DIR_IMAGE}/${ddr_firmware}               ${BOOT_STAGING}
+    done
+    cp ${DEPLOY_DIR_IMAGE}/signed_*_imx8m.bin                ${BOOT_STAGING}
+    cp ${DEPLOY_DIR_IMAGE}/u-boot-spl.bin-${MACHINE}         ${BOOT_STAGING}/u-boot-spl.bin
+    cp ${DEPLOY_DIR_IMAGE}/${BOOT_TOOLS}/${UBOOT_DTB_NAME}   ${BOOT_STAGING}
+    cp ${DEPLOY_DIR_IMAGE}/${BOOT_TOOLS}/u-boot-nodtb.bin-${MACHINE}-${UBOOT_CONFIG} \
+                                                             ${BOOT_STAGING}/u-boot-nodtb.bin
+    cp ${DEPLOY_DIR_IMAGE}/${BOOT_TOOLS}/mkimage_uboot       ${BOOT_STAGING}
+    cp ${DEPLOY_DIR_IMAGE}/${UBOOT_NAME}                     ${BOOT_STAGING}/u-boot.bin
+}
+
 do_compile() {
     compile_${SOC_FAMILY}
     # mkimage for i.MX8
