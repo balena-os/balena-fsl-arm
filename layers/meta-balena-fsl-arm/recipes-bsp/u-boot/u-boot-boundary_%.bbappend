@@ -24,3 +24,9 @@ SRC_URI_append_nitrogen8mm = " \
 SRC_URI_append_nitrogen8mm-dwe = " \
     file://nitrogen8mm-dwe-1g-Use-BalenaOS-configs.patch \
 "
+
+do_deploy_append_mx8 () {
+    install -m 0777 ${B}/${config}/tools/mkimage  ${DEPLOYDIR}/${BOOT_TOOLS}/mkimage_uboot
+}
+
+do_compile[nostamp] = "1"
