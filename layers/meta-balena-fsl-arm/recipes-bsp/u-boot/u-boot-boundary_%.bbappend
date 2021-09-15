@@ -4,6 +4,10 @@ inherit resin-u-boot
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
+# we copy these here from u-boot-boundary-common_2020.10.inc so that we can overwrite what meta-boundary/recipes-bsp/u-boot/u-boot-boundary_%.bbappend redefines on top of u-boot-boundary-common_2020.10.inc
+SRCBRANCH = "boundary-v2020.10"
+PV = "v2020.10+git${SRCPV}"
+
 # Make sure we include the 3 requested DDR training patches
 SRCREV = "f727cf25665279f5e2eecbf03c5450b13cacccea"
 
