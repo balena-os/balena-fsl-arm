@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.51.1+rev3
+## (2021-09-15)
+
+* Remove obsolete oe-meta-go submodule
+* Add u-boot version 2020.10 on top of v2.51.1+rev2 release for nitrogen8mm-dwe
+
 # v2.51.1+rev2
 ## (2020-06-20)
 
