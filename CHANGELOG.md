@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.51.1+rev4
+## (2021-09-18)
+
+* Use a prebuilt imx-boot from OS release v2.75.0+rev1 based on u-boot version 2020.10 [Florin Sarbu]
+
 # v2.51.1+rev3
 ## (2021-09-15)
 
