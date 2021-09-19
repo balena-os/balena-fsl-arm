@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.51.1+rev6
+## (2021-09-19)
+
+* Use a prebuilt imx-boot from OS release v2.79.7+rev2 based on u-boot 2020.10 and fix sending the kernel a wrong root cmdline param [Florin Sarbu]
+
 # v2.51.1+rev5
 ## (2021-09-18)
 
