@@ -1,4 +1,21 @@
 - commits:
+    - subject: 'meta-balena-fsl-arm: update local.conf.sample'
+      hash: 6a9fec6e722a050e0a7dbd6f8a4280bc4d3f602e
+      body: |
+        Update the sample configuration file to use OS_DEVELOPMENT instead of
+        DEVELOPMENT_IMAGE.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: 'meta-balena-fsl-arm: update local.conf.sample'
+        changelog-entry: 'meta-balena-fsl-arm: update local.conf.sample'
+        Signed-off-by: Mark Corbin <mark@balena.io>
+        signed-off-by: Mark Corbin <mark@balena.io>
+      author: Mark Corbin
+      nested: []
+  version: 2.85.4+rev2
+  date: 2021-10-18T13:40:28.527Z
+- commits:
     - subject: Rename resin-info to balena-info
       hash: 05838a86b8120c135bb28e44f28284aa55cc763f
       body: ''
