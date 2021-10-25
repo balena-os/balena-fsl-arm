@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add example of correct git commit in README.md
+      hash: 0cf1b7c3e134472d3b5e9dc3d0364d3e0cd4a746
+      body: ''
+      footer:
+        Changelog-entry: Add example of correct git commit in README.md
+        changelog-entry: Add example of correct git commit in README.md
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.85.4+rev3
+  date: 2021-10-25T11:57:45.368Z
+- commits:
     - subject: 'meta-balena-fsl-arm: update local.conf.sample'
       hash: 6a9fec6e722a050e0a7dbd6f8a4280bc4d3f602e
       body: |

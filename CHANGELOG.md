@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.85.4+rev3
+## (2021-10-25)
+
+* Add example of correct git commit in README.md [Florin Sarbu]
+
 # v2.85.4+rev2
 ## (2021-10-18)
 
