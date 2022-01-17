@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v2.85.4+rev6
+## (2022-01-17)
+
+* recipes-core/systemd: Move audit socket removal to meta-balena [Alexandru Costache]
+
+<details>
+<summary> Update balena-yocto-scripts to v1.16.1 [Alex Gonzalez] </summary>
+
+> ## balena-yocto-scripts-1.16.1
+> ### (2022-01-11)
+> 
+> * revert_overrides: Add intel-quark to architecture overrides [Alex Gonzalez]
+> 
+</details>
+
 # v2.85.4+rev5
 ## (2021-12-30)
 

@@ -1,4 +1,45 @@
 - commits:
+    - subject: 'recipes-core/systemd: Move audit socket removal to meta-balena'
+      hash: 4960000d9bf853d053c891e84a1bee79b24c3fcd
+      body: |
+        Removal of audit sockets to disable audit messages should
+        be done in meta-balena.
+      footer:
+        Changelog-entry: 'recipes-core/systemd: Move audit socket removal to meta-balena'
+        changelog-entry: 'recipes-core/systemd: Move audit socket removal to meta-balena'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+    - subject: Update balena-yocto-scripts to v1.16.1
+      hash: 0c8bd3273bcfe1d298bbd2bf17c8ba1879d49f94
+      body: |
+        Update balena-yocto-scripts from v1.16.0 to v1.16.1
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Update balena-yocto-scripts to v1.16.1
+        changelog-entry: Update balena-yocto-scripts to v1.16.1
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested:
+        - commits:
+            - subject: 'revert_overrides: Add intel-quark to architecture overrides'
+              hash: cbcbbc42c10700c77e17d8f9224e35bec90280fe
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.16.1
+          date: 2022-01-11T14:37:00.027Z
+  version: 2.85.4+rev6
+  date: 2022-01-17T08:42:11.343Z
+- commits:
     - subject: Update balena-yocto-scripts to v1.16.0
       hash: 7aa50de9149604c0382a1b7faec01c24a52a5a02
       body: |
