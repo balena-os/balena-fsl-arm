@@ -4,6 +4,7 @@
 #MACHINE ?= "nitrogen6xq2g"
 #MACHINE ?= "nitrogen8mm"
 #MACHINE ?= "nitrogen8mm-dwe"
+#MACHINE ?= "solidrun-n6g"
 
 # More info meta-resin/README.md
 #TARGET_REPOSITORY ?= ""
@@ -12,6 +13,7 @@
 BALENA_STORAGE_nitrogen6xq2g = "overlay2"
 BALENA_STORAGE_nitrogen8mm = "overlay2"
 BALENA_STORAGE_nitrogen8mm-dwe = "overlay2"
+BALENA_STORAGE_solidrun-n6g = "overlay2"
 
 # Set this to 1 to disable quiet boot and allow bootloader shell access
 #OS_DEVELOPMENT = "1"
