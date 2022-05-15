@@ -26,3 +26,6 @@
 [submodule "layers/meta-boundary"]
 	path = layers/meta-boundary
 	url = https://github.com/boundarydevices/meta-boundary
+[submodule "layers/meta-solidrun-solidsense"]
+	path = layers/meta-solidrun-solidsense
+	url = https://github.com/SolidRun/meta-solidrun-solidsense
