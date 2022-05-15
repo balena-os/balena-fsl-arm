@@ -1,4 +1,19 @@
 - commits:
+    - subject: Add support for SolidRun SolidSense n6g board
+      hash: a83802b30e10091f8c265c6600238bd1c02a29d9
+      body: |
+        Add SolidRun SolidSense n6g support.
+      footer:
+        Changelog-entry: Add support for SolidRun SolidSense n6g board
+        changelog-entry: Add support for SolidRun SolidSense n6g board
+        Signed-off-by: Eric Bree <eric.bree@solid-run.com>
+        signed-off-by: Eric Bree <eric.bree@solid-run.com>
+      author: Eric Bree
+      nested: []
+  version: 2.98.23+rev1
+  title: "'Add the SolidRun SolidSense n6g support.'"
+  date: 2022-05-15T07:50:12.739Z
+- commits:
     - subject: Update layers/meta-balena to 5e9ec7690114640a5a7c3f6c94bb7e3ed37977ab
       hash: 75adba4c54df5f1741ad570b003c830c05c74558
       body: Update layers/meta-balena

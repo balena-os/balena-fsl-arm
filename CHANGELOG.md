@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.98.23+rev1
+## (2022-05-15)
+
+* Add support for SolidRun SolidSense n6g board [Eric Bree]
+
 # v2.98.23
 ## (2022-05-13)
 
