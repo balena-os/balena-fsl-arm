@@ -1,4 +1,34 @@
 - commits:
+    - subject: Update layers/meta-balena to 5804aabaac3d665b39d0da3e02d8f20c5d6d5db4
+      hash: 23131724815481530ab03a21dc234db1d3e78ac1
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 5804aabaac3d665b39d0da3e02d8f20c5d6d5db4
+        changelog-entry: Update layers/meta-balena to 5804aabaac3d665b39d0da3e02d8f20c5d6d5db4
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "os-config: Randomize the timer period"
+              hash: 6a9a456869ac37367058ea56bbf24d33a2cf42f2
+              body: >
+                To avoid all devices fetching configuration settings at the same
+                time,
+
+                distribute the timer adding a random time between 0 and 6 hours.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.98.24
+          title: "'Randomize os-config timer service'"
+          date: 2022-05-15T17:05:46.782Z
+  version: 2.98.24
+  title: "'Update layers/meta-balena digest to 5804aab'"
+  date: 2022-05-16T04:29:07.170Z
+- commits:
     - subject: Add support for SolidRun SolidSense n6g board
       hash: a83802b30e10091f8c265c6600238bd1c02a29d9
       body: |
