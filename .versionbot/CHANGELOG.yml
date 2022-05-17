@@ -1,4 +1,36 @@
 - commits:
+    - subject: Update layers/meta-balena to b6e9352e8784e433c647811d532d7ab3e2ee05e2
+      hash: 2dcd765e9cdd1a24b3f4bc5cc1ccf7b81dc99065
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to b6e9352e8784e433c647811d532d7ab3e2ee05e2
+        changelog-entry: Update layers/meta-balena to b6e9352e8784e433c647811d532d7ab3e2ee05e2
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "patch: Get CDS doc ready for docs sync"
+              hash: f15dc2055e78af9966ac5166061e49bc401c6647
+              body: ""
+              footer: {}
+              author: Vipul Gupta
+              nested: []
+            - subject: "test: os-config: Use common code to wait for service state"
+              hash: 1ccf232c9f2676b0631d71870b2556cddfb69dd6
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.98.25
+          title: "'patch: Get CDS doc ready for docs sync'"
+          date: 2022-05-16T20:59:22.889Z
+  version: 2.98.25
+  title: "'Update layers/meta-balena digest to b6e9352'"
+  date: 2022-05-17T01:45:20.728Z
+- commits:
     - subject: Update layers/meta-balena to 5804aabaac3d665b39d0da3e02d8f20c5d6d5db4
       hash: 23131724815481530ab03a21dc234db1d3e78ac1
       body: Update layers/meta-balena
