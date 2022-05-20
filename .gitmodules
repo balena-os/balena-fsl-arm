@@ -29,3 +29,6 @@
 [submodule "layers/meta-solidrun-solidsense"]
 	path = layers/meta-solidrun-solidsense
 	url = https://github.com/SolidRun/meta-solidrun-solidsense
+[submodule "contracts"]
+	path = contracts
+	url = https://github.com/balena-io/contracts.git
