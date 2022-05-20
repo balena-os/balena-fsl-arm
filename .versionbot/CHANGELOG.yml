@@ -1,4 +1,92 @@
 - commits:
+    - subject: Update layers/meta-balena to 7e98e8f49aee1f5538da16ff564c7d8fb009800e
+      hash: eeefe2bf4a948f1d1e9391bdf79ccba1ef7b3559
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 7e98e8f49aee1f5538da16ff564c7d8fb009800e
+        changelog-entry: Update layers/meta-balena to 7e98e8f49aee1f5538da16ff564c7d8fb009800e
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: Update tests/leviathan digest to 727ba9f
+              hash: b9b9847a3c0bc6082eec319bcac1439ca0752aac
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Renovate Bot
+              nested:
+                - commits:
+                    - subject: "worker: qemu: add new qemu firmware paths"
+                      hash: b19831d5209962eb729ffa55851b593e632a70d8
+                      body: >
+                        Search for firmware shipped as part of QEMU package to
+                        enable
+
+                        cross-platform emulation with UEFI.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Joseph Kogut <joseph@balena.io>
+                        signed-off-by: Joseph Kogut <joseph@balena.io>
+                      author: Joseph Kogut
+                      nested: []
+                    - subject: "worker: install edk2 firmware for aarch64"
+                      hash: 514069e45c814e7f6051ea41ba9da0852f765976
+                      body: ""
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Joseph Kogut <joseph@balena.io>
+                        signed-off-by: Joseph Kogut <joseph@balena.io>
+                      author: Joseph Kogut
+                      nested: []
+                    - subject: "worker: Change default qemu memory from 2G to 512M"
+                      hash: 0820094150876d67ce9203d641fe5c41d1afcef4
+                      body: ""
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Kyle Harding <kyle@balena.io>
+                        signed-off-by: Kyle Harding <kyle@balena.io>
+                      author: Kyle Harding
+                      nested: []
+                    - subject: "make: Do not assume qemu DUT arch will match the host"
+                      hash: 4aac404ff5e221eecef289d07339532335532543
+                      body: >
+                        When KVM is not used we can easily emulate
+                        generic-aarch64
+
+                        on x86_64 hosts so avoid tying the host and target architectures
+
+                        together in the Makefile.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Kyle Harding <kyle@balena.io>
+                        signed-off-by: Kyle Harding <kyle@balena.io>
+                      author: Kyle Harding
+                      nested: []
+                    - subject: "make: Allow passed env vars to replace any .env values"
+                      hash: 4b71f90615c68c90fa8b0bf4c2068f089784ea00
+                      body: ""
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Kyle Harding <kyle@balena.io>
+                        signed-off-by: Kyle Harding <kyle@balena.io>
+                      author: Kyle Harding
+                      nested: []
+                  version: leviathan-2.3.4
+                  title: "'Do not assume qemu DUT arch will match the host'"
+                  date: 2022-05-20T14:09:51.819Z
+          version: meta-balena-2.98.28
+          title: "'Update tests/leviathan digest to 727ba9f'"
+          date: 2022-05-20T15:17:40.870Z
+  version: 2.98.28
+  title: "'Update layers/meta-balena digest to 7e98e8f'"
+  date: 2022-05-20T17:48:50.769Z
+- commits:
     - subject: Update contracts to 6a236f469fbc796adc3c5f63031466fc1dbab013
       hash: 75640c0b015adfa1172421e0e8aaa9b384dc26b5
       body: Update contracts
