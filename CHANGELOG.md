@@ -1,6 +1,34 @@
 Change log
 -----------
 
+# v2.98.30
+## (2022-05-26)
+
+
+<details>
+<summary> Update contracts to f251e053b36b3a6d14cd022b9745e478dcad9a6a [Renovate Bot] </summary>
+
+> ## contracts-1.13.76
+> ### (2022-05-23)
+> 
+> * sw.os-image: Add balena-image software image [Alex Gonzalez]
+> * sw.os: Add balenaOS contract [Alex Gonzalez]
+> 
+</details>
+
+* Update layers/meta-balena to 55903947dc4dbbf7a0a1c5626ba6c8eaa1b09f67 [Renovate Bot]
+
+<details>
+<summary> Update contracts to 6ffb1c8d87c8d0940405cbbc954aa625b4b1f94a [Renovate Bot] </summary>
+
+> ## contracts-1.13.76
+> ### (2022-05-23)
+> 
+> * sw.os-image: Add balena-image software image [Alex Gonzalez]
+> * sw.os: Add balenaOS contract [Alex Gonzalez]
+> 
+</details>
+
 # v2.98.28+rev1
 ## (2022-05-20)
 
