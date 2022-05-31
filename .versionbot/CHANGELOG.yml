@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 8c132cde993d3a8d9e4eea2517edf27b53b47ef3
+      hash: cf2c0cfb5558773c21c04f82b432ae23ca6ff4e5
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 8c132cde993d3a8d9e4eea2517edf27b53b47ef3
+        changelog-entry: Update balena-yocto-scripts to 8c132cde993d3a8d9e4eea2517edf27b53b47ef3
+      author: Renovate Bot
+      nested: []
+  version: 2.98.33+rev1
+  title: "'Update balena-yocto-scripts digest to 8c132cd'"
+  date: 2022-05-31T22:13:01.968Z
+- commits:
     - subject: Update layers/meta-balena to 95c96e0624507fd9701912c67d3ae5ec5dbdf6f9
       hash: dcf880919af8c0c47ad768106ef0e1d3d9110bc7
       body: Update layers/meta-balena
