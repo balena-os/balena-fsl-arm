@@ -1,4 +1,36 @@
 - commits:
+    - subject: Update layers/meta-balena to 82f6128a170dd68e671e30278a4f98398f5d1034
+      hash: 96814d991831a4a800a7dbae56a32a0af4784052
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 82f6128a170dd68e671e30278a4f98398f5d1034
+        changelog-entry: Update layers/meta-balena to 82f6128a170dd68e671e30278a4f98398f5d1034
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "tests: cloud: reduce waitUntil interval"
+              hash: 34f77b125c97d82e182bca1cee94fddc49ad5b07
+              body: >
+                When the promise called in waitUntil fails, the function
+                defaults to a
+
+                30s interval before trying again. Reduce this to a 5s interval w/
+
+                maximum 5m retry window in the cloud suite.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.98.39
+          title: "'tests: cloud: reduce waitUntil interval'"
+          date: 2022-06-04T12:43:32.134Z
+  version: 2.98.39
+  title: "'Update layers/meta-balena digest to 82f6128'"
+  date: 2022-06-04T16:27:39.596Z
+- commits:
     - subject: Update layers/meta-balena to 653c85c0b332b740100c527667df6e184a1482c5
       hash: f467d3ccdeec227869acd746a66f529dfc5719cd
       body: Update layers/meta-balena

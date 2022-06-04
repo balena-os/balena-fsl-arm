@@ -1,6 +1,20 @@
 Change log
 -----------
 
+# v2.98.39
+## (2022-06-04)
+
+
+<details>
+<summary> Update layers/meta-balena to 82f6128a170dd68e671e30278a4f98398f5d1034 [Renovate Bot] </summary>
+
+> ## meta-balena-2.98.39
+> ### (2022-06-04)
+> 
+> * tests: cloud: reduce waitUntil interval [Joseph Kogut]
+> 
+</details>
+
 # v2.98.38
 ## (2022-06-04)
 
