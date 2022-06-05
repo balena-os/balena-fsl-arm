@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v2.98.40
+## (2022-06-05)
+
+
+<details>
+<summary> Update contracts to 58bcfbc0b0237177c51db2d7120e61d70e9c415b [Renovate Bot] </summary>
+
+> ## contracts-2.0.2
+> ### (2022-06-05)
+> 
+> * sw.os - hw.device-type: Update Xavier NX SD and Xavier NX eMMC to 32.7.1 [Alexandru Costache]
+> 
+</details>
+
+* Update layers/meta-balena to efd8306a7a838b600d2cbf77a4ecfbd30ba9324a [Renovate Bot]
+
 # v2.98.39
 ## (2022-06-04)
 
