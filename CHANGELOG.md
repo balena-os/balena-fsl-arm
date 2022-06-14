@@ -1,6 +1,27 @@
 Change log
 -----------
 
+# v2.99.2
+## (2022-06-14)
+
+
+<details>
+<summary> Update layers/meta-balena to ee8110bd257ff145acba793720ea739f14f2429a [Renovate Bot] </summary>
+
+> ## meta-balena-2.99.2
+> ### (2022-06-13)
+> 
+> * tests: os: chrony: reduce retry interval [Joseph Kogut]
+> 
+> ## meta-balena-2.99.1
+> ### (2022-06-11)
+> 
+> * tests: hup: gzip hostapp before transfer to DUT [rcooke-warwick]
+> 
+</details>
+
+* Update contracts to b2bddbdc896e6c628231512b363e5c93d16f5b15 [Renovate Bot]
+
 # v2.99.0+rev1
 ## (2022-06-13)
 

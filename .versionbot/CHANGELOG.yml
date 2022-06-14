@@ -1,4 +1,52 @@
 - commits:
+    - subject: Update layers/meta-balena to ee8110bd257ff145acba793720ea739f14f2429a
+      hash: 183407f5231e2a9221bf41eacc1b048744c9441e
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to ee8110bd257ff145acba793720ea739f14f2429a
+        changelog-entry: Update layers/meta-balena to ee8110bd257ff145acba793720ea739f14f2429a
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "tests: os: chrony: reduce retry interval"
+              hash: 99ef89af348902008fd3370c968013afc0990f15
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.99.2
+          title: "'tests: os: chrony: reduce retry interval'"
+          date: 2022-06-13T22:56:55.782Z
+        - commits:
+            - subject: "tests: hup: gzip hostapp before transfer to DUT"
+              hash: cac92a4d5e884110ae5caaf807c2c5685a88237e
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: meta-balena-2.99.1
+          title: "'tests: hup: gzip hostapp before transfer to DUT'"
+          date: 2022-06-11T12:01:27.278Z
+    - subject: Update contracts to b2bddbdc896e6c628231512b363e5c93d16f5b15
+      hash: 76dec3c570d246190a4d87056fe12bc1f1123cbf
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to b2bddbdc896e6c628231512b363e5c93d16f5b15
+        changelog-entry: Update contracts to b2bddbdc896e6c628231512b363e5c93d16f5b15
+      author: Renovate Bot
+      nested: []
+  version: 2.99.2
+  title: "'Update layers/meta-balena digest to ee8110b'"
+  date: 2022-06-14T21:49:51.684Z
+- commits:
     - subject: Update contracts to 1733467586d1af917c169806986179fdf039336e
       hash: 90ae1e0be891b7f27b47c20463efe3fcb5c5c53e
       body: Update contracts
