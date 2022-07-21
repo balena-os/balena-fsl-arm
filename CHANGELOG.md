@@ -1,6 +1,46 @@
 Change log
 -----------
 
+# v2.100.6
+## (2022-07-21)
+
+
+<details>
+<summary> Update layers/meta-balena to 2438d75a2515240ef254b956da08094b3f4e2d61 [renovate[bot]] </summary>
+
+> ## meta-balena-2.100.6
+> ### (2022-07-21)
+> 
+> * balena-config-vars: Do not use cache in flasher images [Alex Gonzalez]
+> 
+> ## meta-balena-2.100.5
+> ### (2022-07-21)
+> 
+> * Update balena-io/balena-supervisor to v14.0.12 [renovate[bot]]
+> 
+> ## meta-balena-2.100.4
+> ### (2022-07-20)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to d3c6489 [renovate[bot]] </summary>
+> 
+>> ### leviathan-2.6.8
+>> #### (2022-07-20)
+>> 
+>> * core: Reduce logging in failed SSH attempts [Kyle Harding]
+>> 
+>> ### leviathan-2.6.7
+>> #### (2022-07-18)
+>> 
+>> * Revert "patch: Increase timeout for worker connections" [Kyle Harding]
+>> * core: Update node-tap to 14.10.8 [Kyle Harding]
+>> 
+> </details>
+> 
+> 
+</details>
+
 # v2.100.3
 ## (2022-07-21)
 
