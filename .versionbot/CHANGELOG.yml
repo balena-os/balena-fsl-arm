@@ -1,4 +1,196 @@
 - commits:
+    - subject: Update layers/meta-balena to e646204762ac7abb2407a0e1dba8689aeade70f4
+      hash: d12f75d3c5ddca11678392d2f6fcb93674d63e29
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to e646204762ac7abb2407a0e1dba8689aeade70f4
+        changelog-entry: Update layers/meta-balena to e646204762ac7abb2407a0e1dba8689aeade70f4
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "test: os: chrony: Double the wait for time skew test"
+              hash: 756b5eba8d3b197f56688be030b522f94a628c42
+              body: >
+                Including the 2min systemd watchdog timer, plus 60 attempts to
+                sync
+
+                the time via chronyc waitsync, it may take longer than expected to
+
+                trigger the healthcheck condition.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: "os: tests: chrony: Wrap disable/enable NTP in test conditions"
+              hash: 6d51bd39d02898a3a50f8b5ff133a283b0368463
+              body: >
+                This allows us to catch if one of the enable/disable steps has
+                failed
+
+                and includes time to execute.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: "tests: os: Add helper to write or remove properties in config.json"
+              hash: ce338f46cf7d79044b7f67850744784db3869465
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.100.11
+          title: "'tests: os: Add helper to write or remove properties in config.json'"
+          date: 2022-07-25T17:36:43.495Z
+        - commits:
+            - subject: "tests: cloud: preload: fix no-return-await"
+              hash: 4011daec80bf0e81915bdaf6aafdcd1cd298e5d6
+              body: |
+                Fix ESLint no-return-await
+                https://eslint.org/docs/latest/rules/no-return-await
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: "tests: cloud: preload: reduce waitUntil interval"
+              hash: 5b4669444e99788ceff5615ed66edc13719ab70b
+              body: |
+                Specify an explicit retry interval in waitUntil().
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: "tests: cloud: multicontainer: reduce waitUntil interval"
+              hash: 92d72c900e0017203a8de21a7de1930528eb25e6
+              body: |
+                Specify an explicit retry interval in waitUntil().
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.100.10
+          title: "'Jakogut/cloud fixups'"
+          date: 2022-07-24T10:14:15.412Z
+    - subject: Update balena-yocto-scripts to 09e4514953fed499a69c224b47969fd2c3fb7ab8
+      hash: 29f6c29e93303186c62bb41de7f4f4fecb1a8718
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 09e4514953fed499a69c224b47969fd2c3fb7ab8
+        changelog-entry: Update balena-yocto-scripts to 09e4514953fed499a69c224b47969fd2c3fb7ab8
+      author: renovate[bot]
+      nested: []
+    - subject: Update layers/meta-balena to a2ed558c6d2d8362da0b8242ca3b54d1b49acb9c
+      hash: 837031204b4bbbde42c9f7d2d1a8e0b8b03a1282
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to a2ed558c6d2d8362da0b8242ca3b54d1b49acb9c
+        changelog-entry: Update layers/meta-balena to a2ed558c6d2d8362da0b8242ca3b54d1b49acb9c
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "test: os: chrony: Double the wait for time skew test"
+              hash: 756b5eba8d3b197f56688be030b522f94a628c42
+              body: >
+                Including the 2min systemd watchdog timer, plus 60 attempts to
+                sync
+
+                the time via chronyc waitsync, it may take longer than expected to
+
+                trigger the healthcheck condition.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: "os: tests: chrony: Wrap disable/enable NTP in test conditions"
+              hash: 6d51bd39d02898a3a50f8b5ff133a283b0368463
+              body: >
+                This allows us to catch if one of the enable/disable steps has
+                failed
+
+                and includes time to execute.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: "tests: os: Add helper to write or remove properties in config.json"
+              hash: ce338f46cf7d79044b7f67850744784db3869465
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.100.11
+          title: "'tests: os: Add helper to write or remove properties in config.json'"
+          date: 2022-07-25T17:36:43.495Z
+        - commits:
+            - subject: "tests: cloud: preload: fix no-return-await"
+              hash: 4011daec80bf0e81915bdaf6aafdcd1cd298e5d6
+              body: |
+                Fix ESLint no-return-await
+                https://eslint.org/docs/latest/rules/no-return-await
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: "tests: cloud: preload: reduce waitUntil interval"
+              hash: 5b4669444e99788ceff5615ed66edc13719ab70b
+              body: |
+                Specify an explicit retry interval in waitUntil().
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: "tests: cloud: multicontainer: reduce waitUntil interval"
+              hash: 92d72c900e0017203a8de21a7de1930528eb25e6
+              body: |
+                Specify an explicit retry interval in waitUntil().
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.100.10
+          title: "'Jakogut/cloud fixups'"
+          date: 2022-07-24T10:14:15.412Z
+  version: 2.100.11
+  title: "'Update layers/meta-balena digest to e646204'"
+  date: 2022-07-25T22:51:29.549Z
+- commits:
     - subject: Update layers/meta-balena to 9b7bbeaffe87b8dab49eb98163188c77c1934f8e
       hash: 72dbb863825f5219d13945cd49e2e10c26f29022
       body: Update layers/meta-balena

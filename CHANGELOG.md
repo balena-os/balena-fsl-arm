@@ -1,6 +1,50 @@
 Change log
 -----------
 
+# v2.100.11
+## (2022-07-25)
+
+
+<details>
+<summary> Update layers/meta-balena to e646204762ac7abb2407a0e1dba8689aeade70f4 [renovate[bot]] </summary>
+
+> ## meta-balena-2.100.11
+> ### (2022-07-25)
+> 
+> * test: os: chrony: Double the wait for time skew test [Kyle Harding]
+> * os: tests: chrony: Wrap disable/enable NTP in test conditions [Kyle Harding]
+> * tests: os: Add helper to write or remove properties in config.json [Kyle Harding]
+> 
+> ## meta-balena-2.100.10
+> ### (2022-07-24)
+> 
+> * tests: cloud: preload: fix no-return-await [Joseph Kogut]
+> * tests: cloud: preload: reduce waitUntil interval [Joseph Kogut]
+> * tests: cloud: multicontainer: reduce waitUntil interval [Joseph Kogut]
+> 
+</details>
+
+* Update balena-yocto-scripts to 09e4514953fed499a69c224b47969fd2c3fb7ab8 [renovate[bot]]
+
+<details>
+<summary> Update layers/meta-balena to a2ed558c6d2d8362da0b8242ca3b54d1b49acb9c [renovate[bot]] </summary>
+
+> ## meta-balena-2.100.11
+> ### (2022-07-25)
+> 
+> * test: os: chrony: Double the wait for time skew test [Kyle Harding]
+> * os: tests: chrony: Wrap disable/enable NTP in test conditions [Kyle Harding]
+> * tests: os: Add helper to write or remove properties in config.json [Kyle Harding]
+> 
+> ## meta-balena-2.100.10
+> ### (2022-07-24)
+> 
+> * tests: cloud: preload: fix no-return-await [Joseph Kogut]
+> * tests: cloud: preload: reduce waitUntil interval [Joseph Kogut]
+> * tests: cloud: multicontainer: reduce waitUntil interval [Joseph Kogut]
+> 
+</details>
+
 # v2.100.8
 ## (2022-07-22)
 
