@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to 094cc1766365844e9e4dcf46f4f247cad0231715
+      hash: ba4c19d85da923dc718fd01f6906a3037597b7cf
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 094cc1766365844e9e4dcf46f4f247cad0231715
+        changelog-entry: Update layers/meta-balena to 094cc1766365844e9e4dcf46f4f247cad0231715
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "renovate: Fix nested changelogs and change-type for SV updates"
+              hash: 516432877cf9fda8b65cae1b3cddcd8bd8cc249d
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.101.11
+          title: "'renovate: Fix nested changelogs and change-type for SV updates'"
+          date: 2022-08-24T12:22:37.592Z
+  version: 2.101.11
+  title: "'Update layers/meta-balena digest to 094cc17'"
+  date: 2022-08-25T05:45:42.883Z
+- commits:
     - subject: Update layers/meta-balena to a1084cfc437eb601cbb9f3de7822d916e08351de
       hash: 14d6ffdaf05b77c3e776f3717560ff7871020da1
       body: Update layers/meta-balena
