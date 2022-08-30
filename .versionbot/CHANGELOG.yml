@@ -1,4 +1,64 @@
 - commits:
+    - subject: Update layers/meta-balena to a24e52592b2fbc1c60e6a6fc39c61470219f61b1
+      hash: dc9f8555c7397bd9c45da37cb8a2d93bf42a630b
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to a24e52592b2fbc1c60e6a6fc39c61470219f61b1
+        changelog-entry: Update layers/meta-balena to a24e52592b2fbc1c60e6a6fc39c61470219f61b1
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "renovate: Restore default commit body"
+              hash: 05be6314e136d40ae8cdf54988b27e059de07e68
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.102.3
+          title: "'renovate: Restore default commit body'"
+          date: 2022-08-30T19:45:01.208Z
+        - commits:
+            - subject: "Renovate: Fix package rules for balena supervisor"
+              hash: 2a7cb0c5bc3a53980ac8bcd2190500a51fcd85c5
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.102.2
+          title: "'Renovate: Fix package rules for balena supervisor'"
+          date: 2022-08-29T16:15:17.586Z
+        - commits:
+            - subject: "meta-balena-thud: initramfs: Fix building with latest meta-balena"
+              hash: 30bc6e7d27fb2ceaff5ea241fdd0e7b8224b84ea
+              body: >
+                The latest meta-balena includes `util-linux-findmnt` as a kexec
+                module
+
+                dependency and this package has not yet been split from `util-linux` in
+
+                thud.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.102.1
+          title: "'meta-balena-thud: initramfs: Fix building with latest meta-balena'"
+          date: 2022-08-29T08:26:13.610Z
+  version: 2.102.3
+  title: "'Update layers/meta-balena digest to a24e525'"
+  date: 2022-08-30T20:21:59.723Z
+- commits:
     - subject: Update layers/meta-balena to 09dd67ef6a3abd1e9048bb39a2b9a02dc3af18c3
       hash: 7614a8099ccacd7be16a1a5cab310f9eab449b37
       body: Update layers/meta-balena

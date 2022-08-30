@@ -1,6 +1,30 @@
 Change log
 -----------
 
+# v2.102.3
+## (2022-08-30)
+
+
+<details>
+<summary> Update layers/meta-balena to a24e52592b2fbc1c60e6a6fc39c61470219f61b1 [renovate[bot]] </summary>
+
+> ## meta-balena-2.102.3
+> ### (Invalid date)
+> 
+> * renovate: Restore default commit body [Kyle Harding]
+> 
+> ## meta-balena-2.102.2
+> ### (2022-08-29)
+> 
+> * Renovate: Fix package rules for balena supervisor [Kyle Harding]
+> 
+> ## meta-balena-2.102.1
+> ### (2022-08-29)
+> 
+> * meta-balena-thud: initramfs: Fix building with latest meta-balena [Alex Gonzalez]
+> 
+</details>
+
 # v2.102.0
 ## (2022-08-26)
 
