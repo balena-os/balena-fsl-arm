@@ -1,4 +1,46 @@
 - commits:
+    - subject: Update layers/meta-balena to 608994976c4d5d4f1f4558245f6abc375ac0c0c7
+      hash: 01cfabce9092fb9ccc286e874fe2bdece9656ba8
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 608994976c4d5d4f1f4558245f6abc375ac0c0c7
+        changelog-entry: Update layers/meta-balena to 608994976c4d5d4f1f4558245f6abc375ac0c0c7
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "udev: run resin-update-state after md assemble"
+              hash: 09a985b3847b887ae47047c011057372cfee993e
+              body: >
+                Run the resin-update-state rules that create the by-state links
+                after md
+
+                arrays are assembled. This fixes state link creation when running on a
+
+                RAID array.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: "resin_update_state_probe: do not skip md devices"
+              hash: fbfb67820b58fcf7659d616e20657857959e46fe
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.102.4
+          title: "'Fix creating by-state links when rootfs is on a RAID array'"
+          date: 2022-08-30T21:04:53.554Z
+  version: 2.102.4
+  title: "'Update layers/meta-balena digest to 6089949'"
+  date: 2022-09-03T00:32:00.868Z
+- commits:
     - subject: Update contracts to 3bd4b2097a2796afc9a56a580e555982aad4f10b
       hash: 16d3b9b92cc8ca62248a5d04d89ad64556954674
       body: Update contracts
