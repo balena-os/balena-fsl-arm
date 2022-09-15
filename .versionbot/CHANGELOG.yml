@@ -1,4 +1,42 @@
 - commits:
+    - subject: Update contracts to 7ea918011dc38f509a7ae3bce30c3391bc839dd9
+      hash: 5167adf5d541fef0b8922a80bd12e11b086e5008
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 7ea918011dc38f509a7ae3bce30c3391bc839dd9
+        changelog-entry: Update contracts to 7ea918011dc38f509a7ae3bce30c3391bc839dd9
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "hw.device-type: Set LED to false for rockpi-4b"
+              hash: a3ba8781439427390d2dbd21d01b66cc6f33c027
+              body: |
+                LED is not supported for this DT in the device
+                repository, let's set it to false here so that
+                the tests are aware of this being unsupported.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.15
+          title: "'hw.device-type: Set LED to false for rockpi-4b'"
+          date: 2022-09-14T14:17:49.155Z
+    - subject: Update SolidRun bsp to latest
+      hash: 84379520a3d6b1b258d2eadc52b43f581529dc87
+      body: ""
+      footer:
+        Changelog-entry: Update SolidRun bsp to latest
+        changelog-entry: Update SolidRun bsp to latest
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.103.1+rev1
+  title: "'Update contracts digest to 7ea9180'"
+  date: 2022-09-15T13:34:37.861Z
+- commits:
     - subject: Update layers/meta-balena to 2f207a3dbc3f142d4d1e0b9fdbd6136bcfb40dac
       hash: a4d9490030827099765bc704fe4fb99b33da8982
       body: Update layers/meta-balena
