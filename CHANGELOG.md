@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.103.1+rev1
+## (2022-09-15)
+
+* Update SolidRun bsp to latest [Florin Sarbu]
+
 # v2.103.1
 ## (2022-09-14)
 
