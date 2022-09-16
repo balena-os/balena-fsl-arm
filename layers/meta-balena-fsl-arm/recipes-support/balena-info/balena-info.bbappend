@@ -1,1 +1,1 @@
-TTYS_append_nitrogen8mm = " ttymxc1"
+TTYS:append:nitrogen8mm = " ttymxc1"
