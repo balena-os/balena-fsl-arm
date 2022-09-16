@@ -48,7 +48,7 @@ module.exports =
 		machine: 'nitrogen8mm-dwe'
 		image: 'balena-image'
 		fstype: 'balenaos-img'
-		version: 'yocto-dunfell'
+		version: 'yocto-honister'
 		deployArtifact: 'balena-image-nitrogen8mm-dwe.balenaos-img'
 		compressed: true
 
