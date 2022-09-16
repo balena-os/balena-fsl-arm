@@ -1,1 +1,1 @@
-PACKAGECONFIG_remove = " egl glesv2"
+PACKAGECONFIG:remove = " egl glesv2"
