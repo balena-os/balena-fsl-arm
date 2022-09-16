@@ -1,4 +1,4 @@
-CONNECTIVITY_FIRMWARES_remove = " \
+CONNECTIVITY_FIRMWARES:remove = " \
     linux-firmware-wl12xx \
     linux-firmware-bcm43455 \
     linux-firmware-ibt-11-5 \

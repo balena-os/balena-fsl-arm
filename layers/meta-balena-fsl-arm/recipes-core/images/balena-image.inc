@@ -1,11 +1,11 @@
 #
 # Nitrogen6x Quad 2GB RAM
 #
-IMAGE_FSTYPES_append_nitrogen6xq2g = " balenaos-img"
+IMAGE_FSTYPES:append:nitrogen6xq2g = " balenaos-img"
 
 # Customize balenaos-img
-BALENA_IMAGE_BOOTLOADER_nitrogen6xq2g = "u-boot"
-BALENA_BOOT_PARTITION_FILES_nitrogen6xq2g = " \
+BALENA_IMAGE_BOOTLOADER:nitrogen6xq2g = "u-boot"
+BALENA_BOOT_PARTITION_FILES:nitrogen6xq2g = " \
     ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/${KERNEL_IMAGETYPE} \
     zImage-imx6dl-nitrogen6x.dtb:/imx6dl-nitrogen6x.dtb \
     zImage-imx6q-nitrogen6_max.dtb:/imx6q-nitrogen6_max.dtb \
@@ -15,21 +15,21 @@ BALENA_BOOT_PARTITION_FILES_nitrogen6xq2g = " \
     u-boot-flasher.sh:/u-boot-flasher.sh \
 "
 
-IMAGE_INSTALL_append_nitrogen6xq2g = " \
+IMAGE_INSTALL:append:nitrogen6xq2g = " \
                                        mtd-utils \
                                        u-boot-flasher \
 "
 
-DEPENDS_append_nitrogen6xq2g = " u-boot-flasher"
+DEPENDS:append:nitrogen6xq2g = " u-boot-flasher"
 
 #
 # Nitrogen6x
 #
-IMAGE_FSTYPES_append_nitrogen6x = " balenaos-img"
+IMAGE_FSTYPES:append:nitrogen6x = " balenaos-img"
 
 # Customize balenaos-img
-BALENA_IMAGE_BOOTLOADER_nitrogen6x = "u-boot"
-BALENA_BOOT_PARTITION_FILES_nitrogen6x = " \
+BALENA_IMAGE_BOOTLOADER:nitrogen6x = "u-boot"
+BALENA_BOOT_PARTITION_FILES:nitrogen6x = " \
     ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/${KERNEL_IMAGETYPE} \
     zImage-imx6dl-nitrogen6x.dtb:/imx6dl-nitrogen6x.dtb \
     zImage-imx6q-nitrogen6_max.dtb:/imx6q-nitrogen6_max.dtb \
@@ -37,7 +37,7 @@ BALENA_BOOT_PARTITION_FILES_nitrogen6x = " \
     zImage-imx6q-sabrelite.dtb:/imx6q-sabrelite.dtb \
     "
 
-IMAGE_CMD_balenaos-img_append_nitrogen6x () {
+IMAGE_CMD:balenaos-img:append:nitrogen6x () {
     # nitrogen6x needs uboot written at a specific location
     dd if=${DEPLOY_DIR_IMAGE}/u-boot-${MACHINE}.imx of=${BALENA_RAW_IMG} conv=notrunc seek=2 bs=512
 }
@@ -46,11 +46,11 @@ IMAGE_CMD_balenaos-img_append_nitrogen6x () {
 # SolidRun-imx6
 #
 
-IMAGE_FSTYPES_append_solidrun-imx6 = " balenaos-img"
+IMAGE_FSTYPES:append:solidrun-imx6 = " balenaos-img"
 
 # Customize balenaos-img
-BALENA_IMAGE_BOOTLOADER_solidrun-imx6 = "u-boot"
-BALENA_BOOT_PARTITION_FILES_solidrun-imx6 = " \
+BALENA_IMAGE_BOOTLOADER:solidrun-imx6 = "u-boot"
+BALENA_BOOT_PARTITION_FILES:solidrun-imx6 = " \
     zImage-initramfs-${MACHINE}.bin:/zImage \
     imx6dl-cubox-i.dtb:/imx6dl-cubox-i.dtb \
     imx6q-cubox-i.dtb:/imx6q-cubox-i.dtb \
@@ -70,7 +70,7 @@ BALENA_BOOT_PARTITION_FILES_solidrun-imx6 = " \
     u-boot-${MACHINE}.${UBOOT_SUFFIX}:/u-boot-${MACHINE}.${UBOOT_SUFFIX} \
     "
 
-IMAGE_CMD_balenaos-img_append_solidrun-imx6 () {
+IMAGE_CMD:balenaos-img:append:solidrun-imx6 () {
     # solidrun-imx6 needs uboot written at a specific location along with SPL
     dd if=${DEPLOY_DIR_IMAGE}/${SPL_BINARY} of=${BALENA_RAW_IMG} conv=notrunc seek=1 bs=1K
     dd if=${DEPLOY_DIR_IMAGE}/u-boot-${MACHINE}.${UBOOT_SUFFIX} of=${BALENA_RAW_IMG} conv=notrunc seek=69 bs=1K
@@ -79,25 +79,25 @@ IMAGE_CMD_balenaos-img_append_solidrun-imx6 () {
 #
 # SolidRun SolidSense solidrun-n6g
 #
-IMAGE_FSTYPES_append_solidrun-n6g = " balenaos-img"
-BALENA_IMAGE_BOOTLOADER_solidrun-n6g = "u-boot"
-BALENA_BOOT_PARTITION_FILES_solidrun-n6g = " \
+IMAGE_FSTYPES:append:solidrun-n6g = " balenaos-img"
+BALENA_IMAGE_BOOTLOADER:solidrun-n6g = "u-boot"
+BALENA_BOOT_PARTITION_FILES:solidrun-n6g = " \
     zImage-initramfs-${MACHINE}.bin:/zImage \
     imx6dl-hummingboard2-emmc-som-v15.dtb:/imx6dl-hummingboard2-emmc-som-v15.dtb \
     imx6q-hummingboard2-emmc-som-v15.dtb:/imx6q-hummingboard2-emmc-som-v15.dtb \
     ${SPL_BINARY}:/${SPL_BINARY} \
     u-boot-${MACHINE}.${UBOOT_SUFFIX}:/u-boot-${MACHINE}.${UBOOT_SUFFIX} \
 "
-IMAGE_CMD_balenaos-img_append_solidrun-n6g () {
+IMAGE_CMD:balenaos-img:append:solidrun-n6g () {
     # SolidRun SolidSense solidrun-n6g needs uboot written at a specific location along with SPL
     dd if=${DEPLOY_DIR_IMAGE}/${SPL_BINARY} of=${BALENA_RAW_IMG} conv=notrunc seek=1 bs=1K
     dd if=${DEPLOY_DIR_IMAGE}/u-boot-${MACHINE}.${UBOOT_SUFFIX} of=${BALENA_RAW_IMG} conv=notrunc seek=69 bs=1K
 }
 
 
-IMAGE_FSTYPES_append_nitrogen8mm = " balenaos-img"
-BALENA_IMAGE_BOOTLOADER_nitrogen8mm = "u-boot"
-BALENA_BOOT_PARTITION_FILES_nitrogen8mm = " \
+IMAGE_FSTYPES:append:nitrogen8mm = " balenaos-img"
+BALENA_IMAGE_BOOTLOADER:nitrogen8mm = "u-boot"
+BALENA_BOOT_PARTITION_FILES:nitrogen8mm = " \
     imx8mm-nitrogen8mm.dtb:/imx8mm-nitrogen8mm.dtb \
     imx8mm-nitrogen8mm_rev2.dtb:/imx8mm-nitrogen8mm_rev2.dtb \
     imx8mm-nitrogen8mm_rev2-m4.dtb:/imx8mm-nitrogen8mm_rev2-m4.dtb \
@@ -105,13 +105,13 @@ BALENA_BOOT_PARTITION_FILES_nitrogen8mm = " \
     imx-boot:/imx-boot \
 "
 
-BALENA_BOOT_PARTITION_FILES_nitrogen8mm-dwe = " \
+BALENA_BOOT_PARTITION_FILES:nitrogen8mm-dwe = " \
     imx8mm-dwe.dtb:/imx8mm-dwe.dtb \
     boot.scr-${MACHINE}:/boot.scr \
     imx-boot:/imx-boot \
 "
 
-IMAGE_INSTALL_append_nitrogen8mm = " \
+IMAGE_INSTALL:append:nitrogen8mm = " \
 	firmware-imx-8m \
 	kernel-module-imx-gpu-viv \
 	kernel-module-qcacld \
@@ -120,4 +120,4 @@ IMAGE_INSTALL_append_nitrogen8mm = " \
 	kernel-devicetree \
 "
 
-DEPENDS_append_nitrogen8mm += "imx-boot"
+DEPENDS:append:nitrogen8mm += "imx-boot"

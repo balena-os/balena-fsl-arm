@@ -1,5 +1,5 @@
 include balena-image.inc
 
-IMAGE_INSTALL_append_nitrogen8mm = " \
+IMAGE_INSTALL:append:nitrogen8mm = " \
         bluetooth-scripts \
 "
