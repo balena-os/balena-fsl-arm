@@ -38,7 +38,7 @@ module.exports =
 		machine: 'nitrogen8mm'
 		image: 'balena-image-flasher'
 		fstype: 'balenaos-img'
-		version: 'yocto-dunfell'
+		version: 'yocto-honister'
 		deployArtifact: 'balena-image-flasher-nitrogen8mm.balenaos-img'
 		compressed: true
 
