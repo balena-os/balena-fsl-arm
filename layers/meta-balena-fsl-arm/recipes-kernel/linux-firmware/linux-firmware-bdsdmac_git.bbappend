@@ -2,10 +2,10 @@
 SRCREV_nitrogen8mm = "7c849ee87c9b523820e25c3f6a8f3ecbd3b0fbe7"
 SRCBRANCH_nitrogen8mm = "bd-sdmac-qcacld-lea-2.0"
 
-SRC_URI_append_nitrogen8mm = " http://www.freescale.com/lgfiles/NMG/MAD/YOCTO/firmware-qca-2.0.3.bin "
+SRC_URI:append_nitrogen8mm = " http://www.freescale.com/lgfiles/NMG/MAD/YOCTO/firmware-qca-2.0.3.bin "
 SRC_URI[md5sum] = "29e949d1037a464dcb7e71b45a97280e"
 SRC_URI[sha256sum] = "d61220c97aa1e5a875234a95934957b02274cb87c2be74e119e4f093907cf68f"
-SRC_URI_remove_nitrogen8mm-dwe = " http://www.freescale.com/lgfiles/NMG/MAD/YOCTO/firmware-qca-2.0.3.bin "
+SRC_URI:remove_nitrogen8mm-dwe = " http://www.freescale.com/lgfiles/NMG/MAD/YOCTO/firmware-qca-2.0.3.bin "
 
 qcacld_lea_2_0_fw_fix() {
     bash "${S}/../firmware-qca-2.0.3.bin" --force --auto-accept
@@ -16,10 +16,10 @@ qcacld_lea_2_0_fw_fix() {
 
 # Need one specific fw file for monitor mode
 # in SBC
-do_install_append_nitrogen8mm() {
+do_install:append_nitrogen8mm() {
     qcacld_lea_2_0_fw_fix
 }
 
-do_install_remove_nitrogen8mm-dwe() {
+do_install:remove_nitrogen8mm-dwe() {
     qcacld_lea_2_0_fw_fix
 }
