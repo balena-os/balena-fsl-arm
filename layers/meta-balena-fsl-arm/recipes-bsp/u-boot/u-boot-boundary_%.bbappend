@@ -4,17 +4,13 @@ inherit resin-u-boot
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
-# Make sure we include the 3 requested DDR training patches
-SRCREV = "f727cf25665279f5e2eecbf03c5450b13cacccea"
-
 # resin-u-boot class patch is rebased
 SRC_URI:remove = " file://resin-specific-env-integration-kconfig.patch"
 SRC_URI:append = " file://nitrogen-resin-specific-env-integration-kconfig.patch"
 
 SRC_URI:append:nitrogen8mm = " \
-    file://0001-add-back-config-defaults.patch \
-    file://0001-nitrogen8mm-Use-balenaOS-configs.patch \
     file://0001-nitrogen8mm_env-common-Force-using-default-environment.patch \
+    file://balenaos_tweaks.cfg \
 "
 
 SRC_URI:append:nitrogen8mm-dwe = " \
