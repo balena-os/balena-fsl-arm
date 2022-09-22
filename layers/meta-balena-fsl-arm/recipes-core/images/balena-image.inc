@@ -111,6 +111,15 @@ BALENA_BOOT_PARTITION_FILES:nitrogen8mm-dwe = " \
     imx-boot:/imx-boot \
 "
 
+# up the rootfs size to be safe for future increases
+IMAGE_ROOTFS_SIZE:emgw3="409600"
+
+BALENA_BOOT_PARTITION_FILES:emgw3 = " \
+    imx8mm-em.dtb:/imx8mm-em.dtb \
+    boot.scr-${MACHINE}:/boot.scr \
+    imx-boot:/imx-boot \
+"
+
 IMAGE_INSTALL:append:nitrogen8mm = " \
 	firmware-imx-8m \
 	kernel-module-imx-gpu-viv \
