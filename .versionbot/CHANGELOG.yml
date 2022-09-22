@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update to honister-3.4.4
+      hash: 35e66859d6944d13122a7cd47f242e2ec6fc9530
+      body: ""
+      footer:
+        Changelog-entry: Update to honister-3.4.4
+        changelog-entry: Update to honister-3.4.4
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.105.1+rev1
+  title: "'Update to honister'"
+  date: 2022-09-21T20:30:09.497Z
+- commits:
     - subject: Update layers/meta-balena to ce91b3f1807f5dc1d1ee861a164957215757d8a0
       hash: 4d4aecd8c18a91aa3338856f42933df055a30ec9
       body: Update layers/meta-balena

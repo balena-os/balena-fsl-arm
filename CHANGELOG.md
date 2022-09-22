@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.105.1+rev1
+## (2022-09-21)
+
+* Update to honister-3.4.4 [Florin Sarbu]
+
 # v2.105.1
 ## (2022-09-21)
 
