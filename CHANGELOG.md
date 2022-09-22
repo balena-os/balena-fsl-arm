@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.105.1+rev2
+## (2022-09-22)
+
+* Add new Boundary EM GW 3 machine [Florin Sarbu]
+* Enable linux-firmware compression for Nitrogen 8MM based boards [Florin Sarbu]
+
 # v2.105.1+rev1
 ## (2022-09-21)
 

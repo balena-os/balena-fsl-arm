@@ -1,4 +1,32 @@
 - commits:
+    - subject: Add new Boundary EM GW 3 machine
+      hash: c76582c476d21eeff6ced149d9f7f6471fbd6343
+      body: |
+        Add new Boundary EM GW 3 machine
+      footer:
+        Changelog-entry: Add new Boundary EM GW 3 machine
+        changelog-entry: Add new Boundary EM GW 3 machine
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+    - subject: Enable linux-firmware compression for Nitrogen 8MM based boards
+      hash: c7ec333a8d37918ef9e8c506be942c376a2083da
+      body: |
+        After the update to honister we have ran out of root filesystem space
+        for Nitrogen 8MM based boards when doing a HUP so let's enable firmware
+        compression for these devices.
+      footer:
+        Changelog-entry: Enable linux-firmware compression for Nitrogen 8MM based boards
+        changelog-entry: Enable linux-firmware compression for Nitrogen 8MM based boards
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.105.1+rev2
+  title: "'Add em gw3 support'"
+  date: 2022-09-22T09:06:27.083Z
+- commits:
     - subject: Update to honister-3.4.4
       hash: 35e66859d6944d13122a7cd47f242e2ec6fc9530
       body: ""
