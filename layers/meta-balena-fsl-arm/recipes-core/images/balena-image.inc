@@ -111,6 +111,12 @@ BALENA_BOOT_PARTITION_FILES:nitrogen8mm-dwe = " \
     imx-boot:/imx-boot \
 "
 
+BALENA_BOOT_PARTITION_FILES:emgw3 = " \
+    imx8mm-em.dtb:/imx8mm-em.dtb \
+    boot.scr-${MACHINE}:/boot.scr \
+    imx-boot:/imx-boot \
+"
+
 IMAGE_INSTALL:append:nitrogen8mm = " \
 	firmware-imx-8m \
 	kernel-module-imx-gpu-viv \
