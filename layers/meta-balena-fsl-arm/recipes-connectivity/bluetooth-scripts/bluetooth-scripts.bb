@@ -1,4 +1,4 @@
-FILESEXTRAPATHS_append := ":${THISDIR}/files"
+FILESEXTRAPATHS:append := ":${THISDIR}/files"
 
 inherit allarch systemd
 
@@ -11,17 +11,17 @@ SRC_URI += " \
     file://nitrogen8mm-hci.service \
 "
 
-FILES_${PN} = " \
+FILES:${PN} = " \
     /lib/systemd/nitrogen8mm-bluetooth.sh \
     /lib/systemd/system/nitrogen8mm-bluetooth.service \
     /lib/systemd/system/nitrogen8mm-hci.service \
 "
 
-SYSTEMD_SERVICE_${PN} = "nitrogen8mm-bluetooth.service nitrogen8mm-hci.service"
+SYSTEMD_SERVICE:${PN} = "nitrogen8mm-bluetooth.service nitrogen8mm-hci.service"
 
-RDEPENDS_${PN} = " bash systemd"
+RDEPENDS:${PN} = " bash systemd"
 
-do_install_append() {
+do_install:append() {
     install -d ${D}/${systemd_unitdir}/system
     install -m 644 ${WORKDIR}/nitrogen8mm-bluetooth.service ${D}/${systemd_unitdir}/system
     install -m 644 ${WORKDIR}/nitrogen8mm-hci.service ${D}/${systemd_unitdir}/system

@@ -1,4 +1,4 @@
-FILESEXTRAPATHS_append := ":${THISDIR}/${PN}"
+FILESEXTRAPATHS:append := ":${THISDIR}/${PN}"
 
 inherit kernel-resin
 
@@ -8,6 +8,6 @@ inherit kernel-resin
 # Disable commit SHA in kernel version string
 SCMVERSION="n"
 
-SRC_URI_append = " \
+SRC_URI:append = " \
 	file://imx8mm-sbc-add-no-cqe-for-eMMC.patch \
 "

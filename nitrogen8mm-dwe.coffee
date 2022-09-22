@@ -42,13 +42,11 @@ module.exports =
 		osx: 'https://docs.resin.io/nitrogen8mm-dwe/nodejs/getting-started/#adding-your-first-device'
 		linux: 'https://docs.resin.io/nitrogen8mm-dwe/nodejs/getting-started/#adding-your-first-device'
 
-	supportsBlink: false
-
 	yocto:
 		machine: 'nitrogen8mm-dwe'
 		image: 'balena-image'
 		fstype: 'balenaos-img'
-		version: 'yocto-dunfell'
+		version: 'yocto-honister'
 		deployArtifact: 'balena-image-nitrogen8mm-dwe.balenaos-img'
 		compressed: true
 

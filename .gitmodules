@@ -15,14 +15,11 @@
 	url = https://github.com/Freescale/meta-freescale.git
 [submodule "layers/meta-freescale-3rdparty"]
 	path = layers/meta-freescale-3rdparty
-	url = https://github.com/boundarydevices/meta-freescale-3rdparty
+	url = https://github.com/Freescale/meta-freescale-3rdparty.git
 [submodule "layers/meta-solidrun-arm-imx6"]
 	path = layers/meta-solidrun-arm-imx6
 	url = https://github.com/SolidRun/meta-solidrun-arm-imx6.git
 	branch = resinos-morty
-[submodule "layers/meta-rust"]
-	path = layers/meta-rust
-	url = https://github.com/meta-rust/meta-rust.git
 [submodule "layers/meta-boundary"]
 	path = layers/meta-boundary
 	url = https://github.com/boundarydevices/meta-boundary

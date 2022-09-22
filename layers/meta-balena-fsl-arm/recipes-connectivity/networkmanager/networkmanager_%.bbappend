@@ -1,4 +1,4 @@
-do_deploy_append_nitrogen8mm() {
+do_deploy:append:nitrogen8mm() {
      cat >> ${D}${sysconfdir}/NetworkManager/NetworkManager.conf <<EOF
 
 [keyfile]

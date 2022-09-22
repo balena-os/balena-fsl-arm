@@ -1,4 +1,4 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 DESCRIPTION = "Systemd services used to update u-boot on NOR"
 LICENSE = "MIT"
@@ -10,7 +10,7 @@ SRC_URI = "file://u-boot-flasher.service \
            file://u-boot-flasher.sh \
 "
 
-RDEPENDS_${PN} = " bash systemd"
+RDEPENDS:${PN} = " bash systemd"
 
 do_install () {
    install -d ${D}/${systemd_unitdir}/system
@@ -25,8 +25,8 @@ PROVIDES = "u-boot-flasher"
 # deploy dir. Force it to do so.
 do_install[nostamp] = "1"
 
-FILES_${PN} = " \
+FILES:${PN} = " \
 	u-boot-flasher.service \
 	u-boot-flasher.sh \
 "
-SYSTEMD_SERVICE_${PN} = "u-boot-flasher.service"
+SYSTEMD_SERVICE:${PN} = "u-boot-flasher.service"
