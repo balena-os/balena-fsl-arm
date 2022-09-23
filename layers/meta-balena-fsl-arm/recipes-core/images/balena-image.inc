@@ -129,4 +129,9 @@ IMAGE_INSTALL:append:nitrogen8mm = " \
 	kernel-devicetree \
 "
 
+IMAGE_INSTALL:append:emgw3 = " \
+	silex-uart \
+	udev-rules-bt \
+"
+
 DEPENDS:append:nitrogen8mm += "imx-boot"
