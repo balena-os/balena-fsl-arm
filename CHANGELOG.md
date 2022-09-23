@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.105.2+rev1
+## (2022-09-23)
+
+* Enable bluetooth on emgw3 [Florin Sarbu]
+* Update meta-freescale-3rdparty in order to bring in changes requested by the customer [Florin Sarbu]
+
 # v2.105.2
 ## (2022-09-22)
 

@@ -1,4 +1,36 @@
 - commits:
+    - subject: Enable bluetooth on emgw3
+      hash: 1b8fda32f42517bf04b5a642f9471f7b701f11d2
+      body: |
+        The BSP adds this in the image rather as a machine essential
+        so we need to add them ourselves in order to have them in
+        the rootfs.
+      footer:
+        Changelog-entry: Enable bluetooth on emgw3
+        changelog-entry: Enable bluetooth on emgw3
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+    - subject: Update meta-freescale-3rdparty in order to bring in changes requested
+        by the customer
+      hash: a44821e7777bbbd1659a7ab308628ee1baf3ef55
+      body: |
+        This update brings in changes requested by the customer
+        and implemented by Boundary
+      footer:
+        Changelog-entry: Update meta-freescale-3rdparty in order to bring in changes
+          requested by the customer
+        changelog-entry: Update meta-freescale-3rdparty in order to bring in changes
+          requested by the customer
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.105.2+rev1
+  title: "'Bt fix and bsp update'"
+  date: 2022-09-23T14:52:03.321Z
+- commits:
     - subject: Update layers/meta-balena to d17b08668a56aa67c7b55594c3c910e66fbd4baf
       hash: 0eb560707bcda32c0807bea10788df03f21f009a
       body: Update layers/meta-balena
