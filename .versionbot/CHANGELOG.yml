@@ -1,4 +1,42 @@
 - commits:
+    - subject: Update layers/meta-balena to 0bc9280eb23161e5897260dc4555062789540b81
+      hash: 42aca1a36f0c4f42bb4fcfde2523182396361f84
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 0bc9280eb23161e5897260dc4555062789540b81
+        changelog-entry: Update layers/meta-balena to 0bc9280eb23161e5897260dc4555062789540b81
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "classes: kernel-balena: improve aufs branch selection"
+              hash: 83f866691184df43c5b08b9da646a5bf99227b7b
+              body: >
+                The task that applies the aufs patches is still required to
+                support
+
+                hostOS updates between aufs and overlay2 balenaOS versions.
+
+
+                This commit adds support for 5.15 kernels and improves the branch
+
+                selection logic to cover some corner cases.
+
+
+                It also adds a test task so that we can test regressions.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.105.10
+          title: ""
+          date: 2022-10-12T13:48:37.596Z
+  version: 2.105.10
+  title: "'Update layers/meta-balena digest to 0bc9280'"
+  date: 2022-10-12T14:19:44.440Z
+- commits:
     - subject: Update layers/meta-balena to cf01401eff54d9fd3a4fd1247f4d3f059619c2d3
       hash: ed4b5368891d062a5dca06d8cd7f7bac3fec7fd2
       body: Update layers/meta-balena

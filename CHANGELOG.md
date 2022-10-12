@@ -1,6 +1,20 @@
 Change log
 -----------
 
+# v2.105.10
+## (2022-10-12)
+
+
+<details>
+<summary> Update layers/meta-balena to 0bc9280eb23161e5897260dc4555062789540b81 [renovate[bot]] </summary>
+
+> ## meta-balena-2.105.10
+> ### (2022-10-12)
+> 
+> * classes: kernel-balena: improve aufs branch selection [Alex Gonzalez]
+> 
+</details>
+
 # v2.105.9
 ## (2022-10-11)
 
