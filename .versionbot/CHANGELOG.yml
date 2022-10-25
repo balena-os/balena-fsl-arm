@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 7c5b9c44fbd4039c3387c8b74e8efae8fa9f37d6
+      hash: f1147101d3b45bbe509712cd5ac3e58d699098cf
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 7c5b9c44fbd4039c3387c8b74e8efae8fa9f37d6
+        changelog-entry: Update balena-yocto-scripts to 7c5b9c44fbd4039c3387c8b74e8efae8fa9f37d6
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "jenkins_build: Only deploy AMI after deploying a final release"
+              hash: cfa6879d11a98c112a2e16fd40b6443a7fa6a838
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.19.13
+          title: "'jenkins_build: Only deploy AMI after deploying a final release'"
+          date: 2022-10-21T15:03:17.022Z
+  version: 2.105.15+rev4
+  title: ""
+  date: 2022-10-25T01:34:09.378Z
+- commits:
     - subject: Update contracts to 67fb73772ae7ecfb93109e9e42e8b33465a61ec0
       hash: 0655514228c998af23ef69542e95ce572124e2ca
       body: Update contracts
