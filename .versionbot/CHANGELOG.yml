@@ -1,4 +1,42 @@
 - commits:
+    - subject: Update contracts to 3690dee624859ed23f2ee9afaa112638cda5cee3
+      hash: 6dfdbc2a3ad0492169100a2a7097bfe7c42a62b9
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 3690dee624859ed23f2ee9afaa112638cda5cee3
+        changelog-entry: Update contracts to 3690dee624859ed23f2ee9afaa112638cda5cee3
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: Fix incorrect partials in device type contracts
+              hash: 23b23bf963943277e5d5c02bc78d2fb52b4ba7fd
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Micah Halter <micah@balena.io>
+                signed-off-by: Micah Halter <micah@balena.io>
+              author: Micah Halter
+          version: contracts-2.0.25
+          title: ""
+          date: 2022-10-27T16:05:36.897Z
+        - commits:
+            - subject: Add node v18.12.0
+              hash: 76cc4e57fb052486256f3b8f2c2b0239b11c2856
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+                signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+              author: Trong Nghia Nguyen
+          version: contracts-2.0.24
+          title: ""
+          date: 2022-10-27T11:18:14.564Z
+  version: 2.105.21+rev1
+  title: ""
+  date: 2022-10-28T10:31:02.167Z
+- commits:
     - subject: Update layers/meta-balena to 2e9f69012d326b5925304c9d25427c5cc46dfbd4
       hash: 91d7da6be0f406c6c45c6f62514026f2acf743dc
       body: Update layers/meta-balena
