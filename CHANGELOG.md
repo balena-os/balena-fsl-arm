@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.106.7+rev5
+## (2022-12-15)
+
+* Update meta-freescale-3rdparty in order to bring in changes requested by the customer [Florin Sarbu]
+
 # v2.106.7+rev4
 ## (2022-12-15)
 

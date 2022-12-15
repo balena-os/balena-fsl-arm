@@ -1,4 +1,23 @@
 - commits:
+    - subject: Update meta-freescale-3rdparty in order to bring in changes requested
+        by the customer
+      hash: 92e760478310ad6a690319dc461bb340b7ebeaa1
+      body: |
+        This update brings in changes requested by the customer
+        and implemented by Boundary
+      footer:
+        Changelog-entry: Update meta-freescale-3rdparty in order to bring in changes
+          requested by the customer
+        changelog-entry: Update meta-freescale-3rdparty in order to bring in changes
+          requested by the customer
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.106.7+rev5
+  title: ""
+  date: 2022-12-15T20:08:26.278Z
+- commits:
     - subject: Update contracts to 08f029b5c82e71b9b25fbeef4805815bfa4c24aa
       hash: 5f7dc2cec1960975a88fd22702fc0ba5ea2cac4a
       body: Update contracts
