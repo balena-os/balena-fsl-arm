@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update contracts to b65d5bd372587d4aaabba526d34f67c3f63ea90b
+      hash: 93ecd00b063f9288c616083e9b0656607e79f8f2
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to b65d5bd372587d4aaabba526d34f67c3f63ea90b
+        changelog-entry: Update contracts to b65d5bd372587d4aaabba526d34f67c3f63ea90b
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "hw.device-type: Add Owasys owa5X device"
+              hash: d92fb422d14da698061c53422ae7bfb4fdd64b03
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alvaro Guzman <alvaro.guzman@owasys.com>
+                signed-off-by: Alvaro Guzman <alvaro.guzman@owasys.com>
+              author: Alvaro Guzman
+          version: contracts-2.0.35
+          title: ""
+          date: 2022-12-20T11:53:50.722Z
+  version: 2.108.2+rev1
+  title: ""
+  date: 2022-12-20T14:25:38.687Z
+- commits:
     - subject: Update layers/meta-balena to 749dd795aa3d3c79eee071a5c8c4fd2a305af08e
       hash: a89fee4343726f7dd4ede8679637d27e9fcf9776
       body: Update layers/meta-balena
