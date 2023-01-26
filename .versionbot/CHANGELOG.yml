@@ -1,4 +1,28 @@
 - commits:
+    - subject: Update layers/meta-balena to 00324bf0a842b63ee46b24ab5a19bff68d4b3799
+      hash: 2a8a50dbfb41d2a2a2edf4b3719c3d16737f5ce6
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 00324bf0a842b63ee46b24ab5a19bff68d4b3799
+        changelog-entry: Update layers/meta-balena to 00324bf0a842b63ee46b24ab5a19bff68d4b3799
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "patch: Update balenaOS docs title"
+              hash: ec4bb501c04430c0507e7b31d53b5c0eab25063f
+              body: ""
+              footer:
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+              author: Vipul Gupta (@vipulgupta2048)
+              nested: []
+          version: meta-balena-2.108.28
+          title: ""
+          date: 2023-01-26T18:36:44.693Z
+  version: 2.108.28
+  title: ""
+  date: 2023-01-26T20:14:14.876Z
+- commits:
     - subject: Update layers/meta-balena to 73bc1884cad100723ee16dd08c1abd5796260cc2
       hash: 3b13949a7cc5e91720980ee14b133705ed4f7b17
       body: Update layers/meta-balena
