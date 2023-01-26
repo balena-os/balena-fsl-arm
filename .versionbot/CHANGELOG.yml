@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to 73bc1884cad100723ee16dd08c1abd5796260cc2
+      hash: 3b13949a7cc5e91720980ee14b133705ed4f7b17
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 73bc1884cad100723ee16dd08c1abd5796260cc2
+        changelog-entry: Update layers/meta-balena to 73bc1884cad100723ee16dd08c1abd5796260cc2
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "tests: os: fix tests that use glider on rpi0"
+              hash: 864b4ed84c7af438d61501a77996639f3af3499c
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: meta-balena-2.108.27
+          title: ""
+          date: 2023-01-20T23:08:16.096Z
+  version: 2.108.27
+  title: ""
+  date: 2023-01-26T15:14:58.595Z
+- commits:
     - subject: add meta-perl to bblayers.conf
       hash: 0b11ffd672cc6d3e0329f19eea2bbf749b9e17d3
       body: |
