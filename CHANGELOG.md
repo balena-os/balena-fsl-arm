@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.112.14+rev1
+## (2023-02-24)
+
+* remove migrate and recovery initramfs modules from nitrogen8mm-dwe [Alex Gonzalez]
+
 # v2.112.14
 ## (2023-02-22)
 

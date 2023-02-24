@@ -1,4 +1,24 @@
 - commits:
+    - subject: remove migrate and recovery initramfs modules from nitrogen8mm-dwe
+      hash: 72e4c8876c626068d67315ad81ba2a508ee56f12
+      body: |
+        These new meta-balena functionality grows the initramfs image and it no
+        longer fits in the allocated root filesystem partition.
+
+        Removing the recovery and migrate modules from this device type only
+        means that the new functionality won't be available for this device
+        type.
+      footer:
+        Changelog-entry: remove migrate and recovery initramfs modules from nitrogen8mm-dwe
+        changelog-entry: remove migrate and recovery initramfs modules from nitrogen8mm-dwe
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.112.14+rev1
+  title: ""
+  date: 2023-02-24T18:53:24.914Z
+- commits:
     - subject: Update layers/meta-balena to 80ca81f9e4ec9d4b2e4d21bc1cf12bd59220be5a
       hash: c09e2b3510917ea81d92f1b345797c47509f2e8b
       body: Update layers/meta-balena
