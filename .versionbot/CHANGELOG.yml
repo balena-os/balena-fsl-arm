@@ -1,4 +1,20 @@
 - commits:
+    - subject: Fix bootloader flashing instructions for emgw3
+      hash: a0459ed055d64144e7b22dd2dbb57e23511bb11f
+      body: >
+        The bootloader should be written to /dev/mmcblk0boot0 and not
+        /dev/mmcblk1boot0
+      footer:
+        Changelog-entry: Fix bootloader flashing instructions for emgw3
+        changelog-entry: Fix bootloader flashing instructions for emgw3
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.112.14+rev6
+  title: ""
+  date: 2023-03-27T21:54:59.218Z
+- commits:
     - subject: Prevent duplicate CI workflow executions
       hash: d2599e480308500d31ac983d29e5ceb106bbd319
       body: ""

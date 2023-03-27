@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.112.14+rev6
+## (2023-03-27)
+
+* Fix bootloader flashing instructions for emgw3 [Florin Sarbu]
+
 # v2.112.14+rev5
 ## (2023-03-16)
 
