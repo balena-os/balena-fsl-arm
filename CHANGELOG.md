@@ -1,6 +1,73 @@
 Change log
 -----------
 
+# v2.113.35
+## (2023-04-06)
+
+
+<details>
+<summary> Update layers/meta-balena to e2c8c03322c0321c77d28f9691438876c097eacf [Renovate Bot] </summary>
+
+> ## meta-balena-2.113.35
+> ### (2023-04-05)
+> 
+> 
+> <details>
+> <summary> Update balena-engine to v20.10.34 [Renovate Bot] </summary>
+> 
+>> ### balena-engine-20.10.34
+>> #### (2023-04-05)
+>> 
+>> * Update librsync-go to v0.8.5, circbuf to v0.1.3 [Leandro Motta Barros]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.113.34
+> ### (2023-04-04)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 5785e44 [Renovate Bot] </summary>
+> 
+>> ### leviathan-2.24.1
+>> #### (2023-04-04)
+>> 
+>> * Deprecate worker release env var (again) [Kyle Harding]
+>> 
+>> ### leviathan-2.24.0
+>> #### (2023-04-03)
+>> 
+>> * minor: Add Leviathan Test Helpers [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.23.6
+>> #### (2023-04-01)
+>> 
+>> * patch: Output final-result in the end [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.23.5
+>> #### (2023-04-01)
+>> 
+>> * update default worker version [rcooke-warwick]
+>> 
+>> ### leviathan-2.23.4
+>> #### (2023-03-29)
+>> 
+>> * swtpm: store state in tmpfs [Joseph Kogut]
+>> 
+>> ### leviathan-2.23.3
+>> #### (2023-03-29)
+>> 
+>> * Update core/contracts digest to fa51fae [Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v2.113.33+rev1
 ## (2023-04-06)
 
