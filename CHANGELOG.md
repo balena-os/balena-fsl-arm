@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.113.33
+## (2023-04-06)
+
+* layers/meta-balena: Update to v2.113.33 [Alexandru Costache]
+* linux-boundary: Optimize kernel build for size, unset ROOTFS_SIZE [Alexandru Costache]
+
 # v2.112.14+rev6
 ## (2023-03-27)
 
