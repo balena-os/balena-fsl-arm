@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.113.35+rev1
+## (2023-04-06)
+
+* recipes-bsp/u-boot: Remove duplicate environment [Alexandru Costache]
+
 # v2.113.35
 ## (2023-04-06)
 

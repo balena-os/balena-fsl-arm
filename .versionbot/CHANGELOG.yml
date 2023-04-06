@@ -1,4 +1,20 @@
 - commits:
+    - subject: "recipes-bsp/u-boot: Remove duplicate environment"
+      hash: fcc25e68157d388480cd173e96f36986e52cbf03
+      body: |
+        This causes an environment overflow which prevents
+        the board from booting normally.
+      footer:
+        Changelog-entry: "recipes-bsp/u-boot: Remove duplicate environment"
+        changelog-entry: "recipes-bsp/u-boot: Remove duplicate environment"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2.113.35+rev1
+  title: ""
+  date: 2023-04-06T13:32:06.555Z
+- commits:
     - subject: Update layers/meta-balena to e2c8c03322c0321c77d28f9691438876c097eacf
       hash: 7230d3f7598d27ee3e246107fcd5cd5defb29e9b
       body: Update layers/meta-balena
