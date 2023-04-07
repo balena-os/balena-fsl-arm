@@ -12,7 +12,12 @@ SRC_URI:append = " \
 	file://imx8mm-sbc-add-no-cqe-for-eMMC.patch \
 "
 
-BALENA_CONFIGS:append = " optimize-size"
+BALENA_CONFIGS:append = " optimize-size disable_apparmor"
 BALENA_CONFIGS[optimize-size] = " \
     CONFIG_CC_OPTIMIZE_FOR_SIZE=y \
 "
+
+BALENA_CONFIGS[disable_apparmor] = " \
+    CONFIG_SECURITY_APPARMOR=n \
+"
+
