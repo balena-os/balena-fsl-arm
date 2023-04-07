@@ -1,4 +1,23 @@
 - commits:
+    - subject: ensure apparmor is disabled
+      hash: a17af08551003d51d67ee919400b17113850eb16
+      body: |
+        Currently balenaOS disables DEFAULT_SECURITY_APPARMOR
+        due to containers failing to start with missing dependencies.
+
+        The BSP enables CONFIG_SECURITY_APPARMOR and the final
+        result is apparmor enabled although disabled from meta-balena.
+      footer:
+        Changelog-entry: ensure apparmor is disabled
+        changelog-entry: ensure apparmor is disabled
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2.114.0+rev1
+  title: ""
+  date: 2023-04-07T10:16:00.342Z
+- commits:
     - subject: Update layers/meta-balena to 3f0e4743516442227387bb9fc55d97fdf7d57a12
       hash: da8c7792bd83f9fb1aac42a8e087014ecad7dad8
       body: Update layers/meta-balena

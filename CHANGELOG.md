@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.114.0+rev1
+## (2023-04-07)
+
+* ensure apparmor is disabled [Alexandru Costache]
+
 # v2.114.0
 ## (2023-04-07)
 
