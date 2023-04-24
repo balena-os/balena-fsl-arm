@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.114.9+rev1
+## (2023-04-24)
+
+* Update meta-freescale submodule to latest honister branch [Florin Sarbu]
+
 # v2.114.9
 ## (2023-04-22)
 
