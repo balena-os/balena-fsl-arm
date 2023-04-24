@@ -1,4 +1,22 @@
 - commits:
+    - subject: Remove icons from this repo since now the icons are used from the
+        contracts repo instead
+      hash: 9d37fc061919ed95e0f583bbb827d4e940cd0213
+      body: |
+        We now use the icons from the contracts repo.
+      footer:
+        Changelog-entry: Remove icons from this repo since now the icons are used from
+          the contracts repo instead
+        changelog-entry: Remove icons from this repo since now the icons are used from
+          the contracts repo instead
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.114.9+rev2
+  title: ""
+  date: 2023-04-24T18:34:04.103Z
+- commits:
     - subject: Update meta-freescale submodule to latest honister branch
       hash: f3bfd16b2d50e55e244146217968c3cad201816b
       body: |

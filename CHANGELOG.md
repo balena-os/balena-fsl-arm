@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.114.9+rev2
+## (2023-04-24)
+
+* Remove icons from this repo since now the icons are used from the contracts repo instead [Florin Sarbu]
+
 # v2.114.9+rev1
 ## (2023-04-24)
 
