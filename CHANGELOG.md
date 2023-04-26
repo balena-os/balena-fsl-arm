@@ -1,6 +1,44 @@
 Change log
 -----------
 
+# v2.114.12
+## (2023-04-26)
+
+
+<details>
+<summary> Update layers/meta-balena to 0396b07b2119b2c1a3cdf2bbd107e08de2110671 [Renovate Bot] </summary>
+
+> ## meta-balena-2.114.12
+> ### (2023-04-26)
+> 
+> * classes: kernel-balena: force recompilation if signing variables change [Alex Gonzalez]
+> * balena-keys: make tasks depends on signing variables [Alex Gonzalez]
+> * classes: sign: make signing task depends on signing variables [Alex Gonzalez]
+> 
+> ## meta-balena-2.114.11
+> ### (2023-04-24)
+> 
+> 
+> <details>
+> <summary> Update balena-engine to v20.10.35 [Renovate Bot] </summary>
+> 
+>> ### balena-engine-20.10.35
+>> #### (2023-04-24)
+>> 
+>> * Update libnetwork to fix port binding issue [Leandro Motta Barros]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.114.10
+> ### (2023-04-24)
+> 
+> * mkfs-hostapp-native: Update base image in Dockerfile [Alexandru Costache]
+> 
+
+</details>
+
 # v2.114.9+rev2
 ## (2023-04-24)
 
