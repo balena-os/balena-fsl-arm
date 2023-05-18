@@ -1,4 +1,24 @@
 - commits:
+    - subject: Update meta-freescale-3rdparty in order to bring in changes requested
+        by the customer
+      hash: 266a7ec885a6fd116edb84f1bff663d0471a9a4b
+      body: |
+        This update brings in changes requested by the customer
+        and implemented by Boundary which are supposed to fix issues
+        with the bootloader.
+      footer:
+        Changelog-entry: Update meta-freescale-3rdparty in order to bring in changes
+          requested by the customer
+        changelog-entry: Update meta-freescale-3rdparty in order to bring in changes
+          requested by the customer
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.115.0+rev1
+  title: ""
+  date: 2023-05-18T07:43:54.605Z
+- commits:
     - subject: Update layers/meta-balena to e86e103292e67dda18ca243e46721e65cd89c577
       hash: 6bf56e6606d844b2f10111b3c5f7bd04f2a24865
       body: Update layers/meta-balena
