@@ -1,4 +1,49 @@
 - commits:
+    - subject: Update balena-yocto-scripts to f2a164e0acaaa66795d5f31af248f1743dd0ffb7
+      hash: bd862aa2a56b92c6beccc194e3d35413b5274acd
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to f2a164e0acaaa66795d5f31af248f1743dd0ffb7
+        changelog-entry: Update balena-yocto-scripts to f2a164e0acaaa66795d5f31af248f1743dd0ffb7
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "generate_ami: opt-in secure boot when using signed images"
+              hash: 7925369a76060ad9e2adb16856e78cd3ca09b02c
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "balena-generate-ami: comply with default AMI quotas"
+              hash: 27d34aa2a35b0bf6d7c1ffb563c1ad65d773e1fc
+              body: >
+                Comply with AWS public AMI quota, taking into account we have
+                two
+
+                architectures that publish AMI images and we need free slots for custom
+
+                version request.
+
+
+                Make the oldest public image back to private before publishing a new image.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.19.30
+          title: ""
+          date: 2023-05-23T18:02:32.156Z
+  version: 2.115.1+rev2
+  title: ""
+  date: 2023-05-23T19:05:35.024Z
+- commits:
     - subject: Update balena-yocto-scripts to 063493eb51bbaecce4fde37f6fe042bfdc647b71
       hash: d47e79a607e4d5bb38b47f62d6f29443a7ba3b3d
       body: Update balena-yocto-scripts
