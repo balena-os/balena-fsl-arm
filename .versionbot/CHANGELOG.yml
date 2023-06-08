@@ -1,4 +1,31 @@
 - commits:
+    - subject: Update balena-yocto-scripts to e9f9ef5b729ac01f0b8efe0a16187fbb00d0bf54
+      hash: 46a13c583386b7853e323628f8153e257efd87df
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to e9f9ef5b729ac01f0b8efe0a16187fbb00d0bf54
+        changelog-entry: Update balena-yocto-scripts to e9f9ef5b729ac01f0b8efe0a16187fbb00d0bf54
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "balena-deploy: add a compressed licenses tarball to the deploy
+                artifacts"
+              hash: 13ab5d114a679cca3a2df41230e4ad611e1c8292
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.19.31
+          title: ""
+          date: 2023-06-05T15:07:23.610Z
+  version: 2.115.5+rev1
+  title: ""
+  date: 2023-06-08T15:06:43.809Z
+- commits:
     - subject: Update layers/meta-balena to 7c31e98312e50f7cc6380b00701c6ed8ff3da216
       hash: b201af0bf42b12f82d095b5352c0d165f80816cc
       body: Update layers/meta-balena
