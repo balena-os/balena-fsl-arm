@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v3.2.10+rev1
+## (2023-09-01)
+
+* Update balena-image-initramfs.bbappend [Alexandru Costache]
+
 # v3.2.10
 ## (2023-09-01)
 

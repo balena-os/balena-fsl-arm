@@ -1,4 +1,22 @@
 - commits:
+    - subject: Update balena-image-initramfs.bbappend
+      hash: e7b44cfca0d4462ef8d31a457c639b139a82ebcc
+      body: >
+        On other devices we observed that without the migrate module inactive
+        sysroot automount will hang on first boot after provisioning.
+
+        Upon reboot the problem is no longer present.
+      footer:
+        Changelog-entry: Update balena-image-initramfs.bbappend
+        changelog-entry: Update balena-image-initramfs.bbappend
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 3.2.10+rev1
+  title: ""
+  date: 2023-09-01T16:33:55.980Z
+- commits:
     - subject: Update layers/meta-balena to cacbac0f5dc91de46ab61fcb1f517390dc4724ed
       hash: 0477c12398977f57416b371120d0093348667cba
       body: Update layers/meta-balena
