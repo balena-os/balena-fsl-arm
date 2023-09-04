@@ -1,4 +1,31 @@
 - commits:
+    - subject: Update contracts to 518a1d424f09a11dc1b60a16026bfe8ffe07ca78
+      hash: 99825ff628fd42d6e4a45f3fab827c403a0c2dcb
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 518a1d424f09a11dc1b60a16026bfe8ffe07ca78
+        changelog-entry: Update contracts to 518a1d424f09a11dc1b60a16026bfe8ffe07ca78
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "raspberrypi4-unipi-neuron: Add new device type"
+              hash: e45a691e7773e85f5b3db9f0d9050e7f39a1b2e0
+              body: |
+                This was moved from private to public as agreed with the initial
+                customer.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+          version: contracts-2.0.72
+          title: ""
+          date: 2023-09-04T06:45:04.941Z
+  version: 3.2.11+rev1
+  title: ""
+  date: 2023-09-04T08:43:46.867Z
+- commits:
     - subject: Update layers/meta-balena to c1fb1e6bc532507ed9084ba613a481a6a7dbd466
       hash: 3de1a49661f2f57cd6901470dafde97bf7e01568
       body: Update layers/meta-balena
