@@ -1,21 +1,27 @@
 [submodule "layers/poky"]
 	path = layers/poky
 	url = https://github.com/balena-os/poky
+	branch = honister
 [submodule "layers/meta-openembedded"]
 	path = layers/meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
+	branch = honister
 [submodule "layers/meta-balena"]
 	path = layers/meta-balena
 	url = https://github.com/balena-os/meta-balena.git
+	branch = master
 [submodule "balena-yocto-scripts"]
 	path = balena-yocto-scripts
 	url = https://github.com/balena-os/balena-yocto-scripts.git
+	branch = master
 [submodule "layers/meta-freescale"]
 	path = layers/meta-freescale
 	url = https://github.com/Freescale/meta-freescale.git
+	branch = honister
 [submodule "layers/meta-freescale-3rdparty"]
 	path = layers/meta-freescale-3rdparty
 	url = https://github.com/Freescale/meta-freescale-3rdparty.git
+	branch = honister
 [submodule "layers/meta-solidrun-arm-imx6"]
 	path = layers/meta-solidrun-arm-imx6
 	url = https://github.com/SolidRun/meta-solidrun-arm-imx6.git
@@ -23,9 +29,12 @@
 [submodule "layers/meta-boundary"]
 	path = layers/meta-boundary
 	url = https://github.com/boundarydevices/meta-boundary
+	branch = honister
 [submodule "layers/meta-solidrun-solidsense"]
 	path = layers/meta-solidrun-solidsense
 	url = https://github.com/SolidRun/meta-solidrun-solidsense
+	branch = main
 [submodule "contracts"]
 	path = contracts
 	url = https://github.com/balena-io/contracts.git
+	branch = master
