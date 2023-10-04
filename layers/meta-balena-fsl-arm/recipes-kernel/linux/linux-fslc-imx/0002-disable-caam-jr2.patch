@@ -1,0 +1,11 @@
+diff -ur kernel-source.org/arch/arm64/boot/dts/freescale/imx8mm.dtsi kernel-source/arch/arm64/boot/dts/freescale/imx8mm.dtsi
+--- kernel-source.org/arch/arm64/boot/dts/freescale/imx8mm.dtsi	2023-09-20 18:56:03.116395438 +0100
++++ kernel-source/arch/arm64/boot/dts/freescale/imx8mm.dtsi	2023-09-20 19:00:09.565594489 +0100
+@@ -941,6 +941,7 @@
+ 					compatible = "fsl,sec-v4.0-job-ring";
+ 					reg = <0x3000 0x1000>;
+ 					interrupts = <GIC_SPI 114 IRQ_TYPE_LEVEL_HIGH>;
++                                        status = "disabled";
+ 				};
+ 			};
+
