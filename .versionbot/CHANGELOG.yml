@@ -1,4 +1,43 @@
 - commits:
+    - subject: Update layers/meta-balena to 2a57fb406f8ddf36f1e907c1b7c236fed64574be
+      hash: 1598b5a8af7364bc6d5be67ae5653e8165b590c9
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 2a57fb406f8ddf36f1e907c1b7c236fed64574be
+        changelog-entry: Update layers/meta-balena to 2a57fb406f8ddf36f1e907c1b7c236fed64574be
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "os-helpers-fs: fix returning multiple matching devices"
+              hash: 3d99028daf1f9bfb0513f4e0702f3863aed3a205
+              body: >
+                When searching for devices matching the glob list in
+
+                get_internal_device(), a glob match breaks from a nested loop rather
+
+                than the parent loop, allowing the function to output multiple matches.
+
+
+                When running the flasher, this results in the script failing with an
+
+                incorrect path to the internal disk.
+
+
+                Break from the parent loop to fix this behavior.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-4.0.23
+          title: ""
+          date: 2023-10-10T20:22:32.072Z
+  version: 4.0.23
+  title: ""
+  date: 2023-10-10T23:17:47.520Z
+- commits:
     - subject: Update balena-yocto-scripts to 37a4aa0421848226b41dda508e5fc05fdcc01389
       hash: a1a61b7cd2fc97474b69ff31e8a5530e0fab519b
       body: Update balena-yocto-scripts
