@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v4.1.3+rev1
+## (2023-11-10)
+
+* Add support for NXP imx8mm-lpddr4-evk board [Alex J Lennon]
+
 # v4.1.3
 ## (2023-11-06)
 
