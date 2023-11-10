@@ -111,6 +111,20 @@ BALENA_BOOT_PARTITION_FILES:nitrogen8mm-dwe = " \
     imx-boot:/imx-boot \
 "
 
+BALENA_BOOT_SIZE:imx8mm-lpddr4-evk = "131072"
+IMAGE_ROOTFS_SIZE:imx8mm-lpddr4-evk = "524288"
+IMAGE_FSTYPES:append:imx8mm-lpddr4-evk = " balenaos-img"
+BALENA_IMAGE_BOOTLOADER:imx8mm-lpddr4-evk = "u-boot-imx"
+BALENA_BOOT_PARTITION_FILES:imx8mm-lpddr4-evk = " \
+    ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/${KERNEL_IMAGETYPE} \
+    imx8mm-evk.dtb:/imx8mm-evk.dtb \
+    imx-boot:/imx-boot \
+"
+
+IMAGE_CMD:balenaos-img:append:imx8mm-lpddr4-evk () {
+    dd if=${DEPLOY_DIR_IMAGE}/imx-boot of=${BALENA_RAW_IMG} conv=notrunc seek=33 bs=1024
+}
+
 # up the rootfs size to be safe for future increases
 IMAGE_ROOTFS_SIZE:emgw3="409600"
 
@@ -134,7 +148,16 @@ IMAGE_INSTALL:append:emgw3 = " \
 	udev-rules-bt \
 "
 
+IMAGE_INSTALL:append:imx8mm-lpddr4-evk = " \
+       firmware-imx-8m \
+       linux-firmware-bdsdmac \
+       linux-firmware-iwlwifi \
+       kernel-devicetree \
+       pciutils \
+"
+
 DEPENDS:append:nitrogen8mm += "imx-boot"
+DEPENDS:append:imx8mm-lpddr4-evk += "imx-boot"
 
 # the BSP sets this variable so let's unset it since this makes our build fail
 unset ROOTFS_SIZE

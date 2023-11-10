@@ -19,3 +19,8 @@ HOSTAPP_HOOKS:append:nitrogen8mm = " \
     99-resin-uboot \
     99-flash-bootloader-nitrogen8mm \
 "
+
+HOSTAPP_HOOKS:append:imx8mm-lpddr4-evk = " \
+    99-resin-uboot \
+    99-flash-bootloader-imx8mm-lpddr4-evk \
+"
