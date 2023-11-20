@@ -112,7 +112,7 @@ BALENA_BOOT_PARTITION_FILES:nitrogen8mm-dwe = " \
 "
 
 BALENA_BOOT_SIZE:imx8mm-lpddr4-evk = "131072"
-IMAGE_ROOTFS_SIZE:imx8mm-lpddr4-evk = "524288"
+IMAGE_ROOTFS_SIZE:imx8mm-lpddr4-evk = "1048576"
 IMAGE_FSTYPES:append:imx8mm-lpddr4-evk = " balenaos-img"
 BALENA_IMAGE_BOOTLOADER:imx8mm-lpddr4-evk = "u-boot-imx"
 BALENA_BOOT_PARTITION_FILES:imx8mm-lpddr4-evk = " \
