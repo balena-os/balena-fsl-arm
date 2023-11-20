@@ -6,6 +6,7 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 SRC_URI:append:imx8mm-lpddr4-evk = " \
     file://0001-nitrogen8mm_env-common-Force-using-default-environment.patch \
+    file://0002-fix-return-vaue-propagatin-out-of-environ.patch \
     file://0002-fixup-imx8mm-evk-fdt-addr.patch \
     file://balenaos_tweaks-imx.cfg \
     file://increase-early-malloc.cfg \

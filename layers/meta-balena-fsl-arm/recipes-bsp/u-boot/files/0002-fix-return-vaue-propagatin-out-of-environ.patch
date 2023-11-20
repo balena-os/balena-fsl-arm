@@ -1,0 +1,162 @@
+From a6e62a1606279c7b64e006ef4601dd41d7d4ea75 Mon Sep 17 00:00:00 2001
+From: Marek Vasut <marex@denx.de>
+Date: Tue, 20 Dec 2022 07:25:59 +0100
+Subject: [PATCH] cmd: exit: Fix return value propagation out of environment
+ scripts
+
+NOTE: This is backported to NXP uboot-imx based on the backport here
+
+https://github.com/balena-os/balena-compulab-imx9/blob/master/layers/meta-balena-imx9/recipes-bsp/u-boot/files/0002-fix-return-vaue-propagatin-out-of-environ.patch#L184C1-L187C77
+
+We backport this patch in the Compulab u-boot to fix the exit cmd
+which previously had no effect and caused the balenaOS flasher image to never
+get loaded.
+
+
+Make sure the 'exit' command as well as 'exit $val' command exits
+from environment scripts immediately and propagates return value
+out of those scripts fully. That means the following behavior is
+expected:
+
+"
+=> setenv foo 'echo bar ; exit 1' ; run foo ; echo $?
+bar
+1
+=> setenv foo 'echo bar ; exit 0' ; run foo ; echo $?
+bar
+0
+=> setenv foo 'echo bar ; exit -2' ; run foo ; echo $?
+bar
+0
+"
+
+As well as the followin behavior:
+
+"
+=> setenv foo 'echo bar ; exit 3 ; echo fail'; run foo; echo $?
+bar
+3
+=> setenv foo 'echo bar ; exit 1 ; echo fail'; run foo; echo $?
+bar
+1
+=> setenv foo 'echo bar ; exit 0 ; echo fail'; run foo; echo $?
+bar
+0
+=> setenv foo 'echo bar ; exit -1 ; echo fail'; run foo; echo $?
+bar
+0
+=> setenv foo 'echo bar ; exit -2 ; echo fail'; run foo; echo $?
+bar
+0
+=> setenv foo 'echo bar ; exit ; echo fail'; run foo; echo $?
+bar
+0
+"
+
+
+Fixes: 8c4e3b79bd0 ("cmd: exit: Fix return value")
+Reviewed-by: Hector Palacios <hector.palacios@digi.com>
+Signed-off-by: Marek Vasut <marex@denx.de>
+
+Upstream-status: Inappropriate [backport]
+Signed-off-by: Alex J Lennon <ajlennon@dynamicdevices.co.uk>
+
+diff -ur git.org/common/cli.c git/common/cli.c
+--- git.org/common/cli.c	2023-11-20 09:34:25.161848184 +0000
++++ git/common/cli.c	2023-11-20 09:43:12.420878425 +0000
+@@ -132,7 +132,7 @@
+ #if defined(CONFIG_CMD_RUN)
+ int do_run(struct cmd_tbl *cmdtp, int flag, int argc, char *const argv[])
+ {
+-	int i;
++	int i, ret;
+ 
+ 	if (argc < 2)
+ 		return CMD_RET_USAGE;
+@@ -146,8 +146,9 @@
+ 			return 1;
+ 		}
+ 
+-		if (run_command(arg, flag | CMD_FLAG_ENV) != 0)
+-			return 1;
++		ret = run_command(arg, flag | CMD_FLAG_ENV);
++                if(ret)
++                        return ret;
+ 	}
+ 	return 0;
+ }
+diff -ur git.org/common/cli_hush.c git/common/cli_hush.c
+--- git.org/common/cli_hush.c	2023-11-20 09:34:25.161848184 +0000
++++ git/common/cli_hush.c	2023-11-20 09:48:58.198043179 +0000
+@@ -1902,7 +1902,7 @@
+ 			last_return_code = -rcode - 2;
+ 			return -2;	/* exit */
+ 		}
+-		last_return_code=(rcode == 0) ? 0 : 1;
++		last_return_code=rcode;
+ #endif
+ #ifndef __U_BOOT__
+ 		pi->num_progs = save_num_progs; /* restore number of programs */
+@@ -3212,7 +3212,15 @@
+ 					printf("exit not allowed from main input shell.\n");
+ 					continue;
+ 				}
+-				break;
++				/*
++                                 * DANGER
++                                 * Return code -2 is special in this context,
++                                 * it indicates exit from inner pipe instead
++                                 * of return code itself, the return code is
++                                 * stored in 'last_return_code' variable!
++                                 * DANGER
++                                 */
++                                return -2;
+ 			}
+ 			if (code == -1)
+ 			    flag_repeat = 0;
+@@ -3249,9 +3257,9 @@
+ #endif	/* __U_BOOT__ */
+ {
+ 	struct in_str input;
++	int rcode;
+ #ifdef __U_BOOT__
+ 	char *p = NULL;
+-	int rcode;
+ 	if (!s)
+ 		return 1;
+ 	if (!*s)
+@@ -3263,11 +3271,12 @@
+ 		setup_string_in_str(&input, p);
+ 		rcode = parse_stream_outer(&input, flag);
+ 		free(p);
+-		return rcode;
++                return rcode == -2 ? last_return_code : rcode;
+ 	} else {
+ #endif
+ 	setup_string_in_str(&input, s);
+-	return parse_stream_outer(&input, flag);
++        rcode = parse_stream_outer(&input, flag);
++        return rcode == -2 ? last_return_code : rcode;
+ #ifdef __U_BOOT__
+ 	}
+ #endif
+@@ -3287,7 +3296,7 @@
+ 	setup_file_in_str(&input);
+ #endif
+ 	rcode = parse_stream_outer(&input, FLAG_PARSE_SEMICOLON);
+-	return rcode;
++        return rcode == -2 ? last_return_code : rcode;
+ }
+ 
+ #ifdef __U_BOOT__
+diff -ur git.org/doc/usage/exit.rst git/doc/usage/exit.rst
+--- git.org/doc/usage/exit.rst	2023-11-20 09:34:23.409866921 +0000
++++ git/doc/usage/exit.rst	2023-11-20 09:49:38.985720362 +0000
+@@ -37,4 +37,6 @@
+ Return value
+ ------------
+ 
+-$? is always set to 0 (true).
++$? is default set to 0 (true). In case zero or positive integer parameter
++is passed to the command, the return value is the parameter value. In case
++negative integer parameter is passed to the command, the return value is 0.
