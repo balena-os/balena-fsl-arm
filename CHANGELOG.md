@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v4.1.7+rev1
+## (2023-11-22)
+
+
+<details>
+<summary> Update contracts to c45079c380048f9f65967a68cf30f1654195384f [Self-hosted Renovate Bot] </summary>
+
+> ## contracts-2.0.82
+> ### (2023-11-22)
+> 
+> * lcbzu9: boot from internal storage [Francois Loubser]
+> 
+
+</details>
+
+* Add resin envvars and checks [Alex J Lennon]
+* Backport fix to bug in exit command [Alex J Lennon]
+* Increase ROOTFS size to 1GB [Alex J Lennon]
+* Set imx8mm-lpddr4-evk LED for indication [Alex J Lennon]
+
 # v4.1.7
 ## (2023-11-17)
 

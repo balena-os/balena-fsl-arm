@@ -1,4 +1,76 @@
 - commits:
+    - subject: Update contracts to c45079c380048f9f65967a68cf30f1654195384f
+      hash: 76a294e66abc3b5788e0286829d51f7f513a3e52
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to c45079c380048f9f65967a68cf30f1654195384f
+        changelog-entry: Update contracts to c45079c380048f9f65967a68cf30f1654195384f
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "lcbzu9: boot from internal storage"
+              hash: d9b9fbc53be0f7dbf92107681540685db703821f
+              body: >
+                Make flasher image available for download to boot lcbzu9 from
+                eMMC
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Francois Loubser <francois.loubser@topic.nl>
+                signed-off-by: Francois Loubser <francois.loubser@topic.nl>
+              author: Francois Loubser
+          version: contracts-2.0.82
+          title: ""
+          date: 2023-11-22T09:57:10.502Z
+    - subject: Add resin envvars and checks
+      hash: 09aa9ea6f2b8d293395442d2d3259f8b8cbf56d0
+      body: ""
+      footer:
+        Changelog-entry: Add resin envvars and checks
+        changelog-entry: Add resin envvars and checks
+        Signed-off-by: Alex J Lennon <ajlennon@dynamicdevices.co.uk>
+        signed-off-by: Alex J Lennon <ajlennon@dynamicdevices.co.uk>
+      author: Alex J Lennon
+      nested: []
+    - subject: Backport fix to bug in exit command
+      hash: fb5c3a216b3594012110b53c04be8e24bdc3e48d
+      body: >
+        From @acostach,
+
+
+        Note that newer u-boot 2022.04 used in many BSPs has a bug in the exit cmd and this patch needs to be back-ported if you are using a flasher image: https://github.com/balena-os/balena-compulab-imx9/blob/master/layers/meta-balena-imx9/recipes-bsp/u-boot/files/0002-fix-return-vaue-propagatin-out-of-environ.patch
+      footer:
+        Changelog-entry: Backport fix to bug in exit command
+        changelog-entry: Backport fix to bug in exit command
+        Signed-off-by: Alex J Lennon <ajlennon@dynamicdevices.co.uk>
+        signed-off-by: Alex J Lennon <ajlennon@dynamicdevices.co.uk>
+      author: Alex J Lennon
+      nested: []
+    - subject: Increase ROOTFS size to 1GB
+      hash: 7b7ac9331444aacf7c0dff6dccfa87ee21d4c57d
+      body: |
+        As we were 98% full with 512MB
+      footer:
+        Changelog-entry: Increase ROOTFS size to 1GB
+        changelog-entry: Increase ROOTFS size to 1GB
+        Signed-off-by: Alex J Lennon <ajlennon@dynamicdevices.co.uk>
+        signed-off-by: Alex J Lennon <ajlennon@dynamicdevices.co.uk>
+      author: Alex J Lennon
+      nested: []
+    - subject: Set imx8mm-lpddr4-evk LED for indication
+      hash: 2da43b45758be2b365d0b604af5bd9c8aadad986
+      body: ""
+      footer:
+        Changelog-entry: Set imx8mm-lpddr4-evk LED for indication
+        changelog-entry: Set imx8mm-lpddr4-evk LED for indication
+        Signed-off-by: Alex J Lennon <ajlennon@dynamicdevices.co.uk>
+        signed-off-by: Alex J Lennon <ajlennon@dynamicdevices.co.uk>
+      author: Alex J Lennon
+      nested: []
+  version: 4.1.7+rev1
+  title: ""
+  date: 2023-11-22T11:44:19.568Z
+- commits:
     - subject: Update layers/meta-balena to d40a0ca5875c474752cd94aae4e4fd9754b4781f
       hash: c6c4c56786f6dfc7e8ee3b7be809a22a8337d8a3
       body: Update layers/meta-balena
