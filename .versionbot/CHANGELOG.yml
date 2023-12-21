@@ -1,4 +1,39 @@
 - commits:
+    - subject: Update layers/meta-balena to a3b1dd7c9cb8bf593ead65b5c41d5977ad020ab7
+      hash: 47a89e52db6953483917662342a2eb70f99169ca
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to a3b1dd7c9cb8bf593ead65b5c41d5977ad020ab7
+        changelog-entry: Update layers/meta-balena to a3b1dd7c9cb8bf593ead65b5c41d5977ad020ab7
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "balena-config-vars: increase config.json parsing resilience"
+              hash: 42faa76d97f6ca4eeadbc648e44d19737740eb8c
+              body: >
+                There have been reports of an empty config vars cache file -
+                probably
+
+                because of a race condition when the reading of config.json happens just
+
+                as the file is being replaced.
+
+
+                Add some checks and retries to avoid this errors from happening.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-5.1.2
+          title: ""
+          date: 2023-12-21T13:35:27.955Z
+  version: 5.1.2
+  title: ""
+  date: 2023-12-21T15:36:31.877Z
+- commits:
     - subject: Update layers/meta-balena to 66bfc4c87173155d21d2f82a6888f67f1009ccd8
       hash: 6d69dec93431b446960183c228add7a01d68236b
       body: Update layers/meta-balena
