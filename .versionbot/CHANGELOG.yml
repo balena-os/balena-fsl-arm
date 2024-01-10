@@ -1,4 +1,76 @@
 - commits:
+    - subject: Update layers/meta-balena to afa34852ba91dc6e720ae90890c095b73a1f8882
+      hash: b7a6f0b1dd91270b89d2db31bbd7bdc48151f672
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to afa34852ba91dc6e720ae90890c095b73a1f8882
+        changelog-entry: Update layers/meta-balena to afa34852ba91dc6e720ae90890c095b73a1f8882
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: Update tests/leviathan digest to dbcacdb
+              hash: 708458487d1cb01362ca28310b4b67ca847f4a0f
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Self-hosted Renovate Bot
+              nested:
+                - commits:
+                    - subject: timeout netcat process
+                      hash: 3eee636c92fb352101b62cf6cc04dd799f5c6ae9
+                      body: ""
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Ryan Cooke <ryan@balena.io>
+                        signed-off-by: Ryan Cooke <ryan@balena.io>
+                      author: rcooke-warwick
+                      nested: []
+                  version: leviathan-2.29.33
+                  title: ""
+                  date: 2024-01-09T17:35:20.372Z
+          version: meta-balena-5.1.8
+          title: ""
+          date: 2024-01-09T21:50:27.806Z
+    - subject: Update layers/meta-balena to e1c602542c6fa2f51ea6e2ff0e6d60e0e3d5beb3
+      hash: 24d6fc74b3d3dfd851e39979dee870d677abf881
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to e1c602542c6fa2f51ea6e2ff0e6d60e0e3d5beb3
+        changelog-entry: Update layers/meta-balena to e1c602542c6fa2f51ea6e2ff0e6d60e0e3d5beb3
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: Update tests/leviathan digest to dbcacdb
+              hash: 708458487d1cb01362ca28310b4b67ca847f4a0f
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Self-hosted Renovate Bot
+              nested:
+                - commits:
+                    - subject: timeout netcat process
+                      hash: 3eee636c92fb352101b62cf6cc04dd799f5c6ae9
+                      body: ""
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Ryan Cooke <ryan@balena.io>
+                        signed-off-by: Ryan Cooke <ryan@balena.io>
+                      author: rcooke-warwick
+                      nested: []
+                  version: leviathan-2.29.33
+                  title: ""
+                  date: 2024-01-09T17:35:20.372Z
+          version: meta-balena-5.1.8
+          title: ""
+          date: 2024-01-09T21:50:27.806Z
+  version: 5.1.8
+  title: ""
+  date: 2024-01-10T00:51:38.451Z
+- commits:
     - subject: Update contracts to b469f315f2dc5dbd396cbeab6fe3577b948af945
       hash: 03fb8fb838a95fa23670e0e753e5f6baffd685bc
       body: Update contracts

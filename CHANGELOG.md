@@ -1,6 +1,55 @@
 Change log
 -----------
 
+# v5.1.8
+## (2024-01-10)
+
+
+<details>
+<summary> Update layers/meta-balena to afa34852ba91dc6e720ae90890c095b73a1f8882 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.1.8
+> ### (2024-01-09)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to dbcacdb [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.33
+>> #### (2024-01-09)
+>> 
+>> * timeout netcat process [rcooke-warwick]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
+
+<details>
+<summary> Update layers/meta-balena to e1c602542c6fa2f51ea6e2ff0e6d60e0e3d5beb3 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.1.8
+> ### (2024-01-09)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to dbcacdb [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.33
+>> #### (2024-01-09)
+>> 
+>> * timeout netcat process [rcooke-warwick]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v5.1.6+rev1
 ## (2024-01-08)
 
