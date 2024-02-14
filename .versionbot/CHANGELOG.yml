@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update contracts to 0c54ce2d25baac5485f3828dbfed58c33f881256
+      hash: a01dc3c14d776ce7a8371d77b60a95682e39ac98
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 0c54ce2d25baac5485f3828dbfed58c33f881256
+        changelog-entry: Update contracts to 0c54ce2d25baac5485f3828dbfed58c33f881256
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "odyssey-x86: Update icon to latest revision"
+              hash: 83ad917b2027f2a6fecd8d1422984987efc9da13
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.94
+          title: ""
+          date: 2024-02-14T10:35:34.159Z
+  version: 5.1.26+rev5
+  title: ""
+  date: 2024-02-14T13:05:37.856Z
+- commits:
     - subject: Update balena-yocto-scripts to 0cb57aede8dea798c14ddfc6546525b920504970
       hash: 2a73dbf95539717f20933e66955f9bc235a527e5
       body: Update balena-yocto-scripts
