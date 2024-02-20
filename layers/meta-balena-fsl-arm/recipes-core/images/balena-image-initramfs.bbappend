@@ -3,5 +3,6 @@ PACKAGE_INSTALL:solidrun-n6g += " \
 "
 
 PACKAGE_INSTALL:remove:nitrogen8mm = " initramfs-module-recovery"
+PACKAGE_INSTALL:remove:nitrogen8mm = " initramfs-module-migrate"
 
 PACKAGE_INSTALL:remove = "mdraid"
