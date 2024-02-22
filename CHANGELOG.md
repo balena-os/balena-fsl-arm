@@ -1,6 +1,147 @@
 Change log
 -----------
 
+# v5.1.35
+## (2024-02-22)
+
+
+<details>
+<summary> Update layers/meta-balena to a662615594a604d6f84b8fd47a904a2b1d5be9da [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.1.35
+> ### (2024-02-19)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 95a9d72 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.59
+>> #### (2024-02-19)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.58
+>> #### (2024-02-14)
+>> 
+>> * Update core/contracts digest to 0c54ce2 [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-5.1.34
+> ### (2024-02-14)
+> 
+> * resin-init-flasher: add jq dependency [Alex Gonzalez]
+> 
+> ## meta-balena-5.1.33
+> ### (2024-02-14)
+> 
+> * tests: cloud: if no existing release, create generic fleet [rcooke-warwick]
+> 
+> ## meta-balena-5.1.32
+> ### (2024-02-13)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 4b9de7e [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.57
+>> #### (2024-02-13)
+>> 
+>> * patch: Authenticate the validator before validation [Vipul Gupta (@vipulgupta2048)]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-5.1.31
+> ### (2024-02-13)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 00ee51c [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.56
+>> #### (2024-02-12)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.36 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.55
+>> #### (2024-02-12)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.35 [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-5.1.30
+> ### (2024-02-12)
+> 
+> * balena-image-bootloader-initramfs.bb: Add fsck module [Florin Sarbu]
+> 
+> ## meta-balena-5.1.29
+> ### (2024-02-12)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to f6a3391 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.54
+>> #### (2024-02-12)
+>> 
+>> * Update core/contracts digest to 4f7dba1 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.53
+>> #### (2024-02-12)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.52
+>> #### (2024-02-08)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.34 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.51
+>> #### (2024-02-06)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.33 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.50
+>> #### (2024-02-06)
+>> 
+>> * patch: Add config.js validator [Vipul Gupta (@vipulgupta2048)]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-5.1.28
+> ### (2024-02-11)
+> 
+> 
+> <details>
+> <summary> Update balena-engine to v20.10.43 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### balena-engine-20.10.43
+>> #### (2024-02-06)
+>> 
+>> * Update runc component to v1.1.12 from balena-runc repo [Ken Bannister]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-5.1.27
+> ### (2024-02-09)
+> 
+> * patch: upgrade recipes/devtools/go to 1.17.13 [JOASSART Edwin]
+> * patch: removes recipes/devtools/go to 1.16 [JOASSART Edwin]
+> 
+
+</details>
+
 # v5.1.26+rev5
 ## (2024-02-14)
 
