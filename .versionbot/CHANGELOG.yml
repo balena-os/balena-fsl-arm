@@ -1,4 +1,42 @@
 - commits:
+    - subject: Update layers/meta-balena to 53ff24d92800474ad310af81129aef2c4d9d2809
+      hash: fd9b82dac265f802b016ed060b8e37f34e97b684
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 53ff24d92800474ad310af81129aef2c4d9d2809
+        changelog-entry: Update layers/meta-balena to 53ff24d92800474ad310af81129aef2c4d9d2809
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: Update tests/leviathan digest to d71ce8f
+              hash: 813e7442dad72eb0dc8994a1ff09b4cc3f1e717a
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Self-hosted Renovate Bot
+              nested:
+                - commits:
+                    - subject: ad extra autokit setup information, and basic troubleshooting
+                      hash: 8245d549f586330a1805ea4ad998622f735c347b
+                      body: ""
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Ryan Cooke <ryan@balena.io>
+                        signed-off-by: Ryan Cooke <ryan@balena.io>
+                      author: rcooke-warwick
+                      nested: []
+                  version: leviathan-2.29.62
+                  title: ""
+                  date: 2024-02-26T11:59:24.765Z
+          version: meta-balena-5.1.40
+          title: ""
+          date: 2024-02-26T17:53:35.831Z
+  version: 5.1.40
+  title: ""
+  date: 2024-02-26T23:54:53.648Z
+- commits:
     - subject: Update layers/meta-balena to 47803bace87fd17c2b0bfe89bb06c0744ddcd5e3
       hash: 02afad56e59258002e00011c457d9516989a5469
       body: Update layers/meta-balena
