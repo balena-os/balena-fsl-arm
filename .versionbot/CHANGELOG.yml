@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-os/github-workflows to v0.0.27
+      hash: f578cb240c3001072e6a81385bebf8cbace5234d
+      body: Update balena-os/github-workflows
+      footer:
+        Changelog-entry: Update balena-os/github-workflows to v0.0.27
+        changelog-entry: Update balena-os/github-workflows to v0.0.27
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 5.1.47+rev3
+  title: ""
+  date: 2024-03-06T03:24:54.937Z
+- commits:
     - subject: pass input parameters to common esr workflow
       hash: e97b0653b4c8b015f105a69ebfb24c8472eee66e
       body: ""
