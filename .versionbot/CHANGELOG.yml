@@ -1,4 +1,41 @@
 - commits:
+    - subject: Update layers/meta-balena to 2cef02167e0e780d1e96da0f801f1f4d5e27e79f
+      hash: ea7aaa2a06dffb70a0c6bff4299ddd0b61863f14
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 2cef02167e0e780d1e96da0f801f1f4d5e27e79f
+        changelog-entry: Update layers/meta-balena to 2cef02167e0e780d1e96da0f801f1f4d5e27e79f
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "mkfs-hostapp-native: Disable iptables features in yocto balena daemon"
+              hash: 1e563863caf75fc88a8e7c7f2ab15f65ad21ebe8
+              body: >
+                We don't need any iptables features in order to perform
+
+                hostapp-update in this build recipe, and it has no impact
+
+                on build output.
+
+
+                It does, however, improve compatbility with build environments
+                and
+
+                reduces the dependencies of the build host kernel.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-5.1.54
+          title: ""
+          date: 2024-03-13T06:45:02.830Z
+  version: 5.1.54
+  title: ""
+  date: 2024-03-14T04:54:14.568Z
+- commits:
     - subject: Update balena-yocto-scripts to 97ebe58289e398c96dbc6f789e0119010b85da7f
       hash: c0dacc486ba76516cfb2a91a04beda4c523d1994
       body: Update balena-yocto-scripts
