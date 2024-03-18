@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v5.2.1
+## (2024-03-18)
+
+
+<details>
+<summary> Update layers/meta-balena to 74e89b4f4904b418882cb3dd9ef2c0bd360d8713 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.2.1
+> ### (2024-03-18)
+> 
+> * networkmanager: Wait for iptables lock in shared dispatcher script [Michal Toman]
+> 
+> ## meta-balena-5.2.0
+> ### (2024-03-16)
+> 
+> * Update NetworkManager to version 1.46.0 [Florin Sarbu]
+> 
+
+</details>
+
 # v5.1.54+rev1
 ## (2024-03-14)
 

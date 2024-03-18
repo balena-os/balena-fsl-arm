@@ -1,4 +1,84 @@
 - commits:
+    - subject: Update layers/meta-balena to 74e89b4f4904b418882cb3dd9ef2c0bd360d8713
+      hash: e06b5ecd6c2d29421c2dcc518df425f85fa33452
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 74e89b4f4904b418882cb3dd9ef2c0bd360d8713
+        changelog-entry: Update layers/meta-balena to 74e89b4f4904b418882cb3dd9ef2c0bd360d8713
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "networkmanager: Wait for iptables lock in shared dispatcher script"
+              hash: 374c4c32df59cc00e0b04d0c619f6fb98a69f1a5
+              body: >
+                The dispatcher script that moves around FORWARD rules of shared
+
+                interfaces currently calls iptables assuming it will always work
+
+                but in practice two iptables commands can not run in parallel
+
+                and we have occasionally seen the script fail with:
+
+
+                Another app is currently holding the xtables lock.
+
+                Perhaps you want to use the -w option?
+
+
+                This patch adds the -w option to make the script wait for the
+                lock
+
+                when necessary.
+
+
+                It also makes the script exit with an error code if anything
+                fails,
+
+                which will log the output as WARN instead of INFO as the errors
+
+                are easy to overlook at this moment.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-5.2.1
+          title: ""
+          date: 2024-03-18T17:11:28.023Z
+        - commits:
+            - subject: Update NetworkManager to version 1.46.0
+              hash: 9d88a4566b7a9afc7226df97b40d266f0ece64b6
+              body: >
+                This recipe is taken from meta-openembedded commit
+
+                f240c5cecf3d7ee75d5ec1ece4c412c94434a879 with the only changes
+                being that
+
+                we removed from it the init.d, iwd, and dhcpcd daemon
+                configurations which
+
+                are not used by us.
+
+
+                This is the latest stable version available.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update NetworkManager to version 1.46.0
+                changelog-entry: Update NetworkManager to version 1.46.0
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-5.2.0
+          title: ""
+          date: 2024-03-16T12:02:30.009Z
+  version: 5.2.1
+  title: ""
+  date: 2024-03-18T22:13:10.269Z
+- commits:
     - subject: Update contracts to 908a50dc79192e66ab3fd518f166be05382c2c6e
       hash: 8585739fd54d8f4e17de84e7db7406665cd7350c
       body: Update contracts
