@@ -1,4 +1,32 @@
 - commits:
+    - subject: Update layers/meta-balena to b551e7d7a37d040165676862dba5a29ff1109b13
+      hash: a6a99e1285678700826fe2baf3cedb6dcbe38271
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to b551e7d7a37d040165676862dba5a29ff1109b13
+        changelog-entry: Update layers/meta-balena to b551e7d7a37d040165676862dba5a29ff1109b13
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: Update contributing-device-support with balena-info documentation
+              hash: a42c71a14701a2d06d3025abfbbbc869c52b062d
+              body: |
+                Info on the ascii art for consoles was missing, so we add that
+                in this commit.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru
+              nested: []
+          version: meta-balena-5.2.2
+          title: ""
+          date: 2024-03-20T03:17:05.884Z
+  version: 5.2.2
+  title: ""
+  date: 2024-03-20T08:18:03.523Z
+- commits:
     - subject: Update balena-yocto-scripts to 775e16968edc4c3803834bc524687ae4316ab6e4
       hash: 02313253169d84b5571cc16c3831ffd7cec04e4f
       body: Update balena-yocto-scripts
