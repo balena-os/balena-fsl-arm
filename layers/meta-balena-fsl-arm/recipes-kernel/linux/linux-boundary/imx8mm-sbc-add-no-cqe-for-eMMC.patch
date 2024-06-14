@@ -1,22 +1,22 @@
-From be02ed6bb6974b40e1a0fe87540adc68607ca90e Mon Sep 17 00:00:00 2001
-From: Alexandru Costache <alexandru@balena.io>
-Date: Wed, 30 Sep 2020 17:42:18 +0200
+From aae54712db255d3f5b927baffda0ed034295267e Mon Sep 17 00:00:00 2001
+From: Florin Sarbu <florin@balena.io>
+Date: Fri, 14 Jun 2024 07:37:42 +0000
 Subject: [PATCH] arm64: dts: imx8mm-sbc: add no-cqe for eMMC
 
 BD recommends having CQE disabled for the SBC too
 to avoid freezes in case of cqe errors.
 
 Upstream-status: Inappropriate [configuration]
-Signed-off-by: Alexandru Costache <alexandru@balena.io>
+Signed-off-by: Florin Sarbu <florin@balena.io>
 ---
- arch/arm64/boot/dts/freescale/imx8mmn-nitrogen8mm.dtsi | 1 +
+ arch/arm64/boot/dts/freescale/imx8mmn-nitrogen8mm_rev2.dtsi | 1 +
  1 file changed, 1 insertion(+)
 
-diff --git a/arch/arm64/boot/dts/freescale/imx8mmn-nitrogen8mm.dtsi b/arch/arm64/boot/dts/freescale/imx8mmn-nitrogen8mm.dtsi
-index 88cb9fa..e269bbd 100644
---- a/arch/arm64/boot/dts/freescale/imx8mmn-nitrogen8mm.dtsi
-+++ b/arch/arm64/boot/dts/freescale/imx8mmn-nitrogen8mm.dtsi
-@@ -1173,6 +1173,7 @@
+diff --git a/arch/arm64/boot/dts/freescale/imx8mmn-nitrogen8mm_rev2.dtsi b/arch/arm64/boot/dts/freescale/imx8mmn-nitrogen8mm_rev2.dtsi
+index 0c016de60010..f888bccb84f8 100644
+--- a/arch/arm64/boot/dts/freescale/imx8mmn-nitrogen8mm_rev2.dtsi
++++ b/arch/arm64/boot/dts/freescale/imx8mmn-nitrogen8mm_rev2.dtsi
+@@ -859,6 +859,7 @@
  	bus-width = <8>;
  	no-mmc-hs400;
  	non-removable;
@@ -25,5 +25,5 @@ index 88cb9fa..e269bbd 100644
  	pinctrl-0 = <&pinctrl_usdhc1>;
  	pinctrl-1 = <&pinctrl_usdhc1_100mhz>;
 -- 
-2.7.4
+2.17.1
 
