@@ -4,10 +4,6 @@ Date: Tue, 20 Dec 2022 07:25:59 +0100
 Subject: [PATCH] cmd: exit: Fix return value propagation out of environment
  scripts
 
-NOTE: This is backported to NXP uboot-imx based on the backport here
-
-https://github.com/balena-os/balena-compulab-imx9/blob/master/layers/meta-balena-imx9/recipes-bsp/u-boot/files/0002-fix-return-vaue-propagatin-out-of-environ.patch#L184C1-L187C77
-
 We backport this patch in the Compulab u-boot to fix the exit cmd
 which previously had no effect and caused the balenaOS flasher image to never
 get loaded.
@@ -59,12 +55,39 @@ Reviewed-by: Hector Palacios <hector.palacios@digi.com>
 Signed-off-by: Marek Vasut <marex@denx.de>
 
 Upstream-status: Inappropriate [backport]
-Signed-off-by: Alex J Lennon <ajlennon@dynamicdevices.co.uk>
+Signed-off-by: Alexandru Costache <alexandru@balena.io>
+---
+ cmd/exit.c             |  7 +++++--
+ common/cli.c           |  7 ++++---
+ common/cli_hush.c      | 21 +++++++++++++++------
+ doc/usage/cmd/exit.rst |  4 +++-
+ 4 files changed, 27 insertions(+), 12 deletions(-)
 
-diff -ur git.org/common/cli.c git/common/cli.c
---- git.org/common/cli.c	2023-11-20 09:34:25.161848184 +0000
-+++ git/common/cli.c	2023-11-20 09:43:12.420878425 +0000
-@@ -132,7 +132,7 @@
+diff --git a/cmd/exit.c b/cmd/exit.c
+index 2c7132693a..7bf241ec73 100644
+--- a/cmd/exit.c
++++ b/cmd/exit.c
+@@ -10,10 +10,13 @@
+ static int do_exit(struct cmd_tbl *cmdtp, int flag, int argc,
+ 		   char *const argv[])
+ {
++	int r;
++
++	r = 0;
+ 	if (argc > 1)
+-		return dectoul(argv[1], NULL);
++		r = simple_strtoul(argv[1], NULL, 10);
+ 
+-	return 0;
++	return -r - 2;
+ }
+ 
+ U_BOOT_CMD(
+diff --git a/common/cli.c b/common/cli.c
+index a7e3d84b68..8b30a23147 100644
+--- a/common/cli.c
++++ b/common/cli.c
+@@ -131,7 +131,7 @@ int run_command_list(const char *cmd, int len, int flag)
  #if defined(CONFIG_CMD_RUN)
  int do_run(struct cmd_tbl *cmdtp, int flag, int argc, char *const argv[])
  {
@@ -73,48 +96,49 @@ diff -ur git.org/common/cli.c git/common/cli.c
  
  	if (argc < 2)
  		return CMD_RET_USAGE;
-@@ -146,8 +146,9 @@
+@@ -145,8 +145,9 @@ int do_run(struct cmd_tbl *cmdtp, int flag, int argc, char *const argv[])
  			return 1;
  		}
  
 -		if (run_command(arg, flag | CMD_FLAG_ENV) != 0)
 -			return 1;
 +		ret = run_command(arg, flag | CMD_FLAG_ENV);
-+                if(ret)
-+                        return ret;
++		if (ret)
++			return ret;
  	}
  	return 0;
  }
-diff -ur git.org/common/cli_hush.c git/common/cli_hush.c
---- git.org/common/cli_hush.c	2023-11-20 09:34:25.161848184 +0000
-+++ git/common/cli_hush.c	2023-11-20 09:48:58.198043179 +0000
-@@ -1902,7 +1902,7 @@
+diff --git a/common/cli_hush.c b/common/cli_hush.c
+index 1467ff81b3..b8940b1973 100644
+--- a/common/cli_hush.c
++++ b/common/cli_hush.c
+@@ -1902,7 +1902,7 @@ static int run_list_real(struct pipe *pi)
  			last_return_code = -rcode - 2;
  			return -2;	/* exit */
  		}
 -		last_return_code=(rcode == 0) ? 0 : 1;
-+		last_return_code=rcode;
++		last_return_code = rcode;
  #endif
  #ifndef __U_BOOT__
  		pi->num_progs = save_num_progs; /* restore number of programs */
-@@ -3212,7 +3212,15 @@
+@@ -3212,7 +3212,15 @@ static int parse_stream_outer(struct in_str *inp, int flag)
  					printf("exit not allowed from main input shell.\n");
  					continue;
  				}
 -				break;
 +				/*
-+                                 * DANGER
-+                                 * Return code -2 is special in this context,
-+                                 * it indicates exit from inner pipe instead
-+                                 * of return code itself, the return code is
-+                                 * stored in 'last_return_code' variable!
-+                                 * DANGER
-+                                 */
-+                                return -2;
++				 * DANGER
++				 * Return code -2 is special in this context,
++				 * it indicates exit from inner pipe instead
++				 * of return code itself, the return code is
++				 * stored in 'last_return_code' variable!
++				 * DANGER
++				 */
++				return -2;
  			}
  			if (code == -1)
  			    flag_repeat = 0;
-@@ -3249,9 +3257,9 @@
+@@ -3249,9 +3257,9 @@ int parse_string_outer(const char *s, int flag)
  #endif	/* __U_BOOT__ */
  {
  	struct in_str input;
@@ -125,34 +149,35 @@ diff -ur git.org/common/cli_hush.c git/common/cli_hush.c
  	if (!s)
  		return 1;
  	if (!*s)
-@@ -3263,11 +3271,12 @@
+@@ -3263,11 +3271,12 @@ int parse_string_outer(const char *s, int flag)
  		setup_string_in_str(&input, p);
  		rcode = parse_stream_outer(&input, flag);
  		free(p);
 -		return rcode;
-+                return rcode == -2 ? last_return_code : rcode;
++		return rcode == -2 ? last_return_code : rcode;
  	} else {
  #endif
  	setup_string_in_str(&input, s);
 -	return parse_stream_outer(&input, flag);
-+        rcode = parse_stream_outer(&input, flag);
-+        return rcode == -2 ? last_return_code : rcode;
++	rcode = parse_stream_outer(&input, flag);
++	return rcode == -2 ? last_return_code : rcode;
  #ifdef __U_BOOT__
  	}
  #endif
-@@ -3287,7 +3296,7 @@
+@@ -3287,7 +3296,7 @@ int parse_file_outer(void)
  	setup_file_in_str(&input);
  #endif
  	rcode = parse_stream_outer(&input, FLAG_PARSE_SEMICOLON);
 -	return rcode;
-+        return rcode == -2 ? last_return_code : rcode;
++	return rcode == -2 ? last_return_code : rcode;
  }
  
  #ifdef __U_BOOT__
-diff -ur git.org/doc/usage/exit.rst git/doc/usage/exit.rst
---- git.org/doc/usage/exit.rst	2023-11-20 09:34:23.409866921 +0000
-+++ git/doc/usage/exit.rst	2023-11-20 09:49:38.985720362 +0000
-@@ -37,4 +37,6 @@
+diff --git a/doc/usage/cmd/exit.rst b/doc/usage/cmd/exit.rst
+index 769223c477..3edb12809c 100644
+--- a/doc/usage/cmd/exit.rst
++++ b/doc/usage/cmd/exit.rst
+@@ -37,4 +37,6 @@ executed.
  Return value
  ------------
  
@@ -160,3 +185,5 @@ diff -ur git.org/doc/usage/exit.rst git/doc/usage/exit.rst
 +$? is default set to 0 (true). In case zero or positive integer parameter
 +is passed to the command, the return value is the parameter value. In case
 +negative integer parameter is passed to the command, the return value is 0.
+-- 
+2.37.2
