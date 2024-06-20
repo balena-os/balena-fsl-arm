@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v5.2.2+rev1
+## (2024-06-20)
+
+* Update to kirkstone-4.0.17 [Florin Sarbu]
+
 # v5.2.2
 ## (2024-03-20)
 

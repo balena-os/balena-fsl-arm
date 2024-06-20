@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update to kirkstone-4.0.17
+      hash: 26dd45e24c5ee40d2cb36e429b1d56304ea14e9f
+      body: ""
+      footer:
+        Changelog-entry: Update to kirkstone-4.0.17
+        changelog-entry: Update to kirkstone-4.0.17
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 5.2.2+rev1
+  title: ""
+  date: 2024-06-20T06:42:41.234Z
+- commits:
     - subject: Update layers/meta-balena to b551e7d7a37d040165676862dba5a29ff1109b13
       hash: a6a99e1285678700826fe2baf3cedb6dcbe38271
       body: Update layers/meta-balena
