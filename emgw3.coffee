@@ -38,7 +38,7 @@ module.exports =
 		machine: 'emgw3'
 		image: 'balena-image'
 		fstype: 'balenaos-img'
-		version: 'yocto-honister'
+		version: 'yocto-kirkstone'
 		deployArtifact: 'balena-image-emgw3.balenaos-img'
 		compressed: true
 

@@ -156,8 +156,7 @@ IMAGE_INSTALL:append:imx8mm-lpddr4-evk = " \
        pciutils \
 "
 
-DEPENDS:append:nitrogen8mm += "imx-boot"
-DEPENDS:append:imx8mm-lpddr4-evk += "imx-boot"
+DEPENDS:append:imx8mm-lpddr4-evk = " imx-boot"
 
 # the BSP sets this variable so let's unset it since this makes our build fail
 unset ROOTFS_SIZE

@@ -36,7 +36,7 @@ module.exports =
 		machine: 'imx8mm-lpddr4-evk'
 		image: 'balena-image-flasher'
 		fstype: 'balenaos-img'
-		version: 'yocto-honister'
+		version: 'yocto-kirkstone'
 		deployArtifact: 'balena-image-flasher-imx8mm-lpddr4-evk.balenaos-img'
 		compressed: true
 

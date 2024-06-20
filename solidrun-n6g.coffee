@@ -17,7 +17,7 @@ module.exports =
 		machine: 'solidrun-n6g'
 		image: 'balena-image'
 		fstype: 'balenaos-img'
-		version: 'yocto-dunfell'
+		version: 'yocto-kirkstone'
 		deployArtifact: 'balena-image-solidrun-n6g.balenaos.img'
 		compressed: true
 
