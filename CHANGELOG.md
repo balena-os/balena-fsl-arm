@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v5.3.28+rev1
+## (2024-07-18)
+
+* update git submodule branches [Alex Gonzalez]
+
 # v5.3.28
 ## (2024-07-12)
 

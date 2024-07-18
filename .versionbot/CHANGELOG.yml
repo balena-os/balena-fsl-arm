@@ -1,4 +1,20 @@
 - commits:
+    - subject: update git submodule branches
+      hash: 641d869f3251261095a2dd787d834370f823e479
+      body: |
+        The branches are used by renovate when updating submodules to the
+        latest branch head.
+      footer:
+        Changelog-entry: update git submodule branches
+        changelog-entry: update git submodule branches
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 5.3.28+rev1
+  title: ""
+  date: 2024-07-18T08:44:31.333Z
+- commits:
     - subject: Update layers/meta-balena to 4c376535a83f0b22b9757d835c4a7029cd758a77
       hash: 5c0875b9e1f4fdb6bad3108df129141213638258
       body: Update layers/meta-balena
