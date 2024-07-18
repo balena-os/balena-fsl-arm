@@ -1,11 +1,11 @@
 [submodule "layers/poky"]
 	path = layers/poky
 	url = https://github.com/balena-os/poky
-	branch = honister
+	branch = kirkstone
 [submodule "layers/meta-openembedded"]
 	path = layers/meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
-	branch = honister
+	branch = kirkstone
 [submodule "layers/meta-balena"]
 	path = layers/meta-balena
 	url = https://github.com/balena-os/meta-balena.git
@@ -17,19 +17,19 @@
 [submodule "layers/meta-freescale"]
 	path = layers/meta-freescale
 	url = https://github.com/Freescale/meta-freescale.git
-	branch = honister
+	branch = kirkstone
 [submodule "layers/meta-freescale-3rdparty"]
 	path = layers/meta-freescale-3rdparty
 	url = https://github.com/Freescale/meta-freescale-3rdparty.git
-	branch = honister
+	branch = master
 [submodule "layers/meta-solidrun-arm-imx6"]
 	path = layers/meta-solidrun-arm-imx6
 	url = https://github.com/SolidRun/meta-solidrun-arm-imx6.git
-	branch = resinos-morty
+	branch = kirkstone
 [submodule "layers/meta-boundary"]
 	path = layers/meta-boundary
 	url = https://github.com/boundarydevices/meta-boundary
-	branch = honister
+	branch = kirkstone
 [submodule "layers/meta-solidrun-solidsense"]
 	path = layers/meta-solidrun-solidsense
 	url = https://github.com/SolidRun/meta-solidrun-solidsense
