@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.0.49+rev1
+## (2024-10-25)
+
+* Update layers/meta-boundary to 0c405be0b905b239b96dc6f65a2eebc27a7e21c7 [balena-renovate[bot]]
+
 # v6.0.49
 ## (2024-10-25)
 

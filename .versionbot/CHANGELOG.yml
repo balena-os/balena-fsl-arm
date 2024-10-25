@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update layers/meta-boundary to 0c405be0b905b239b96dc6f65a2eebc27a7e21c7
+      hash: dd27602b09c6c42e405538c5e6da19a3f6e701b7
+      body: Update layers/meta-boundary
+      footer:
+        Changelog-entry: Update layers/meta-boundary to 0c405be0b905b239b96dc6f65a2eebc27a7e21c7
+        changelog-entry: Update layers/meta-boundary to 0c405be0b905b239b96dc6f65a2eebc27a7e21c7
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.0.49+rev1
+  title: ""
+  date: 2024-10-25T21:52:48.586Z
+- commits:
     - subject: Update layers/meta-balena to 1f8d8cd8886b4e78762eb491eb5b00be6400ad4d
       hash: 2fe535a527579df763679a3955ce9b6b7524f043
       body: Update layers/meta-balena
