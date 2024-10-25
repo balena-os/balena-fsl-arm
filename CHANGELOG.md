@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v6.0.36
+## (2024-10-25)
+
+* Allow custom meta-balena ref on workflow dispatch [Ryan Cooke]
+* Add GHA Built Test Deploy workflows [rcooke-warwick]
+
 # v5.3.28+rev1
 ## (2024-07-18)
 
