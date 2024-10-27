@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.0.50
+## (2024-10-27)
+
+
+<details>
+<summary> Update layers/meta-balena to bbfe78062182eaacc9a524383144a24b731a7372 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.0.50
+> ### (2024-10-26)
+> 
+> * tests: secureboot: add test to ensure partition integrity [Joseph Kogut]
+> 
+
+</details>
+
 # v6.0.49+rev1
 ## (2024-10-25)
 

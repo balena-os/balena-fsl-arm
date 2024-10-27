@@ -1,4 +1,34 @@
 - commits:
+    - subject: Update layers/meta-balena to bbfe78062182eaacc9a524383144a24b731a7372
+      hash: 08988c273302219f0a846e4ebf332004b8193986
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to bbfe78062182eaacc9a524383144a24b731a7372
+        changelog-entry: Update layers/meta-balena to bbfe78062182eaacc9a524383144a24b731a7372
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "tests: secureboot: add test to ensure partition integrity"
+              hash: 3cf94c892cd6a21f91c1c3ab7718f3feca35435f
+              body: >
+                Ensure the signed kernel aborts the boot process when partitions
+                or
+
+                filesystems have been tampered with.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-6.0.50
+          title: ""
+          date: 2024-10-26T23:12:59.729Z
+  version: 6.0.50
+  title: ""
+  date: 2024-10-27T01:49:47.680Z
+- commits:
     - subject: Update layers/meta-boundary to 0c405be0b905b239b96dc6f65a2eebc27a7e21c7
       hash: dd27602b09c6c42e405538c5e6da19a3f6e701b7
       body: Update layers/meta-boundary
