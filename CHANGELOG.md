@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.1.0
+## (2024-11-01)
+
+
+<details>
+<summary> Update layers/meta-balena to 26dd79ea1569ad3f365e669f3e646e21d67e9121 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.1.0
+> ### (2024-11-01)
+> 
+> * Add auth. header to /os/v1/config requests [Anton Belodedenko]
+> 
+
+</details>
+
 # v6.0.50+rev1
 ## (2024-10-29)
 
