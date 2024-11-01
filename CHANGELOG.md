@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v6.1.0+rev2
+## (2024-11-01)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 2ff723d53fd6bf40b4e161e74c7e94aa26034b03 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.27.4
+> ### (2024-11-01)
+> 
+> * Update actions/checkout action to v4.2.2 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.27.3
+> ### (2024-10-29)
+> 
+> * Add pull request write permissions for workflow approvals [Kyle Harding]
+> 
+
+</details>
+
 # v6.1.0+rev1
 ## (2024-11-01)
 
