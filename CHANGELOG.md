@@ -1,6 +1,71 @@
 Change log
 -----------
 
+# v6.1.3
+## (2024-11-12)
+
+
+<details>
+<summary> Update layers/meta-balena to 8aa49fb4cf48ea59ac7ed28151413a19bc9b928f [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.1.3
+> ### (2024-11-11)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v16.7.6 [balena-renovate[bot]] </summary>
+> 
+>> ### balena-supervisor-16.7.6
+>> #### (2024-11-07)
+>> 
+>> * Update firewall documentation [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-16.7.5
+>> #### (2024-11-07)
+>> 
+>> * Delete apps not in target from db by appUuid instead of appId [Christina Ying Wang]
+>> 
+>> ### balena-supervisor-16.7.4
+>> #### (2024-10-28)
+>> 
+>> * Update express to v4.20.0 [SECURITY] [balena-renovate[bot]]
+>> 
+>> ### balena-supervisor-16.7.3
+>> #### (2024-10-28)
+>> 
+>> * Add NXP support to balenaOS secure boot [Alex Gonzalez]
+>> 
+>> ### balena-supervisor-16.7.2
+>> #### (2024-10-18)
+>> 
+>> * Use bookworm image to source journalctl binaries [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-16.7.1
+>> #### (2024-09-26)
+>> 
+>> * Add support for init field from compose [Christina Ying Wang]
+>> 
+>> ### balena-supervisor-16.7.0
+>> #### (2024-09-02)
+>> 
+>> * Store rejected apps in the database [Felipe Lalanne]
+>> * Set the app update status when reporting state [Felipe Lalanne]
+>> * Add update status to types [Felipe Lalanne]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.1.2
+> ### (2024-11-11)
+> 
+> * modemmanager: Update outdated context of patches [Florin Sarbu]
+> 
+
+</details>
+
+* Revert kernel compression for nitrogen8mm based boards [Florin Sarbu]
+
 # v6.1.1+rev4
 ## (2024-11-12)
 
