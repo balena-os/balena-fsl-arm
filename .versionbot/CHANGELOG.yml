@@ -1,4 +1,50 @@
 - commits:
+    - subject: Update layers/meta-balena to e89bd184891acdab646ea490b84ab3e773fde14b
+      hash: 0bfb0762f021883c88ed64260004dcba7a1c310e
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to e89bd184891acdab646ea490b84ab3e773fde14b
+        changelog-entry: Update layers/meta-balena to e89bd184891acdab646ea490b84ab3e773fde14b
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "os: test for rootfs by-state link uniqueness"
+              hash: d4341f15bc0398721e9b26cd728f91b1be7914f8
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: "common: fix udev helper by-state link creation"
+              hash: b260c964ddc5adf7e9e86d3825e1afe59500082d
+              body: >
+                The 65-resin-update-state udev rules creates links for the
+                active and
+
+                inactive root filesystems in /dev/disk/by-state.
+
+
+                Filter the output of lsblk to remove devices that aren't
+                partitions of
+
+                $parent, which is a problem when using software RAID.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-6.1.4
+          title: ""
+          date: 2024-11-12T16:10:47.705Z
+  version: 6.1.4
+  title: ""
+  date: 2024-11-12T18:31:24.876Z
+- commits:
     - subject: Update layers/meta-balena to 8aa49fb4cf48ea59ac7ed28151413a19bc9b928f
       hash: 445d512825429f70dade5da0f2abb6335f33b63a
       body: Update layers/meta-balena
