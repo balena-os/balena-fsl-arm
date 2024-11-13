@@ -1,4 +1,56 @@
 - commits:
+    - subject: Update layers/meta-balena to a0f8d0f174767b9e69f35ba3ae7e142c4463d7bf
+      hash: f1e826aa087a783648a2b51a6cdb7adbe63ad950
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to a0f8d0f174767b9e69f35ba3ae7e142c4463d7bf
+        changelog-entry: Update layers/meta-balena to a0f8d0f174767b9e69f35ba3ae7e142c4463d7bf
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "recipes-support/os-fan-profile: Don't print logs unless configured"
+              hash: dfc023721aefc427255e996f7589450296836de3
+              body: >
+                Supervisor PR #2382 adds log streaming for this service. Let's
+                not print
+
+                any logs in the dashboard for devices which don't support
+                configurable
+
+                fan profiles, unless a value is specified in config.json, to
+                avoid
+
+                any confusion.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+            - subject: Update tests/leviathan digest to 8234f44
+              hash: a27959f1322d02d874cfe42136853e8649872878
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: meta-balena-6.1.5
+          title: ""
+          date: 2024-11-13T15:09:19.450Z
+    - subject: Update layers/poky to 51bd4260cb9592af4b63059a30f4f977e0a2fad6
+      hash: 51b83cbfd4b0620e1d3a50532490dbbc1456f206
+      body: Update layers/poky
+      footer:
+        Changelog-entry: Update layers/poky to 51bd4260cb9592af4b63059a30f4f977e0a2fad6
+        changelog-entry: Update layers/poky to 51bd4260cb9592af4b63059a30f4f977e0a2fad6
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.1.5
+  title: ""
+  date: 2024-11-13T17:56:05.080Z
+- commits:
     - subject: Update layers/meta-balena to e89bd184891acdab646ea490b84ab3e773fde14b
       hash: 0bfb0762f021883c88ed64260004dcba7a1c310e
       body: Update layers/meta-balena
