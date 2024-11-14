@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to e4b77f04adcf5d949cec850d2a497f7bb46a20b8
+      hash: 65219c247aee7f83a5303c440c5142a0d1791d47
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to e4b77f04adcf5d949cec850d2a497f7bb46a20b8
+        changelog-entry: Update layers/meta-balena to e4b77f04adcf5d949cec850d2a497f7bb46a20b8
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update actions/checkout digest to 11bd719
+              hash: a4da39b99f863a49ce9aa608383c7ddf45300b3d
+              body: >
+                Update actions/checkout to
+                11bd71901bbe5b1630ceea73d27597364c9af683
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: meta-balena-6.1.7
+          title: ""
+          date: 2024-11-13T22:30:24.613Z
+  version: 6.1.7
+  title: ""
+  date: 2024-11-14T00:30:14.318Z
+- commits:
     - subject: Update layers/meta-balena to 1111741345bd99c5f226da1b847ad19a1517e6a3
       hash: 47f688eb2f5335d8f37c8ab28e814dbcea310e5b
       body: Update layers/meta-balena

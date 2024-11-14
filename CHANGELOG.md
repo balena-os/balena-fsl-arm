@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.1.7
+## (2024-11-14)
+
+
+<details>
+<summary> Update layers/meta-balena to e4b77f04adcf5d949cec850d2a497f7bb46a20b8 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.1.7
+> ### (2024-11-13)
+> 
+> * Update actions/checkout digest to 11bd719 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.1.6
 ## (2024-11-13)
 
