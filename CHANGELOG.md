@@ -1,6 +1,32 @@
 Change log
 -----------
 
+# v6.1.10
+## (2024-11-15)
+
+
+<details>
+<summary> Update layers/meta-balena to 9060838858c8461f42f88c344c8f63ab50c7707b [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.1.10
+> ### (2024-11-15)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v16.7.7 [balena-renovate[bot]] </summary>
+> 
+>> ### balena-supervisor-16.7.7
+>> #### (2024-11-11)
+>> 
+>> * Firewall: allow DNS requests from custom Docker bridge networks [Christina Ying Wang]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v6.1.9
 ## (2024-11-15)
 

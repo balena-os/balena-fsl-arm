@@ -1,4 +1,56 @@
 - commits:
+    - subject: Update layers/meta-balena to 9060838858c8461f42f88c344c8f63ab50c7707b
+      hash: e5d5ffc8bb9cfed54d6e423d70f8b413282f4fde
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 9060838858c8461f42f88c344c8f63ab50c7707b
+        changelog-entry: Update layers/meta-balena to 9060838858c8461f42f88c344c8f63ab50c7707b
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-supervisor to v16.7.7
+              hash: a5fa76b78ede4419deacb69c891b5acd880115d0
+              body: |
+                Update balena-supervisor from 16.7.6 to 16.7.7
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: "Firewall: allow DNS requests from custom Docker bridge networks"
+                      hash: 7e1cafa866d7ce04d983a990aa219dbd23de26c7
+                      body: >
+                        We only allow DNS requests through `balena0` interface,
+                        but this
+
+                        is the default Docker bridge which is used for
+                        containers that
+
+                        don't have a custom bridge. However, the Supervisor
+                        creates a
+
+                        custom bridge for all containers unless another network
+                        mode is
+
+                        specified.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Christina Ying Wang <christina@balena.io>
+                        signed-off-by: Christina Ying Wang <christina@balena.io>
+                      author: Christina Ying Wang
+                      nested: []
+                  version: balena-supervisor-16.7.7
+                  title: ""
+                  date: 2024-11-11T19:02:34.485Z
+          version: meta-balena-6.1.10
+          title: ""
+          date: 2024-11-15T17:15:00.902Z
+  version: 6.1.10
+  title: ""
+  date: 2024-11-15T18:48:22.841Z
+- commits:
     - subject: Update layers/meta-balena to 6dcd159945538c32be87e085f5119a38552810e4
       hash: 438ffc8cafb43fc672d5808deea0769e1b2bb58b
       body: Update layers/meta-balena
