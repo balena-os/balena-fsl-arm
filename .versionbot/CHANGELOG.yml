@@ -1,4 +1,39 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 4fa14172613c2fc7fa618b27f15eefae855feae2
+      hash: 0809949b8084b2c2250aa158afe23b953ed10e5d
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 4fa14172613c2fc7fa618b27f15eefae855feae2
+        changelog-entry: Update balena-yocto-scripts to 4fa14172613c2fc7fa618b27f15eefae855feae2
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "github/workflows/yocto-build-deploy.yml: Add hostapp metadata to OS
+                release"
+              hash: 0c8631cf2d935b139aff85004bb7c41883c355a6
+              body: >
+                This is needed for supervisor managed OS updates. For example,
+                the supervisor
+
+                can check this metadata against the equivalent field from
+                /etc/os-release to
+
+                determine if the device is already running the latest OS
+                release.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: balena-yocto-scripts-1.27.11
+          title: ""
+          date: 2024-11-17T19:41:07.287Z
+  version: 6.1.10+rev2
+  title: ""
+  date: 2024-11-17T21:23:41.994Z
+- commits:
     - subject: Update layers/poky to 8e092852b63e998d990b8f8e1aa91297dec4430f
       hash: 0fdf5adfc8931ced0e64f92371694924c1aa393e
       body: Update layers/poky
