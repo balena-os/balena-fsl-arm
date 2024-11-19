@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.1.10+rev7
+## (2024-11-19)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 55e707dc405e13428fa3abdf594c2828ad0053b0 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.27.13
+> ### (2024-11-18)
+> 
+> * Explicitly set GH_TOKEN permissions [Anton Belodedenko]
+> 
+
+</details>
+
 # v6.1.10+rev6
 ## (2024-11-19)
 

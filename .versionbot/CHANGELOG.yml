@@ -1,4 +1,27 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 55e707dc405e13428fa3abdf594c2828ad0053b0
+      hash: 9666d05e19e7127f022b35026c7d57b18df92889
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 55e707dc405e13428fa3abdf594c2828ad0053b0
+        changelog-entry: Update balena-yocto-scripts to 55e707dc405e13428fa3abdf594c2828ad0053b0
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Explicitly set GH_TOKEN permissions
+              hash: 389d08cfa7af88eb059f1d56fcf6a0db69598bbb
+              body: ""
+              footer:
+                change-type: patch
+              author: Anton Belodedenko
+              nested: []
+          version: balena-yocto-scripts-1.27.13
+          title: ""
+          date: 2024-11-18T22:20:04.431Z
+  version: 6.1.10+rev7
+  title: ""
+  date: 2024-11-19T01:06:07.553Z
+- commits:
     - subject: Update balena-os/balena-yocto-scripts to v1.27.13
       hash: 8727d225685cfed8e66bde8506b1a9b1187cf6f3
       body: Update balena-os/balena-yocto-scripts
