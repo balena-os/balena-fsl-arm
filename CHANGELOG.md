@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.1.12
+## (2024-11-21)
+
+
+<details>
+<summary> Update layers/meta-balena to b902bd04894f36bfc2145a573ec267501bcb1a50 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.1.12
+> ### (2024-11-21)
+> 
+> * balena-os: allow to specify early console for OS development builds [Alex Gonzalez]
+> 
+
+</details>
+
 # v6.1.11
 ## (2024-11-20)
 

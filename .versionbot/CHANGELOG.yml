@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to b902bd04894f36bfc2145a573ec267501bcb1a50
+      hash: 3cb0c4a92b67fbf7fc344dc0eb495e1181a9fc95
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to b902bd04894f36bfc2145a573ec267501bcb1a50
+        changelog-entry: Update layers/meta-balena to b902bd04894f36bfc2145a573ec267501bcb1a50
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "balena-os: allow to specify early console for OS development builds"
+              hash: eea406c78c131ec36c2fd8b26f6072f055dec89a
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.1.12
+          title: ""
+          date: 2024-11-21T13:18:17.719Z
+  version: 6.1.12
+  title: ""
+  date: 2024-11-21T16:07:26.891Z
+- commits:
     - subject: Update layers/meta-balena to 2d7b9e10fb6564aa7383dc427876e91c9ab5cb1c
       hash: 260ebdb838154294f3518f3f8bad37a650a31178
       body: Update layers/meta-balena
