@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v6.1.13
+## (2024-11-22)
+
+
+<details>
+<summary> Update layers/meta-balena to 7db3c31ccc6640f4c424e910db6999e06d27f34d [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.1.13
+> ### (2024-11-22)
+> 
+> * u-boot: env_resin: fix use of skip bootcount [Alex Gonzalez]
+> * initrdscripts: migrate: panic on installation failure [Alex Gonzalez]
+> 
+
+</details>
+
 # v6.1.12
 ## (2024-11-21)
 
