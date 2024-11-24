@@ -1,4 +1,67 @@
 - commits:
+    - subject: Update layers/meta-balena to 690845219abf6bf0a5be048cd754af6c2119e1a9
+      hash: 558b81a736a96803d4f4b2ef85bf194612a1c5e7
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 690845219abf6bf0a5be048cd754af6c2119e1a9
+        changelog-entry: Update layers/meta-balena to 690845219abf6bf0a5be048cd754af6c2119e1a9
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update tests/leviathan digest to 64ba6a3
+              hash: 186adb94af303adaa002e64c3cb25f99c992e80b
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Update balena-os/leviathan-worker to v2.9.50
+                      hash: 53f09c362c19fc010065841707727effcc5d2aa6
+                      body: |
+                        Update balena-os/leviathan-worker from 2.9.47 to 2.9.50
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.31.65
+                  title: ""
+                  date: 2024-11-23T20:34:16.707Z
+                - commits:
+                    - subject: Update core/contracts digest to 88fb8ad
+                      hash: 0652731d7054fbe8431c9a8e4c7eadc9dc5164b1
+                      body: |
+                        Update core/contracts
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.31.64
+                  title: ""
+                  date: 2024-11-23T19:35:52.250Z
+                - commits:
+                    - subject: Update balena-io/balena-cli to v20
+                      hash: 55962849de4bfebaf83fb9d6c226f8ad0220446c
+                      body: |
+                        Update balena-io/balena-cli from 19.16.0 to 20.0.7
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.31.63
+                  title: ""
+                  date: 2024-11-23T18:36:27.695Z
+          version: meta-balena-6.1.14
+          title: ""
+          date: 2024-11-23T22:50:40.547Z
+  version: 6.1.14
+  title: ""
+  date: 2024-11-24T00:43:11.636Z
+- commits:
     - subject: Update layers/meta-balena to 7db3c31ccc6640f4c424e910db6999e06d27f34d
       hash: 144795b46a6cb47b0a295a2b9cde834cb6a95738
       body: Update layers/meta-balena
