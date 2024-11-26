@@ -1,4 +1,37 @@
 - commits:
+    - subject: Update layers/meta-balena to 1f2c1fb81b4845d841c216a0319193ee56cc151e
+      hash: 790efe27d41f1e5f2dab550cc3aae8a4c008f9f0
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 1f2c1fb81b4845d841c216a0319193ee56cc151e
+        changelog-entry: Update layers/meta-balena to 1f2c1fb81b4845d841c216a0319193ee56cc151e
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "initrdscripts/migrate: Allow overriding of target internal devices"
+              hash: d969fcf547bad87cab45231ee30f59e48b32b6d4
+              body: >
+                ... on flasher images by specifying installer.target_devices in
+                config.json,
+
+                which will be used during migration instead of the list of
+                devices specified
+
+                at boot time.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-6.1.15
+          title: ""
+          date: 2024-11-26T17:20:05.226Z
+  version: 6.1.15
+  title: ""
+  date: 2024-11-26T19:42:56.731Z
+- commits:
     - subject: Update contracts to 01757392e1088465b996fb9e92e1b6ab8a45d3b1
       hash: a0fef781c71309e7afbebe7cf22daffe9be1e067
       body: Update contracts

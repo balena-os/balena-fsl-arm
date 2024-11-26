@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.1.15
+## (2024-11-26)
+
+
+<details>
+<summary> Update layers/meta-balena to 1f2c1fb81b4845d841c216a0319193ee56cc151e [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.1.15
+> ### (2024-11-26)
+> 
+> * initrdscripts/migrate: Allow overriding of target internal devices [Alexandru Costache]
+> 
+
+</details>
+
 # v6.1.14+rev3
 ## (2024-11-25)
 
