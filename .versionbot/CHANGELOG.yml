@@ -1,4 +1,31 @@
 - commits:
+    - subject: Update layers/meta-balena to 229a6ad1da498c4ce8aaa17501ddad3e99806f08
+      hash: e4fc2ff872115a78f824016bbb153c23d0d229de
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 229a6ad1da498c4ce8aaa17501ddad3e99806f08
+        changelog-entry: Update layers/meta-balena to 229a6ad1da498c4ce8aaa17501ddad3e99806f08
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "classes/kernel-balena: Add aufs patches for 6.1 kernels"
+              hash: 87d1cdcd707cf90dc40a760d0307fdb1573498b4
+              body: |
+                Also, aufs5 and aufs6 patches are in the same git repo now.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.1.16
+          title: ""
+          date: 2024-11-27T19:50:52.083Z
+  version: 6.1.16
+  title: ""
+  date: 2024-11-27T21:45:11.140Z
+- commits:
     - subject: Update layers/meta-balena to 1f2c1fb81b4845d841c216a0319193ee56cc151e
       hash: 790efe27d41f1e5f2dab550cc3aae8a4c008f9f0
       body: Update layers/meta-balena
