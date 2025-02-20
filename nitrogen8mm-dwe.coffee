@@ -44,10 +44,11 @@ module.exports =
 
 	yocto:
 		machine: 'nitrogen8mm-dwe'
-		image: 'balena-image'
+		image: 'balena-image-flasher'
 		fstype: 'balenaos-img'
 		version: 'yocto-kirkstone'
 		deployArtifact: 'balena-image-nitrogen8mm-dwe.balenaos-img'
+		deployFlasherArtifact: 'balena-image-flasher-nitrogen8mm-dwe.balenaos-img'
 		compressed: true
 
 	options: [ networkOptions.group ]
