@@ -1,6 +1,73 @@
 Change log
 -----------
 
+# v6.3.20+rev3
+## (2025-02-21)
+
+
+<details>
+<summary> Update contracts to 1adfd1c331b3464969cc09a5c7cc3583ef1fe3de [balena-renovate[bot]] </summary>
+
+> ## contracts-2.0.128
+> ### (2025-02-05)
+> 
+> * Improve testing of contracts [Felipe Lalanne]
+> * Remove unused sw.os-image contracts [Felipe Lalanne]
+> 
+> ## contracts-2.0.127
+> ### (2025-01-28)
+> 
+> * Mark alpine 3.21 as the default alpine version [Thodoris Greasidis]
+> 
+> ## contracts-2.0.126
+> ### (2025-01-28)
+> 
+> * Add alpine 3.21 [Felipe Lalanne]
+> 
+> ## contracts-2.0.125
+> ### (2025-01-15)
+> 
+> * hw.device-type: Switch to using markdown for links [Alexandru Costache]
+> 
+> ## contracts-2.0.124
+> ### (2025-01-07)
+> 
+> * sw.os+hw.device-type: Add Forecr DSB Orin Nano 8GB and Orin NX 16GB distro tpl files [Alexandru Costache]
+> * forecr-dsb-ornx-lan-orin-nx-16gb: Add new public device type [Alexandru Costache]
+> 
+> ## contracts-2.0.123
+> ### (2025-01-02)
+> 
+> * Forecr DSB ORNX: Update device name [Alexandru]
+> 
+> ## contracts-2.0.122
+> ### (2024-12-23)
+> 
+> * hw.device-type: add Forecr DSB ORNX entries [Alex Suykov]
+> 
+> ## contracts-2.0.121
+> ### (2024-12-18)
+> 
+> * hw.device-type: Fix compatibility with existing sdk structure [Alexandru Costache]
+> 
+> ## contracts-2.0.120
+> ### (2024-12-18)
+> 
+> * add eg5120-imx8mp contract [Ryan Cooke]
+> 
+> ## contracts-2.0.119
+> ### (2024-12-16)
+> 
+> * contracts/hw.device-type: Update instructions for Orin flasher types [Alexandru Costache]
+> 
+> ## contracts-2.0.118
+> ### (2024-12-04)
+> 
+> * hw.device-type: update logo for nitrogen8M Mini [Jonathan Berger]
+> 
+
+</details>
+
 # v6.3.20+rev2
 ## (2025-02-21)
 
