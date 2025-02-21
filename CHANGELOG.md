@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.3.20+rev2
+## (2025-02-21)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 800cd18b1f924e8ad8029689fef3ca52d99d7e1e [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.30.31
+> ### (2025-02-21)
+> 
+> * barys: build unique machine-image combinations [Alex Gonzalez]
+> 
+
+</details>
+
 # v6.3.20+rev1
 ## (2025-02-21)
 

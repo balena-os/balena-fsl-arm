@@ -1,4 +1,40 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 800cd18b1f924e8ad8029689fef3ca52d99d7e1e
+      hash: b5834a784a2fad6c68e573751f47440c907aad8a
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 800cd18b1f924e8ad8029689fef3ca52d99d7e1e
+        changelog-entry: Update balena-yocto-scripts to 800cd18b1f924e8ad8029689fef3ca52d99d7e1e
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "barys: build unique machine-image combinations"
+              hash: 290992af63811118ef49a1059f78c1395066a279
+              body: >
+                Keep track of the different machine-image combos being built not
+                to
+
+                duplicate fields.
+
+
+                This allows to have multiple device types that build the same
+                machine,
+
+                for example if they have different feature layers.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.30.31
+          title: ""
+          date: 2025-02-21T13:29:22.936Z
+  version: 6.3.20+rev2
+  title: ""
+  date: 2025-02-21T14:37:20.698Z
+- commits:
     - subject: Update balena-yocto-scripts to c071a7173ca278c851954cbbad15f17d831d12b0
       hash: b7d1529bae52ea960aa9a1fc2d302ace80d47df8
       body: Update balena-yocto-scripts
