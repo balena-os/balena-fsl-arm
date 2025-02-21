@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.3.21
+## (2025-02-21)
+
+
+<details>
+<summary> Update layers/meta-balena to b87445d1ae125b108e2d8e0fa766382a42ba7730 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.3.21
+> ### (2025-02-21)
+> 
+> * kernel-balena.bbclass: Add aufs patches for 6.12 kernels [Florin Sarbu]
+> 
+
+</details>
+
 # v6.3.20+rev4
 ## (2025-02-21)
 

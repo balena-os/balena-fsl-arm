@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to b87445d1ae125b108e2d8e0fa766382a42ba7730
+      hash: 40676f1d88c24b1fb0aa57ddbdadb28234d94691
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to b87445d1ae125b108e2d8e0fa766382a42ba7730
+        changelog-entry: Update layers/meta-balena to b87445d1ae125b108e2d8e0fa766382a42ba7730
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "kernel-balena.bbclass: Add aufs patches for 6.12 kernels"
+              hash: 21469a4d0fb4ddf15d17ec1cff3687329abea018
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.3.21
+          title: ""
+          date: 2025-02-21T20:03:08.166Z
+  version: 6.3.21
+  title: ""
+  date: 2025-02-21T20:55:06.466Z
+- commits:
     - subject: Update layers/meta-openembedded to
         de8681b4a2a101b99dd2c48d89a7de2ccd9a961f
       hash: a187d71e8df016b242d74cc6d9db86713ec4d682
