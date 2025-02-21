@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v6.1.16+rev2
+## (2025-02-21)
+
+* Explicitly set GITHUB_TOKEN permissions for yocto workflow [Florin Sarbu]
+* Specify in the coffee file what is the deployFlasherArtifact for nitrogen8mm-dwe.coffee [Florin Sarbu]
+
 # v6.1.16+rev1
 ## (2024-11-28)
 

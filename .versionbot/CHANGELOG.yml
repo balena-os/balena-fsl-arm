@@ -1,4 +1,38 @@
 - commits:
+    - subject: Explicitly set GITHUB_TOKEN permissions for yocto workflow
+      hash: cc2f9f55fa0ae43e2b37683b326fd09f9b39b01f
+      body: ""
+      footer:
+        Changelog-entry: Explicitly set GITHUB_TOKEN permissions for yocto workflow
+        changelog-entry: Explicitly set GITHUB_TOKEN permissions for yocto workflow
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+    - subject: Specify in the coffee file what is the deployFlasherArtifact for
+        nitrogen8mm-dwe.coffee
+      hash: fc78183ca2fe271b1f4394d63c0539340dec54b8
+      body: >
+        For automated testing we need to use the flasher image to provision the
+        board.
+
+        The customer will keep using the internal image for provisioning, which
+        is
+
+        the image that will continue to be offered in the dashboard.
+      footer:
+        Changelog-entry: Specify in the coffee file what is the deployFlasherArtifact
+          for nitrogen8mm-dwe.coffee
+        changelog-entry: Specify in the coffee file what is the deployFlasherArtifact
+          for nitrogen8mm-dwe.coffee
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 6.1.16+rev2
+  title: ""
+  date: 2025-02-21T09:23:44.564Z
+- commits:
     - subject: Update layers/poky to c0dcc563322cbe8b4c323172d66d04d16d2067e8
       hash: 06f45dc8e8be7fb6cd412ed9ce92fb8a87ef6318
       body: Update layers/poky
