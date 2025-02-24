@@ -1,4 +1,36 @@
 - commits:
+    - subject: Update layers/meta-balena to 5dfed54ec4ffcfb78d1af5a53a8cb8d7e569a806
+      hash: 31bc49e5e42beacf9b6455aa60b2e9af8d9e110c
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 5dfed54ec4ffcfb78d1af5a53a8cb8d7e569a806
+        changelog-entry: Update layers/meta-balena to 5dfed54ec4ffcfb78d1af5a53a8cb8d7e569a806
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "kernel-devsrc.bb: Use recipe from Poky for 6.12+ kernels"
+              hash: 1eb52a251cfd48d32a4dce2ee01b54e791d7b4ea
+              body: >
+                This is taken from Poky rev
+                ae8fe5b896a1f6bd0740d1fa6638b9d9377a8d28 in master.
+
+
+                It is required for being able to compile kernel modules for
+                6.12+ kernels.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.3.22
+          title: ""
+          date: 2025-02-24T09:34:34.666Z
+  version: 6.3.22
+  title: ""
+  date: 2025-02-24T10:55:58.938Z
+- commits:
     - subject: Update balena-yocto-scripts to 1e3c94d6ea91d7c580acbeb9331403803ba60266
       hash: 1b11e1c245d1215f2413a6cedfdc9b51c8d74185
       body: Update balena-yocto-scripts
