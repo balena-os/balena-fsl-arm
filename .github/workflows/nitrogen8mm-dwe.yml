@@ -65,6 +65,6 @@ jobs:
         {
           "test_suite": ["os","cloud","hup"],
           "environment": ["balena-cloud.com"],
-          "runs_on": [["self-hosted"]],
-          image: [balena-flasher]
+          "runs_on": ["self-hosted"],
+          "image": ["balena-flasher"]
         }
