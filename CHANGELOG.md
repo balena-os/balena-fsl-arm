@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.5.4+rev1
+## (2025-03-28)
+
+
+<details>
+<summary> Update contracts to de98cd4040268e71693710039c7c9c91b1a07cfc [balena-renovate[bot]] </summary>
+
+> ## contracts-2.0.129
+> ### (2025-03-14)
+> 
+> * Mark Bookworm as the default version for Debian [Thodoris Greasidis]
+> 
+
+</details>
+
 # v6.5.4
 ## (2025-03-28)
 
