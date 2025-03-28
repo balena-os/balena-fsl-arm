@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.5.4+rev3
+## (2025-03-28)
+
+
+<details>
+<summary> Update contracts to d07781855aec29f2508be51a04573b7832af8c90 [balena-renovate[bot]] </summary>
+
+> ## contracts-2.0.130
+> ### (2025-03-28)
+> 
+> * hw.device-type: Update links to docs for UEFI version checking [Alexandru Costache]
+> 
+
+</details>
+
 # v6.5.4+rev2
 ## (2025-03-28)
 

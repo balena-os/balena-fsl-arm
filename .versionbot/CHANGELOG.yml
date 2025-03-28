@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update contracts to d07781855aec29f2508be51a04573b7832af8c90
+      hash: 2b0400802d69f3e73dd2f677a0b22d5549d2dfdd
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to d07781855aec29f2508be51a04573b7832af8c90
+        changelog-entry: Update contracts to d07781855aec29f2508be51a04573b7832af8c90
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "hw.device-type: Update links to docs for UEFI version checking"
+              hash: cd8fa068d9e3a1a5d8aeda35829973963fc4e204
+              body: |
+                ... also include the L4T minor revision in the UEFI version
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.130
+          title: ""
+          date: 2025-03-28T11:36:03.120Z
+  version: 6.5.4+rev3
+  title: ""
+  date: 2025-03-28T15:36:47.407Z
+- commits:
     - subject: Fix bluetooth on new kernel for nitrogen8mm
       hash: dae96c1bfb1718d0fc2157460c59030c210decd7
       body: >
