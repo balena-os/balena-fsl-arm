@@ -1,6 +1,173 @@
 Change log
 -----------
 
+# v6.5.4
+## (2025-03-28)
+
+
+<details>
+<summary> Update layers/meta-balena to 5393bc5f097a6e03e605abf7211625a02d11133c [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.4
+> ### (2025-03-27)
+> 
+> * classes: kernel-balena: enable CONFIG_MEMCG_V1 when needed [Alex Gonzalez]
+> 
+> ## meta-balena-6.5.3
+> ### (2025-03-27)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to c3c6661 [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.31.95
+>> #### (2025-03-25)
+>> 
+>> * Update balena-io/balena-cli to v21 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.31.94
+>> #### (2025-03-25)
+>> 
+>> * Extend selection of devices to run secureboot tests [Alex Gonzalez]
+>> 
+>> ### leviathan-2.31.93
+>> #### (2025-03-19)
+>> 
+>> * Update balena-io/balena-cli to v20.2.10 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.31.92
+>> #### (2025-03-19)
+>> 
+>> * Update docker/setup-buildx-action digest to b5ca514 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.31.91
+>> #### (2025-03-19)
+>> 
+>> * Update actions/upload-artifact digest to ea165f8 [balena-renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.5.2
+> ### (2025-03-19)
+> 
+> * kernel-balena: enable CONFIG_MODULE_COMPRESS as needed [Joseph Kogut]
+> 
+> ## meta-balena-6.5.1
+> ### (2025-03-14)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 81e7f26 [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.31.90
+>> #### (2025-02-25)
+>> 
+>> * Update balena-io/balena-cli to v20.2.7 [balena-renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.5.0
+> ### (2025-03-13)
+> 
+> * resin-init-flasher: Support devices using 3rd party UEFI drivers [Michal Toman]
+> * efitools: Allow building an ESL from a list of hashes [Michal Toman]
+> 
+> ## meta-balena-6.4.4
+> ### (2025-03-12)
+> 
+> * Differentiate MACHINE from DEVICE_TYPE [Alex Gonzalez]
+> 
+> ## meta-balena-6.4.3
+> ### (2025-03-10)
+> 
+> * secureboot: imx: program bootloader in integrity check [Alex Gonzalez]
+> * secureboot: imx: increase kernel headers required version [Alex Gonzalez]
+> 
+> ## meta-balena-6.4.2
+> ### (2025-03-07)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v16.12.7 [balena-renovate[bot]] </summary>
+> 
+>> ### balena-supervisor-16.12.7
+>> #### (2025-03-06)
+>> 
+>> * Release locks when removing apps [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-16.12.6
+>> #### (2025-03-04)
+>> 
+>> * Log non-API errors during state poll [Felipe Lalanne]
+>> * Fix target poll healthcheck [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-16.12.5
+>> #### (2025-03-04)
+>> 
+>> * Decrease balenaCloud api request timeout from 15m to 59s [Pagan Gazzard]
+>> 
+>> ### balena-supervisor-16.12.4
+>> #### (2025-03-03)
+>> 
+>> * Don't revert to regular pull if delta server 401 [Christina Ying Wang]
+>> 
+>> ### balena-supervisor-16.12.3
+>> #### (2025-02-19)
+>> 
+>> * Retry DELTA_APPLY_RETRY_COUNT (3) times during delta apply fail before reverting to regular pull [Christina Ying Wang]
+>> * Revert to regular pull immediately on delta server failure (code 400s) [Christina Ying Wang]
+>> 
+>> ### balena-supervisor-16.12.2
+>> #### (2025-02-11)
+>> 
+>> * Update balena-io/deploy-to-balena-action action to v2.0.92 [balena-renovate[bot]]
+>> 
+>> ### balena-supervisor-16.12.1
+>> #### (2025-02-10)
+>> 
+>> * Pin io-ts version to v2.2.20 [Felipe Lalanne]
+>> * Update network-manager to v1 [Felipe Lalanne]
+>> * Update balena-request and balena-register-device [Felipe Lalanne]
+>> * Update pinejs-client-request to v8 [Felipe Lalanne]
+>> * Update chai utility modules [Felipe Lalanne]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.4.1
+> ### (2025-02-28)
+> 
+> * tests/device-tree: Rework test to not use the sysfs gpio interface [Florin Sarbu]
+> 
+> ## meta-balena-6.4.0
+> ### (2025-02-27)
+> 
+> * hup: hooks: silence tpm2_flushcontext trap while updating policy [Joseph Kogut]
+> * hup: hooks: update passphrase in TPM NVRAM [Joseph Kogut]
+> * os-helpers-tpm2: lowercase vars in print_pcr_val_bin [Joseph Kogut]
+> * hup: signed-update: store passphrase in TPM [Joseph Kogut]
+> * hostapp-update-hooks: use generate_pcr_digests [Joseph Kogut]
+> * balena-init-flasher-tpm: use generate_pcr_digests [Joseph Kogut]
+> * balena-init-flasher-tpm: write LUKS passphrase to TPM nvram [Joseph Kogut]
+> * os-helpers-tpm2: add generate_pcr_digests [Joseph Kogut]
+> * os-helpers-tpm2: add tpm_nvram_store_passphrase [Joseph Kogut]
+> * os-helpers-tpm2: add size param to hw_gen_passphrase [Joseph Kogut]
+> * cryptsetup-efi-tpm: retrieve passphrase from TPM [Joseph Kogut]
+> * os-helpers-tpm2: add tpm_nvram_retrieve_passphrase [Joseph Kogut]
+> 
+> ## meta-balena-6.3.23
+> ### (2025-02-25)
+> 
+> * modemmanager: patch for Cinterion port types [Kirill Zabelin]
+> 
+
+</details>
+
 # v6.3.22+rev1
 ## (2025-03-28)
 
