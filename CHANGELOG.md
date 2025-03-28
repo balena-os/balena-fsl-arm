@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.5.4+rev2
+## (2025-03-28)
+
+* Fix bluetooth on new kernel for nitrogen8mm [Florin Sarbu]
+
 # v6.5.4+rev1
 ## (2025-03-28)
 

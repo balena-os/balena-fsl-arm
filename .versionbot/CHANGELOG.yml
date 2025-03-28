@@ -1,4 +1,22 @@
 - commits:
+    - subject: Fix bluetooth on new kernel for nitrogen8mm
+      hash: dae96c1bfb1718d0fc2157460c59030c210decd7
+      body: >
+        The path for testing when the UART device has been attached to the Bluez
+        stack
+
+        changed again in the new kernel.
+      footer:
+        Changelog-entry: Fix bluetooth on new kernel for nitrogen8mm
+        changelog-entry: Fix bluetooth on new kernel for nitrogen8mm
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 6.5.4+rev2
+  title: ""
+  date: 2025-03-28T12:21:39.426Z
+- commits:
     - subject: Update contracts to de98cd4040268e71693710039c7c9c91b1a07cfc
       hash: 73ca04943a3600c079c7bb476b32559c2c9f6593
       body: Update contracts
