@@ -1,4 +1,100 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 18950a768d42f7d39ebd6128a1054da6947c5eed
+      hash: bcaf129a8def840fb1838c6f7d0002c4788f3224
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 18950a768d42f7d39ebd6128a1054da6947c5eed
+        changelog-entry: Update balena-yocto-scripts to 18950a768d42f7d39ebd6128a1054da6947c5eed
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.25.6
+              hash: edb9ad596c1a682d9ccef6467d0ab1ccbf3f0957
+              body: |
+                Update aws/aws-cli from 2.25.5 to 2.25.6
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.55
+          title: ""
+          date: 2025-03-30T01:08:32.223Z
+        - commits:
+            - subject: Update balena-io/balena-cli to v21.1.3
+              hash: 719b2318b89afd1b68b25bdcf6b167daf4625583
+              body: |
+                Update balena-io/balena-cli from 21.1.2 to 21.1.3
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.54
+          title: ""
+          date: 2025-03-29T01:20:41.751Z
+        - commits:
+            - subject: Update easimon/maximize-build-space digest to c28619d
+              hash: 6de76326f162839ef2458fd2d92cc244906c6915
+              body: |
+                Update easimon/maximize-build-space
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.53
+          title: ""
+          date: 2025-03-28T20:40:56.919Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.25.5
+              hash: 70a95a0e6353f981d9cc2a3da2cdd05c5f0f7dae
+              body: |
+                Update aws/aws-cli from 2.25.4 to 2.25.5
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.52
+          title: ""
+          date: 2025-03-28T18:00:27.225Z
+        - commits:
+            - subject: Update balena-os/leviathan action to v2.31.96
+              hash: 5dcd2e56ff18822bdaddb8ef5def6003a6acdb58
+              body: |
+                Update balena-os/leviathan from 2.31.95 to 2.31.96
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.51
+          title: ""
+          date: 2025-03-28T15:46:35.141Z
+        - commits:
+            - subject: "Leviathan: Allow specifying alternative image to test"
+              hash: 30ad694fa8b688a5df5cad8a8db82fafad3ecff6
+              body: >
+                This is for use in at least 3 device types - where the customer
+                requires a non-flasher image to be available by default via
+                downloads, but for testing purposes we need ot use the flasher
+                image. This change allows for selecting the flasher image using
+                the test_matrix input - i.e image: balena-flasher.img
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+          version: balena-yocto-scripts-1.31.50
+          title: ""
+          date: 2025-03-28T12:22:02.875Z
+  version: 6.5.4+rev4
+  title: ""
+  date: 2025-03-30T10:36:00.535Z
+- commits:
     - subject: Update contracts to d07781855aec29f2508be51a04573b7832af8c90
       hash: 2b0400802d69f3e73dd2f677a0b22d5549d2dfdd
       body: Update contracts

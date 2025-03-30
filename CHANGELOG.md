@@ -1,6 +1,46 @@
 Change log
 -----------
 
+# v6.5.4+rev4
+## (2025-03-30)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 18950a768d42f7d39ebd6128a1054da6947c5eed [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.31.55
+> ### (Invalid date)
+> 
+> * Update aws/aws-cli to v2.25.6 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.31.54
+> ### (2025-03-29)
+> 
+> * Update balena-io/balena-cli to v21.1.3 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.31.53
+> ### (2025-03-28)
+> 
+> * Update easimon/maximize-build-space digest to c28619d [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.31.52
+> ### (2025-03-28)
+> 
+> * Update aws/aws-cli to v2.25.5 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.31.51
+> ### (2025-03-28)
+> 
+> * Update balena-os/leviathan action to v2.31.96 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.31.50
+> ### (2025-03-28)
+> 
+> * Leviathan: Allow specifying alternative image to test [Ryan Cooke]
+> 
+
+</details>
+
 # v6.5.4+rev3
 ## (2025-03-28)
 
