@@ -1,4 +1,35 @@
 - commits:
+    - subject: Update layers/meta-balena to 0c657af51fe6209c35447ed13870dfca4e38b19b
+      hash: d3f304c79d73eee9540f27ccc6fb236dfd22aff5
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 0c657af51fe6209c35447ed13870dfca4e38b19b
+        changelog-entry: Update layers/meta-balena to 0c657af51fe6209c35447ed13870dfca4e38b19b
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "initrdscripts: Force migration with secure boot enabled"
+              hash: a664a14d3e788f086f8572a312a72e5603faf0db
+              body: >
+                As a part of secure boot hardening, we want to avoid flasher
+                running
+
+                userspace from an external drive, and always provision from
+                memory.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.5.5
+          title: ""
+          date: 2025-03-30T12:42:16.341Z
+  version: 6.5.5
+  title: ""
+  date: 2025-03-30T17:23:58.527Z
+- commits:
     - subject: Update layers/meta-openembedded to
         084df16f561ebce5aea2ae9241cc500247771ef3
       hash: d346a46c9d5923924165455fefbf7bd1fc999ba0
