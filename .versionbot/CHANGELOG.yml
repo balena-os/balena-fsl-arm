@@ -1,4 +1,50 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 0ca5cb78828e7b8c0df024fd1d9e5c98786aa766
+      hash: aa46d2c5037c7bbe2e017a5fac6e58ef53fd08c5
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 0ca5cb78828e7b8c0df024fd1d9e5c98786aa766
+        changelog-entry: Update balena-yocto-scripts to 0ca5cb78828e7b8c0df024fd1d9e5c98786aa766
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-os/leviathan action to v2.31.97
+              hash: 38c3ed376003b62a5613000aed9b92f950a4be65
+              body: |
+                Update balena-os/leviathan from 2.31.96 to 2.31.97
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.57
+          title: ""
+          date: 2025-04-01T19:01:03.077Z
+    - subject: Update balena-yocto-scripts to b3341c90569dc08c0c0f843c799f7e49637969cc
+      hash: 9512fa36d3f6709d7f26dfe3a0cb8f3fc3602fc8
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to b3341c90569dc08c0c0f843c799f7e49637969cc
+        changelog-entry: Update balena-yocto-scripts to b3341c90569dc08c0c0f843c799f7e49637969cc
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-os/leviathan action to v2.31.97
+              hash: 38c3ed376003b62a5613000aed9b92f950a4be65
+              body: |
+                Update balena-os/leviathan from 2.31.96 to 2.31.97
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.57
+          title: ""
+          date: 2025-04-01T19:01:03.077Z
+  version: 6.5.6+rev1
+  title: ""
+  date: 2025-04-01T22:17:11.072Z
+- commits:
     - subject: Update layers/meta-balena to 116c4ecdae65da21061650c6177d35a62e9d7da9
       hash: b1daca85edfbb6ee5db1b866d98c78448d03867c
       body: Update layers/meta-balena
