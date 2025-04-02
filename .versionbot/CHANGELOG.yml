@@ -1,4 +1,31 @@
 - commits:
+    - subject: Update layers/meta-balena to c9903d7b93fd1c9db7c565031145834f61153dbe
+      hash: f192a3613b562fbdc0bc75ad171ce9a967ce9e43
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to c9903d7b93fd1c9db7c565031145834f61153dbe
+        changelog-entry: Update layers/meta-balena to c9903d7b93fd1c9db7c565031145834f61153dbe
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "kernel-balena.bbclass: enable multipath TCP"
+              hash: e96b6aebcd77ada85e17aec8e7bfe32855e8a0d7
+              body: |
+                Enable multipath TCP (MPTCP) for all devices by default.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-6.5.7
+          title: ""
+          date: 2025-04-01T19:43:34.631Z
+  version: 6.5.7
+  title: ""
+  date: 2025-04-02T02:48:22.666Z
+- commits:
     - subject: Update balena-yocto-scripts to 0ca5cb78828e7b8c0df024fd1d9e5c98786aa766
       hash: aa46d2c5037c7bbe2e017a5fac6e58ef53fd08c5
       body: Update balena-yocto-scripts
