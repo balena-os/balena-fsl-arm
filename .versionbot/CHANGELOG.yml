@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update contracts to 34033e690fc5b1c194114c3aab492036db837bd2
+      hash: 635a6aa09069e66e40baf526fbee5f886def69d4
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 34033e690fc5b1c194114c3aab492036db837bd2
+        changelog-entry: Update contracts to 34033e690fc5b1c194114c3aab492036db837bd2
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Add EDATEC Sensing contract and logo
+              hash: 2504d5f5bb1a11056495ce3e44f8f60f297593e4
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ray <rxie@edatec.cn>
+                signed-off-by: Ray <rxie@edatec.cn>
+              author: RayX123456
+          version: contracts-2.0.131
+          title: ""
+          date: 2025-04-03T09:12:05.127Z
+  version: 6.5.8+rev3
+  title: ""
+  date: 2025-04-03T15:25:28.709Z
+- commits:
     - subject: Update balena-yocto-scripts to 8a31d49379c1088f580d60e425685d1bc4399c5a
       hash: 997d6af0ce1d319165488e03b851ab223e634909
       body: Update balena-yocto-scripts
