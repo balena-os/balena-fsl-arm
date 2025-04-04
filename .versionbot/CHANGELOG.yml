@@ -1,4 +1,55 @@
 - commits:
+    - subject: Update balena-yocto-scripts to f875247a10bb08b77db2a99dfcf7844adc439016
+      hash: ea1b4d6433daf8fceb1ffdceb563da37fac2737c
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to f875247a10bb08b77db2a99dfcf7844adc439016
+        changelog-entry: Update balena-yocto-scripts to f875247a10bb08b77db2a99dfcf7844adc439016
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update actions/create-github-app-token action to v2.0.2
+              hash: e8ce310d9cf19bde0c7238ec8cdd5e24fd807e73
+              body: |
+                Update actions/create-github-app-token from 2.0.0 to 2.0.2
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.62
+          title: ""
+          date: 2025-04-04T01:21:21.447Z
+        - commits:
+            - subject: Update actions/create-github-app-token action to v2
+              hash: 3b5af9e223b560eedb9ab3f74eb2a5c9c81b7895
+              body: |
+                Update actions/create-github-app-token from 1.12.0 to 2.0.0
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.61
+          title: ""
+          date: 2025-04-03T22:27:04.161Z
+        - commits:
+            - subject: Update balena-io/balena-cli to v21.1.8
+              hash: 433a3db14838064ca5f9cd7aaf32516a14c35ce9
+              body: |
+                Update balena-io/balena-cli from 21.1.4 to 21.1.8
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.60
+          title: ""
+          date: 2025-04-03T19:48:30.732Z
+  version: 6.5.8+rev4
+  title: ""
+  date: 2025-04-04T04:08:30.903Z
+- commits:
     - subject: Update contracts to 34033e690fc5b1c194114c3aab492036db837bd2
       hash: 635a6aa09069e66e40baf526fbee5f886def69d4
       body: Update contracts
