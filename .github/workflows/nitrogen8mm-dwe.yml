@@ -61,3 +61,13 @@ jobs:
       deploy-environment: ${{ inputs.deploy-environment || 'balena-cloud.com' }}
       # Allow overriding the meta-balena ref for workflow dispatch events
       meta-balena-ref: ${{ inputs.meta-balena-ref || '' }}
+      # Disable finalize-on-push until we have automated HUP tests for DT's needing the non-default image
+      finalize-on-push-if-tests-passed: false
+      # Disable HUP suite for now - as it won't work without leviathan changes
+      test_matrix: >
+        {
+          "test_suite": ["os","cloud"],
+          "environment": ["balena-cloud.com"],
+          "runs_on": [["self-hosted"]],
+          "test_image": ["balena-flasher.img"],
+        }
