@@ -1,4 +1,35 @@
 - commits:
+    - subject: Update layers/meta-balena to 538b193865ffd18d7a2becce76cccc962945813d
+      hash: 181d16a2095cecde64492f7cd57a4cc9ef746de3
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 538b193865ffd18d7a2becce76cccc962945813d
+        changelog-entry: Update layers/meta-balena to 538b193865ffd18d7a2becce76cccc962945813d
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "balena-unique-key: Fix dependency on /home/root/.rnd mount point"
+              hash: fa7215bbef396dfe75f7ebd9ab6b1b5d568fe47a
+              body: >
+                We have changed the mount units to service units a while back
+                but forgot to update a
+
+                depending service to use the new service unit instead of the
+                older mount point unit.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.5.9
+          title: ""
+          date: 2025-04-03T03:23:17.919Z
+  version: 6.5.9
+  title: ""
+  date: 2025-04-05T01:27:30.244Z
+- commits:
     - subject: Update balena-yocto-scripts to 17e117065455f20d843ff6989e9e28d1f16fec83
       hash: a999a7aa4257f7dae06c6c04ca91b8a0906e8638
       body: Update balena-yocto-scripts
