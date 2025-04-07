@@ -1,4 +1,20 @@
 - commits:
+    - subject: Allow overriding default test image
+      hash: 11de37c1b4a44370844a3ad986a567cc68dbcddf
+      body: >
+        This enables using the flasher image in testing, while still deploying
+        the non flasher
+      footer:
+        Changelog-entry: Allow overriding default test image
+        changelog-entry: Allow overriding default test image
+        Signed-off-by: Ryan Cooke <ryan@balena.io>
+        signed-off-by: Ryan Cooke <ryan@balena.io>
+      author: Ryan Cooke
+      nested: []
+  version: 6.5.9+rev2
+  title: ""
+  date: 2025-04-07T08:38:28.276Z
+- commits:
     - subject: Update layers/poky to d70d287a77d5026b698ac237ab865b2dafd36bb8
       hash: 4e3f5d7aa96a57bc64115592cb202fb5c7a73bb2
       body: Update layers/poky

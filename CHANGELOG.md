@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.5.9+rev2
+## (2025-04-07)
+
+* Allow overriding default test image [Ryan Cooke]
+
 # v6.5.9+rev1
 ## (2025-04-05)
 
