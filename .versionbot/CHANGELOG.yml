@@ -1,4 +1,77 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 8a606870dbc3193810c496442a06c1fca8122ab4
+      hash: a35864213a9a6aeae124670bd637878fa8c45b55
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 8a606870dbc3193810c496442a06c1fca8122ab4
+        changelog-entry: Update balena-yocto-scripts to 8a606870dbc3193810c496442a06c1fca8122ab4
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.25.13
+              hash: 2db786c0505371d9ce89e9c888f1a6803f848b64
+              body: |
+                Update aws/aws-cli from 2.25.12 to 2.25.13
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.71
+          title: ""
+          date: 2025-04-09T00:22:57.344Z
+        - commits:
+            - subject: Update balena-os/leviathan action to v2.31.103
+              hash: e71461851258381041f021d36a9366bbbcca14a3
+              body: |
+                Update balena-os/leviathan from 2.31.101 to 2.31.103
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.70
+          title: ""
+          date: 2025-04-08T20:08:43.454Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.25.12
+              hash: 0c8084e0c0c90c8dd5de678740e4e730457f9660
+              body: |
+                Update aws/aws-cli from 2.25.11 to 2.25.12
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.69
+          title: ""
+          date: 2025-04-08T12:04:47.975Z
+        - commits:
+            - subject: "build/barys: Fix builds for older Poky variants"
+              hash: 0bcdad7ea22ce796b80891824783b288b345fd2e
+              body: >
+                Commit 8d9f26fb switched to using the wildcard * char inside
+                quotes,
+
+                which makes ls fail to find the intended directory and thus all
+                builds
+
+                for older Poky revisions fail. We can fix this by removing the
+                quotes.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: balena-yocto-scripts-1.31.68
+          title: ""
+          date: 2025-04-08T07:25:00.234Z
+  version: 6.5.12+rev1
+  title: ""
+  date: 2025-04-09T06:45:13.159Z
+- commits:
     - subject: Update layers/meta-balena to 3ae8a7468efe9fef34974d49a028ce041dd8f0d6
       hash: 8469e1931ec7ac5708925364dcfb010de81b2163
       body: Update layers/meta-balena
