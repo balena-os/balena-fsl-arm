@@ -1,4 +1,120 @@
 - commits:
+    - subject: Update layers/meta-balena to 2b4c0d2d128a36ad2591babc6c2589530118b86b
+      hash: 81dd9848912c80ce9d72f1c78ac7f764f68e811d
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 2b4c0d2d128a36ad2591babc6c2589530118b86b
+        changelog-entry: Update layers/meta-balena to 2b4c0d2d128a36ad2591babc6c2589530118b86b
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "os-helpers-tpm2: Always use password protection for TPM NVRAM writes"
+              hash: e91e64315c06327d4592ad4c9d72658ae88c4fba
+              body: >
+                At this moment tpm_nvram_store_passphrase checks whether the
+                expected
+
+                policy is currently met or not, and acts differently in each
+                case.
+
+                If the policy doesn't match, the TPM write is protected by a
+                one-time
+
+                password that is lost when the function exits.
+
+                If the policy matches, it will be used to protect the write
+                directly.
+
+                The latter seems to be broken at least in some scenarios
+                (retrying
+
+                HUP after a rollback).
+
+
+                This patch removes the special-casing and makes
+
+                tpm_nvram_store_passphrase always use the password protection.
+                While
+
+                using the current PCR states directly is a nice optimization,
+                always
+
+                using the password is more universal and makes the code simpler.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.5.19
+          title: ""
+          date: 2025-04-17T08:41:50.848Z
+        - commits:
+            - subject: "hostapp-update-hooks: make rollback possible when migrating to TPM
+                NVRAM"
+              hash: ce2a7d309a5637dc8f5f17d1106fc925f00a898e
+              body: >
+                At this moment migrating from passphrase encrypted in the EFI
+                partition
+
+                to passphrase stored in TPM NVRAM is a one way operation.
+
+                The signed-update HUP hook will move the passphrase to TPM NVRAM
+
+                and protect it with a new policy, but doesn't update the
+                encrypted
+
+                file in the EFI partition. That way, if the new OS doesn't work
+
+                and triggers a rollback, the passphrase can't be decrypted when
+                running
+
+                the "old" hooks and rollback fails, leaving the system
+
+                in an inconsistent state.
+
+
+                This patch makes the signed-update hook re-encrypt the
+                passphrase
+
+                and update it in the boot partition one last time during the
+                migration.
+
+                * If HUP goes through, the encrypted file is removed from the
+                boot
+                  partition and the system sticks with NVRAM only.
+                * If HUP fails, the system can rollback and the "old" OS version
+                  is able to decrypt the passphrase without involving NVRAM.
+
+                It's worth noting that both the RSA key and the NVRAM slot are
+                protected
+
+                by the same policy, so the "old" OS will be allowed to access
+
+                the passphrase in the TPM NVRAM, even though there is no OS
+                tooling
+
+                that would know how to do that. And the "new" OS will be allowed
+
+                to decrypt the passphrase in the EFI partition until it's
+                removed
+
+                by rollback-health, even though it will prefer to use NVRAM.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.5.18
+          title: ""
+          date: 2025-04-15T08:48:17.007Z
+  version: 6.5.19
+  title: ""
+  date: 2025-04-17T12:44:32.543Z
+- commits:
     - subject: Update balena-yocto-scripts to 4ebe790eed9dbde36944496ee1ef14ba6bc4c5be
       hash: e9d8e51e7ec505ddfb08098ba0d7d085bada9e3b
       body: Update balena-yocto-scripts

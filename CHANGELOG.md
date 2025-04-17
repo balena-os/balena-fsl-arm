@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v6.5.19
+## (2025-04-17)
+
+
+<details>
+<summary> Update layers/meta-balena to 2b4c0d2d128a36ad2591babc6c2589530118b86b [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.19
+> ### (2025-04-17)
+> 
+> * os-helpers-tpm2: Always use password protection for TPM NVRAM writes [Michal Toman]
+> 
+> ## meta-balena-6.5.18
+> ### (2025-04-15)
+> 
+> * hostapp-update-hooks: make rollback possible when migrating to TPM NVRAM [Michal Toman]
+> 
+
+</details>
+
 # v6.5.17+rev3
 ## (2025-04-15)
 
