@@ -16,8 +16,13 @@ HOSTAPP_HOOKS:append:nitrogen6xq2g = " \
 "
 
 HOSTAPP_HOOKS:append:nitrogen8mm = " \
+    98-update-imx-boot \
     99-resin-uboot \
     99-flash-bootloader-nitrogen8mm \
+"
+
+HOSTAPP_HOOKS:remove:nitrogen8mm-dwe = " \
+    98-update-imx-boot \
 "
 
 HOSTAPP_HOOKS:append:imx8mm-lpddr4-evk = " \
