@@ -35,8 +35,8 @@ index 92f3cbae46..63d49fb479 100644
 +fi;
 +
 +setenv resin_dev_index ${devnum};
-+setenv resin_kernel_load_addr ${a_zImage}
-+
++setenv resin_kernel_load_addr ${a_zImage}; if env exists balena_device_fdt_addr_var; then echo "Fdt address already set ${balena_device_fdt_addr_var}"; else setenv balena_device_fdt_addr_var ${a_fdt} ; fi;
++if env exists balena_device_kernel_addr_var; then echo "Kernel address already set ${balena_device_kernel_addr_var}"; else setenv balena_device_kernel_addr_var ${a_zImage} ; fi;
 +if env exists resin_set_kernel_root; then
 +    run resin_set_kernel_root;
 +    run set_os_cmdline;
@@ -53,9 +53,9 @@ index 92f3cbae46..63d49fb479 100644
 -	fdt addr ${a_fdt}
 +if env exists resin_set_kernel_root; then
 +        if load ${devtype} ${devnum}:${resin_root_part} ${a_fdt} boot/${fdt_file} ; then
-+                fdt addr ${a_fdt}
++                if env exists balena_fdt_load_crc_save; then run balena_fdt_load_crc_save; fi; fdt addr ${a_fdt};
 +        elif load ${devtype} ${devnum}:${resin_boot_part} ${a_fdt} ${fdt_file} ; then
-+                echo "Did not find dtb in root filesystem, loaded it from boot partition"
++                if env exists balena_fdt_load_crc_save; then run balena_fdt_load_crc_save; fi; echo "Did not find dtb in root filesystem, loaded it from boot partition";
 +                fdt addr ${a_fdt}
 +        else
 +                echo "!!!! Error loading Balena ${prefix}${fdt_file}";
@@ -101,7 +101,7 @@ index 92f3cbae46..63d49fb479 100644
 +    setenv bootargs "${bootargs} ${os_cmdline} "
 +
 +    if load ${devtype} ${resin_dev_index}:${resin_root_part} ${a_zImage} boot/${kernelimage} ; then
-+        ${bootcommand} ${a_zImage} - ${a_fdt}
++        if env exists balena_kernel_load_crc_save; then run balena_kernel_load_crc_save; run balena_fdt_load_crc_check; run balena_kernel_load_crc_check; fi; ${bootcommand} ${a_zImage} - ${a_fdt}
 +    fi;
 +
 +    echo "Error loading Balena kernel image"
