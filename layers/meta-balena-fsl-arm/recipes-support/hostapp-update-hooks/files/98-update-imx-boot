@@ -1,0 +1,24 @@
+#!/bin/sh
+
+#
+# Script used for updating imx-boot on nitrogen8mm rev2
+# to fix this older revision not rebooting with older revisions.
+# Rev3.0 boards do not exhibit this issue, neither with older
+# OS releases nor with newer ones.
+#
+
+set -o errexit
+
+. /usr/libexec/os-helpers-fs
+
+DURING_UPDATE=${DURING_UPDATE:-0}
+
+if [ "$DURING_UPDATE" = "1" ]; then
+    if cat $(find /mnt/sysroot/active/ | grep os-release | grep etc) | grep META_BALENA_VERSION | grep -q "2.114.0" ; then
+        info "Updating from balenaOS v2.114.0"
+        info "Replacing existing u-boot with newer one to fix reboot issue on rev2.0 boards"
+        inactive_imx_boot=$(find /mnt/sysroot/active/ | grep "imx-boot")
+        cp /resin-boot/imx-boot ${inactive_imx_boot}
+        info "Replaced ${inactive_imx_boot}"
+    fi
+fi

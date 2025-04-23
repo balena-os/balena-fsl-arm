@@ -1,6 +1,6 @@
-rom 133afb15e0c4b0fd1c6e194b8193ff369042c321 Mon Sep 17 00:00:00 2001
+From 7d13de26c2f4a31eceb3a4200ee2d101e69a76fe Mon Sep 17 00:00:00 2001
 From: Alexandru Costache <alexandru@balena.io>
-Date: Wed, 14 Apr 2021 15:13:08 +0200
+Date: Mon, 21 Apr 2025 12:17:39 +0000
 Subject: [PATCH] bootscript-yocto.txt: Allow flashing, integrate balenaOS
 
 Integrate boot script with BalenaOS and allow flashing
@@ -13,19 +13,19 @@ Signed-off-by: Alexandru Costache <alexandru@balena.io>
  1 file changed, 51 insertions(+), 8 deletions(-)
 
 diff --git a/board/boundary/bootscripts/bootscript-yocto.txt b/board/boundary/bootscripts/bootscript-yocto.txt
-index 92f3cbae46..63d49fb479 100644
+index 622ff48926a..4e9dcadd9e7 100644
 --- a/board/boundary/bootscripts/bootscript-yocto.txt
 +++ b/board/boundary/bootscripts/bootscript-yocto.txt
-@@ -26,7 +26,7 @@ fi
+@@ -25,7 +25,7 @@ fi
  
  setexpr a_script  ${a_base} + 0x00800000
  setexpr a_zImage  ${a_base} + 0x00800000
 -setexpr a_fdt     ${a_base} + 0x03000000
-+setexpr a_fdt     ${a_base} + 0x03300000
++setexpr a_fdt     ${a_base} + 0x03C00000
  setexpr a_initrd  ${a_base} + 0x03100000
  setexpr a_reset_cause_marker ${a_base} + 0x80
  setexpr a_reset_cause	     ${a_base} + 0x84
-@@ -72,6 +72,19 @@ if itest.s x${distro_bootpart} == x ; then
+@@ -100,6 +100,19 @@ if itest.s x${distro_bootpart} == x ; then
  	distro_bootpart=1
  fi
  
@@ -35,8 +35,8 @@ index 92f3cbae46..63d49fb479 100644
 +fi;
 +
 +setenv resin_dev_index ${devnum};
-+setenv resin_kernel_load_addr ${a_zImage}
-+
++setenv resin_kernel_load_addr ${a_zImage}; if env exists balena_device_fdt_addr_var; then echo "Fdt address already set ${balena_device_fdt_addr_var}"; else setenv balena_device_fdt_addr_var a_fdt ; fi;
++if env exists balena_device_kernel_addr_var; then echo "Kernel address already set ${balena_device_kernel_addr_var}"; else setenv balena_device_kernel_addr_var a_zImage ; fi;
 +if env exists resin_set_kernel_root; then
 +    run resin_set_kernel_root;
 +    run set_os_cmdline;
@@ -45,7 +45,7 @@ index 92f3cbae46..63d49fb479 100644
  if load ${devtype} ${devnum}:${distro_bootpart} ${a_script} uEnv.txt ; then
      env import -t ${a_script} ${filesize}
  fi
-@@ -87,12 +100,24 @@ if itest.s x${consoleblank} == x ; then
+@@ -115,12 +128,24 @@ if itest.s x${consoleblank} == x ; then
  fi
  setenv bootargs ${bootargs} vmalloc=${vmalloc} consoleblank=${consoleblank} rootwait fixrtc cpu=${imx_cpu} board=${board} uboot_release=${uboot_release}
  
@@ -53,9 +53,9 @@ index 92f3cbae46..63d49fb479 100644
 -	fdt addr ${a_fdt}
 +if env exists resin_set_kernel_root; then
 +        if load ${devtype} ${devnum}:${resin_root_part} ${a_fdt} boot/${fdt_file} ; then
-+                fdt addr ${a_fdt}
++                echo "Loaded ${fdt_file} from root partition ${resin_root_part}"; fdt addr ${a_fdt};
 +        elif load ${devtype} ${devnum}:${resin_boot_part} ${a_fdt} ${fdt_file} ; then
-+                echo "Did not find dtb in root filesystem, loaded it from boot partition"
++                echo "Did not find dtb in root filesystem, loaded it from boot partition";
 +                fdt addr ${a_fdt}
 +        else
 +                echo "!!!! Error loading Balena ${prefix}${fdt_file}";
@@ -75,7 +75,7 @@ index 92f3cbae46..63d49fb479 100644
  
  fdt resize 4096
  if itest.s "x" != "x${cmd_board}" ; then
-@@ -132,7 +157,11 @@ if test "sata" = "${devtype}" ; then
+@@ -160,7 +185,11 @@ if test "sata" = "${devtype}" ; then
  elif test "usb" = "${devtype}" ; then
  	setenv bootargs "${bootargs} root=/dev/sda${bpart}" ;
  else
@@ -88,7 +88,7 @@ index 92f3cbae46..63d49fb479 100644
  fi
  
  if itest.s "x" != "x${disable_msi}" ; then
-@@ -177,7 +206,21 @@ if itest.s "x" != "x${show_env}" ; then
+@@ -205,7 +234,21 @@ if itest.s "x" != "x${show_env}" ; then
  	printenv
  fi
  
@@ -99,9 +99,9 @@ index 92f3cbae46..63d49fb479 100644
 +
 +if env exists resin_set_kernel_root; then
 +    setenv bootargs "${bootargs} ${os_cmdline} "
-+
++    run balena_fdt_load_crc_save;
 +    if load ${devtype} ${resin_dev_index}:${resin_root_part} ${a_zImage} boot/${kernelimage} ; then
-+        ${bootcommand} ${a_zImage} - ${a_fdt}
++        if env exists balena_kernel_load_crc_save; then run balena_kernel_load_crc_save; run balena_fdt_load_crc_check; run balena_kernel_load_crc_check; fi; ${bootcommand} ${a_zImage} - ${a_fdt}
 +    fi;
 +
 +    echo "Error loading Balena kernel image"
@@ -112,5 +112,5 @@ index 92f3cbae46..63d49fb479 100644
  fi
  echo "Error loading kernel image"
 -- 
-2.37.2
+2.34.1
 
