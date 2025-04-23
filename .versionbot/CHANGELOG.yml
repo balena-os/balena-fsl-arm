@@ -1,4 +1,18 @@
 - commits:
+    - subject: Enable automatic testing for Nitrogen8MM SBC
+      hash: 9d82897a61b6857d3680b2de54be667260d9d309
+      body: ""
+      footer:
+        Changelog-entry: Enable automatic testing for Nitrogen8MM SBC
+        changelog-entry: Enable automatic testing for Nitrogen8MM SBC
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 6.5.19+rev2
+  title: ""
+  date: 2025-04-23T11:58:06.947Z
+- commits:
     - subject: Update balena-yocto-scripts to 4b8835af9cd78184a0460b45b586037a661251b8
       hash: 5b403afffb3ca6238afddd4e18e3601af824e7cd
       body: Update balena-yocto-scripts

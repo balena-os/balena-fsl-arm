@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.5.19+rev2
+## (2025-04-23)
+
+* Enable automatic testing for Nitrogen8MM SBC [Alexandru Costache]
+
 # v6.5.19+rev1
 ## (2025-04-22)
 
