@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.5.24+rev3
+## (2025-05-15)
+
+* nitrogen8mm-dwe: Add u-boot-script CRC32 checks [Alexandru Costache]
+
 # v6.5.24+rev2
 ## (2025-04-29)
 
