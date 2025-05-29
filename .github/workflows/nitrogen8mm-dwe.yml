@@ -46,7 +46,7 @@ permissions:
 jobs:
   yocto:
     name: Yocto
-    uses: balena-os/balena-yocto-scripts/.github/workflows/yocto-build-deploy.yml@474c4d804d8278dd10d4506278a8d656e53775fe
+    uses: balena-os/balena-yocto-scripts/.github/workflows/yocto-build-deploy.yml@ryan/image-var
     # Prevent duplicate workflow executions for pull_request (PR) and pull_request_target (PRT) events.
     # Both PR and PRT will be triggered for the same pull request, whether it is internal or from a fork.
     # This condition will prevent the workflow from running twice for the same pull request while
@@ -60,13 +60,13 @@ jobs:
       # Default to balena-staging.com for workflow dispatch, but balena-cloud.com for other events
       deploy-environment: ${{ inputs.deploy-environment || 'balena-cloud.com' }}
       # Allow overriding the meta-balena ref for workflow dispatch events
-      meta-balena-ref: ${{ inputs.meta-balena-ref || '' }}
+      meta-balena-ref: 'ryan/dwe-test'
       # Disable finalize-on-push until we have automated HUP tests for DT's needing the non-default image
       finalize-on-push-if-tests-passed: false
       # Disable HUP suite for now - as it won't work without leviathan changes
       test_matrix: >
         {
-          "test_suite": ["os","cloud"],
+          "test_suite": ["hup"],
           "environment": ["balena-cloud.com"],
           "runs_on": [["self-hosted"]],
           "test_image": ["balena-flasher.img"],
