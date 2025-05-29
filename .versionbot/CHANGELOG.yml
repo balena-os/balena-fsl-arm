@@ -1,4 +1,18 @@
 - commits:
+    - subject: "layers/meta-balena: update to v6.5.25"
+      hash: 0d9e317fab9d4b2184762f883c57d37b4a3f244d
+      body: ""
+      footer:
+        Changelog-entry: "layers/meta-balena: update to v6.5.25"
+        changelog-entry: "layers/meta-balena: update to v6.5.25"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 6.5.25
+  title: ""
+  date: 2025-05-29T08:33:15.070Z
+- commits:
     - subject: Update balena-yocto-scripts to 474c4d804d8278dd10d4506278a8d656e53775fe
       hash: 8fd564a9ef36e4773bdc4c07361d57560b49efbc
       body: Update balena-yocto-scripts
