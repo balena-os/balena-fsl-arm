@@ -12,9 +12,9 @@ SRC_URI += " \
 "
 
 FILES:${PN} = " \
-    /lib/systemd/nitrogen8mm-bluetooth.sh \
-    /lib/systemd/system/nitrogen8mm-bluetooth.service \
-    /lib/systemd/system/nitrogen8mm-hci.service \
+    ${nonarch_base_libdir}/systemd/nitrogen8mm-bluetooth.sh \
+    ${nonarch_base_libdir}/systemd/system/nitrogen8mm-bluetooth.service \
+    ${nonarch_base_libdir}/systemd/system/nitrogen8mm-hci.service \
 "
 
 SYSTEMD_SERVICE:${PN} = "nitrogen8mm-bluetooth.service nitrogen8mm-hci.service"
