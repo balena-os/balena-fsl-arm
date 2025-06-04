@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.5.30
+## (2025-06-04)
+
+* layers/meta-balena: Update to v6.5.30 [Alexandru Costache]
+
 # v6.5.25+rev1
 ## (2025-05-30)
 
