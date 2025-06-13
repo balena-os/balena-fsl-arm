@@ -1,4 +1,18 @@
 - commits:
+    - subject: "layers/meta-balena: Update to v6.5.37"
+      hash: 8d128d68de7ea91526bd8e8770a606cfc35e9585
+      body: ""
+      footer:
+        Changelog-entry: "layers/meta-balena: Update to v6.5.37"
+        changelog-entry: "layers/meta-balena: Update to v6.5.37"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 6.5.37
+  title: ""
+  date: 2025-06-13T08:21:33.855Z
+- commits:
     - subject: "layers/meta-balena: Update to v6.5.30"
       hash: f27510285e4debbb5755424676260d51a9469a88
       body: ""
