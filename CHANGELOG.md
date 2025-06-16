@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.5.37+rev2
+## (2025-06-16)
+
+* Fix lp55231 LED driver probe for emgw3 [Florin Sarbu]
+
 # v6.5.37+rev1
 ## (2025-06-14)
 
