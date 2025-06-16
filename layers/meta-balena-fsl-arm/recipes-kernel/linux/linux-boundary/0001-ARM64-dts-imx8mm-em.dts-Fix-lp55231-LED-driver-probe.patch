@@ -1,0 +1,104 @@
+From 63735859139ef9ab22ad1d879aded54482b0e382 Mon Sep 17 00:00:00 2001
+From: Florin Sarbu <florin@balena.io>
+Date: Mon, 16 Jun 2025 09:43:32 +0000
+Subject: [PATCH] ARM64: dts: imx8mm-em.dts: Fix lp55231 LED driver probe
+
+With the update to kernel 5.15.71 we encounter the following error:
+
+lp5523x: probe of 3-0034 failed with error -22
+
+We backport https://lore.kernel.org/all/20210818070209.1540451-1-michal.vokac@ysoft.com/ to fix this for
+the hardware based on imx8mm-em.dts
+
+Signed-off-by: Florin Sarbu <florin@balena.io>
+---
+ arch/arm64/boot/dts/freescale/imx8mm-em.dts | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/arch/arm64/boot/dts/freescale/imx8mm-em.dts b/arch/arm64/boot/dts/freescale/imx8mm-em.dts
+index fd556682bd6e..211f62f1f4ad 100644
+--- a/arch/arm64/boot/dts/freescale/imx8mm-em.dts
++++ b/arch/arm64/boot/dts/freescale/imx8mm-em.dts
+@@ -10,6 +10,7 @@
+ #define IMX8MM
+ 
+ #include "imx8mm.dtsi"
++#include <dt-bindings/leds/common.h>
+ /* panel-ltk080a60a004t.dtsi uses our standard irq pin for enable */
+ #define GP_MIPI_IRQ(a)		<&gpio1 1 a>
+ #define PD_MIPI_IRQ(a)	MX8MM_IOMUXC_GPIO1_IO01_GPIO1_IO1	a
+@@ -848,6 +849,7 @@ led@0 {
+ 			led-cur = /bits/ 8 <0x2f>;
+ 			max-cur = /bits/ 8 <0xff>;
+ 			reg = <0x0>;
++			color = <LED_COLOR_ID_BLUE>;
+ 		};
+ 
+ 		led@1 {
+@@ -855,6 +857,7 @@ led@1 {
+ 			led-cur = /bits/ 8 <0x2f>;
+ 			max-cur = /bits/ 8 <0xff>;
+ 			reg = <0x1>;
++			color = <LED_COLOR_ID_RED>;
+ 		};
+ 
+ 		led@2 {
+@@ -862,6 +865,7 @@ led@2 {
+ 			led-cur = /bits/ 8 <0x2f>;
+ 			max-cur = /bits/ 8 <0xff>;
+ 			reg = <0x2>;
++			color = <LED_COLOR_ID_GREEN>;
+ 		};
+ 
+ 		led@3 {
+@@ -869,6 +873,7 @@ led@3 {
+ 			led-cur = /bits/ 8 <0x2f>;
+ 			max-cur = /bits/ 8 <0xff>;
+ 			reg = <0x3>;
++			color = <LED_COLOR_ID_BLUE>;
+ 		};
+ 
+ 		led@4 {
+@@ -876,6 +881,7 @@ led@4 {
+ 			led-cur = /bits/ 8 <0x2f>;
+ 			max-cur = /bits/ 8 <0xff>;
+ 			reg = <0x4>;
++			color = <LED_COLOR_ID_RED>;
+ 		};
+ 
+ 		led@5 {
+@@ -883,6 +889,7 @@ led@5 {
+ 			led-cur = /bits/ 8 <0x2f>;
+ 			max-cur = /bits/ 8 <0xff>;
+ 			reg = <0x5>;
++			color = <LED_COLOR_ID_GREEN>;
+ 		};
+ 
+ 		led@6 {
+@@ -890,6 +897,7 @@ led@6 {
+ 			led-cur = /bits/ 8 <0x2f>;
+ 			max-cur = /bits/ 8 <0xff>;
+ 			reg = <0x6>;
++			color = <LED_COLOR_ID_BLUE>;
+ 		};
+ 
+ 		led@7 {
+@@ -897,6 +905,7 @@ led@7 {
+ 			led-cur = /bits/ 8 <0x2f>;
+ 			max-cur = /bits/ 8 <0xff>;
+ 			reg = <0x7>;
++			color = <LED_COLOR_ID_RED>;
+ 		};
+ 
+ 		led@8 {
+@@ -904,6 +913,7 @@ led@8 {
+ 			led-cur = /bits/ 8 <0x2f>;
+ 			max-cur = /bits/ 8 <0xff>;
+ 			reg = <0x8>;
++			color = <LED_COLOR_ID_GREEN>;
+ 		};
+ 	};
+ };
+-- 
+2.34.1
+
