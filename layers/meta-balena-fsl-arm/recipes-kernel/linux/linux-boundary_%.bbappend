@@ -10,6 +10,7 @@ SCMVERSION="n"
 
 SRC_URI:append = " \
 	file://imx8mm-sbc-add-no-cqe-for-eMMC.patch \
+	file://0001-ARM64-dts-imx8mm-em.dts-Fix-lp55231-LED-driver-probe.patch \
 "
 
 BALENA_CONFIGS:append = " optimize-size disable_apparmor"
