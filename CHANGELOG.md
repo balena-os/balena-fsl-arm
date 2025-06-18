@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.5.38+rev1
+## (2025-06-18)
+
+* Specify in the coffee file what is the flasher image for emgw3 [Florin Sarbu]
+
 # v6.5.38
 ## (2025-06-16)
 

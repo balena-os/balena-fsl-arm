@@ -1,4 +1,25 @@
 - commits:
+    - subject: Specify in the coffee file what is the flasher image for emgw3
+      hash: 8745f7e5395f54433bfb09cdec634550fdeabade
+      body: >
+        For automated testing we need to use the flasher image to provision the
+        board.
+
+        The customer will keep using the internal image for provisioning, which
+        is
+
+        the image that will continue to be offered in the dashboard.
+      footer:
+        Changelog-entry: Specify in the coffee file what is the flasher image for emgw3
+        changelog-entry: Specify in the coffee file what is the flasher image for emgw3
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 6.5.38+rev1
+  title: ""
+  date: 2025-06-18T11:25:00.413Z
+- commits:
     - subject: Update layers/meta-balena to a9448144a03697610d9906fb6d689e64ca5a681a
       hash: 8f1793d9230b7a442d1f6d61ace0bca913ec8151
       body: Update layers/meta-balena
