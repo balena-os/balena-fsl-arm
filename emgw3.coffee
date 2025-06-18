@@ -36,10 +36,11 @@ module.exports =
 
 	yocto:
 		machine: 'emgw3'
-		image: 'balena-image'
+		image: 'balena-image-flasher'
 		fstype: 'balenaos-img'
 		version: 'yocto-kirkstone'
 		deployArtifact: 'balena-image-emgw3.balenaos-img'
+		deployFlasherArtifact: 'balena-image-flasher-emgw3.balenaos-img'
 		compressed: true
 
 	options: [ networkOptions.group ]
