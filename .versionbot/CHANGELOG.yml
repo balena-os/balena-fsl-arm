@@ -1,4 +1,91 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 81e74066e57a1994324bc3b4dc8e3e1390613909
+      hash: 8719276025fc7d472216243f0e69033ba77e9c0e
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 81e74066e57a1994324bc3b4dc8e3e1390613909
+        changelog-entry: Update balena-yocto-scripts to 81e74066e57a1994324bc3b4dc8e3e1390613909
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.49
+              hash: aebc370b9ee1e741a9901c9af3da8f37eaf229c6
+              body: |
+                Update aws/aws-cli from 2.27.47 to 2.27.49
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.35.4
+          title: ""
+          date: 2025-07-03T22:38:08.681Z
+        - commits:
+            - subject: Update Pin balena-io/upload-balena-release-asset action to ad48340
+              hash: d982b942ed18465825eb06dce6060078a6b7b500
+              body: |
+                Update balena-io/upload-balena-release-asset
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.35.3
+          title: ""
+          date: 2025-07-03T05:53:43.594Z
+        - commits:
+            - subject: Update balena-os/leviathan action to v2.33.8
+              hash: 308fd6665af01e3f2dd3412578da5ad98b21e716
+              body: |
+                Update balena-os/leviathan from 2.33.7 to 2.33.8
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.35.2
+          title: ""
+          date: 2025-07-03T01:03:49.115Z
+        - commits:
+            - subject: "workflows: yocto-build-deploy: pass RSA key if available"
+              hash: 01e03fb1543d9f78c320d783f842eaa805908ba6
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "workflows: yocto-build-deploy: deploy RPI locking artifacts as assets
+                if available"
+              hash: 32e0a048ec36eca7da143cc457dc35a60a5fc648
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "balena-deploy: compress RPI secure boot locking artifacts"
+              hash: 1fbeda7cbd6fa3b83779b127b19026b7f4837257
+              body: |
+                These allows to upload them as a single release asset artifact.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.35.1
+          title: ""
+          date: 2025-07-02T19:27:05.989Z
+  version: 6.5.38+rev5
+  title: ""
+  date: 2025-07-04T03:17:31.737Z
+- commits:
     - subject: Update layers/poky to 78c9cb3eaf071932567835742608404d5ce23cc4
       hash: 3c6dea1bfe61417bcff5129d8a21ab5d945040f0
       body: Update layers/poky
