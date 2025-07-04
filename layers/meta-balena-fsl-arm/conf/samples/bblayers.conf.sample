@@ -20,4 +20,5 @@ BBLAYERS ?= " \
     ${TOPDIR}/../layers/meta-freescale \
     ${TOPDIR}/../layers/meta-freescale-3rdparty \
     ${TOPDIR}/../layers/meta-boundary \
-"
+    ${TOPDIR}/../layers/meta-cyclonedx  \
+    "
