@@ -1,4 +1,18 @@
 - commits:
+    - subject: "layers/meta-balena: Update to v6.5.43"
+      hash: b3ef0947c10d9dc75064f775b026399cbe8e70ed
+      body: ""
+      footer:
+        Changelog-entry: "layers/meta-balena: Update to v6.5.43"
+        changelog-entry: "layers/meta-balena: Update to v6.5.43"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 6.5.43
+  title: ""
+  date: 2025-07-09T09:30:32.985Z
+- commits:
     - subject: Update layers/meta-openembedded to
         058249f9a836e3aa866436aa6e37d6d48ff768fd
       hash: 9e402b463293365e06cafe8a119283c47b539074
