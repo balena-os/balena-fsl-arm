@@ -1,4 +1,31 @@
 - commits:
+    - subject: Update layers/meta-balena to 4e67673a7d7d67b5fc4b6d87065b900b00d72341
+      hash: 22a647db552eb57db97682215893f9b33033ef9f
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 4e67673a7d7d67b5fc4b6d87065b900b00d72341
+        changelog-entry: Update layers/meta-balena to 4e67673a7d7d67b5fc4b6d87065b900b00d72341
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "meta-balena-YOCTO_RELEASE: update bmap-tools branch name"
+              hash: ca3e8df431c811088982050c5053d4fb5ca46499
+              body: |
+                In Nov 2024 bmap-tools  master branch was renamed to main
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+          version: meta-balena-6.5.44
+          title: ""
+          date: 2025-07-09T16:53:56.590Z
+  version: 6.5.44
+  title: ""
+  date: 2025-07-15T01:42:30.850Z
+- commits:
     - subject: Generate SBOM and VEX (cycloneDX)
       hash: 6b31c4004197a7000d5403d8d963426953cec77c
       body: >
