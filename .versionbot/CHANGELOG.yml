@@ -1,4 +1,48 @@
 - commits:
+    - subject: Update layers/meta-balena to 5f7be9b1ce225e8dba13c08bb862cacf376e9424
+      hash: 6b24137f00161d812cc78cac13ecd68419f7d1f4
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 5f7be9b1ce225e8dba13c08bb862cacf376e9424
+        changelog-entry: Update layers/meta-balena to 5f7be9b1ce225e8dba13c08bb862cacf376e9424
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "grub-conf: Don't sign non-luks grub.cfg"
+              hash: 000f38c9384557ba7ed67e0fa2444638a4f0d3e4
+              body: >
+                At this moment we sign 3 artifacts:
+
+                * grub.cfg_external - for flasher (secure boot or not)
+
+                * grub.cfg_internal_luks - for secure boot + LUKS
+
+                * grub.cfg_internal - for regular systems
+
+
+                We don't verify any signatures on systems with secure boot
+                disabled
+
+                so there is no need to sign grub.cfg_internal, on the contrary,
+                having
+
+                it signed only makes the file loadable on secure boot systems,
+
+                which is undesirable.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.5.45
+          title: ""
+          date: 2025-07-23T23:20:31.526Z
+  version: 6.5.45
+  title: ""
+  date: 2025-07-24T04:26:02.338Z
+- commits:
     - subject: Update balena-yocto-scripts to 7b93474962f3c9ebd516402869077a4aad560834
       hash: ed1d0e814c41578f13843aba8ad68e5ecaf309c6
       body: Update balena-yocto-scripts
