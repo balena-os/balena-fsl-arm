@@ -1,4 +1,18 @@
 - commits:
+    - subject: Enable autokit tests for emgw3
+      hash: ee23c48f7d39331f849c545859423652cba6bef0
+      body: ""
+      footer:
+        Changelog-entry: Enable autokit tests for emgw3
+        changelog-entry: Enable autokit tests for emgw3
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 6.5.48+rev2
+  title: ""
+  date: 2025-08-09T19:57:26.285Z
+- commits:
     - subject: Update balena-yocto-scripts to b3ac171bd72f031b9701c875650bf6bec908414d
       hash: 1b3e827f19791e44b60656dbd943a5e3323da0f0
       body: Update balena-yocto-scripts

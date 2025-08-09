@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.5.48+rev2
+## (2025-08-09)
+
+* Enable autokit tests for emgw3 [Florin Sarbu]
+
 # v6.5.48+rev1
 ## (2025-08-08)
 
