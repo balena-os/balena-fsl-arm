@@ -146,6 +146,7 @@ IMAGE_INSTALL:append:nitrogen8mm = " \
 IMAGE_INSTALL:append:emgw3 = " \
 	silex-uart \
 	udev-rules-bt \
+	gecko-uart \
 "
 
 IMAGE_INSTALL:append:imx8mm-lpddr4-evk = " \
