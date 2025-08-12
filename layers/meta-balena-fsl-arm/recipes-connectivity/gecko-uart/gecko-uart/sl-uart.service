@@ -1,0 +1,14 @@
+[Unit]
+Description=Attaching SiliconLabs UART to bluetooth
+Requires=bluetooth.target
+After=bluetooth.target silex-uart.service
+ConditionPathExists=/var/lib/bluetooth/firmware/rcp
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /usr/share/gecko-uart/sl-uart.sh start
+ExecStop=/bin/bash  /usr/share/gecko-uart/sl-uart.sh stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
