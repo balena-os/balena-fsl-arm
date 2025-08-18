@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.5.48+rev5
+## (2025-08-18)
+
+* Add systemd service for initializing bluetooth on emgw3 boards with a different bluetooth firmware [Florin Sarbu]
+
 # v6.5.48+rev4
 ## (2025-08-11)
 

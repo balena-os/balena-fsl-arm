@@ -1,4 +1,26 @@
 - commits:
+    - subject: Add systemd service for initializing bluetooth on emgw3 boards with a
+        different bluetooth firmware
+      hash: da111b0bd9537600cc491669a6bfe47ece57af16
+      body: >
+        This systemd service will only run on machines which have a certain file
+        created in /var/lib/bluetooth/firmware/
+
+        This file can be created at fleet level by the application based on the
+        existence of a certain env var for example.
+      footer:
+        Changelog-entry: Add systemd service for initializing bluetooth on emgw3 boards
+          with a different bluetooth firmware
+        changelog-entry: Add systemd service for initializing bluetooth on emgw3 boards
+          with a different bluetooth firmware
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 6.5.48+rev5
+  title: ""
+  date: 2025-08-18T09:19:52.530Z
+- commits:
     - subject: Update layers/meta-openembedded to
         06fc0278f10d630838d703dde707bbf0e2999873
       hash: 448cad0447b8c5593e1c8bef0480b342ed1369ba
