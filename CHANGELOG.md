@@ -1,6 +1,66 @@
 Change log
 -----------
 
+# v6.6.7+rev2
+## (2025-10-10)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 17636b4b32662e606d1670f94b4e869e026499d2 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.38.43
+> ### (2025-10-09)
+> 
+> * Update balena-io/balena-cli to v22.4.10 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.38.42
+> ### (2025-10-08)
+> 
+> * Update aws/aws-cli to v2.31.11 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.38.41
+> ### (2025-10-08)
+> 
+> * Update GitHub Actions [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.38.40
+> ### (2025-10-08)
+> 
+> * Update balena-io/balena-cli to v22.4.9 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.38.39
+> ### (2025-10-08)
+> 
+> * Update balena-io-examples/setup-balena-action action to v0.0.46 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.38.38
+> ### (2025-10-07)
+> 
+> * Update aws/aws-cli to v2.31.10 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.38.37
+> ### (2025-10-07)
+> 
+> * Update aws/aws-cli to v2.30.7 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.38.36
+> ### (2025-10-07)
+> 
+> * Fix check for present test matrix when checking test results [Ryan Cooke]
+> 
+> ## balena-yocto-scripts-1.38.35
+> ### (2025-09-25)
+> 
+> * Update balena-io/balena-cli to v22.4.8 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.38.34
+> ### (2025-09-22)
+> 
+> * Update balena-io/balena-cli to v22.4.7 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.6.7+rev1
 ## (2025-10-08)
 
