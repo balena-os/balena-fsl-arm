@@ -1,6 +1,123 @@
 Change log
 -----------
 
+# v6.10.2
+## (2025-12-13)
+
+
+<details>
+<summary> Update layers/meta-balena to f90bf403b93602fddf32f0cb4081f9b58864cf34 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.10.2
+> ### (2025-12-13)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v17.2.2 [balena-renovate[bot]] </summary>
+> 
+>> ### balena-supervisor-17.2.2
+>> #### (2025-12-11)
+>> 
+>> * Improve issue of very early container logs potentially being dropped [Pagan Gazzard]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.10.1
+> ### (2025-12-11)
+> 
+> * balena-os.inc: Enable firmware compression by default [Michal Toman]
+> 
+> ## meta-balena-6.10.0
+> ### (2025-12-11)
+> 
+> * networkmanager: update to 1.52.0 [Michal Toman]
+> 
+> ## meta-balena-6.9.6
+> ### (2025-12-11)
+> 
+> * renovate.json: Remove custom balena-git package rules [Kyle Harding]
+> 
+> ## meta-balena-6.9.5
+> ### (2025-12-10)
+> 
+> * fix initramfs rootfs script wrong indent [Yann CARDAILLAC]
+> 
+> ## meta-balena-6.9.4
+> ### (2025-12-10)
+> 
+> * Update actions/checkout action to v6 [balena-renovate[bot]]
+> 
+> ## meta-balena-6.9.3
+> ### (2025-12-09)
+> 
+> * Update actions/setup-python digest to 83679a8 [balena-renovate[bot]]
+> 
+> ## meta-balena-6.9.2
+> ### (2025-12-08)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 0545105 [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.36.71
+>> #### (2025-12-08)
+>> 
+>> * Update Lock file maintenance [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.70
+>> #### (2025-12-06)
+>> 
+>> * Update actions/checkout digest to 8e8c483 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.69
+>> #### (2025-12-01)
+>> 
+>> * Update balena-os/leviathan-worker to v2.10.17 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.68
+>> #### (2025-12-01)
+>> 
+>> * Update balena-os/leviathan-worker to v2.10.16 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.67
+>> #### (2025-12-01)
+>> 
+>> * Update balena-os/leviathan-worker to v2.10.15 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.66
+>> #### (2025-12-01)
+>> 
+>> * Update Lock file maintenance [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.65
+>> #### (2025-11-22)
+>> 
+>> * Update actions/checkout action to v6 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.64
+>> #### (2025-11-14)
+>> 
+>> * Update balena-io/balena-cli to v22.5.5 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.63
+>> #### (2025-11-11)
+>> 
+>> * Update balena-io/balena-cli to v22.4.17 [balena-renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.9.1
+> ### (2025-12-08)
+> 
+> * peak: Update to version 8.20.0 [Florin Sarbu]
+> 
+
+</details>
+
 # v6.9.0+rev1
 ## (2025-12-07)
 
