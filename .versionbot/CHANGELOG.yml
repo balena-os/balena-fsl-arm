@@ -1,4 +1,44 @@
 - commits:
+    - subject: Update balena-yocto-scripts to d8ce8169949e64dbf2bf58aa9f10ac4b7103076d
+      hash: 940dc86ed5887d213e0d9ded13647ee8b2a4d9cb
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to d8ce8169949e64dbf2bf58aa9f10ac4b7103076d
+        changelog-entry: Update balena-yocto-scripts to d8ce8169949e64dbf2bf58aa9f10ac4b7103076d
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update Lock file maintenance
+              hash: f91307783b6b706cb921b194c88403f25e37ac3c
+              body: |
+                Update 
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.39.7
+          title: ""
+          date: 2025-12-31T00:43:20.659Z
+        - commits:
+            - subject: Fix condition to check for test suites in workflow
+              hash: e26c0f3b25eecba877b789620ef08b8293773c15
+              body: |
+                Check that test_matrix is truthy before attempting to parse as JSON to avoid the error:
+
+                > Error when evaluating 'if' for job 'test'. balena-os/balena-yocto-scripts/.github/workflows/yocto-build-deploy.yml@master (Line: 2239, Col: 9): could not get operand for index access: Error from function 'fromJSON': empty input
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.39.6
+          title: ""
+          date: 2025-12-30T18:18:07.761Z
+  version: 6.10.2+rev3
+  title: ""
+  date: 2025-12-31T06:33:12.240Z
+- commits:
     - subject: Update balena-yocto-scripts to cf231fff5d7dad80a5c081fae27205f4c1be46fd
       hash: df4cae152716bbf2bd9c17df3ab93f308975dfd1
       body: Update balena-yocto-scripts
