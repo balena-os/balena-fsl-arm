@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v6.10.17
+## (2026-01-21)
+
+
+<details>
+<summary> Update layers/meta-balena to 5fdbeb1984d50a9f7c9a5e5404771838c2670d67 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.10.17
+> ### (2026-01-21)
+> 
+> * Update vacuum-size to 128M to match vacuum.conf and journald-balena-os.conf [Chris Sawer]
+> 
+> ## meta-balena-6.10.16
+> ### (2026-01-20)
+> 
+> * os-helpers: safe-reboot: always sync filesystem before reboot [Alex Gonzalez]
+> 
+
+</details>
+
 # v6.10.15
 ## (2026-01-16)
 
