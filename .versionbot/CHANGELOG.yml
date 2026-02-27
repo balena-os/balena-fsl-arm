@@ -1,4 +1,18 @@
 - commits:
+    - subject: "workflows: workflows: Move testing to BC from BM"
+      hash: 0a999555c799aef3518976406de9155976f72985
+      body: ""
+      footer:
+        Changelog-entry: "workflows: workflows: Move testing to BC from BM"
+        changelog-entry: "workflows: workflows: Move testing to BC from BM"
+        Signed-off-by: Ryan Cooke<ryan@balena.io>
+        signed-off-by: Ryan Cooke<ryan@balena.io>
+      author: Ryan Cooke
+      nested: []
+  version: 6.10.17+rev3
+  title: ""
+  date: 2026-02-27T15:38:08.705Z
+- commits:
     - subject: Update layers/meta-openembedded to
         8a598a2bc9199a4fbb9008a32ab143fb509a0933
       hash: 2c57b14b864bd8323a00bd52771e267dd5070cb6
