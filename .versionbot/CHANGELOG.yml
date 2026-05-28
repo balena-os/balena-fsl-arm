@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update contracts to 9fe86f23e02c5d438a96ab3209239dcb5df4dc5b
+      hash: aa52cbebf3249fa4488fa5997f07791aaadb9972
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 9fe86f23e02c5d438a96ab3209239dcb5df4dc5b
+        changelog-entry: Update contracts to 9fe86f23e02c5d438a96ab3209239dcb5df4dc5b
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "hw.device-type/beaglebone-ai64: Add the beaglebone-ai-64 alias to
+                align with its device repo definition"
+              hash: 72cf4a59d42908cee0350bb6aa5a96e3c96fcc4f
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                See: https://balena.fibery.io/Work/Project/2470
+                see: https://balena.fibery.io/Work/Project/2470
+              author: Thodoris Greasidis
+          version: contracts-2.0.144
+          title: ""
+          date: 2026-05-19T06:48:40.188Z
+  version: 6.10.17+rev7
+  title: ""
+  date: 2026-05-28T13:46:11.451Z
+- commits:
     - subject: Update contracts to 7c3bf64c92a839dcbf02cfd69367392e7728fcde
       hash: 2c7a1baa244dc8091a200b08a8f63712ab71ff6e
       body: Update contracts
