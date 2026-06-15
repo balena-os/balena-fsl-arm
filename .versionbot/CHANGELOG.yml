@@ -1,4 +1,18 @@
 - commits:
+    - subject: "layers/meta-balena: Update to v7.0.4"
+      hash: d5f088f12f720f75ef4bf490b89482cbf1c83ea9
+      body: ""
+      footer:
+        Changelog-entry: "layers/meta-balena: Update to v7.0.4"
+        changelog-entry: "layers/meta-balena: Update to v7.0.4"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 7.0.4
+  title: ""
+  date: 2026-06-15T17:21:28.815Z
+- commits:
     - subject: Update contracts to 9fe86f23e02c5d438a96ab3209239dcb5df4dc5b
       hash: aa52cbebf3249fa4488fa5997f07791aaadb9972
       body: Update contracts
