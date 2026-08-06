@@ -1,6 +1,46 @@
 Change log
 -----------
 
+# v7.5.1+rev1
+## (2026-08-06)
+
+* Build initramfs packages with -Os for nitrogen8mm [guille-vega]
+* Reduce kernel size for nitrogen8mm [guille-vega]
+
+<details>
+<summary> Update balena-yocto-scripts to 4c19733cad4cd1473d196d41ea7d2f4531913172 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.41.8
+> ### (2026-07-15)
+> 
+> * Update GitHub Actions [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.41.7
+> ### (2026-07-14)
+> 
+> * Update product-os/review-commit-action action to v0.3.2 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.41.6
+> ### (2026-07-13)
+> 
+> * Update balena-io/balena-cli to v25 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.41.5
+> ### (2026-06-29)
+> 
+> * yocto-build-deploy: replace pattern based all history first parent match [Alex Gonzalez]
+> 
+> ## balena-yocto-scripts-1.41.4
+> ### (2026-06-23)
+> 
+> * Decode base64-encoded GitHub App private key before token generation [Kyle Harding]
+> * Update actions/create-github-app-token action to v3 [balena-renovate[bot]]
+> 
+
+</details>
+
+* Set explicit partition size overrides for each machine [guille-vega]
+
 # v7.5.1
 ## (2026-06-16)
 
