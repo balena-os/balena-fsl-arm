@@ -1,4 +1,84 @@
 - commits:
+    - subject: Update contracts to 93b30010e7441051d361fa319a6e395f5a3c94f4
+      hash: d870fe8ec61378b3e08e14970fcfee6a1724e3a3
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 93b30010e7441051d361fa319a6e395f5a3c94f4
+        changelog-entry: Update contracts to 93b30010e7441051d361fa319a6e395f5a3c94f4
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "revpi-connect-4: remove led"
+              hash: a6cc5e7131ccc62e886d95f16001d98a59ad3303
+              body: |
+                This device type has no LED.
+              footer:
+                Relates-to: https://balena.zulipchat.com/#narrow/channel/345889-balena-io.2Fos/topic/raspberrypi.20pipeline/near/619759972
+                relates-to: https://balena.zulipchat.com/#narrow/channel/345889-balena-io.2Fos/topic/raspberrypi.20pipeline/near/619759972
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+          version: contracts-2.0.149
+          title: ""
+          date: 2026-08-28T11:23:48.697Z
+        - commits:
+            - subject: "hw.device-type: Update Orin boards L4T version to 39.2.0"
+              hash: ebae4da834d1e4efe16b41718189ae26005af527
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.148
+          title: ""
+          date: 2026-08-24T18:52:54.835Z
+        - commits:
+            - subject: Add device family and manufacturer metadata
+              hash: a74ddb06557df9e0c19f8201d095be10828ef47a
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Pranas Ziaukas <pranas@balena.io>
+                signed-off-by: Pranas Ziaukas <pranas@balena.io>
+              author: Pranas Ziaukas
+          version: contracts-2.0.147
+          title: ""
+          date: 2026-08-04T04:57:52.384Z
+        - commits:
+            - subject: Modify existing device family and manufacturer metadata
+              hash: cd120576e7c0f021b84c1e81096c188862a144df
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Pranas Ziaukas <pranas@balena.io>
+                signed-off-by: Pranas Ziaukas <pranas@balena.io>
+              author: Pranas Ziaukas
+          version: contracts-2.0.146
+          title: ""
+          date: 2026-07-16T13:59:26.149Z
+        - commits:
+            - subject: "hw/device-type: Add Jetson AGX Thor Devkit contract"
+              hash: b4177e428fcc74bf0cf18ff0189d7a4826f7da4d
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.145
+          title: ""
+          date: 2026-07-01T09:44:52.326Z
+  version: 7.5.1+rev5
+  title: ""
+  date: 2026-08-28T15:30:59.223Z
+- commits:
     - subject: Update flowzonify to 0.4.0
       hash: d60a189b22531438594ecdf1a5c1fad89639db46
       body: Update flowzonify
