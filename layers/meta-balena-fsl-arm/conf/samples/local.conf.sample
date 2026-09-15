@@ -65,3 +65,6 @@ HOSTTOOLS += "docker iptables"
 
 # CycloneDX SBOM and VEX generation
 INHERIT += "cyclonedx-export"
+
+# Configure size optimization for the kernel & the rootfs
+FULL_OPTIMIZATION = "-Os -pipe ${DEBUG_FLAGS}"
