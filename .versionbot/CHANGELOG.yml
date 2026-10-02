@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update balena-yocto-scripts to f493532250022bcf723bddd055c3c8cb770ae649
+      hash: 91770e8dae73736135b4af2742c2d9617a9da3ef
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to f493532250022bcf723bddd055c3c8cb770ae649
+        changelog-entry: Update balena-yocto-scripts to f493532250022bcf723bddd055c3c8cb770ae649
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update ubuntu:22.04 Docker digest to b8b6ee6
+              hash: 13d81e84787dfd8d7f090de65c38faeade4af4f8
+              body: |
+                Update ubuntu
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.42.16
+          title: ""
+          date: 2026-10-02T08:34:42.921Z
+  version: 8.0.13+rev1
+  title: ""
+  date: 2026-10-02T11:55:39.014Z
+- commits:
     - subject: Update layers/meta-balena to cb154545ef42d3f53209032a3228d64403ef0b5f
       hash: 3952fe7e36f3faebd3e594976e174f370a7f5282
       body: Update layers/meta-balena
