@@ -1,4 +1,51 @@
 - commits:
+    - subject: Update contracts to d3c1db43a35fd33802623d0f30acfb2f0bf095e2
+      hash: 391526081ebdf47f7ac412e1e3a059837cab9fa8
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to d3c1db43a35fd33802623d0f30acfb2f0bf095e2
+        changelog-entry: Update contracts to d3c1db43a35fd33802623d0f30acfb2f0bf095e2
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Mark revpi-connect-4 and revpi-connect-s as legacy
+              hash: f88d15f5128228e7247c48d6bfcbf5ebbbb9c4b9
+              body: >
+                New RevPi devices will be supported by a single device type
+                based on
+
+                meta-revolutionpi. Signal that these are not meant for new
+                deployments.
+
+                The Connect S device type covers the Connect SE as well.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Nicolai Buchwitz <n.buchwitz@kunbus.com>
+                signed-off-by: Nicolai Buchwitz <n.buchwitz@kunbus.com>
+              author: Nicolai Buchwitz
+          version: contracts-2.0.152
+          title: ""
+          date: 2026-11-17T09:08:39.748Z
+        - commits:
+            - subject: "hw.device-type: Add new device-type - Compulab IOT-GATE-RPI5"
+              hash: 654d03f81ec00d71588a2a023ba0d8b454d8e40e
+              body: >
+                ... and improve instructions in RaspberryPi4 CM4 IOBoard
+                contract.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.151
+          title: ""
+          date: 2026-11-03T07:53:38.332Z
+  version: 9.0.7+rev1
+  title: ""
+  date: 2026-11-17T14:14:26.582Z
+- commits:
     - subject: Update layers/meta-balena to 61d294761aaafe47398d4a4be5001577c29e2ac2
       hash: 271c75fdee316ffc414c7cfbd6a8df53deb72110
       body: Update layers/meta-balena
