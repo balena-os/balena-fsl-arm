@@ -9,5 +9,6 @@ SRC_URI:append:imx8mm-lpddr4-evk = " \
         file://0002-disable-caam-jr2.patch \
         file://enable-iwlwifi.cfg \
         file://extra-kernel.cfg \
+        file://CVE-2026-98432.patch \
 "
 
