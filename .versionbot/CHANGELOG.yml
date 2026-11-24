@@ -1,4 +1,30 @@
 - commits:
+    - subject: Backport fix for CVE-2026-98432 to linux-boundary and linux-fslc-imx
+      hash: c713f1414f57c0c9470430f9c62145751b9dbacd
+      body: |
+        Add the 5.15 stable fix for CVE-2026-98432 (IPv4 TCP use-after-free of
+        inet_opt/ireq_opt, freed with kfree() while a SYNACK is still being
+        built) to the kernels used by the active machines in this repo:
+
+        - linux-boundary 5.15.71 (nitrogen8mm, nitrogen8mm-dwe, emgw3)
+        - linux-fslc-imx 5.15.201 (imx8mm-lpddr4-evk)
+
+        The change is the 5.15.y backport of upstream e3f33b0a1d89
+        (5.15.223, 95a8c8fa9f27): kfree() becomes kfree_rcu() in
+        inet_sock_destruct() and tcp_v4_reqsk_destructor(). The patch applies
+        cleanly to both pinned kernels with small offsets (checked against the
+        sources, not built or boot-tested).
+      footer:
+        Changelog-entry: Backport fix for CVE-2026-98432 to linux-boundary and linux-fslc-imx
+        changelog-entry: Backport fix for CVE-2026-98432 to linux-boundary and linux-fslc-imx
+        Signed-off-by: Ryan Cooke<ryan@balena.io>
+        signed-off-by: Ryan Cooke<ryan@balena.io>
+      author: Ryan Cooke
+      nested: []
+  version: 9.1.1+rev5
+  title: ""
+  date: 2026-11-24T17:17:01.519Z
+- commits:
     - subject: Update balena-yocto-scripts to ff4bd1ead1e0ae80007c5fa7edc695d91e3974c2
       hash: 7ba43857cb45b8e22ffbc5a3ceef56ad67295bba
       body: Update balena-yocto-scripts

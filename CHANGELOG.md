@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v9.1.1+rev5
+## (2026-11-24)
+
+* Backport fix for CVE-2026-98432 to linux-boundary and linux-fslc-imx [Ryan Cooke]
+
 # v9.1.1+rev4
 ## (2026-11-21)
 
