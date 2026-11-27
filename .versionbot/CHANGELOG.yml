@@ -1,4 +1,44 @@
 - commits:
+    - subject: Update balena-yocto-scripts to d747b3b055f7db08aca18af0ad0eed9a3443e9f8
+      hash: a44b8aa590bd36f87e7005aecaf1a9c371bb2fdd
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to d747b3b055f7db08aca18af0ad0eed9a3443e9f8
+        changelog-entry: Update balena-yocto-scripts to d747b3b055f7db08aca18af0ad0eed9a3443e9f8
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Change CLI channel to os-profiles-with-runtimes
+              hash: 85596207aca5072bc955d6a6b914c4fc02526847
+              body: >
+                This branch contains support for both profiles and custom
+                container runtimes via the CLI, which are needed to deploy OS
+                Blocks.
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.44.5
+          title: ""
+          date: 2026-11-27T17:43:30.263Z
+        - commits:
+            - subject: Update ubuntu:22.04 Docker digest to b000e69
+              hash: c14fb3244cd21272fd6b8f705e3f5a97a2b50f08
+              body: |
+                Update ubuntu
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.44.4
+          title: ""
+          date: 2026-11-27T07:27:22.474Z
+  version: 9.1.2+rev1
+  title: ""
+  date: 2026-11-27T23:46:57.044Z
+- commits:
     - subject: Update layers/meta-balena to 2c5bb6e19fb0b26a962e9a0a4b662345cb38e89d
       hash: f601eb167df3a0ffc3f04dfc81366c4eebb01914
       body: Update layers/meta-balena

@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v9.1.2+rev1
+## (2026-11-27)
+
+
+<details>
+<summary> Update balena-yocto-scripts to d747b3b055f7db08aca18af0ad0eed9a3443e9f8 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.44.5
+> ### (2026-11-27)
+> 
+> * Change CLI channel to os-profiles-with-runtimes [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.44.4
+> ### (2026-11-27)
+> 
+> * Update ubuntu:22.04 Docker digest to b000e69 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v9.1.2
 ## (2026-11-27)
 
